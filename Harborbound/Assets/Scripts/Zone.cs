@@ -6,22 +6,21 @@ public class Zone : MonoBehaviour
     // This script holds the zone class that is used to define the zones in the game.
 
     public int id;
-    public string name;
-    public float innerRadius;
-    public float outerRadius;
-    public Color color;
+    public string zoneName;
+    public float innerRadius = 20f;
+    public float outerRadius = 30f;
+    public Color color = Color.blue;
 
-    public float fishSpawnRate;
-    public float enemySpawnRate;
-    public List<Fish> availableFish;
-    public int difficulty;
+    public float fishSpawnRate = 1f;
+    public float enemySpawnRate = 1f;
+    //public List<Fish> availableFish = new();
+    public int difficulty = 1;
+    //public List<EnemyType> enemyTypes = new();
 
-    public List<EnemyType> enemyTypes;
-
-    public Fish GetRandomFishForZone(Zone zone)
+    /* public Fish GetRandomFishForZone(Zone zone)
     {
         return availableFish[UnityEngine.Random.Range(0, availableFish.Count)];
-    }
+    } */
 
     public bool IsPositionInZone(Vector2 playerPosition, Vector2 islandCenterPosition)
     {

@@ -2,25 +2,54 @@ using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
-using Quaternion = UnityEngine.Quaternion;
 using Random = UnityEngine.Random;
+using Quaternion = UnityEngine.Quaternion;
 
 public class WorldGenerator : MonoBehaviour
 {
-    public int worldZoneCount;
+    // Singleton instance
+    public static WorldGenerator Instance { get; private set; }
+
+    public int worldZoneCount = 3;
     public GameObject rockPrefab;
     public List<Vector2> rockPositions = new();
-    public zoneManager zoneManager;
 
-    public int rockCount;
-    public Vector2 islandCenterPosition;
+    public int rockCount = 50;
+    public Vector2 islandCenterPosition = new(0, 0);
+
+    private void Awake()
+    {
+        // Singleton pattern implementation
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); // Destroy duplicates
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject); // Optional: keeps the object across scene loads
+
+    }
+
+    void Start()
+    {
+        GenerateWorld();
+    }
 
     public void GenerateWorld()
     {
         // Step 1: Generate world zones
         for (int i = 0; i < worldZoneCount; i++)
         {
-            GenerateZone(i);
+            if (ZoneManager.Instance != null)
+            {
+                ZoneManager.Instance.GenerateZone(i + 1);
+            }
+            else
+            {
+                Debug.LogError("ZoneManager is not assigned.");
+                return;
+            }
         }
 
         // Step 2: Check and generate rock positions if needed
