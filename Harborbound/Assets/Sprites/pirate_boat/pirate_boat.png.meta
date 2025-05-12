@@ -1,0 +1,5187 @@
+fileFormatVersion: 2
+guid: cf1d3d33ca274443aae3cbed0e9d7d90
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6790599241328402257
+    second: pirate_boat_0
+  - first:
+      213: 7290419211648439357
+    second: pirate_boat_1
+  - first:
+      213: 2820333331298690555
+    second: pirate_boat_2
+  - first:
+      213: 686035681103465690
+    second: pirate_boat_3
+  - first:
+      213: 2697191512571074312
+    second: pirate_boat_4
+  - first:
+      213: 4966529648808419580
+    second: pirate_boat_5
+  - first:
+      213: 3167689213457246520
+    second: pirate_boat_6
+  - first:
+      213: -7002093850668453049
+    second: pirate_boat_7
+  - first:
+      213: 5164751650443999069
+    second: pirate_boat_8
+  - first:
+      213: 8501844565682492752
+    second: pirate_boat_9
+  - first:
+      213: -3032600833025319568
+    second: pirate_boat_10
+  - first:
+      213: -2053523425974091587
+    second: pirate_boat_11
+  - first:
+      213: -7887531726747665309
+    second: pirate_boat_12
+  - first:
+      213: 3106340017477676894
+    second: pirate_boat_13
+  - first:
+      213: -6052082739102333118
+    second: pirate_boat_14
+  - first:
+      213: 7197757738095590915
+    second: pirate_boat_15
+  - first:
+      213: 8401799385245493770
+    second: pirate_boat_16
+  - first:
+      213: 3589162024849853262
+    second: pirate_boat_17
+  - first:
+      213: -5103551131692881627
+    second: pirate_boat_18
+  - first:
+      213: 1696714731787954955
+    second: pirate_boat_19
+  - first:
+      213: -1409860716533753101
+    second: pirate_boat_20
+  - first:
+      213: -6162496046333694669
+    second: pirate_boat_21
+  - first:
+      213: -5757935677150347741
+    second: pirate_boat_22
+  - first:
+      213: -8471568415414270556
+    second: pirate_boat_23
+  - first:
+      213: 6542006828109982258
+    second: pirate_boat_24
+  - first:
+      213: 3538774227853044130
+    second: pirate_boat_25
+  - first:
+      213: -805740535942659206
+    second: pirate_boat_26
+  - first:
+      213: -8132911870409758852
+    second: pirate_boat_27
+  - first:
+      213: -3275180224567186259
+    second: pirate_boat_28
+  - first:
+      213: 1613856284267996929
+    second: pirate_boat_29
+  - first:
+      213: 4408117442517645659
+    second: pirate_boat_30
+  - first:
+      213: 3768902966424125570
+    second: pirate_boat_31
+  - first:
+      213: -7093627078608863439
+    second: pirate_boat_32
+  - first:
+      213: -7852141075978483125
+    second: pirate_boat_33
+  - first:
+      213: -6728086582131953375
+    second: pirate_boat_34
+  - first:
+      213: 1955875223137647309
+    second: pirate_boat_35
+  - first:
+      213: -1497744831183007533
+    second: pirate_boat_36
+  - first:
+      213: 4973622903919609343
+    second: pirate_boat_37
+  - first:
+      213: -693178984370459634
+    second: pirate_boat_38
+  - first:
+      213: 7147382354538750006
+    second: pirate_boat_39
+  - first:
+      213: 3221515184967927701
+    second: pirate_boat_40
+  - first:
+      213: -7597115424597656557
+    second: pirate_boat_41
+  - first:
+      213: -7551117814230866540
+    second: pirate_boat_42
+  - first:
+      213: -5561155054037887000
+    second: pirate_boat_43
+  - first:
+      213: -7833219337352494702
+    second: pirate_boat_44
+  - first:
+      213: -551743802517725663
+    second: pirate_boat_45
+  - first:
+      213: -7995983283344046145
+    second: pirate_boat_46
+  - first:
+      213: 9085268922737993611
+    second: pirate_boat_47
+  - first:
+      213: 7887593282315328883
+    second: pirate_boat_48
+  - first:
+      213: 305390515093712891
+    second: pirate_boat_49
+  - first:
+      213: 6889188264694991192
+    second: pirate_boat_50
+  - first:
+      213: 7824906868319364108
+    second: pirate_boat_51
+  - first:
+      213: 5593871196346354312
+    second: pirate_boat_52
+  - first:
+      213: 7354139264119104183
+    second: pirate_boat_53
+  - first:
+      213: -2769427502600687031
+    second: pirate_boat_54
+  - first:
+      213: 4909649078639942005
+    second: pirate_boat_55
+  - first:
+      213: 6913576531123543590
+    second: pirate_boat_56
+  - first:
+      213: 7296042732607840484
+    second: pirate_boat_57
+  - first:
+      213: 3253189625247993036
+    second: pirate_boat_58
+  - first:
+      213: 3128965256773503810
+    second: pirate_boat_59
+  - first:
+      213: -1737569921899650332
+    second: pirate_boat_60
+  - first:
+      213: -864548662405775661
+    second: pirate_boat_61
+  - first:
+      213: -5961201125852903919
+    second: pirate_boat_62
+  - first:
+      213: -128417432022267089
+    second: pirate_boat_63
+  - first:
+      213: -6615895654235973530
+    second: pirate_boat_64
+  - first:
+      213: -752589213029355683
+    second: pirate_boat_65
+  - first:
+      213: -4721035341065040839
+    second: pirate_boat_66
+  - first:
+      213: 7624278525678329828
+    second: pirate_boat_67
+  - first:
+      213: 5123621425811346926
+    second: pirate_boat_68
+  - first:
+      213: 7484489180762066466
+    second: pirate_boat_69
+  - first:
+      213: 3798342013754556017
+    second: pirate_boat_70
+  - first:
+      213: -6300269504651100272
+    second: pirate_boat_71
+  - first:
+      213: -9009147546017368527
+    second: pirate_boat_72
+  - first:
+      213: 15802744912295883
+    second: pirate_boat_73
+  - first:
+      213: 6938019750880253165
+    second: pirate_boat_74
+  - first:
+      213: 6222049117009964651
+    second: pirate_boat_75
+  - first:
+      213: 3877143226834849509
+    second: pirate_boat_76
+  - first:
+      213: -4714867156867411947
+    second: pirate_boat_77
+  - first:
+      213: 1477677305755689367
+    second: pirate_boat_78
+  - first:
+      213: -4345871996805669200
+    second: pirate_boat_79
+  - first:
+      213: -1335059891549462492
+    second: pirate_boat_80
+  - first:
+      213: 4376111945048066215
+    second: pirate_boat_81
+  - first:
+      213: 8504943652195559837
+    second: pirate_boat_82
+  - first:
+      213: -150932321618952286
+    second: pirate_boat_83
+  - first:
+      213: -7841712992746561147
+    second: pirate_boat_84
+  - first:
+      213: 5307141691438345963
+    second: pirate_boat_85
+  - first:
+      213: 3066900119257286124
+    second: pirate_boat_86
+  - first:
+      213: 5790827136927846988
+    second: pirate_boat_87
+  - first:
+      213: 5739277831006078657
+    second: pirate_boat_88
+  - first:
+      213: -2826462971557167616
+    second: pirate_boat_89
+  - first:
+      213: 9090616555386814981
+    second: pirate_boat_90
+  - first:
+      213: -9119117187521446380
+    second: pirate_boat_91
+  - first:
+      213: -5836515824171422665
+    second: pirate_boat_92
+  - first:
+      213: -2375641156823497304
+    second: pirate_boat_93
+  - first:
+      213: 6057877258785975647
+    second: pirate_boat_94
+  - first:
+      213: -3682166537818196333
+    second: pirate_boat_95
+  - first:
+      213: 7316351570847733277
+    second: pirate_boat_96
+  - first:
+      213: -5718133262300760471
+    second: pirate_boat_97
+  - first:
+      213: 8308092361159339956
+    second: pirate_boat_98
+  - first:
+      213: 2670946233221689806
+    second: pirate_boat_99
+  - first:
+      213: 3837705708585113683
+    second: pirate_boat_100
+  - first:
+      213: -3533885537145639632
+    second: pirate_boat_101
+  - first:
+      213: 893835118611818674
+    second: pirate_boat_102
+  - first:
+      213: -4498553088746872192
+    second: pirate_boat_103
+  - first:
+      213: -8647142441170540908
+    second: pirate_boat_104
+  - first:
+      213: 6689847212290282489
+    second: pirate_boat_105
+  - first:
+      213: 9031909430825633645
+    second: pirate_boat_106
+  - first:
+      213: -1938013793924175763
+    second: pirate_boat_107
+  - first:
+      213: -1734049619698483340
+    second: pirate_boat_108
+  - first:
+      213: -3956130122895384873
+    second: pirate_boat_109
+  - first:
+      213: 6635290921266679140
+    second: pirate_boat_110
+  - first:
+      213: 2108121228620001782
+    second: pirate_boat_111
+  - first:
+      213: 2799911696240006792
+    second: pirate_boat_112
+  - first:
+      213: -4237615069222172120
+    second: pirate_boat_113
+  - first:
+      213: -5929596585489372350
+    second: pirate_boat_114
+  - first:
+      213: 3014944395273338506
+    second: pirate_boat_115
+  - first:
+      213: -3586862607762842443
+    second: pirate_boat_116
+  - first:
+      213: 1762790330765549106
+    second: pirate_boat_117
+  - first:
+      213: 4253636160407855649
+    second: pirate_boat_118
+  - first:
+      213: -6650742467089853475
+    second: pirate_boat_119
+  - first:
+      213: -1827638637981042799
+    second: pirate_boat_120
+  - first:
+      213: -8237544968468404146
+    second: pirate_boat_121
+  - first:
+      213: 1783764966164850272
+    second: pirate_boat_122
+  - first:
+      213: -4334842623884770947
+    second: pirate_boat_123
+  - first:
+      213: 2871876964228158273
+    second: pirate_boat_124
+  - first:
+      213: 6091600409960729178
+    second: pirate_boat_125
+  - first:
+      213: -1812753280465168693
+    second: pirate_boat_126
+  - first:
+      213: 2231012187983934895
+    second: pirate_boat_127
+  - first:
+      213: -5225325853729050131
+    second: pirate_boat_128
+  - first:
+      213: 8416055051620974503
+    second: pirate_boat_129
+  - first:
+      213: -5301086831500494986
+    second: pirate_boat_130
+  - first:
+      213: -1214915027182688401
+    second: pirate_boat_131
+  - first:
+      213: 2355236568877209663
+    second: pirate_boat_132
+  - first:
+      213: -1980758808406342160
+    second: pirate_boat_133
+  - first:
+      213: -4719688915338064203
+    second: pirate_boat_134
+  - first:
+      213: 7718289982373867954
+    second: pirate_boat_135
+  - first:
+      213: -8046291190522329701
+    second: pirate_boat_136
+  - first:
+      213: 5258135659283707117
+    second: pirate_boat_137
+  - first:
+      213: -3577910491974278407
+    second: pirate_boat_138
+  - first:
+      213: 7814986179471221745
+    second: pirate_boat_139
+  - first:
+      213: 2821472820509847568
+    second: pirate_boat_140
+  - first:
+      213: 5357618542089524131
+    second: pirate_boat_141
+  - first:
+      213: -1130892046460382864
+    second: pirate_boat_142
+  - first:
+      213: -5364417635349911012
+    second: pirate_boat_143
+  - first:
+      213: -7239098674830880356
+    second: pirate_boat_144
+  - first:
+      213: 7725114102724898323
+    second: pirate_boat_145
+  - first:
+      213: -4271431497915893036
+    second: pirate_boat_146
+  - first:
+      213: 7668263784091629765
+    second: pirate_boat_147
+  - first:
+      213: 2825658851873645084
+    second: pirate_boat_148
+  - first:
+      213: -5669077630830831778
+    second: pirate_boat_149
+  - first:
+      213: 2126947392468050066
+    second: pirate_boat_150
+  - first:
+      213: -8461093313212564657
+    second: pirate_boat_151
+  - first:
+      213: -5759561810148791280
+    second: pirate_boat_152
+  - first:
+      213: -3105766409251986652
+    second: pirate_boat_153
+  - first:
+      213: -6117891463511619026
+    second: pirate_boat_154
+  - first:
+      213: -8189582103576465744
+    second: pirate_boat_155
+  - first:
+      213: -3447789356418205473
+    second: pirate_boat_156
+  - first:
+      213: -5247713872950850632
+    second: pirate_boat_157
+  - first:
+      213: 5906327985627524454
+    second: pirate_boat_158
+  - first:
+      213: -8836472451669990447
+    second: pirate_boat_159
+  - first:
+      213: 2735112125184205190
+    second: pirate_boat_160
+  - first:
+      213: 7324543621589140771
+    second: pirate_boat_161
+  - first:
+      213: 8252288828056304858
+    second: pirate_boat_162
+  - first:
+      213: -3406117381978686804
+    second: pirate_boat_163
+  - first:
+      213: 579068879271065957
+    second: pirate_boat_164
+  - first:
+      213: 6815036047952487076
+    second: pirate_boat_165
+  - first:
+      213: 3548599171352154935
+    second: pirate_boat_166
+  - first:
+      213: -2321636007804731506
+    second: pirate_boat_167
+  - first:
+      213: -567626797344169801
+    second: pirate_boat_168
+  - first:
+      213: 1593874413499856236
+    second: pirate_boat_169
+  - first:
+      213: 6090087976099486553
+    second: pirate_boat_170
+  - first:
+      213: 5527398076875673799
+    second: pirate_boat_171
+  - first:
+      213: -8352961873763069048
+    second: pirate_boat_172
+  - first:
+      213: 551076833016631357
+    second: pirate_boat_173
+  - first:
+      213: -1465348237241146486
+    second: pirate_boat_174
+  - first:
+      213: 1256932807495587389
+    second: pirate_boat_175
+  - first:
+      213: -1919448475559949700
+    second: pirate_boat_176
+  - first:
+      213: 1504041397069278518
+    second: pirate_boat_177
+  - first:
+      213: -561174421071574588
+    second: pirate_boat_178
+  - first:
+      213: -8727485283807073618
+    second: pirate_boat_179
+  - first:
+      213: -4132304771616801078
+    second: pirate_boat_180
+  - first:
+      213: 6846823018916652926
+    second: pirate_boat_181
+  - first:
+      213: -1297980048806870415
+    second: pirate_boat_182
+  - first:
+      213: -7872002170522819131
+    second: pirate_boat_183
+  - first:
+      213: 2455748661626545972
+    second: pirate_boat_184
+  - first:
+      213: 5468158957301707569
+    second: pirate_boat_185
+  - first:
+      213: -3034592152752876689
+    second: pirate_boat_186
+  - first:
+      213: -6922437664761945735
+    second: pirate_boat_187
+  - first:
+      213: -7576688080146478745
+    second: pirate_boat_188
+  - first:
+      213: -3985543363019101407
+    second: pirate_boat_189
+  - first:
+      213: -1281463354412001031
+    second: pirate_boat_190
+  - first:
+      213: -3511354912171303232
+    second: pirate_boat_191
+  - first:
+      213: -3379696301473030113
+    second: pirate_boat_192
+  - first:
+      213: -1521928419525212821
+    second: pirate_boat_193
+  - first:
+      213: 2336948090052149540
+    second: pirate_boat_194
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pirate_boat_0
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 255
+        width: 1050
+        height: 1099
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa06598d7f1f2c1a0800000000000000
+      internalID: -6790599241328402257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_1
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1327
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d341dfd85a5cc2560800000000000000
+      internalID: 7290419211648439357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_2
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1319
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5a048d836d32720800000000000000
+      internalID: 2820333331298690555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_3
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1322
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc4a6331d9458900800000000000000
+      internalID: 686035681103465690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_4
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1302
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8075ffde3695e6520800000000000000
+      internalID: 2697191512571074312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_5
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1317
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf0ebabd668ace440800000000000000
+      internalID: 4966529648808419580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_6
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 1317
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839a4f67e84e5fb20800000000000000
+      internalID: 3167689213457246520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_7
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1299
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 743b5f2ddb093de90800000000000000
+      internalID: -7002093850668453049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_8
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 1307
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d57b3d51342eca740800000000000000
+      internalID: 5164751650443999069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_9
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1267
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0551719769e9cf570800000000000000
+      internalID: 8501844565682492752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_10
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1279
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07dd8f91c990ae5d0800000000000000
+      internalID: -3032600833025319568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_11
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 1272
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db00fd8f25b6083e0800000000000000
+      internalID: -2053523425974091587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_12
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 1279
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36cf4983fabd98290800000000000000
+      internalID: -7887531726747665309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_13
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1259
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f665da9cfeb1b20800000000000000
+      internalID: 3106340017477676894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_14
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1237
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247488860dea20ca0800000000000000
+      internalID: -6052082739102333118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_15
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1239
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30eb186078293e360800000000000000
+      internalID: 7197757738095590915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_16
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1242
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a27a7b600399470800000000000000
+      internalID: 8401799385245493770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_17
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 1237
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4b4f7c68d34fc130800000000000000
+      internalID: 3589162024849853262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_18
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1219
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5292766194b8c29b0800000000000000
+      internalID: -5103551131692881627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_19
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1227
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ba4691f01fb8710800000000000000
+      internalID: 1696714731787954955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_20
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 1227
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa5a38e52b2f6ce0800000000000000
+      internalID: -1409860716533753101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_21
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1192
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33de7840f7a6a7aa0800000000000000
+      internalID: -6162496046333694669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_22
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1200
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32eb7eb2204b710b0800000000000000
+      internalID: -5757935677150347741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_23
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 1192
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a540d41961fe6a80800000000000000
+      internalID: -8471568415414270556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_24
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 1200
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23aeca39c80e9ca50800000000000000
+      internalID: 6542006828109982258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_25
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1180
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a9ec7739604c1130800000000000000
+      internalID: 3538774227853044130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_26
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1157
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a734106604f61d4f0800000000000000
+      internalID: -805740535942659206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_27
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1160
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c772bae6eb7122f80800000000000000
+      internalID: -8132911870409758852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_28
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1162
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dace94b30f83c82d0800000000000000
+      internalID: -3275180224567186259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_29
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 1157
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 107635e6db1956610800000000000000
+      internalID: 1613856284267996929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_30
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1140
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b59b7717577cc2d30800000000000000
+      internalID: 4408117442517645659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_31
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1147
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28040aa8745dd4430800000000000000
+      internalID: 3768902966424125570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_32
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 1147
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f3d6271cf5e8d90800000000000000
+      internalID: -7093627078608863439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_33
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1112
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4a8c083b47970390800000000000000
+      internalID: -7852141075978483125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_34
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1120
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 121f3f586e801a2a0800000000000000
+      internalID: -6728086582131953375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_35
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 1112
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca7b1c172aa42b10800000000000000
+      internalID: 1955875223137647309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_36
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 1120
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d0d82de201f63be0800000000000000
+      internalID: -1497744831183007533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_37
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1100
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff500e20eabd50540800000000000000
+      internalID: 4973622903919609343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_38
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1077
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0c25d6e2655166f0800000000000000
+      internalID: -693178984370459634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_39
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1080
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6306d2c026a903360800000000000000
+      internalID: 7147382354538750006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_40
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1082
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5974a8e0efe15bc20800000000000000
+      internalID: 3221515184967927701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_41
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 1077
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c3737c5cf919690800000000000000
+      internalID: -7597115424597656557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_42
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1060
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49525a10b5a053790800000000000000
+      internalID: -7551117814230866540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_43
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1067
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7143f41fec2d2b0800000000000000
+      internalID: -5561155054037887000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_44
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 1067
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 291426dc380da4390800000000000000
+      internalID: -7833219337352494702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_45
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1032
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12e58e35fefc758f0800000000000000
+      internalID: -551743802517725663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_46
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1040
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7015e719f880190800000000000000
+      internalID: -7995983283344046145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_47
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 1032
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b87a1bc03fb551e70800000000000000
+      internalID: 9085268922737993611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_48
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 1040
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d992dcc4c567d60800000000000000
+      internalID: 7887593282315328883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_49
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1020
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bff2fe13e07fc3400800000000000000
+      internalID: 305390515093712891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_50
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 998
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8594febe9305b9f50800000000000000
+      internalID: 6889188264694991192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_51
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1000
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04a0bea657a79c60800000000000000
+      internalID: 7824906868319364108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_52
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1003
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88a8389273c61ad40800000000000000
+      internalID: 5593871196346354312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_53
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 998
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b2629262b62f0660800000000000000
+      internalID: 7354139264119104183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_54
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 980
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 942f9440c540199d0800000000000000
+      internalID: -2769427502600687031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_55
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 988
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579582813d3922440800000000000000
+      internalID: 4909649078639942005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_56
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 988
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e9811b935f1ff50800000000000000
+      internalID: 6913576531123543590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_57
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 953
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e0292f8530c04560800000000000000
+      internalID: 7296042732607840484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_58
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 960
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc84ef5ab6a52d20800000000000000
+      internalID: 3253189625247993036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_59
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 953
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b0684b2515c6b20800000000000000
+      internalID: 3128965256773503810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_60
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 960
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e2a4c0bc59e2e7e0800000000000000
+      internalID: -1737569921899650332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_61
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 940
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3deb34672918004f0800000000000000
+      internalID: -864548662405775661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_62
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 918
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11601eae82f854da0800000000000000
+      internalID: -5961201125852903919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_63
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 920
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2b4855a605c73ef0800000000000000
+      internalID: -128417432022267089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_64
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 923
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668d63a74fd9f24a0800000000000000
+      internalID: -6615895654235973530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_65
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 918
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5f289f19144e85f0800000000000000
+      internalID: -752589213029355683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_66
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 900
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93cc0c3de538b7eb0800000000000000
+      internalID: -4721035341065040839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_67
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 908
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ef12b78ce0eec960800000000000000
+      internalID: 7624278525678329828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_68
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 908
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee5d0196a82ca1740800000000000000
+      internalID: 5123621425811346926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_69
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 873
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ec390614f3ed760800000000000000
+      internalID: 7484489180762066466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_70
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 880
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17e3841efeb66b430800000000000000
+      internalID: 3798342013754556017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_71
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 873
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f7b0a0442f098a0800000000000000
+      internalID: -6300269504651100272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_72
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 880
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1367d861a0419f280800000000000000
+      internalID: -9009147546017368527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_73
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 860
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc739f44384283000800000000000000
+      internalID: 15802744912295883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_74
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 838
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de49cd7443cc84060800000000000000
+      internalID: 6938019750880253165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_75
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 840
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6e6962c4b8295650800000000000000
+      internalID: 6222049117009964651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_76
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 843
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee8dca09316ec530800000000000000
+      internalID: 3877143226834849509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_77
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 838
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51013cf1d4d619eb0800000000000000
+      internalID: -4714867156867411947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_78
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 820
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79169363ea3c18410800000000000000
+      internalID: 1477677305755689367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_79
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 828
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be941fb17c50b3c0800000000000000
+      internalID: -4345871996805669200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_80
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 828
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420a2522a1ae87de0800000000000000
+      internalID: -1335059891549462492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_81
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 793
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a80fedd0a21bbc30800000000000000
+      internalID: 4376111945048066215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_82
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 801
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9964d7c031a70670800000000000000
+      internalID: 8504943652195559837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_83
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 793
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aff6c86ad7c7edf0800000000000000
+      internalID: -150932321618952286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_84
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 801
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 581a6cc8493ac2390800000000000000
+      internalID: -7841712992746561147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_85
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 781
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bee29daff31c6a940800000000000000
+      internalID: 5307141691438345963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_86
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 758
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce50fe9c861df8a20800000000000000
+      internalID: 3066900119257286124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_87
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 761
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c42d64499962d5050800000000000000
+      internalID: 5790827136927846988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_88
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 763
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c6446087c206af40800000000000000
+      internalID: 5739277831006078657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_89
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 758
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00e3a8117e266c8d0800000000000000
+      internalID: -2826462971557167616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_90
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 741
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 502cd1dc79b582e70800000000000000
+      internalID: 9090616555386814981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_91
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 748
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41eff9cab33627180800000000000000
+      internalID: -9119117187521446380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_92
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 748
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ce056f7c7800fa0800000000000000
+      internalID: -5836515824171422665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_93
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 713
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a5ccbd54f6080fd0800000000000000
+      internalID: -2375641156823497304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_94
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 721
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5dead65547e11450800000000000000
+      internalID: 6057877258785975647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_95
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 713
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3963485fa0156ecc0800000000000000
+      internalID: -3682166537818196333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_96
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 721
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1610407df6e88560800000000000000
+      internalID: 7316351570847733277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_97
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 701
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966b73a081c15a0b0800000000000000
+      internalID: -5718133262300760471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_98
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 678
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bfe90cfbf54c4370800000000000000
+      internalID: 8308092361159339956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_99
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 681
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec1b855a27b111520800000000000000
+      internalID: 2670946233221689806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_100
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 683
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35854b84205424530800000000000000
+      internalID: 3837705708585113683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_101
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 678
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d2b89c3dd15fec0800000000000000
+      internalID: -3533885537145639632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_102
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 661
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b860acfd4a876c00800000000000000
+      internalID: 893835118611818674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_103
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 668
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 082a106dccde191c0800000000000000
+      internalID: -4498553088746872192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_104
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 668
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49663d7a3cd2ff780800000000000000
+      internalID: -8647142441170540908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_105
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 633
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f31332689c17dc50800000000000000
+      internalID: 6689847212290282489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_106
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 641
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67ccd336c9c75d70800000000000000
+      internalID: 9031909430825633645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_107
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 633
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d68a753f8baca15e0800000000000000
+      internalID: -1938013793924175763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_108
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 641
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f78faee0b6fe7e0800000000000000
+      internalID: -1734049619698483340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_109
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 621
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7de199b1d900919c0800000000000000
+      internalID: -3956130122895384873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_110
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 599
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46d897700f9451c50800000000000000
+      internalID: 6635290921266679140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_111
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 601
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f1fa5f861d814d10800000000000000
+      internalID: 2108121228620001782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_112
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 604
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886d8d86ad84bd620800000000000000
+      internalID: 2799911696240006792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_113
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 599
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a8b20eb87f035c0800000000000000
+      internalID: -4237615069222172120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_114
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 581
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b69846257d5bda0800000000000000
+      internalID: -5929596585489372350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_115
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 589
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8e72d124fb37d920800000000000000
+      internalID: 3014944395273338506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_116
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 589
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc1a265677e83ec0800000000000000
+      internalID: -3586862607762842443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_117
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 554
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e16c65770b67810800000000000000
+      internalID: 1762790330765549106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_118
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 561
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 122edd81d83f70b30800000000000000
+      internalID: 4253636160407855649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_119
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 554
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd3118c96f0d3b3a0800000000000000
+      internalID: -6650742467089853475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_120
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 561
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1977c5d875ce2a6e0800000000000000
+      internalID: -1827638637981042799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_121
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 541
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e48622dde7c5ead80800000000000000
+      internalID: -8237544968468404146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_122
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 519
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 066ea0339c431c810800000000000000
+      internalID: 1783764966164850272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_123
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 521
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d71402eb99b87d3c0800000000000000
+      internalID: -4334842623884770947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_124
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 524
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 143527312e4fad720800000000000000
+      internalID: 2871876964228158273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_125
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 519
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a45555c46b98450800000000000000
+      internalID: 6091600409960729178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_126
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 501
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6137cee7ec7d6e0800000000000000
+      internalID: -1812753280465168693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_127
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 509
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa5795ab3c526fe10800000000000000
+      internalID: 2231012187983934895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_128
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 509
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de1b0dc22d9eb77b0800000000000000
+      internalID: -5225325853729050131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_129
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 474
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7affff1ba75dbc470800000000000000
+      internalID: 8416055051620974503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_130
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 481
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67779e4fc91ce66b0800000000000000
+      internalID: -5301086831500494986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_131
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 474
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f67ed7c3831c32fe0800000000000000
+      internalID: -1214915027182688401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_132
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 481
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f389fe94e2b7fa020800000000000000
+      internalID: 2355236568877209663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_133
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 461
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f5c637bb5ee284e0800000000000000
+      internalID: -1980758808406342160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_134
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 439
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5be0deeffeb408eb0800000000000000
+      internalID: -4719688915338064203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_135
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 441
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1b9d088dfdc1b60800000000000000
+      internalID: 7718289982373867954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_136
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 444
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b95cf851bc4d55090800000000000000
+      internalID: -8046291190522329701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_137
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 439
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de47b68f586a8f840800000000000000
+      internalID: 5258135659283707117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_138
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 421
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2eab73d55b85ec0800000000000000
+      internalID: -3577910491974278407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_139
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 429
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f328ff4688647c60800000000000000
+      internalID: 7814986179471221745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_140
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 429
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 010b8e9d492e72720800000000000000
+      internalID: 2821472820509847568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_141
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 394
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a3da4b9da51a5a40800000000000000
+      internalID: 5357618542089524131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_142
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 402
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0711a6beca34e40f0800000000000000
+      internalID: -1130892046460382864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_143
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 394
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1aa0222592cd85b0800000000000000
+      internalID: -5364417635349911012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_144
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 402
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9154b01c1e898b90800000000000000
+      internalID: -7239098674830880356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_145
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 382
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e2746d85e153b60800000000000000
+      internalID: 7725114102724898323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_146
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 359
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dafe440fa3d8b4c0800000000000000
+      internalID: -4271431497915893036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_147
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 362
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c836ce88452b6a60800000000000000
+      internalID: 7668263784091629765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_148
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 364
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c12ed5a31c1c63720800000000000000
+      internalID: 2825658851873645084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_149
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 359
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57173a4ee36351b0800000000000000
+      internalID: -5669077630830831778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_150
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 342
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2906008626f648d10800000000000000
+      internalID: 2126947392468050066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_151
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 349
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4b388ed578249a80800000000000000
+      internalID: -8461093313212564657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_152
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 349
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01cec249c0de110b0800000000000000
+      internalID: -5759561810148791280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_153
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 314
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423e135e7e916e4d0800000000000000
+      internalID: -3105766409251986652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_154
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 322
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2acefeb022e81ba0800000000000000
+      internalID: -6117891463511619026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_155
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 314
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bead619772c85e80800000000000000
+      internalID: -8189582103576465744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_156
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 322
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8f156f8ddf620d0800000000000000
+      internalID: -3447789356418205473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_157
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 302
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bb00ef39006c27b0800000000000000
+      internalID: -5247713872950850632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_158
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 279
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66de646820e77f150800000000000000
+      internalID: 5906327985627524454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_159
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 282
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d36fa27f1b8e5580800000000000000
+      internalID: -8836472451669990447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_160
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 284
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 681e7729cf115f520800000000000000
+      internalID: 2735112125184205190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_161
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 279
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3258ca2ed9106a560800000000000000
+      internalID: 7324543621589140771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_162
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 262
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc783477f4068270800000000000000
+      internalID: 8252288828056304858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_163
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 269
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caa70e7994a0bb0d0800000000000000
+      internalID: -3406117381978686804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_164
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 262
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5697f61e314490800800000000000000
+      internalID: 579068879271065957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_165
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 262
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a2a0b19d2fd39e50800000000000000
+      internalID: 6815036047952487076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_166
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 262
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 733d0b225282f3130800000000000000
+      internalID: 3548599171352154935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_167
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 262
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8ffa09f954e7cfd0800000000000000
+      internalID: -2321636007804731506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_168
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 269
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0ee4b6f626f18f0800000000000000
+      internalID: -567626797344169801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_169
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 259
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c653e3995549e1610800000000000000
+      internalID: 1593874413499856236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_170
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 255
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95b99426fb6548450800000000000000
+      internalID: 6090087976099486553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_171
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 259
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c01a58f34345bc40800000000000000
+      internalID: 5527398076875673799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_172
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 255
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88398f38e61541c80800000000000000
+      internalID: -8352961873763069048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_173
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 259
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3057ebb571d5a700800000000000000
+      internalID: 551076833016631357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_174
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 255
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a832ffeba890aabe0800000000000000
+      internalID: -1465348237241146486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_175
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 259
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d361f499ab5817110800000000000000
+      internalID: 1256932807495587389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_176
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 255
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7a8599f7cfbc55e0800000000000000
+      internalID: -1919448475559949700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_177
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 259
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63debcf8ead6fd410800000000000000
+      internalID: 1504041397069278518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_178
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 255
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c94ef656de4638f0800000000000000
+      internalID: -561174421071574588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_179
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 259
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaaea34ef5eb1e680800000000000000
+      internalID: -8727485283807073618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_180
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 255
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acef02044ba17a6c0800000000000000
+      internalID: -4132304771616801078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_181
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 259
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e77ae7a724dc40f50800000000000000
+      internalID: 6846823018916652926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_182
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 255
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1728259c506acfde0800000000000000
+      internalID: -1297980048806870415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_183
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 259
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c522eacbb701c290800000000000000
+      internalID: -7872002170522819131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_184
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 255
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43724e98562941220800000000000000
+      internalID: 2455748661626545972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_185
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 259
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 133b651a99dc2eb40800000000000000
+      internalID: 5468158957301707569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_186
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 255
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f631af8d386f2e5d0800000000000000
+      internalID: -3034592152752876689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_187
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 259
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 971641cde9f8eef90800000000000000
+      internalID: -6922437664761945735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_188
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 255
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 769cee885523ad690800000000000000
+      internalID: -7576688080146478745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_189
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 259
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ba45a7d6180b8c0800000000000000
+      internalID: -3985543363019101407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_190
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 255
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f8979f5ed3573ee0800000000000000
+      internalID: -1281463354412001031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_191
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 259
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ced4b3bf49254fc0800000000000000
+      internalID: -3511354912171303232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_192
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 255
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f10aff5ce18e811d0800000000000000
+      internalID: -3379696301473030113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_193
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 259
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b65c0ac7a2601eae0800000000000000
+      internalID: -1521928419525212821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_boat_194
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 255
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 421061ef7e18e6020800000000000000
+      internalID: 2336948090052149540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pirate_boat_0: -6790599241328402257
+      pirate_boat_1: 7290419211648439357
+      pirate_boat_10: -3032600833025319568
+      pirate_boat_100: 3837705708585113683
+      pirate_boat_101: -3533885537145639632
+      pirate_boat_102: 893835118611818674
+      pirate_boat_103: -4498553088746872192
+      pirate_boat_104: -8647142441170540908
+      pirate_boat_105: 6689847212290282489
+      pirate_boat_106: 9031909430825633645
+      pirate_boat_107: -1938013793924175763
+      pirate_boat_108: -1734049619698483340
+      pirate_boat_109: -3956130122895384873
+      pirate_boat_11: -2053523425974091587
+      pirate_boat_110: 6635290921266679140
+      pirate_boat_111: 2108121228620001782
+      pirate_boat_112: 2799911696240006792
+      pirate_boat_113: -4237615069222172120
+      pirate_boat_114: -5929596585489372350
+      pirate_boat_115: 3014944395273338506
+      pirate_boat_116: -3586862607762842443
+      pirate_boat_117: 1762790330765549106
+      pirate_boat_118: 4253636160407855649
+      pirate_boat_119: -6650742467089853475
+      pirate_boat_12: -7887531726747665309
+      pirate_boat_120: -1827638637981042799
+      pirate_boat_121: -8237544968468404146
+      pirate_boat_122: 1783764966164850272
+      pirate_boat_123: -4334842623884770947
+      pirate_boat_124: 2871876964228158273
+      pirate_boat_125: 6091600409960729178
+      pirate_boat_126: -1812753280465168693
+      pirate_boat_127: 2231012187983934895
+      pirate_boat_128: -5225325853729050131
+      pirate_boat_129: 8416055051620974503
+      pirate_boat_13: 3106340017477676894
+      pirate_boat_130: -5301086831500494986
+      pirate_boat_131: -1214915027182688401
+      pirate_boat_132: 2355236568877209663
+      pirate_boat_133: -1980758808406342160
+      pirate_boat_134: -4719688915338064203
+      pirate_boat_135: 7718289982373867954
+      pirate_boat_136: -8046291190522329701
+      pirate_boat_137: 5258135659283707117
+      pirate_boat_138: -3577910491974278407
+      pirate_boat_139: 7814986179471221745
+      pirate_boat_14: -6052082739102333118
+      pirate_boat_140: 2821472820509847568
+      pirate_boat_141: 5357618542089524131
+      pirate_boat_142: -1130892046460382864
+      pirate_boat_143: -5364417635349911012
+      pirate_boat_144: -7239098674830880356
+      pirate_boat_145: 7725114102724898323
+      pirate_boat_146: -4271431497915893036
+      pirate_boat_147: 7668263784091629765
+      pirate_boat_148: 2825658851873645084
+      pirate_boat_149: -5669077630830831778
+      pirate_boat_15: 7197757738095590915
+      pirate_boat_150: 2126947392468050066
+      pirate_boat_151: -8461093313212564657
+      pirate_boat_152: -5759561810148791280
+      pirate_boat_153: -3105766409251986652
+      pirate_boat_154: -6117891463511619026
+      pirate_boat_155: -8189582103576465744
+      pirate_boat_156: -3447789356418205473
+      pirate_boat_157: -5247713872950850632
+      pirate_boat_158: 5906327985627524454
+      pirate_boat_159: -8836472451669990447
+      pirate_boat_16: 8401799385245493770
+      pirate_boat_160: 2735112125184205190
+      pirate_boat_161: 7324543621589140771
+      pirate_boat_162: 8252288828056304858
+      pirate_boat_163: -3406117381978686804
+      pirate_boat_164: 579068879271065957
+      pirate_boat_165: 6815036047952487076
+      pirate_boat_166: 3548599171352154935
+      pirate_boat_167: -2321636007804731506
+      pirate_boat_168: -567626797344169801
+      pirate_boat_169: 1593874413499856236
+      pirate_boat_17: 3589162024849853262
+      pirate_boat_170: 6090087976099486553
+      pirate_boat_171: 5527398076875673799
+      pirate_boat_172: -8352961873763069048
+      pirate_boat_173: 551076833016631357
+      pirate_boat_174: -1465348237241146486
+      pirate_boat_175: 1256932807495587389
+      pirate_boat_176: -1919448475559949700
+      pirate_boat_177: 1504041397069278518
+      pirate_boat_178: -561174421071574588
+      pirate_boat_179: -8727485283807073618
+      pirate_boat_18: -5103551131692881627
+      pirate_boat_180: -4132304771616801078
+      pirate_boat_181: 6846823018916652926
+      pirate_boat_182: -1297980048806870415
+      pirate_boat_183: -7872002170522819131
+      pirate_boat_184: 2455748661626545972
+      pirate_boat_185: 5468158957301707569
+      pirate_boat_186: -3034592152752876689
+      pirate_boat_187: -6922437664761945735
+      pirate_boat_188: -7576688080146478745
+      pirate_boat_189: -3985543363019101407
+      pirate_boat_19: 1696714731787954955
+      pirate_boat_190: -1281463354412001031
+      pirate_boat_191: -3511354912171303232
+      pirate_boat_192: -3379696301473030113
+      pirate_boat_193: -1521928419525212821
+      pirate_boat_194: 2336948090052149540
+      pirate_boat_2: 2820333331298690555
+      pirate_boat_20: -1409860716533753101
+      pirate_boat_21: -6162496046333694669
+      pirate_boat_22: -5757935677150347741
+      pirate_boat_23: -8471568415414270556
+      pirate_boat_24: 6542006828109982258
+      pirate_boat_25: 3538774227853044130
+      pirate_boat_26: -805740535942659206
+      pirate_boat_27: -8132911870409758852
+      pirate_boat_28: -3275180224567186259
+      pirate_boat_29: 1613856284267996929
+      pirate_boat_3: 686035681103465690
+      pirate_boat_30: 4408117442517645659
+      pirate_boat_31: 3768902966424125570
+      pirate_boat_32: -7093627078608863439
+      pirate_boat_33: -7852141075978483125
+      pirate_boat_34: -6728086582131953375
+      pirate_boat_35: 1955875223137647309
+      pirate_boat_36: -1497744831183007533
+      pirate_boat_37: 4973622903919609343
+      pirate_boat_38: -693178984370459634
+      pirate_boat_39: 7147382354538750006
+      pirate_boat_4: 2697191512571074312
+      pirate_boat_40: 3221515184967927701
+      pirate_boat_41: -7597115424597656557
+      pirate_boat_42: -7551117814230866540
+      pirate_boat_43: -5561155054037887000
+      pirate_boat_44: -7833219337352494702
+      pirate_boat_45: -551743802517725663
+      pirate_boat_46: -7995983283344046145
+      pirate_boat_47: 9085268922737993611
+      pirate_boat_48: 7887593282315328883
+      pirate_boat_49: 305390515093712891
+      pirate_boat_5: 4966529648808419580
+      pirate_boat_50: 6889188264694991192
+      pirate_boat_51: 7824906868319364108
+      pirate_boat_52: 5593871196346354312
+      pirate_boat_53: 7354139264119104183
+      pirate_boat_54: -2769427502600687031
+      pirate_boat_55: 4909649078639942005
+      pirate_boat_56: 6913576531123543590
+      pirate_boat_57: 7296042732607840484
+      pirate_boat_58: 3253189625247993036
+      pirate_boat_59: 3128965256773503810
+      pirate_boat_6: 3167689213457246520
+      pirate_boat_60: -1737569921899650332
+      pirate_boat_61: -864548662405775661
+      pirate_boat_62: -5961201125852903919
+      pirate_boat_63: -128417432022267089
+      pirate_boat_64: -6615895654235973530
+      pirate_boat_65: -752589213029355683
+      pirate_boat_66: -4721035341065040839
+      pirate_boat_67: 7624278525678329828
+      pirate_boat_68: 5123621425811346926
+      pirate_boat_69: 7484489180762066466
+      pirate_boat_7: -7002093850668453049
+      pirate_boat_70: 3798342013754556017
+      pirate_boat_71: -6300269504651100272
+      pirate_boat_72: -9009147546017368527
+      pirate_boat_73: 15802744912295883
+      pirate_boat_74: 6938019750880253165
+      pirate_boat_75: 6222049117009964651
+      pirate_boat_76: 3877143226834849509
+      pirate_boat_77: -4714867156867411947
+      pirate_boat_78: 1477677305755689367
+      pirate_boat_79: -4345871996805669200
+      pirate_boat_8: 5164751650443999069
+      pirate_boat_80: -1335059891549462492
+      pirate_boat_81: 4376111945048066215
+      pirate_boat_82: 8504943652195559837
+      pirate_boat_83: -150932321618952286
+      pirate_boat_84: -7841712992746561147
+      pirate_boat_85: 5307141691438345963
+      pirate_boat_86: 3066900119257286124
+      pirate_boat_87: 5790827136927846988
+      pirate_boat_88: 5739277831006078657
+      pirate_boat_89: -2826462971557167616
+      pirate_boat_9: 8501844565682492752
+      pirate_boat_90: 9090616555386814981
+      pirate_boat_91: -9119117187521446380
+      pirate_boat_92: -5836515824171422665
+      pirate_boat_93: -2375641156823497304
+      pirate_boat_94: 6057877258785975647
+      pirate_boat_95: -3682166537818196333
+      pirate_boat_96: 7316351570847733277
+      pirate_boat_97: -5718133262300760471
+      pirate_boat_98: 8308092361159339956
+      pirate_boat_99: 2670946233221689806
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
