@@ -11,7 +11,7 @@ public class WorldGenerator : MonoBehaviour
     public static WorldGenerator Instance { get; private set; }
 
     public int worldZoneCount = 3;
-    public GameObject rockPrefab;
+    public GameObject[] rockPrefabs;
     public List<Vector2> rockPositions = new();
 
     public int rockCount = 50;
@@ -52,13 +52,19 @@ public class WorldGenerator : MonoBehaviour
             }
         }
 
-        // Step 2: Check and generate rock positions if needed
+        // Step 2. Generate water tiles to represent the zones
+        if (WaterTileManager.Instance != null)
+        {
+            WaterTileManager.Instance.GenerateWaterTiles();
+        }
+
+        // Step 3: Check and generate rock positions if needed
         if (rockPositions == null || rockPositions.Count == 0)
         {
             GenerateNewRockPositions();
         }
 
-        // Step 3: Place rocks
+        // Step 4: Place rocks
         PlaceRocks();
     }
 
@@ -104,8 +110,19 @@ public class WorldGenerator : MonoBehaviour
     {
         foreach (Vector2 position in rockPositions)
         {
-            GameObject rock = Instantiate(rockPrefab, position, Quaternion.identity);
+            // Select a random prefab from the array
+            GameObject selectedPrefab = rockPrefabs[Random.Range(0, rockPrefabs.Length)];
+
+            // Instantiate the selected prefab
+            GameObject rock = Instantiate(selectedPrefab, position, Quaternion.identity);
             rock.transform.SetParent(transform);
+
+            // Flip the rock randomly
+            bool flipHorizontal = Random.value > 0.5f;
+            rock.transform.localScale = new Vector2(
+                flipHorizontal ? -1 : 1, // Flip X scale to flip horizontally
+                1                      // Keep Y scale the same
+            );
         }
     }
 
