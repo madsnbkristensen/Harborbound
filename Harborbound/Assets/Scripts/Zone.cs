@@ -9,8 +9,6 @@ public class Zone : MonoBehaviour
     public string zoneName;
     public float innerRadius = 20f;
     public float outerRadius = 30f;
-    public Color color = Color.blue;
-
     public float fishSpawnRate = 1f;
     public float enemySpawnRate = 1f;
     //public List<Fish> availableFish = new();
@@ -22,9 +20,4 @@ public class Zone : MonoBehaviour
         return availableFish[UnityEngine.Random.Range(0, availableFish.Count)];
     } */
 
-    public bool IsPositionInZone(Vector2 playerPosition, Vector2 islandCenterPosition)
-    {
-        float distance = Vector2.Distance(playerPosition, islandCenterPosition);
-        return distance >= innerRadius && distance <= outerRadius;
-    }
 }
