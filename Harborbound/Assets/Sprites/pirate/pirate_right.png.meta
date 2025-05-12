@@ -1,0 +1,4875 @@
+fileFormatVersion: 2
+guid: ca6250bff8f1f425f81c6b3298462332
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2525700080194561763
+    second: pirate_right_0
+  - first:
+      213: -2213963395806058779
+    second: pirate_right_1
+  - first:
+      213: -6272674087057668394
+    second: pirate_right_2
+  - first:
+      213: 8085233222711271975
+    second: pirate_right_3
+  - first:
+      213: 3902025635862840546
+    second: pirate_right_4
+  - first:
+      213: -156214472667443286
+    second: pirate_right_5
+  - first:
+      213: 5298191074391374999
+    second: pirate_right_6
+  - first:
+      213: 5091558331618136605
+    second: pirate_right_7
+  - first:
+      213: -3811119813039025658
+    second: pirate_right_8
+  - first:
+      213: 5526949630667392398
+    second: pirate_right_9
+  - first:
+      213: -2524663919917269251
+    second: pirate_right_10
+  - first:
+      213: 2718262666052890639
+    second: pirate_right_11
+  - first:
+      213: -7744267368236574962
+    second: pirate_right_12
+  - first:
+      213: -1785038350859570512
+    second: pirate_right_13
+  - first:
+      213: -2955760037560307972
+    second: pirate_right_14
+  - first:
+      213: -7180538998908560656
+    second: pirate_right_15
+  - first:
+      213: 569997547800037615
+    second: pirate_right_16
+  - first:
+      213: 1943430807010364270
+    second: pirate_right_17
+  - first:
+      213: 1566080383554637017
+    second: pirate_right_18
+  - first:
+      213: -3084798014745275944
+    second: pirate_right_19
+  - first:
+      213: -5683174069124723906
+    second: pirate_right_20
+  - first:
+      213: 2955059475164989699
+    second: pirate_right_21
+  - first:
+      213: -8774818280015971341
+    second: pirate_right_22
+  - first:
+      213: 3262041002037872765
+    second: pirate_right_23
+  - first:
+      213: 1641686827583084033
+    second: pirate_right_24
+  - first:
+      213: -3989766631528635568
+    second: pirate_right_25
+  - first:
+      213: 2043945063572877324
+    second: pirate_right_26
+  - first:
+      213: 1786978648329331144
+    second: pirate_right_27
+  - first:
+      213: -6690658770590874972
+    second: pirate_right_28
+  - first:
+      213: 1360036275616779333
+    second: pirate_right_29
+  - first:
+      213: 644591366166988297
+    second: pirate_right_30
+  - first:
+      213: -3731764834867169863
+    second: pirate_right_31
+  - first:
+      213: -2765712212033261924
+    second: pirate_right_32
+  - first:
+      213: 2788930689162434362
+    second: pirate_right_33
+  - first:
+      213: -1011405972646497742
+    second: pirate_right_34
+  - first:
+      213: -4396333364296422079
+    second: pirate_right_35
+  - first:
+      213: 932085943195445640
+    second: pirate_right_36
+  - first:
+      213: 1613655161246116284
+    second: pirate_right_37
+  - first:
+      213: 3737293006748184323
+    second: pirate_right_38
+  - first:
+      213: 2523197768307579421
+    second: pirate_right_39
+  - first:
+      213: 2331863746168467226
+    second: pirate_right_40
+  - first:
+      213: 8372000312178782281
+    second: pirate_right_41
+  - first:
+      213: -6647474175367722219
+    second: pirate_right_42
+  - first:
+      213: -5189757687395034502
+    second: pirate_right_43
+  - first:
+      213: 1278140659983799861
+    second: pirate_right_44
+  - first:
+      213: 5366051009392789258
+    second: pirate_right_45
+  - first:
+      213: -245394957300372859
+    second: pirate_right_46
+  - first:
+      213: 8703082211451063116
+    second: pirate_right_47
+  - first:
+      213: 5305683135682760996
+    second: pirate_right_48
+  - first:
+      213: -153450140668499197
+    second: pirate_right_49
+  - first:
+      213: -2265447170435806570
+    second: pirate_right_50
+  - first:
+      213: 1521316627911863197
+    second: pirate_right_51
+  - first:
+      213: 222752793489959401
+    second: pirate_right_52
+  - first:
+      213: -6370579830438808011
+    second: pirate_right_53
+  - first:
+      213: -233608615487999773
+    second: pirate_right_54
+  - first:
+      213: -3480909294967469353
+    second: pirate_right_55
+  - first:
+      213: -6522263775007818900
+    second: pirate_right_56
+  - first:
+      213: 7966958879328754855
+    second: pirate_right_57
+  - first:
+      213: 4300017302176599588
+    second: pirate_right_58
+  - first:
+      213: -6828778670392771378
+    second: pirate_right_59
+  - first:
+      213: 1449779520769319677
+    second: pirate_right_60
+  - first:
+      213: -7022863515854525589
+    second: pirate_right_61
+  - first:
+      213: -6791412056767451012
+    second: pirate_right_62
+  - first:
+      213: -6713753436163204100
+    second: pirate_right_63
+  - first:
+      213: -1292582318427595170
+    second: pirate_right_64
+  - first:
+      213: 6934068485110420886
+    second: pirate_right_65
+  - first:
+      213: 307430119984035357
+    second: pirate_right_66
+  - first:
+      213: 7016914378846048800
+    second: pirate_right_67
+  - first:
+      213: -3187345021735047043
+    second: pirate_right_68
+  - first:
+      213: 8169821853382990439
+    second: pirate_right_69
+  - first:
+      213: 7285610800378497178
+    second: pirate_right_70
+  - first:
+      213: -8860857473060197672
+    second: pirate_right_71
+  - first:
+      213: 8089270528091236189
+    second: pirate_right_72
+  - first:
+      213: 8057678122117955856
+    second: pirate_right_73
+  - first:
+      213: -5174513654993772654
+    second: pirate_right_74
+  - first:
+      213: 1920620601075788337
+    second: pirate_right_75
+  - first:
+      213: -7246181270320743812
+    second: pirate_right_76
+  - first:
+      213: 1596760425338120625
+    second: pirate_right_77
+  - first:
+      213: 1944111037210205448
+    second: pirate_right_78
+  - first:
+      213: -4048991325209482009
+    second: pirate_right_79
+  - first:
+      213: 2954868370231310410
+    second: pirate_right_80
+  - first:
+      213: -4558804764038875527
+    second: pirate_right_81
+  - first:
+      213: -1133561462469332312
+    second: pirate_right_82
+  - first:
+      213: 479314505628582345
+    second: pirate_right_83
+  - first:
+      213: -3375281006500248478
+    second: pirate_right_84
+  - first:
+      213: -3776614910548732354
+    second: pirate_right_85
+  - first:
+      213: 71349660358981855
+    second: pirate_right_86
+  - first:
+      213: -3295333596889902637
+    second: pirate_right_87
+  - first:
+      213: 4490579485726471918
+    second: pirate_right_88
+  - first:
+      213: 3060412924323975464
+    second: pirate_right_89
+  - first:
+      213: -3275803233967792852
+    second: pirate_right_90
+  - first:
+      213: -6041443125198338740
+    second: pirate_right_91
+  - first:
+      213: 3444219063985716038
+    second: pirate_right_92
+  - first:
+      213: 1308832856208159081
+    second: pirate_right_93
+  - first:
+      213: 7905803118204991103
+    second: pirate_right_94
+  - first:
+      213: 3206126789538498392
+    second: pirate_right_95
+  - first:
+      213: 7020163740145710757
+    second: pirate_right_96
+  - first:
+      213: -8240121899643196842
+    second: pirate_right_97
+  - first:
+      213: 3069378164412048343
+    second: pirate_right_98
+  - first:
+      213: 6729690732808715757
+    second: pirate_right_99
+  - first:
+      213: -5752896779341178883
+    second: pirate_right_100
+  - first:
+      213: 8471693263866364819
+    second: pirate_right_101
+  - first:
+      213: -4489651099121201797
+    second: pirate_right_102
+  - first:
+      213: -4444088517883155170
+    second: pirate_right_103
+  - first:
+      213: 149957980760241277
+    second: pirate_right_104
+  - first:
+      213: 8646938964770636459
+    second: pirate_right_105
+  - first:
+      213: -5747289489549809170
+    second: pirate_right_106
+  - first:
+      213: 5752288017597657558
+    second: pirate_right_107
+  - first:
+      213: -26571751415997801
+    second: pirate_right_108
+  - first:
+      213: 8682201939372847094
+    second: pirate_right_109
+  - first:
+      213: 5093463509441598963
+    second: pirate_right_110
+  - first:
+      213: 7663510641934947559
+    second: pirate_right_111
+  - first:
+      213: -8616483055799784716
+    second: pirate_right_112
+  - first:
+      213: 8348990652966895783
+    second: pirate_right_113
+  - first:
+      213: -6347511461607351017
+    second: pirate_right_114
+  - first:
+      213: -5999637038761940564
+    second: pirate_right_115
+  - first:
+      213: 3672534531509702988
+    second: pirate_right_116
+  - first:
+      213: -2366515790009841160
+    second: pirate_right_117
+  - first:
+      213: -2241973288503997355
+    second: pirate_right_118
+  - first:
+      213: -5687960921017694635
+    second: pirate_right_119
+  - first:
+      213: 6824266983854012338
+    second: pirate_right_120
+  - first:
+      213: -2386757634345156552
+    second: pirate_right_121
+  - first:
+      213: 3415278257589139347
+    second: pirate_right_122
+  - first:
+      213: 5274737301345477935
+    second: pirate_right_123
+  - first:
+      213: -3078300940717152939
+    second: pirate_right_124
+  - first:
+      213: -8164786748081375702
+    second: pirate_right_125
+  - first:
+      213: 2787000373526109180
+    second: pirate_right_126
+  - first:
+      213: -7327446153529159833
+    second: pirate_right_127
+  - first:
+      213: 1743596259280612990
+    second: pirate_right_128
+  - first:
+      213: 8740324935035392287
+    second: pirate_right_129
+  - first:
+      213: 491440433565292313
+    second: pirate_right_130
+  - first:
+      213: 1635786985668947703
+    second: pirate_right_131
+  - first:
+      213: 1885352693433936966
+    second: pirate_right_132
+  - first:
+      213: 6932823909472209546
+    second: pirate_right_133
+  - first:
+      213: 739113365021209617
+    second: pirate_right_134
+  - first:
+      213: -3242007148989922127
+    second: pirate_right_135
+  - first:
+      213: -6563322836204983872
+    second: pirate_right_136
+  - first:
+      213: 7794799795602392635
+    second: pirate_right_137
+  - first:
+      213: -4145648330162654242
+    second: pirate_right_138
+  - first:
+      213: 7247927074338350030
+    second: pirate_right_139
+  - first:
+      213: -6699776176387193884
+    second: pirate_right_140
+  - first:
+      213: 8028733902788404353
+    second: pirate_right_141
+  - first:
+      213: 7775656914020072392
+    second: pirate_right_142
+  - first:
+      213: -2898032817670046606
+    second: pirate_right_143
+  - first:
+      213: 1522778743835685446
+    second: pirate_right_144
+  - first:
+      213: -3132279507402271565
+    second: pirate_right_145
+  - first:
+      213: 6210582827037434606
+    second: pirate_right_146
+  - first:
+      213: 6858153016774565045
+    second: pirate_right_147
+  - first:
+      213: 1928643910468848144
+    second: pirate_right_148
+  - first:
+      213: 7235324983854207009
+    second: pirate_right_149
+  - first:
+      213: 5876196550453366180
+    second: pirate_right_150
+  - first:
+      213: 5141555792861462174
+    second: pirate_right_151
+  - first:
+      213: -2717645488394330204
+    second: pirate_right_152
+  - first:
+      213: -7698078290337067754
+    second: pirate_right_153
+  - first:
+      213: 2005958250551497041
+    second: pirate_right_154
+  - first:
+      213: -7562358629550684390
+    second: pirate_right_155
+  - first:
+      213: 1748099495366357205
+    second: pirate_right_156
+  - first:
+      213: -7788309116163997194
+    second: pirate_right_157
+  - first:
+      213: -1052492082763470765
+    second: pirate_right_158
+  - first:
+      213: 527078366710029885
+    second: pirate_right_159
+  - first:
+      213: 5868376643646485766
+    second: pirate_right_160
+  - first:
+      213: -2290441206783182847
+    second: pirate_right_161
+  - first:
+      213: -4711602512316827050
+    second: pirate_right_162
+  - first:
+      213: -5087351740904922173
+    second: pirate_right_163
+  - first:
+      213: -6966471874830468449
+    second: pirate_right_164
+  - first:
+      213: 4815791674038881456
+    second: pirate_right_165
+  - first:
+      213: 7381288791868368884
+    second: pirate_right_166
+  - first:
+      213: 7821717084181327311
+    second: pirate_right_167
+  - first:
+      213: -8942733580739387700
+    second: pirate_right_168
+  - first:
+      213: -7436062658928055992
+    second: pirate_right_169
+  - first:
+      213: 8099699945257454707
+    second: pirate_right_170
+  - first:
+      213: -6691210715102277351
+    second: pirate_right_171
+  - first:
+      213: 4535054988822586080
+    second: pirate_right_172
+  - first:
+      213: 3574431638397295802
+    second: pirate_right_173
+  - first:
+      213: 6387978597299322107
+    second: pirate_right_174
+  - first:
+      213: -4963396655989387996
+    second: pirate_right_175
+  - first:
+      213: -7318652220508671072
+    second: pirate_right_176
+  - first:
+      213: 7405992653050182142
+    second: pirate_right_177
+  - first:
+      213: -6920376098514402560
+    second: pirate_right_178
+  - first:
+      213: -7251949565205205297
+    second: pirate_right_179
+  - first:
+      213: 3740089337497715402
+    second: pirate_right_180
+  - first:
+      213: 1990249419888797846
+    second: pirate_right_181
+  - first:
+      213: 3799070833829421489
+    second: pirate_right_182
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pirate_right_0
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1119
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19d3d6a829e2fcd0800000000000000
+      internalID: -2525700080194561763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_1
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1115
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e62347850c6641e0800000000000000
+      internalID: -2213963395806058779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_2
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1121
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d64121e62cf2f8a0800000000000000
+      internalID: -6272674087057668394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_3
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 1113
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72264e557c4843070800000000000000
+      internalID: 8085233222711271975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_4
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1113
+        width: 36
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4821a54a7c62630800000000000000
+      internalID: 3902025635862840546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_5
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1115
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aafc1e7c3c305ddf0800000000000000
+      internalID: -156214472667443286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_6
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 1117
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c3e3d06b4f68940800000000000000
+      internalID: 5298191074391374999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_7
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1128
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d12974d8359d8a640800000000000000
+      internalID: 5091558331618136605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_8
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1115
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6021b53e8be2c1bc0800000000000000
+      internalID: -3811119813039025658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_9
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1119
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e850863f76ba3bc40800000000000000
+      internalID: 5526949630667392398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_10
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1113
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfef5148a8796fcd0800000000000000
+      internalID: -2524663919917269251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_11
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1113
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00f9482e7539b520800000000000000
+      internalID: 2718262666052890639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_12
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1115
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e071c960cd5d68490800000000000000
+      internalID: -7744267368236574962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_13
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 1111
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b2f092d3154a37e0800000000000000
+      internalID: -1785038350859570512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_14
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 1119
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe2ce7f7e70bf6d0800000000000000
+      internalID: -2955760037560307972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_15
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1128
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fa573a13d9995c90800000000000000
+      internalID: -7180538998908560656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_16
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1115
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe8077fefb909e700800000000000000
+      internalID: 569997547800037615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_17
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1119
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6b4761b50478fa10800000000000000
+      internalID: 1943430807010364270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_18
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1113
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc4b77bfc5dbb510800000000000000
+      internalID: 1566080383554637017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_19
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1113
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d1174fac889035d0800000000000000
+      internalID: -3084798014745275944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_20
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1115
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b0c1d7b4f4121b0800000000000000
+      internalID: -5683174069124723906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_21
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 1117
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3098c53afea720920800000000000000
+      internalID: 2955059475164989699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_22
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1119
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb3b0be345993680800000000000000
+      internalID: -8774818280015971341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_23
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1115
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d780a312209154d20800000000000000
+      internalID: 3262041002037872765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_24
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 1126
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 106178eb87178c610800000000000000
+      internalID: 1641686827583084033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_25
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 1113
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0536707236081a8c0800000000000000
+      internalID: -3989766631528635568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_26
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1113
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c00bcaeb43d8d5c10800000000000000
+      internalID: 2043945063572877324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_27
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 1115
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c1a0e2ec9f9cc810800000000000000
+      internalID: 1786978648329331144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_28
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1111
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a24499fb410623a0800000000000000
+      internalID: -6690658770590874972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_29
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1119
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54c88c179c1dfd210800000000000000
+      internalID: 1360036275616779333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_30
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 1128
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 906caadae6c02f800800000000000000
+      internalID: 644591366166988297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_31
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 1115
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b5b27887ab163cc0800000000000000
+      internalID: -3731764834867169863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_32
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 1119
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9e2cc285673e99d0800000000000000
+      internalID: -2765712212033261924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_33
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1113
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3756b67fa544b620800000000000000
+      internalID: 2788930689162434362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_34
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1113
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23272b460a3c6f1f0800000000000000
+      internalID: -1011405972646497742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_35
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1115
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14de9e219161df2c0800000000000000
+      internalID: -4396333364296422079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_36
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1117
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 889ac481a3f6fec00800000000000000
+      internalID: 932085943195445640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_37
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1119
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb9ec04d1dad46610800000000000000
+      internalID: 1613655161246116284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_38
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1115
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30fe6c840388dd330800000000000000
+      internalID: 3737293006748184323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_39
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 1126
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1a18067003340320800000000000000
+      internalID: 2523197768307579421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_40
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 1113
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1fabfee8b17c5020800000000000000
+      internalID: 2331863746168467226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_41
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1113
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94030ea5de15f2470800000000000000
+      internalID: 8372000312178782281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_42
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 1115
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51bcf93157d6fb3a0800000000000000
+      internalID: -6647474175367722219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_43
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 1117
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7a577c31e64af7b0800000000000000
+      internalID: -5189757687395034502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_44
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1128
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536515b882edcb110800000000000000
+      internalID: 1278140659983799861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_45
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1115
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07cb7566fa087a40800000000000000
+      internalID: 5366051009392789258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_46
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1117
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58a6074269e289cf0800000000000000
+      internalID: -245394957300372859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_47
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1113
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4bcf80192f87c870800000000000000
+      internalID: 8703082211451063116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_48
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 1115
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 421d62183b291a940800000000000000
+      internalID: 5305683135682760996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_49
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 1111
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30b68baf8e5deddf0800000000000000
+      internalID: -153450140668499197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_50
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1111
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69a82c42dc38f80e0800000000000000
+      internalID: -2265447170435806570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_51
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1119
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9be49da96dcc1510800000000000000
+      internalID: 1521316627911863197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_52
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1119
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e9e1b84c70671300800000000000000
+      internalID: 222752793489959401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_53
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1115
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5363d61a5672797a0800000000000000
+      internalID: -6370579830438808011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_54
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 1126
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e0fd51b33e02ccf0800000000000000
+      internalID: -233608615487999773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_55
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 1113
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dacb1a507351bfc0800000000000000
+      internalID: -3480909294967469353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_56
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 1111
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6bb24f27a34c75a0800000000000000
+      internalID: -6522263775007818900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_57
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1115
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7acd886d3e2509e60800000000000000
+      internalID: 7966958879328754855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_58
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 1117
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e054034fabcab30800000000000000
+      internalID: 4300017302176599588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_59
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1128
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecc797dcafd4b31a0800000000000000
+      internalID: -6828778670392771378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_60
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1115
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df2671afac6ae1410800000000000000
+      internalID: 1449779520769319677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_61
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 1119
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6ba07f47d6c98e90800000000000000
+      internalID: -7022863515854525589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_62
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1113
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c70321187be00c1a0800000000000000
+      internalID: -6791412056767451012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_63
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1111
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb1fef12d4f3d2a0800000000000000
+      internalID: -6713753436163204100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_64
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 1115
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e1c23da33df0ee0800000000000000
+      internalID: -1292582318427595170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_65
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 1111
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 695dc378c82ca3060800000000000000
+      internalID: 6934068485110420886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_66
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 1119
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1677e6b016344400800000000000000
+      internalID: 307430119984035357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_67
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 1119
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 022137a4376116160800000000000000
+      internalID: 7016914378846048800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_68
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 1115
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d707fda079644c3d0800000000000000
+      internalID: -3187345021735047043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_69
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1121
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76add19a0b9016170800000000000000
+      internalID: 8169821853382990439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_70
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1113
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a984f401c60bb1560800000000000000
+      internalID: 7285610800378497178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_71
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 1111
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8daa1e83319e70580800000000000000
+      internalID: -8860857473060197672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_72
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 256
+        width: 612
+        height: 861
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d572aeebfacd24070800000000000000
+      internalID: 8089270528091236189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_73
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1111
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01107478f8f92df60800000000000000
+      internalID: 8057678122117955856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_74
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 1111
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29f10bc1f3f6038b0800000000000000
+      internalID: -5174513654993772654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_75
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1111
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13a6b63c24a67aa10800000000000000
+      internalID: 1920620601075788337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_76
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1111
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7a717cc684607b90800000000000000
+      internalID: -7246181270320743812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_77
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 1111
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b92ea79525d82610800000000000000
+      internalID: 1596760425338120625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_78
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 1111
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80d94d020bedafa10800000000000000
+      internalID: 1944111037210205448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_79
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1111
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec204a97d71fc7c0800000000000000
+      internalID: -4048991325209482009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_80
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1111
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a48bcad802dc10920800000000000000
+      internalID: 2954868370231310410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_81
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1111
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 976ba1f783fdbb0c0800000000000000
+      internalID: -4558804764038875527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_82
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 1111
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a271721bd7c440f0800000000000000
+      internalID: -1133561462469332312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_83
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1111
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c10fabd00ed6a600800000000000000
+      internalID: 479314505628582345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_84
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1111
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2640e6ebec79821d0800000000000000
+      internalID: -3375281006500248478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_85
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 1111
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e369c4b8fb4c69bc0800000000000000
+      internalID: -3776614910548732354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_86
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1111
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8ba88532c7df000800000000000000
+      internalID: 71349660358981855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_87
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 1111
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d197f49d8f9442d0800000000000000
+      internalID: -3295333596889902637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_88
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1067
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee6f16a004eb15e30800000000000000
+      internalID: 4490579485726471918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_89
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1053
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82158540755c87a20800000000000000
+      internalID: 3060412924323975464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_90
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1005
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d164d80520a82d0800000000000000
+      internalID: -3275803233967792852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_91
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 992
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c45c3df8c7b782ca0800000000000000
+      internalID: -6041443125198338740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_92
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 944
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b3f7d8df25ccf20800000000000000
+      internalID: 3444219063985716038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_93
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 930
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 961b5a85c88e92210800000000000000
+      internalID: 1308832856208159081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_94
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 882
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76b8cc9c0e07bd60800000000000000
+      internalID: 7905803118204991103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_95
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 869
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8574e4b04537e7c20800000000000000
+      internalID: 3206126789538498392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_96
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 821
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a6767c2ab1ac6160800000000000000
+      internalID: 7020163740145710757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_97
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 808
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65aa9d15ac435ad80800000000000000
+      internalID: -8240121899643196842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_98
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 760
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d3ee13ad2f989a20800000000000000
+      internalID: 3069378164412048343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_99
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 746
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ded3d49e01aa46d50800000000000000
+      internalID: 6729690732808715757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_100
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 698
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df751edfbda9920b0800000000000000
+      internalID: -5752896779341178883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_101
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 685
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39303d67320819570800000000000000
+      internalID: 8471693263866364819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_102
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 637
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7d407fcc1e81b1c0800000000000000
+      internalID: -4489651099121201797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_103
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 623
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1dae2de90d6352c0800000000000000
+      internalID: -4444088517883155170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_104
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 575
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d74f27e2df1c41200800000000000000
+      internalID: 149957980760241277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_105
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 562
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba243adcc29100870800000000000000
+      internalID: 8646938964770636459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_106
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 514
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee92c02e8a68d30b0800000000000000
+      internalID: -5747289489549809170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_107
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 500
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1f4ae997b34df40800000000000000
+      internalID: 5752288017597657558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_108
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 452
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a1ac3022991aff0800000000000000
+      internalID: -26571751415997801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_109
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 439
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ffa680e9a06d7870800000000000000
+      internalID: 8682201939372847094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_110
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 391
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f55ea4531e9fa640800000000000000
+      internalID: 5093463509441598963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_111
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 377
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e455f863524a5a60800000000000000
+      internalID: 7663510641934947559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_112
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 329
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4faa1e5105a1c6880800000000000000
+      internalID: -8616483055799784716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_113
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 316
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a0062793c29dd370800000000000000
+      internalID: 8348990652966895783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_114
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 278
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71d5c2bc4fb19e7a0800000000000000
+      internalID: -6347511461607351017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_115
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 278
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca9615396e10dbca0800000000000000
+      internalID: -5999637038761940564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_116
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 278
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c41ddffc2b677f230800000000000000
+      internalID: 3672534531509702988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_117
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 283
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f94c156d62782fd0800000000000000
+      internalID: -2366515790009841160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_118
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 278
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55c0ece2c29e2e0e0800000000000000
+      internalID: -2241973288503997355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_119
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 278
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 556cf6eadad4011b0800000000000000
+      internalID: -5687960921017694635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_120
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 278
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b77b015aaaa4be50800000000000000
+      internalID: 6824266983854012338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_121
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 278
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 830c7efb39880eed0800000000000000
+      internalID: -2386757634345156552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_122
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 278
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39737b8fa71856f20800000000000000
+      internalID: 3415278257589139347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_123
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 278
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f25233af0a1a33940800000000000000
+      internalID: 5274737301345477935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_124
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 278
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 555adcc9a9da745d0800000000000000
+      internalID: -3078300940717152939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_125
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 278
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a26fac526b9d0be80800000000000000
+      internalID: -8164786748081375702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_126
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 278
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb97e4d21a6da620800000000000000
+      internalID: 2787000373526109180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_127
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 278
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76f871cbb8eaf4a90800000000000000
+      internalID: -7327446153529159833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_128
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 278
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7eee125f8f723810800000000000000
+      internalID: 1743596259280612990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_129
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 278
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11164e583fdb4970800000000000000
+      internalID: 8740324935035392287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_130
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 278
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9175ce67872f1d600800000000000000
+      internalID: 491440433565292313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_131
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 278
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe2101c89b73b610800000000000000
+      internalID: 1635786985668947703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_132
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 278
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ca470294e1a2a10800000000000000
+      internalID: 1885352693433936966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_133
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 278
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a0d6e2d96563060800000000000000
+      internalID: 6932823909472209546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_134
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 274
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11435d280bbd14a00800000000000000
+      internalID: 739113365021209617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_135
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b4cd25cca31203d0800000000000000
+      internalID: -3242007148989922127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_136
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 274
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c9eac987a46ae4a0800000000000000
+      internalID: -6563322836204983872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_137
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b360b209d11bc2c60800000000000000
+      internalID: 7794799795602392635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_138
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 266
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3b6fceec2b776c0800000000000000
+      internalID: -4145648330162654242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_139
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec3afdfd54fc59460800000000000000
+      internalID: 7247927074338350030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_140
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 274
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e301d3801d9503a0800000000000000
+      internalID: -6699776176387193884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_141
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 184a6df42facb6f60800000000000000
+      internalID: 8028733902788404353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_142
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 266
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbf97f14cea8eb60800000000000000
+      internalID: 7775656914020072392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_143
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 268
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c3a5bb18e18c7d0800000000000000
+      internalID: -2898032817670046606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_144
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 274
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64277d1133ff12510800000000000000
+      internalID: 1522778743835685446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_145
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b45d003268e784d0800000000000000
+      internalID: -3132279507402271565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_146
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 266
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee225b51d2c603650800000000000000
+      internalID: 6210582827037434606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_147
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc1f1c25dd0d2f50800000000000000
+      internalID: 6858153016774565045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_148
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 274
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a47bd0b6be3ca10800000000000000
+      internalID: 1928643910468848144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_149
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12093290db9096460800000000000000
+      internalID: 7235324983854207009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_150
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 266
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ad062411a17c8150800000000000000
+      internalID: 5876196550453366180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_151
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 268
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9efb52a0c97a5740800000000000000
+      internalID: 5141555792861462174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_152
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 274
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4af10d6b3dbf84ad0800000000000000
+      internalID: -2717645488394330204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_153
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 268
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d0053c49eea2590800000000000000
+      internalID: -7698078290337067754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_154
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 266
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 151d26e966896db10800000000000000
+      internalID: 2005958250551497041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_155
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a17858db4ea1d0790800000000000000
+      internalID: -7562358629550684390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_156
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 274
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d0f95daa3f724810800000000000000
+      internalID: 1748099495366357205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_157
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f1cb128f1e5ae390800000000000000
+      internalID: -7788309116163997194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_158
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 266
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358e8fde60cc461f0800000000000000
+      internalID: -1052492082763470765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_159
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 268
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e5b806bfe805700800000000000000
+      internalID: 527078366710029885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_160
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 274
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6057fb42779a07150800000000000000
+      internalID: 5868376643646485766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_161
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 268
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10875c29bd7b630e0800000000000000
+      internalID: -2290441206783182847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_162
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 266
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a748a6a760d9eb0800000000000000
+      internalID: -4711602512316827050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_163
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3a5ebab881669b0800000000000000
+      internalID: -5087351740904922173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_164
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 274
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9afaf26dbe125f90800000000000000
+      internalID: -6966471874830468449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_165
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc0f5b230125d240800000000000000
+      internalID: 4815791674038881456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_166
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 266
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f7e2e76c0b9f6660800000000000000
+      internalID: 7381288791868368884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_167
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd6b303f325c8c60800000000000000
+      internalID: 7821717084181327311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_168
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 274
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce521f503705e380800000000000000
+      internalID: -8942733580739387700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_169
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 849eb0fd86ccdc890800000000000000
+      internalID: -7436062658928055992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_170
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 266
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c4258af2ae76070800000000000000
+      internalID: 8099699945257454707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_171
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9119a016e4b0423a0800000000000000
+      internalID: -6691210715102277351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_172
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 274
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e222ad0c70cfee30800000000000000
+      internalID: 4535054988822586080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_173
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abc969013aeea9130800000000000000
+      internalID: 3574431638397295802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_174
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 258
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfcf2d470b8a6a850800000000000000
+      internalID: 6387978597299322107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_175
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 258
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d0460e9097e1bb0800000000000000
+      internalID: -4963396655989387996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_176
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 258
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a3f4f1d49cee6a90800000000000000
+      internalID: -7318652220508671072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_177
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 258
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef9753e441f57c660800000000000000
+      internalID: 7405992653050182142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_178
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 258
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00302f7aa92e5ff90800000000000000
+      internalID: -6920376098514402560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_179
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 258
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fce25ecfa46eb5b90800000000000000
+      internalID: -7251949565205205297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_180
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 258
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac207c5cf6777e330800000000000000
+      internalID: 3740089337497715402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_181
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 258
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69826e67d49ce9b10800000000000000
+      internalID: 1990249419888797846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pirate_right_182
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 258
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b123f68bc209b430800000000000000
+      internalID: 3799070833829421489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pirate_right_0: -2525700080194561763
+      pirate_right_1: -2213963395806058779
+      pirate_right_10: -2524663919917269251
+      pirate_right_100: -5752896779341178883
+      pirate_right_101: 8471693263866364819
+      pirate_right_102: -4489651099121201797
+      pirate_right_103: -4444088517883155170
+      pirate_right_104: 149957980760241277
+      pirate_right_105: 8646938964770636459
+      pirate_right_106: -5747289489549809170
+      pirate_right_107: 5752288017597657558
+      pirate_right_108: -26571751415997801
+      pirate_right_109: 8682201939372847094
+      pirate_right_11: 2718262666052890639
+      pirate_right_110: 5093463509441598963
+      pirate_right_111: 7663510641934947559
+      pirate_right_112: -8616483055799784716
+      pirate_right_113: 8348990652966895783
+      pirate_right_114: -6347511461607351017
+      pirate_right_115: -5999637038761940564
+      pirate_right_116: 3672534531509702988
+      pirate_right_117: -2366515790009841160
+      pirate_right_118: -2241973288503997355
+      pirate_right_119: -5687960921017694635
+      pirate_right_12: -7744267368236574962
+      pirate_right_120: 6824266983854012338
+      pirate_right_121: -2386757634345156552
+      pirate_right_122: 3415278257589139347
+      pirate_right_123: 5274737301345477935
+      pirate_right_124: -3078300940717152939
+      pirate_right_125: -8164786748081375702
+      pirate_right_126: 2787000373526109180
+      pirate_right_127: -7327446153529159833
+      pirate_right_128: 1743596259280612990
+      pirate_right_129: 8740324935035392287
+      pirate_right_13: -1785038350859570512
+      pirate_right_130: 491440433565292313
+      pirate_right_131: 1635786985668947703
+      pirate_right_132: 1885352693433936966
+      pirate_right_133: 6932823909472209546
+      pirate_right_134: 739113365021209617
+      pirate_right_135: -3242007148989922127
+      pirate_right_136: -6563322836204983872
+      pirate_right_137: 7794799795602392635
+      pirate_right_138: -4145648330162654242
+      pirate_right_139: 7247927074338350030
+      pirate_right_14: -2955760037560307972
+      pirate_right_140: -6699776176387193884
+      pirate_right_141: 8028733902788404353
+      pirate_right_142: 7775656914020072392
+      pirate_right_143: -2898032817670046606
+      pirate_right_144: 1522778743835685446
+      pirate_right_145: -3132279507402271565
+      pirate_right_146: 6210582827037434606
+      pirate_right_147: 6858153016774565045
+      pirate_right_148: 1928643910468848144
+      pirate_right_149: 7235324983854207009
+      pirate_right_15: -7180538998908560656
+      pirate_right_150: 5876196550453366180
+      pirate_right_151: 5141555792861462174
+      pirate_right_152: -2717645488394330204
+      pirate_right_153: -7698078290337067754
+      pirate_right_154: 2005958250551497041
+      pirate_right_155: -7562358629550684390
+      pirate_right_156: 1748099495366357205
+      pirate_right_157: -7788309116163997194
+      pirate_right_158: -1052492082763470765
+      pirate_right_159: 527078366710029885
+      pirate_right_16: 569997547800037615
+      pirate_right_160: 5868376643646485766
+      pirate_right_161: -2290441206783182847
+      pirate_right_162: -4711602512316827050
+      pirate_right_163: -5087351740904922173
+      pirate_right_164: -6966471874830468449
+      pirate_right_165: 4815791674038881456
+      pirate_right_166: 7381288791868368884
+      pirate_right_167: 7821717084181327311
+      pirate_right_168: -8942733580739387700
+      pirate_right_169: -7436062658928055992
+      pirate_right_17: 1943430807010364270
+      pirate_right_170: 8099699945257454707
+      pirate_right_171: -6691210715102277351
+      pirate_right_172: 4535054988822586080
+      pirate_right_173: 3574431638397295802
+      pirate_right_174: 6387978597299322107
+      pirate_right_175: -4963396655989387996
+      pirate_right_176: -7318652220508671072
+      pirate_right_177: 7405992653050182142
+      pirate_right_178: -6920376098514402560
+      pirate_right_179: -7251949565205205297
+      pirate_right_18: 1566080383554637017
+      pirate_right_180: 3740089337497715402
+      pirate_right_181: 1990249419888797846
+      pirate_right_182: 3799070833829421489
+      pirate_right_19: -3084798014745275944
+      pirate_right_2: -6272674087057668394
+      pirate_right_20: -5683174069124723906
+      pirate_right_21: 2955059475164989699
+      pirate_right_22: -8774818280015971341
+      pirate_right_23: 3262041002037872765
+      pirate_right_24: 1641686827583084033
+      pirate_right_25: -3989766631528635568
+      pirate_right_26: 2043945063572877324
+      pirate_right_27: 1786978648329331144
+      pirate_right_28: -6690658770590874972
+      pirate_right_29: 1360036275616779333
+      pirate_right_3: 8085233222711271975
+      pirate_right_30: 644591366166988297
+      pirate_right_31: -3731764834867169863
+      pirate_right_32: -2765712212033261924
+      pirate_right_33: 2788930689162434362
+      pirate_right_34: -1011405972646497742
+      pirate_right_35: -4396333364296422079
+      pirate_right_36: 932085943195445640
+      pirate_right_37: 1613655161246116284
+      pirate_right_38: 3737293006748184323
+      pirate_right_39: 2523197768307579421
+      pirate_right_4: 3902025635862840546
+      pirate_right_40: 2331863746168467226
+      pirate_right_41: 8372000312178782281
+      pirate_right_42: -6647474175367722219
+      pirate_right_43: -5189757687395034502
+      pirate_right_44: 1278140659983799861
+      pirate_right_45: 5366051009392789258
+      pirate_right_46: -245394957300372859
+      pirate_right_47: 8703082211451063116
+      pirate_right_48: 5305683135682760996
+      pirate_right_49: -153450140668499197
+      pirate_right_5: -156214472667443286
+      pirate_right_50: -2265447170435806570
+      pirate_right_51: 1521316627911863197
+      pirate_right_52: 222752793489959401
+      pirate_right_53: -6370579830438808011
+      pirate_right_54: -233608615487999773
+      pirate_right_55: -3480909294967469353
+      pirate_right_56: -6522263775007818900
+      pirate_right_57: 7966958879328754855
+      pirate_right_58: 4300017302176599588
+      pirate_right_59: -6828778670392771378
+      pirate_right_6: 5298191074391374999
+      pirate_right_60: 1449779520769319677
+      pirate_right_61: -7022863515854525589
+      pirate_right_62: -6791412056767451012
+      pirate_right_63: -6713753436163204100
+      pirate_right_64: -1292582318427595170
+      pirate_right_65: 6934068485110420886
+      pirate_right_66: 307430119984035357
+      pirate_right_67: 7016914378846048800
+      pirate_right_68: -3187345021735047043
+      pirate_right_69: 8169821853382990439
+      pirate_right_7: 5091558331618136605
+      pirate_right_70: 7285610800378497178
+      pirate_right_71: -8860857473060197672
+      pirate_right_72: 8089270528091236189
+      pirate_right_73: 8057678122117955856
+      pirate_right_74: -5174513654993772654
+      pirate_right_75: 1920620601075788337
+      pirate_right_76: -7246181270320743812
+      pirate_right_77: 1596760425338120625
+      pirate_right_78: 1944111037210205448
+      pirate_right_79: -4048991325209482009
+      pirate_right_8: -3811119813039025658
+      pirate_right_80: 2954868370231310410
+      pirate_right_81: -4558804764038875527
+      pirate_right_82: -1133561462469332312
+      pirate_right_83: 479314505628582345
+      pirate_right_84: -3375281006500248478
+      pirate_right_85: -3776614910548732354
+      pirate_right_86: 71349660358981855
+      pirate_right_87: -3295333596889902637
+      pirate_right_88: 4490579485726471918
+      pirate_right_89: 3060412924323975464
+      pirate_right_9: 5526949630667392398
+      pirate_right_90: -3275803233967792852
+      pirate_right_91: -6041443125198338740
+      pirate_right_92: 3444219063985716038
+      pirate_right_93: 1308832856208159081
+      pirate_right_94: 7905803118204991103
+      pirate_right_95: 3206126789538498392
+      pirate_right_96: 7020163740145710757
+      pirate_right_97: -8240121899643196842
+      pirate_right_98: 3069378164412048343
+      pirate_right_99: 6729690732808715757
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
