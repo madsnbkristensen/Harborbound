@@ -1,4 +1,7 @@
 using UnityEngine;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 public class Player : Humanoid
 {
@@ -122,30 +125,43 @@ public class Player : Humanoid
 
     public void TryInteract()
     {
-        // BOAT LOGIC
-        if (IsNearBoatWheel())
-        {
+        // Create a list of potential interactions
+        var interactions = new List<(string type, Action action, float priority)>
+    {
+        // Boat interaction
+        ("Boat", () => {
             Debug.Log("Player is near the boat wheel. Starting to drive.");
             StartDriving();
-            return;
-        }
-        // FRIEND LOGIC
-        else if (IsNearFriend())
-        {
+        }, 2.0f), // Higher priority number
+        
+        // Friend interaction
+        ("Friend", () => {
             Debug.Log($"Player is near {currentInteractableFriend.humanoidName}. Starting dialogue.");
             currentInteractableFriend.StartDialogue();
-
             if (gameManager != null)
                 gameManager.ChangeState(GameManager.GameState.DIALOGUE);
+        }, 1.0f),
+        
+        // You can add more interactions here as needed
+        // ("FishingSpot", () => { /* fishing logic */ }, 1.0f),
+    };
 
-            // Update game state to dialogue mode
-            return;
+        // Filter out interactions that aren't available
+        var availableInteractions = interactions.Where(i =>
+            (i.type == "Boat" && IsNearBoatWheel()) ||
+            (i.type == "Friend" && IsNearFriend())
+        // Add more conditions for other interaction types
+        ).ToList();
+
+        if (availableInteractions.Count > 0)
+        {
+            // Sort by priority (highest first) and execute the top action
+            availableInteractions.OrderByDescending(i => i.priority).First().action();
         }
         else
         {
             Debug.Log("Nothing to interact with nearby.");
-            // Check for other interactable objects
-            // CheckForFishingSpot();
+            // No interactions available
         }
     }
 
