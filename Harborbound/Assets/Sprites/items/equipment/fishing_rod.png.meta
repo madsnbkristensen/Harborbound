@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: bd2de1b27d4714e8b9aee3e0d5a3824b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4224577621940155398
+    second: fishing_rod_0
+  - first:
+      213: 2016316423648886790
+    second: fishing_rod_1
+  - first:
+      213: -3642841450780731918
+    second: fishing_rod_2
+  - first:
+      213: 5213699247588980338
+    second: fishing_rod_3
+  - first:
+      213: -8240697840741498121
+    second: fishing_rod_4
+  - first:
+      213: -4335095678378909806
+    second: fishing_rod_5
+  - first:
+      213: -3016073344992988567
+    second: fishing_rod_6
+  - first:
+      213: 9208397372775588487
+    second: fishing_rod_7
+  - first:
+      213: 9121952319846630981
+    second: fishing_rod_8
+  - first:
+      213: 6790668477843875627
+    second: fishing_rod_9
+  - first:
+      213: 2519784235025887132
+    second: fishing_rod_10
+  - first:
+      213: 6883370022932383446
+    second: fishing_rod_11
+  - first:
+      213: -2931698146440743833
+    second: fishing_rod_12
+  - first:
+      213: 1767388536162872518
+    second: fishing_rod_13
+  - first:
+      213: 3302227772421282704
+    second: fishing_rod_14
+  - first:
+      213: 6922997720191905083
+    second: fishing_rod_15
+  - first:
+      213: 447734861798804009
+    second: fishing_rod_16
+  - first:
+      213: 2559269913611140491
+    second: fishing_rod_17
+  - first:
+      213: 2372032709391399602
+    second: fishing_rod_18
+  - first:
+      213: -1697974191013238837
+    second: fishing_rod_19
+  - first:
+      213: 895078263463979392
+    second: fishing_rod_20
+  - first:
+      213: 240963833390380854
+    second: fishing_rod_21
+  - first:
+      213: 3140855907228274926
+    second: fishing_rod_22
+  - first:
+      213: 5376915540152685425
+    second: fishing_rod_23
+  - first:
+      213: -5572742053590301323
+    second: fishing_rod_24
+  - first:
+      213: -5848978570647626455
+    second: fishing_rod_25
+  - first:
+      213: -9178204934601368314
+    second: fishing_rod_26
+  - first:
+      213: -5335453199678227291
+    second: fishing_rod_27
+  - first:
+      213: -9103785962162145317
+    second: fishing_rod_28
+  - first:
+      213: 5202326810355961499
+    second: fishing_rod_29
+  - first:
+      213: 6069756027025026163
+    second: fishing_rod_30
+  - first:
+      213: 7779880185444616090
+    second: fishing_rod_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fishing_rod_0
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 255
+        width: 290
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 604bec1e6f6b0aa30800000000000000
+      internalID: 4224577621940155398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_1
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 534
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 600c06aba156bfb10800000000000000
+      internalID: 2016316423648886790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_2
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 537
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f555294007027dc0800000000000000
+      internalID: -3642841450780731918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_3
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 534
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2763342a7d7ca5840800000000000000
+      internalID: 5213699247588980338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_4
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 539
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f2464599f823ad80800000000000000
+      internalID: -8240697840741498121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_5
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 534
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29fd4e6e275a6d3c0800000000000000
+      internalID: -4335095678378909806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_6
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 533
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9623b27c541c426d0800000000000000
+      internalID: -3016073344992988567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_7
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 537
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 782ede25f9ccacf70800000000000000
+      internalID: 9208397372775588487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_8
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 526
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54642820e4fa79e70800000000000000
+      internalID: 9121952319846630981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_9
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 526
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27a359800d4d3e50800000000000000
+      internalID: 6790668477843875627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_10
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 517
+        width: 9
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9fe85f496218f220800000000000000
+      internalID: 2519784235025887132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_11
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 526
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d60572f094a68f50800000000000000
+      internalID: 6883370022932383446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_12
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 526
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7647ab091148057d0800000000000000
+      internalID: -2931698146440743833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_13
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 526
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cce5167286078810800000000000000
+      internalID: 1767388536162872518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_14
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 526
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b999eb9aed3dd20800000000000000
+      internalID: 3302227772421282704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_15
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 507
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3da0e43fbd631060800000000000000
+      internalID: 6922997720191905083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_16
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 474
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92a831f0c7ca63600800000000000000
+      internalID: 447734861798804009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_17
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 445
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8df2254d6a548320800000000000000
+      internalID: 2559269913611140491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_18
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 452
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bab1ee7e272be020800000000000000
+      internalID: 2372032709391399602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_19
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 417
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc7efd238759f68e0800000000000000
+      internalID: -1697974191013238837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_20
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 388
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089a1f330f4fb6c00800000000000000
+      internalID: 895078263463979392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_21
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 380
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63733fc6453185300800000000000000
+      internalID: 240963833390380854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_22
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 376
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee057018ecf869b20800000000000000
+      internalID: 3140855907228274926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_23
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 361
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17314161234ae9a40800000000000000
+      internalID: 5376915540152685425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_24
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 347
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5758edeb0a4a9a2b0800000000000000
+      internalID: -5572742053590301323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_25
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 351
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d1dadaaf044dea0800000000000000
+      internalID: -5848978570647626455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_26
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 331
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60d195d7d3770a080800000000000000
+      internalID: -9178204934601368314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_27
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 331
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac35755599a4f5b0800000000000000
+      internalID: -5335453199678227291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_28
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 258
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd7332eb6ead8a180800000000000000
+      internalID: -9103785962162145317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_29
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 256
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e02c0cba0623840800000000000000
+      internalID: 5202326810355961499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_30
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 255
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37cec1892fa1c3450800000000000000
+      internalID: 6069756027025026163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fishing_rod_31
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 262
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a97c6802fcfa7fb60800000000000000
+      internalID: 7779880185444616090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fishing_rod_0: 4224577621940155398
+      fishing_rod_1: 2016316423648886790
+      fishing_rod_10: 2519784235025887132
+      fishing_rod_11: 6883370022932383446
+      fishing_rod_12: -2931698146440743833
+      fishing_rod_13: 1767388536162872518
+      fishing_rod_14: 3302227772421282704
+      fishing_rod_15: 6922997720191905083
+      fishing_rod_16: 447734861798804009
+      fishing_rod_17: 2559269913611140491
+      fishing_rod_18: 2372032709391399602
+      fishing_rod_19: -1697974191013238837
+      fishing_rod_2: -3642841450780731918
+      fishing_rod_20: 895078263463979392
+      fishing_rod_21: 240963833390380854
+      fishing_rod_22: 3140855907228274926
+      fishing_rod_23: 5376915540152685425
+      fishing_rod_24: -5572742053590301323
+      fishing_rod_25: -5848978570647626455
+      fishing_rod_26: -9178204934601368314
+      fishing_rod_27: -5335453199678227291
+      fishing_rod_28: -9103785962162145317
+      fishing_rod_29: 5202326810355961499
+      fishing_rod_3: 5213699247588980338
+      fishing_rod_30: 6069756027025026163
+      fishing_rod_31: 7779880185444616090
+      fishing_rod_4: -8240697840741498121
+      fishing_rod_5: -4335095678378909806
+      fishing_rod_6: -3016073344992988567
+      fishing_rod_7: 9208397372775588487
+      fishing_rod_8: 9121952319846630981
+      fishing_rod_9: 6790668477843875627
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

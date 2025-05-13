@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95b83406016b49c8af9627670c9510f, type: 3}
+  m_Name: Salmon_Fish
+  m_EditorClassIdentifier: 
+  _id: 281961
+  itemName: Bigeared Salmon
+  description: Salmon with crazy big ears
+  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  value: 200
+  type: 2
+  inventoryWidth: 3
+  inventoryHeight: 1
+  isStackable: 1
+  maxStackSize: 64
+  prefab: {fileID: 0}
+  damage: 0
+  range: 0
+  attackSpeed: 0
+  minSize: 200
+  maxSize: 300
+  availableZones: 0100000004000000
+  rarity: 10
+  catchSpeedBonus: 0
+  rareItemChanceBonus: 0
