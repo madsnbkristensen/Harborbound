@@ -269,7 +269,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1980217959
+--- !u!1 &1657073273
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -277,24 +277,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1980217960}
+  - component: {fileID: 1657073275}
+  - component: {fileID: 1657073274}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: FishingSpotSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1980217960
+--- !u!114 &1657073274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657073273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf33216048afa6549ab7f76eb9a7bd76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishingSpotPrefab: {fileID: 6576570336716106953, guid: d240b9b2a90ef7c4da74f93891bf872a, type: 3}
+  baseFishingSpotsPerZone: 5
+  spotIncreaseFactor: 1.5
+  minDistanceBetweenSpots: 3
+  minDistanceFromRocks: 2
+--- !u!4 &1657073275
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980217959}
+  m_GameObject: {fileID: 1657073273}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.146135, y: 7.886747, z: -0.4455566}
+  m_LocalPosition: {x: -2.1033401, y: 11.794392, z: -1.6006353}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -400,4 +418,4 @@ SceneRoots:
   - {fileID: 1365885312}
   - {fileID: 434633619}
   - {fileID: 133535211}
-  - {fileID: 1980217960}
+  - {fileID: 1657073275}

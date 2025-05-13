@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 06b61ac22334f4f4cadbf04d772ecaa8
+guid: 9e3f947407fd6994096fbe68064b443f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4390033149433182506
-    second: Rock_1_0
+      213: -6060820862842820632
+    second: fishingBubble_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rock_1_0
+      name: fishingBubble_1_0
       rect:
         serializedVersion: 2
-        x: 264
-        y: 263
-        width: 368
-        height: 428
+        x: 0
+        y: 0
+        width: 54
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a297728d3e78cec30800000000000000
-      internalID: 4390033149433182506
+      spriteID: 8e72afe6983a3eba0800000000000000
+      internalID: -6060820862842820632
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Rock_1_0: 4390033149433182506
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

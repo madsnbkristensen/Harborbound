@@ -78,6 +78,16 @@ public class WorldGenerator : MonoBehaviour
 
         // Step 4: Place rocks
         PlaceRocks();
+
+        // Step 5: Spawn fishing spots
+        if (FishingSpotSpawner.Instance != null)
+        {
+            FishingSpotSpawner.Instance.SpawnFishingSpots();
+        }
+        else
+        {
+            Debug.LogWarning("FishingSpotSpawner not found. Fishing spots will not be generated.");
+        }
     }
 
     private void GenerateNewRockPositions()
@@ -183,12 +193,12 @@ public class WorldGenerator : MonoBehaviour
         Debug.Log($"Placed {rockPositions.Count} rocks in the world.");
     }
 
-    public bool CheckRockPositions(Vector2 position)
+    // Update the rock check method to allow for a custom distance check
+    public bool CheckRockPositions(Vector2 position, float minDistance = 1f)
     {
-        // This function is to return the rock positions, so that other scripts can use it to determine if a rock is in the way of spawning another object.
         foreach (Vector2 rockPosition in rockPositions)
         {
-            if (Vector2.Distance(position, rockPosition) < 1f) // 1f = minimum spacing
+            if (Vector2.Distance(position, rockPosition) < minDistance)
             {
                 return true; // Rock is in the way
             }
