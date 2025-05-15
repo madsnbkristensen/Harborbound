@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5711172971640255279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2985530065252768154}
+  - component: {fileID: 7166231892288201274}
+  m_Layer: 0
+  m_Name: FishingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2985530065252768154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5711172971640255279}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.077691585, y: -0.7444044, z: -0.06315036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7166231892288201274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5711172971640255279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5834f8f062fc542ed8ca1593413d111c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 6827428874560893546, guid: 9a320148da65b4f62ba509b9d1c9a10b, type: 3}
+  player: {fileID: 7035993917590173729, guid: b5db154add2494adb8f630c82a8eff2c, type: 3}
+  allItems: []
+  itemDatabase: {fileID: 11400000, guid: e70c0de49d7614cf99dabd2a9a62c754, type: 2}
+  catchAnimationPrefab: {fileID: 5260340858400398140, guid: 49ae684d82e7245b9842ebc3c1b5e57d, type: 3}
+  catchAnimationSpawnPoint: {fileID: 2185498243363619352, guid: b5db154add2494adb8f630c82a8eff2c, type: 3}
+  bobberPrefab: {fileID: 6080604513635685319, guid: 371c7e589719243109a6acc0003ec04b, type: 3}
+  minTimeUntilBite: 1.5
+  maxTimeUntilBite: 5
+  catchWindowDuration: 1.5
+  catchKey: 32
+  cancelKey: 32
+  isFishing: 0

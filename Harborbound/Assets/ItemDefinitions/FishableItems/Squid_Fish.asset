@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95b83406016b49c8af9627670c9510f, type: 3}
+  m_Name: Squid_Fish
+  m_EditorClassIdentifier: 
+  _id: 175309
+  itemName: Black squid
+  description: very black squid
+  icon: {fileID: 21300000, guid: cf1d3d33ca274443aae3cbed0e9d7d90, type: 3}
+  value: 100
+  type: 2
+  inventoryWidth: 2
+  inventoryHeight: 2
+  isStackable: 1
+  maxStackSize: 4
+  prefab: {fileID: 0}
+  damage: 0
+  range: 0
+  attackSpeed: 0
+  minSize: 20
+  maxSize: 100
+  availableZones: 0100000002000000
+  rarity: 0
+  catchSpeedBonus: 0
+  rareItemChanceBonus: 0

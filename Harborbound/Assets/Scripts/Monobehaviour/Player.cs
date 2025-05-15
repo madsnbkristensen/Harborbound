@@ -62,6 +62,7 @@ public class Player : Humanoid
                 break;
 
             case GameManager.GameState.DRIVING:
+            case GameManager.GameState.FISHING:
                 // Disable player's collider when driving
                 if (col != null) col.enabled = false;
                 break;
