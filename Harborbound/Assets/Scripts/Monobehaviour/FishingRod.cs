@@ -55,12 +55,11 @@ public class FishingRod : Item
         PlayerEquipment equipment = player.GetComponent<PlayerEquipment>();
 
         // This will be the transform we use for the fishing line origin
-        Transform lineOrigin = player.transform; // Default to player if nothing else works
+        Transform lineOrigin = player.transform;
 
         // If we have equipment and a visual, use that
         if (equipment != null && equipment.currentEquippedVisual != null)
         {
-            // Use the equipped visual's transform directly
             lineOrigin = equipment.currentEquippedVisual.transform;
         }
 
@@ -80,8 +79,10 @@ public class FishingRod : Item
         FishingManager fishingManager = Object.FindFirstObjectByType<FishingManager>();
         if (fishingManager != null)
         {
-            fishingManager.CastBobber(playerPos, bobberPos, GetPlayerZone(player), lineOrigin);
-        } 
+            // Get the zone at the bobber's destination for fallback
+            int targetZone = GetZoneAtPosition(bobberPos);
+            fishingManager.CastBobber(playerPos, bobberPos, targetZone, lineOrigin);
+        }
         else
         {
             Debug.LogError("No FishingManager found in scene!");
@@ -90,10 +91,9 @@ public class FishingRod : Item
 
     private Vector3 GetMouseWorldPosition()
     {
-        // Get mouse position in screen space
+        // Existing mouse position code...
         Vector3 mousePos = Input.mousePosition;
 
-        // Convert to world space
         Camera mainCamera = Camera.main;
         if (mainCamera != null)
         {
@@ -102,6 +102,29 @@ public class FishingRod : Item
         }
 
         return Vector3.zero;
+    }
+
+    // New method to get zone at a position
+    private int GetZoneAtPosition(Vector3 position)
+    {
+        if (ZoneManager.Instance == null || ZoneManager.Instance.zones.Count == 0)
+            return 1; // Default to zone 1
+
+        Vector2 centerPoint = ZoneManager.Instance.centerPoint;
+        float distance = Vector2.Distance(position, centerPoint);
+
+        // Check each zone
+        for (int i = 0; i < ZoneManager.Instance.zones.Count; i++)
+        {
+            Zone zone = ZoneManager.Instance.zones[i];
+            if (distance >= zone.innerRadius && distance <= zone.outerRadius)
+            {
+                return i + 1; // Zones are 1-indexed
+            }
+        }
+
+        // If not in any zone (should not happen with proper boundary collider)
+        return 1;
     }
 
     private int GetPlayerZone(Player player)

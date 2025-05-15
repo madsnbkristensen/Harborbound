@@ -76,7 +76,6 @@ public class FishingManager : MonoBehaviour
         {
             anim.SetupAnimation(caughtFish.definition, () =>
             {
-                Debug.Log("Animation completed");
             });
         }
     }
@@ -175,11 +174,47 @@ public class FishingManager : MonoBehaviour
     // Main fishing sequence
     private IEnumerator FishingSequence()
     {
-        // Wait random time until fish bites
-        float waitTime = Random.Range(minTimeUntilBite, maxTimeUntilBite);
-        Debug.Log("Waiting for a bite... (" + waitTime + " seconds)");
+        // Get the fishing spot information from the bobber
+        bool isInFishingSpot = false;
+        FishingSpot spot = null;
+        int fishingZoneId = 1;
 
-        // Use a timer rather than WaitForSeconds to allow for interruption
+        if (activeBobber != null)
+        {
+            Bobber bobber = activeBobber.GetComponent<Bobber>();
+            if (bobber != null)
+            {
+                isInFishingSpot = bobber.IsInFishingSpot();
+                spot = bobber.GetCurrentFishingSpot();
+                fishingZoneId = bobber.GetCurrentZone();
+            }
+        }
+
+        // Adjust wait time based on whether we're in a fishing spot
+        float baseWaitTime = Random.Range(minTimeUntilBite, maxTimeUntilBite);
+        float waitTime;
+
+        if (isInFishingSpot && spot != null && spot.numberOfFish > 0)
+        {
+            // Fish bite faster in fishing spots with more fish
+            float fishFactor = Mathf.Clamp01((float)spot.numberOfFish / spot.maxNumberOfFish);
+            waitTime = Mathf.Lerp(baseWaitTime, minTimeUntilBite, fishFactor);
+            Debug.Log($"Fishing in spot with {spot.numberOfFish} fish. (Zone {fishingZoneId}) Bite time: {waitTime}s");
+        }
+        else if (!isInFishingSpot)
+        {
+            // Longer wait time when not in a fishing spot, fish are rare
+            waitTime = baseWaitTime * 2f;
+            Debug.Log($"Fishing in open water (Zone {fishingZoneId}). Bite time: {waitTime}s");
+        }
+        else
+        {
+            // Fishing spot with no fish
+            waitTime = float.MaxValue; // Will never bite
+            Debug.Log("This fishing spot is depleted. No fish will bite!");
+        }
+
+        // Wait for bite
         float elapsedTime = 0f;
         while (elapsedTime < waitTime && isFishing)
         {
@@ -187,15 +222,35 @@ public class FishingManager : MonoBehaviour
             elapsedTime += Time.deltaTime;
         }
 
-        // If fishing was canceled early, exit the coroutine
-        if (!isFishing)
+        // If fishing was canceled or wait time is "infinite", exit
+        if (!isFishing || waitTime >= float.MaxValue)
             yield break;
 
         // Fish is biting!
-        currentCatch = CatchFish(currentZoneId);
-        fishIsBiting = true;
+        if (isInFishingSpot && spot != null && spot.numberOfFish > 0)
+        {
+            // Use the fishing spot's zone for catching
+            currentCatch = CatchFish(spot.fishingSpotZone);
+        }
+        else
+        {
+            // Use the zone determined by position
+            currentCatch = CatchFish(fishingZoneId);
 
-        if (currentCatch != null)
+            // Make catches in open water more rare (might be nothing)
+            if (Random.value > 0.3f) // 70% chance of catching nothing in open water
+            {
+                Debug.Log("Nothing seems to be biting here...");
+                currentCatch = null;
+                yield return new WaitForSeconds(1.0f);
+                StopFishing();
+                yield break;
+            }
+        }
+
+        fishIsBiting = currentCatch != null;
+
+        if (fishIsBiting)
         {
             Debug.Log("Fish is biting! Press " + catchKey + " to catch!");
 
@@ -213,13 +268,18 @@ public class FishingManager : MonoBehaviour
                     // Player caught the fish!
                     Debug.Log("Caught a " + currentCatch.GetName() + "!");
 
-                    // Add to inventory or handle as needed
-                    if (player != null)
+                    // Remove fish from the fishing spot if applicable
+                    if (isInFishingSpot && spot != null)
                     {
-                        // This would be a call to your inventory system
-                        // player.inventory.AddItem(currentCatch);
-                        // Debug.Log("Fish added to inventory");
+                        spot.RemoveFish(1);
+                        Debug.Log($"Fishing spot now has {spot.numberOfFish} fish remaining.");
                     }
+
+                    // Add to inventory (commented until inventory system is implemented)
+                    // if (player != null && player.inventory != null)
+                    // {
+                    //     player.inventory.AddItem(currentCatch);
+                    // }
 
                     // Trigger caught event
                     OnFishCaught?.Invoke(currentCatch);
@@ -247,16 +307,22 @@ public class FishingManager : MonoBehaviour
         StopFishing();
     }
 
-    // Generate a caught fish for the given zone
+    // Update your CatchFish method to consider fishing spots
     public Item CatchFish(int zoneId)
     {
-        // Use the database to get a random fish
+        // Use the database to get a random fish for the zone
         ItemDefinition fishDef = itemDatabase.GetRandomFishInZone(zoneId);
         if (fishDef == null)
+        {
+            Debug.LogWarning($"No fish found for zone {zoneId}");
             return null;
+        }
 
-        // Create and return the fish item
-        return ItemFactory.CreateItem(fishDef);
+        // Create fish item
+        Item fishItem = ItemFactory.CreateItem(fishDef);
+
+        Debug.Log($"Created fish: {fishDef.itemName} for zone {zoneId}");
+        return fishItem;
     }
 
     // Helper method to get random fish weighted by rarity
