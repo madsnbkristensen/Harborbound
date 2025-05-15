@@ -3,6 +3,8 @@ using UnityEngine;
 public class EquipmentTester : MonoBehaviour
 {
     public PlayerEquipment playerEquipment;
+
+    // Only keep a single weapon definition
     public ItemDefinition testWeaponDef;
     public ItemDefinition testFishingRodDef;
 
@@ -42,11 +44,18 @@ public class EquipmentTester : MonoBehaviour
             playerEquipment.EquipItem(null);
         }
 
-        // Press Space to use equipped item
+        // Handle weapon firing
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Using equipped item");
-            playerEquipment.UseEquippedItem();
+            Debug.Log("Starting to use equipped item");
+            playerEquipment.StartUsingEquippedWeapon();
+        }
+
+        // For automatic weapons, we still need to stop firing when key is released
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            Debug.Log("Stopping use of equipped item");
+            playerEquipment.StopUsingEquippedWeapon();
         }
     }
 }

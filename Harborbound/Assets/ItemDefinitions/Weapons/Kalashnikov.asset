@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f95b83406016b49c8af9627670c9510f, type: 3}
-  m_Name: AK_Weapon
+  m_Name: Kalashnikov
   m_EditorClassIdentifier: 
   _id: 259150
   itemName: Kalashnikov
@@ -25,7 +25,9 @@ MonoBehaviour:
   prefab: {fileID: 7546166427365782202, guid: bda05c2de77f84e4bb4affbe37a051a4, type: 3}
   damage: 20
   range: 100
-  attackSpeed: 60
+  attackSpeed: 10
+  spread: 1
+  bulletTravelTime: 1
   minSize: 0
   maxSize: 0
   availableZones: 

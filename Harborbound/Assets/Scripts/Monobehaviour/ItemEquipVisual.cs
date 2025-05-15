@@ -95,6 +95,32 @@ public class ItemEquipVisual : MonoBehaviour
         transform.localRotation = startRotation;
     }
 
+    // Add this method to your ItemEquipVisual class
+    public void RotateTowardsMouse()
+    {
+        // Only apply to weapons
+        if (itemDefinition == null || itemDefinition.type != ItemDefinition.ItemType.WEAPON)
+            return;
+
+        // Get mouse position and calculate angle
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 direction = mousePos - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        // Apply rotation
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+    }
+
+    // And update the existing Update method if you have one, or add it
+    private void Update()
+    {
+        // Only rotate weapons
+        if (itemDefinition != null && itemDefinition.type == ItemDefinition.ItemType.WEAPON)
+        {
+            RotateTowardsMouse();
+        }
+    }
+
     // Optional debug visualization
     void OnDrawGizmos()
     {

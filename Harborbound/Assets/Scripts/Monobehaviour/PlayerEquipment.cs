@@ -55,6 +55,12 @@ public class PlayerEquipment : MonoBehaviour
     // Equipment type-specific methods
     private void EquipWeapon(Item weapon)
     {
+        // If we currently have a weapon equipped, stop using it first
+        if (equippedWeapon != null && equippedWeapon is Weapon currentWeapon)
+        {
+            currentWeapon.StopUse();
+        }
+
         // Unequip current weapon if any
         if (weaponVisual != null)
             Destroy(weaponVisual);
@@ -121,6 +127,12 @@ public class PlayerEquipment : MonoBehaviour
 
     private void UnequipWeapon()
     {
+        // Stop any active use effects first
+        if (equippedWeapon != null && equippedWeapon is Weapon weapon)
+        {
+            weapon.StopUse();
+        }
+
         if (weaponVisual != null)
             Destroy(weaponVisual);
 
@@ -135,8 +147,8 @@ public class PlayerEquipment : MonoBehaviour
         equippedFishingRod = null;
     }
 
-    // Use the currently equipped items
-    public void UseEquippedWeapon()
+    // UPDATED METHOD - Start using the equipped weapon (for press and hold)
+    public void StartUsingEquippedWeapon()
     {
         if (equippedWeapon != null)
         {
@@ -151,6 +163,21 @@ public class PlayerEquipment : MonoBehaviour
             // Use the weapon
             equippedWeapon.Use(player);
         }
+    }
+
+    // NEW METHOD - Stop using the equipped weapon (for release)
+    public void StopUsingEquippedWeapon()
+    {
+        if (equippedWeapon != null && equippedWeapon is Weapon weapon)
+        {
+            weapon.StopUse();
+        }
+    }
+
+    // Legacy method - for single press usage
+    public void UseEquippedWeapon()
+    {
+        StartUsingEquippedWeapon();
     }
 
     public void UseEquippedFishingRod()
@@ -185,7 +212,6 @@ public class PlayerEquipment : MonoBehaviour
     }
 
     // Read-only property to get the currently equipped item definition
-    // This maintains backward compatibility with your existing code
     public ItemDefinition CurrentEquippedItem
     {
         get

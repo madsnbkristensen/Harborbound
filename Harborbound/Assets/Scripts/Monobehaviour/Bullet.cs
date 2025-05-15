@@ -29,8 +29,15 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        // Move the bullet forward
-        transform.Translate(Vector3.right * speed * Time.deltaTime);
+        // Safety check for invalid speed
+        if (float.IsNaN(speed) || float.IsInfinity(speed) || speed <= 0)
+        {
+            Debug.LogWarning($"Invalid bullet speed: {speed}. Using default.");
+            speed = 10f; // Default fallback speed
+        }
+
+        // Move forward based on the bullet's rotation
+        transform.Translate(Vector3.right * speed * Time.deltaTime, Space.Self);
 
         // Track lifetime
         timer += Time.deltaTime;

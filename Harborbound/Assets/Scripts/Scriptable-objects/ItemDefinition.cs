@@ -35,10 +35,17 @@ public class ItemDefinition : ScriptableObject
     public int damage;
     public float range;
     public float attackSpeed;
-
     public float spread;
-
     public float bulletTravelTime;
+
+    // New weapon behavior properties
+    public enum WeaponType { SINGLE, AUTOMATIC, SHOTGUN, BURST }
+
+    [Header("Special Weapon Behaviors")]
+    public WeaponType weaponType = WeaponType.SINGLE;
+    public int bulletsPerShot = 1;     // For shotguns/burst weapons
+    public int burstCount = 1;         // For burst fire weapons
+    public float burstInterval = 0.1f; // Time between burst shots
 
     // Fish-specific properties (only used if type == FISH)
     [Header("Fish Properties")]
