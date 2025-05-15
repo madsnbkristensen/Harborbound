@@ -55,4 +55,5 @@ MonoBehaviour:
   maxTimeUntilBite: 5
   catchWindowDuration: 1.5
   catchKey: 32
+  cancelKey: 32
   isFishing: 0

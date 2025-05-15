@@ -56,23 +56,27 @@ public class FishingManager : MonoBehaviour
     private void HandleFishCaught(Item caughtFish)
     {
         // Don't proceed if we're missing something
-        if (catchAnimationPrefab == null || catchAnimationSpawnPoint == null || caughtFish == null)
+        if (catchAnimationPrefab == null || caughtFish == null || Camera.main == null)
             return;
 
-        // Create catch animation
-        GameObject animObj = Instantiate(catchAnimationPrefab,
-            catchAnimationSpawnPoint.position,
-            Quaternion.identity);
+        // Get the camera transform
+        Transform cameraTransform = Camera.main.transform;
+
+        // Create the animation object as a child of the camera
+        GameObject animObj = Instantiate(catchAnimationPrefab, cameraTransform);
+
+        // Position it in front of the camera, centered with a slight downward offset
+        float verticalOffset = 1f; // Adjust this value as needed
+        animObj.transform.localPosition = new Vector3(0, verticalOffset, 10); // Local position relative to camera
+
+        Debug.Log("Created fish animation as child of camera");
 
         CatchAnimation anim = animObj.GetComponent<CatchAnimation>();
-
         if (anim != null)
         {
-            // Start animation
             anim.SetupAnimation(caughtFish.definition, () =>
             {
-                // Animation is complete - could add additional logic here
-                Debug.Log("Catch animation completed");
+                Debug.Log("Animation completed");
             });
         }
     }
@@ -140,7 +144,6 @@ public class FishingManager : MonoBehaviour
         fishIsBiting = false;
 
         Debug.Log("Started fishing in zone " + zoneId + " at position " + position);
-        Debug.Log("Press " + cancelKey + " to stop fishing early");
 
         // Start fishing coroutine
         StartCoroutine(FishingSequence());
@@ -167,7 +170,6 @@ public class FishingManager : MonoBehaviour
         if (gameManager != null)
             gameManager.ChangeState(GameManager.GameState.ROAMING);
 
-        Debug.Log("Stopped fishing");
     }
 
     // Main fishing sequence
@@ -216,7 +218,7 @@ public class FishingManager : MonoBehaviour
                     {
                         // This would be a call to your inventory system
                         // player.inventory.AddItem(currentCatch);
-                        Debug.Log("Fish added to inventory");
+                        // Debug.Log("Fish added to inventory");
                     }
 
                     // Trigger caught event
