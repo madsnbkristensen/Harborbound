@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &869758176562653583
+--- !u!1 &2039829010210368846
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3885147575777644529}
-  - component: {fileID: 6827428874560893546}
+  - component: {fileID: 5196634922292363925}
+  - component: {fileID: 2443481978319142599}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: UIManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3885147575777644529
+--- !u!4 &5196634922292363925
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869758176562653583}
+  m_GameObject: {fileID: 2039829010210368846}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -9.909053, y: -3.4773884, z: -0.25536025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6827428874560893546
+--- !u!114 &2443481978319142599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869758176562653583}
+  m_GameObject: {fileID: 2039829010210368846}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73d3d399f41794d9fa9e036ff3610b38, type: 3}
+  m_Script: {fileID: 11500000, guid: d8c62d1e48b8248e5ad1c1d9ab3c24c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 0
+  gameManager: {fileID: 6827428874560893546, guid: 9a320148da65b4f62ba509b9d1c9a10b, type: 3}
   player: {fileID: 7035993917590173729, guid: b5db154add2494adb8f630c82a8eff2c, type: 3}
-  currentPlayerBoat: {fileID: 6143032493178821912, guid: ad8cde775386f428999ad036fee1fd44, type: 3}
-  unlockedBoats: []
-  _state: 0
+  hudPanel: {fileID: 5999495990892597432, guid: 7b943778b12da4b60b9a73a78cd6a50b, type: 3}
+  menuPanel: {fileID: 0}
+  inventoryPanel: {fileID: 0}
+  dialoguePanel: {fileID: 0}
+  fishingPanel: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  healthText: {fileID: 0}
+  healthSlider: {fileID: 0}
+  moneyText: {fileID: 0}
+  fuelSlider: {fileID: 0}
+  fuelText: {fileID: 0}

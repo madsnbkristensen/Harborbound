@@ -228,7 +228,7 @@ MonoBehaviour:
   speed: 5
   maxHealth: 100
   currentHealth: 0
-  humanoidName: 
+  humanoidName: Player
   gameManager: {fileID: 6827428874560893546, guid: 9a320148da65b4f62ba509b9d1c9a10b, type: 3}
   playerBoat: {fileID: 0}
   interactionRange: 1.7
@@ -368,6 +368,7 @@ MonoBehaviour:
   equipItemPrefab: {fileID: 7546166427365782202, guid: bda05c2de77f84e4bb4affbe37a051a4, type: 3}
   weaponAttachPoint: {fileID: 1533000066078620353}
   fishingRodAttachPoint: {fileID: 7189699806558354246}
+  currentEquippedVisual: {fileID: 0}
 --- !u!114 &7488084073679386627
 MonoBehaviour:
   m_ObjectHideFlags: 0

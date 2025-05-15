@@ -6,10 +6,10 @@ public class Player : Humanoid
     public Boat playerBoat;
     private Friend currentInteractableFriend;
 
-
     [Header("Interaction Settings")]
     public float interactionRange = 2f;
     public KeyCode interactionKey = KeyCode.E;
+    public KeyCode inventoryKey = KeyCode.Tab;
     public Transform boatWheelPosition;
     private Vector3 lastPositionBeforeDriving;
 
@@ -67,7 +67,16 @@ public class Player : Humanoid
                 if (col != null) col.enabled = false;
                 break;
 
-                // Handle other states as needed...
+            // Handle other states as needed...
+            case GameManager.GameState.INVENTORY:
+                if (rb != null)
+                {
+                    // Stop any current movement
+                    rb.linearVelocity = Vector2.zero;
+                    // Freeze position but allow rotation if needed
+                    rb.constraints = RigidbodyConstraints2D.FreezePosition;
+                }
+                break;
         }
     }
 
@@ -76,6 +85,11 @@ public class Player : Humanoid
         if (gameManager == null) return;
 
         Vector2 inputDirection = GetInputDirection();
+        if (UnityEngine.Input.GetKeyDown(inventoryKey))
+        {
+            ToggleInventory();
+            return; // Prevent other state-specific logic from running
+        }
 
         switch (gameManager.state)
         {
@@ -117,7 +131,6 @@ public class Player : Humanoid
                     ExitDialogue();
                 }
                 break;
-
         }
     }
 
@@ -147,6 +160,22 @@ public class Player : Humanoid
             Debug.Log("Nothing to interact with nearby.");
             // Check for other interactable objects
             // CheckForFishingSpot();
+        }
+    }
+
+    private void ToggleInventory()
+    {
+        if (gameManager != null)
+        {
+            Debug.Log("Toggling inventory");
+            if (gameManager.state == GameManager.GameState.INVENTORY)
+            {
+                gameManager.ChangeState(GameManager.GameState.ROAMING);
+            }
+            else
+            {
+                gameManager.ChangeState(GameManager.GameState.INVENTORY);
+            }
         }
     }
 
