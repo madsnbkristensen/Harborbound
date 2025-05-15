@@ -15,7 +15,7 @@ MonoBehaviour:
   _id: 259150
   itemName: Kalashnikov
   description: BR BRRR
-  icon: {fileID: 0}
+  icon: {fileID: -8238340982745299796, guid: c709d0fb83210b84eb0f9a5c7b9f0226, type: 3}
   value: 4000
   type: 0
   inventoryWidth: 4
@@ -24,10 +24,14 @@ MonoBehaviour:
   maxStackSize: 0
   prefab: {fileID: 7546166427365782202, guid: bda05c2de77f84e4bb4affbe37a051a4, type: 3}
   damage: 20
-  range: 100
+  range: 30
   attackSpeed: 10
-  spread: 1
+  spread: 3
   bulletTravelTime: 1
+  weaponType: 1
+  bulletsPerShot: 1
+  burstCount: 1
+  burstInterval: 0.1
   minSize: 0
   maxSize: 0
   availableZones: 
