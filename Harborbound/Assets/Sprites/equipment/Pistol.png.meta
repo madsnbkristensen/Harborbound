@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 84a09ba050da7904aa2e0d2ad5d0b92b
+guid: 1c7034126cf36f4488e1e753ed98548c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5538093523847954431
-    second: fishingBubble_2_0
+      213: 4319395737909131107
+    second: Pistol_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fishingBubble_2_0
+      name: Pistol_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 58
-        height: 26
+        x: 259
+        y: 256
+        width: 252
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fff39d5c7b24bdc40800000000000000
-      internalID: 5538093523847954431
+      spriteID: 367f86ad98391fb30800000000000000
+      internalID: 4319395737909131107
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      fishingBubble_2_0: 5538093523847954431
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

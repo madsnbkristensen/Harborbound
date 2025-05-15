@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Kalashnikov_0: -8238340982745299796
+      Kalashnikov_1: -2859265174240218457
+      Kalashnikov_2: -7811127584174978233
+      Kalashnikov_3: 6914775115454818017
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

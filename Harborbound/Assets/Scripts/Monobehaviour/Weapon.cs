@@ -10,11 +10,25 @@ public class Weapon : Item
     public float spread;
     public float bulletTravelTime;
 
-    [SerializeField] private Transform firePoint;
+    [SerializeField]
+    private Transform firePoint;
     private float lastFireTime;
 
+    // Add this property to expose lastFireTime
+    public float LastFireTime
+    {
+        get { return lastFireTime; }
+    }
+
     // Add these new fields to your Weapon class
-    public enum WeaponType { SINGLE, AUTOMATIC, SHOTGUN, BURST }
+    public enum WeaponType
+    {
+        SINGLE,
+        AUTOMATIC,
+        SHOTGUN,
+        BURST,
+    }
+
     public WeaponType weaponType = WeaponType.SINGLE;
     public int bulletsPerShot = 1;
     public int burstCount = 1;
@@ -25,7 +39,9 @@ public class Weapon : Item
 
     private void Awake()
     {
-        Debug.Log($"Weapon Awake: {name} - definition is {(definition == null ? "NULL" : "assigned")}");
+        Debug.Log(
+            $"Weapon Awake: {name} - definition is {(definition == null ? "NULL" : "assigned")}"
+        );
 
         // Initialize properties from definition when the component wakes up
         if (definition != null && definition.type == ItemDefinition.ItemType.WEAPON)
@@ -34,11 +50,15 @@ public class Weapon : Item
             range = definition.range;
             fireRate = definition.attackSpeed;
             // Other properties from definition
-            Debug.Log($"Weapon initialized from definition: {definition.itemName} with attackSpeed={definition.attackSpeed}");
+            Debug.Log(
+                $"Weapon initialized from definition: {definition.itemName} with attackSpeed={definition.attackSpeed}"
+            );
         }
         else
         {
-            Debug.LogWarning($"Weapon {name} has no valid weapon definition assigned. Using default values.");
+            Debug.LogWarning(
+                $"Weapon {name} has no valid weapon definition assigned. Using default values."
+            );
             // Set default values
             damage = 1;
             range = 10f;
@@ -49,7 +69,7 @@ public class Weapon : Item
         lastFireTime = -999f;
     }
 
-    // the use method is called when the weapon is used, and should be callable from the player and from enemy 
+    // the use method is called when the weapon is used, and should be callable from the player and from enemy
     public override void Use(Player player)
     {
         // This version is called by players via the PlayerEquipment system
@@ -98,7 +118,9 @@ public class Weapon : Item
         float currentTime = Time.time;
         bool canFire = currentTime > cooldownTime;
 
-        Debug.Log($"Fire check: Time={currentTime:F2}, Last={lastFireTime:F2}, Cooldown={cooldownTime:F2}, FireRate={fireRate}, CanFire={canFire}");
+        Debug.Log(
+            $"Fire check: Time={currentTime:F2}, Last={lastFireTime:F2}, Cooldown={cooldownTime:F2}, FireRate={fireRate}, CanFire={canFire}"
+        );
 
         // Check if enough time has passed since last fire based on fire rate
         if (canFire)
@@ -184,7 +206,9 @@ public class Weapon : Item
             burstCount = definition.burstCount;
             burstInterval = definition.burstInterval;
 
-            Debug.Log($"Weapon properties refreshed: {definition.itemName}, Type={weaponType}, BulletsPerShot={bulletsPerShot}");
+            Debug.Log(
+                $"Weapon properties refreshed: {definition.itemName}, Type={weaponType}, BulletsPerShot={bulletsPerShot}"
+            );
         }
     }
 
@@ -195,10 +219,9 @@ public class Weapon : Item
         Vector3 mousePosition = Input.mousePosition;
 
         // Convert mouse position to world space
-        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(
-            mousePosition.x,
-            mousePosition.y,
-            -Camera.main.transform.position.z)); // Set the z to match the distance from the camera
+        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(
+            new Vector3(mousePosition.x, mousePosition.y, -Camera.main.transform.position.z)
+        ); // Set the z to match the distance from the camera
 
         // Calculate direction from weapon/firePoint to mouse position
         Vector3 aimDirection;

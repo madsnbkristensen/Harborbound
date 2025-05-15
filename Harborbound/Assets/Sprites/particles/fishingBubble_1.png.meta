@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fishingBubble_1_0: -6060820862842820632
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -25,11 +25,11 @@ MonoBehaviour:
   prefab: {fileID: 7546166427365782202, guid: bda05c2de77f84e4bb4affbe37a051a4, type: 3}
   damage: 30
   range: 15
-  attackSpeed: 3
+  attackSpeed: 2
   spread: 10
   bulletTravelTime: 1
   weaponType: 2
-  bulletsPerShot: 3
+  bulletsPerShot: 4
   burstCount: 1
   burstInterval: 0.1
   minSize: 0
