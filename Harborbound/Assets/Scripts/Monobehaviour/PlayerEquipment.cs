@@ -7,7 +7,7 @@ public class PlayerEquipment : MonoBehaviour
     public Transform fishingRodAttachPoint;
 
     // Track equipped items
-    private Item equippedWeapon;
+    public Item equippedWeapon;
     private Item equippedFishingRod;
 
     // Track visual gameObjects
@@ -74,6 +74,22 @@ public class PlayerEquipment : MonoBehaviour
                 visual.positionOffset = new Vector3(0.2f, 0, 0);
                 visual.rotationOffset = Vector3.zero;
                 visual.SetupVisual(weapon.definition, weaponAttachPoint);
+
+                // Set the firePoint reference on the weapon
+                if (weapon is Weapon weaponComponent)
+                {
+                    // Find the FirePoint transform in the visual
+                    Transform firePoint = weaponVisual.transform.Find("FirePoint");
+                    if (firePoint != null)
+                    {
+                        // Set the reference in the weapon
+                        weaponComponent.SetFirePoint(firePoint);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("FirePoint not found in weapon visual");
+                    }
+                }
             }
         }
     }

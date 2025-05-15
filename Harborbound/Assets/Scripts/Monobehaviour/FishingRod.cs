@@ -33,4 +33,17 @@ public class FishingRod : Item
 
         return 1; // Default to zone 1
     }
+
+    // Add this method to your FishingRod class
+    public override void RefreshFromDefinition()
+    {
+        // Call the base implementation first to handle shared properties
+        base.RefreshFromDefinition();
+
+        if (definition != null && definition.type == ItemDefinition.ItemType.FISHING_ROD)
+        {
+
+            Debug.Log($"FishingRod properties refreshed from definition: {definition.itemName}");
+        }
+    }
 }

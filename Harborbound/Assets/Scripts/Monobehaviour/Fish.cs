@@ -5,12 +5,17 @@ public class Fish : Item
     // Fish-specific properties
     public float size;
 
-    private void Awake()
+    public override void RefreshFromDefinition()
     {
+        // Call the base implementation first to handle shared properties
+        base.RefreshFromDefinition();
+
         if (definition != null && definition.type == ItemDefinition.ItemType.FISH)
         {
             // Generate a random size for this fish instance
             size = Random.Range(definition.minSize, definition.maxSize);
+
+            Debug.Log($"Fish properties refreshed from definition: {definition.itemName} with size={size}");
         }
     }
 

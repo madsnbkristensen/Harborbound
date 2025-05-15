@@ -32,9 +32,13 @@ public class ItemDefinition : ScriptableObject
 
     // Weapon-specific properties (only used if type == WEAPON)
     [Header("Weapon Properties")]
-    public float damage;
+    public int damage;
     public float range;
     public float attackSpeed;
+
+    public float spread;
+
+    public float bulletTravelTime;
 
     // Fish-specific properties (only used if type == FISH)
     [Header("Fish Properties")]
