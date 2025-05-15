@@ -26,6 +26,8 @@ MonoBehaviour:
   damage: 30
   range: 15
   attackSpeed: 15
+  spread: 10
+  bulletTravelTime: 10
   minSize: 0
   maxSize: 0
   availableZones: 
