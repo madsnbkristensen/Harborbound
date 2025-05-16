@@ -11,6 +11,7 @@ public class CatchAnimation : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private ItemDefinition fishDefinition;
     private System.Action onAnimationComplete;
+    private Vector3 startLocalPosition;
 
     void Awake()
     {
@@ -22,10 +23,16 @@ public class CatchAnimation : MonoBehaviour
         fishDefinition = fish;
         onAnimationComplete = callback;
 
+        // Record the starting local position
+        startLocalPosition = transform.localPosition;
+
         // Set sprite from definition
         if (spriteRenderer && fish != null)
         {
             spriteRenderer.sprite = fish.icon;
+
+            // Make sure it's visible
+            spriteRenderer.sortingOrder = 100;
         }
 
         // Start animation
@@ -53,8 +60,8 @@ public class CatchAnimation : MonoBehaviour
             // Side-to-side wobble
             float wobble = Mathf.Sin(progress * Mathf.PI * 8) * wobbleAmount;
 
-            // Update position
-            transform.position = startPos + new Vector3(wobble, height, 0);
+            // Update position - use local position since we're a child of the camera
+            transform.localPosition = startLocalPosition + new Vector3(wobble, height, 0);
 
             // Fade out near the end
             if (progress > 0.7f)

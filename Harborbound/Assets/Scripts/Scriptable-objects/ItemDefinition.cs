@@ -56,8 +56,8 @@ public class ItemDefinition : ScriptableObject
 
     // Fishing Rod properties (only used if type == FISHING_ROD)
     [Header("Fishing Rod Properties")]
-    public float catchSpeedBonus;
-    public float rareItemChanceBonus;
+    public float castRange;
+    public float bobberTravelSpeed;
 
     // Called when the scriptable object is first created
     private void OnEnable()

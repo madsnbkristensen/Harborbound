@@ -13,6 +13,10 @@ public class PlayerEquipment : MonoBehaviour
     // Track visual gameObjects
     private GameObject weaponVisual;
     private GameObject fishingRodVisual;
+    // Track the currently equipped item
+    private Item currentEquippedItem;
+    public GameObject currentEquippedVisual;
+    private Transform currentAttachPoint;
 
     private Player player;
 

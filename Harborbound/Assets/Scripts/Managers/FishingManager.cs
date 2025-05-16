@@ -13,16 +13,23 @@ public class FishingManager : MonoBehaviour
     public Transform catchAnimationSpawnPoint;
     // public PlayerInventory playerInventory;
 
+    [Header("Bobber stuff")]
+    public GameObject bobberPrefab;
+    private GameObject activeBobber;
+    private Vector3 fishingPosition;
+
     [Header("Fishing Settings")]
     public float minTimeUntilBite = 1.5f;
     public float maxTimeUntilBite = 5.0f;
     public float catchWindowDuration = 1.5f; // How long player has to press button
     public KeyCode catchKey = KeyCode.Space;
+    public KeyCode cancelKey = KeyCode.Space; // Same key to cancel early
 
     [Header("State")]
     public bool isFishing = false;
     private Item currentCatch = null;
     private int currentZoneId = 1; // Default to zone 1
+    private bool fishIsBiting = false; // Track if a fish is biting
 
     // Events
     public delegate void FishingEvent(Item caughtFish);
@@ -35,80 +42,215 @@ public class FishingManager : MonoBehaviour
         OnFishCaught += HandleFishCaught;
     }
 
+    private void Update()
+    {
+        // Check for early cancellation only when fishing and no fish is biting yet
+        if (isFishing && !fishIsBiting && Input.GetKeyDown(cancelKey))
+        {
+            Debug.Log("Fishing canceled early");
+            StopFishing();
+        }
+    }
+
     // Add this new method:
     private void HandleFishCaught(Item caughtFish)
     {
         // Don't proceed if we're missing something
-        if (catchAnimationPrefab == null || catchAnimationSpawnPoint == null || caughtFish == null)
+        if (catchAnimationPrefab == null || caughtFish == null || Camera.main == null)
             return;
 
-        // Create catch animation
-        GameObject animObj = Instantiate(catchAnimationPrefab,
-            catchAnimationSpawnPoint.position,
-            Quaternion.identity);
+        // Get the camera transform
+        Transform cameraTransform = Camera.main.transform;
+
+        // Create the animation object as a child of the camera
+        GameObject animObj = Instantiate(catchAnimationPrefab, cameraTransform);
+
+        // Position it in front of the camera, centered with a slight downward offset
+        float verticalOffset = 1f; // Adjust this value as needed
+        animObj.transform.localPosition = new Vector3(0, verticalOffset, 10); // Local position relative to camera
+
+        Debug.Log("Created fish animation as child of camera");
 
         CatchAnimation anim = animObj.GetComponent<CatchAnimation>();
-
         if (anim != null)
         {
-            // Start animation
             anim.SetupAnimation(caughtFish.definition, () =>
             {
-                // Animation is complete - could add additional logic here
-                Debug.Log("Catch animation completed");
             });
         }
     }
 
-    // Start fishing process
-    public void StartFishing(int zoneId)
+    // New method to cast bobber and start fishing
+    public void CastBobber(Vector3 startPos, Vector3 targetPos, int zoneId, Transform rodTransform = null)
+    {
+        // Don't cast if already fishing
+        if (isFishing)
+            return;
+
+        if (gameManager != null)
+            gameManager.ChangeState(GameManager.GameState.FISHING);
+
+        // Clear any existing bobber
+        if (activeBobber != null)
+        {
+            Destroy(activeBobber);
+        }
+
+        // Store the zone
+        currentZoneId = zoneId;
+
+        // Create bobber if prefab exists
+        if (bobberPrefab != null)
+        {
+            activeBobber = Instantiate(bobberPrefab, startPos, Quaternion.identity);
+            Bobber bobberComponent = activeBobber.GetComponent<Bobber>();
+
+            if (bobberComponent == null)
+            {
+                bobberComponent = activeBobber.AddComponent<Bobber>();
+            }
+
+            // Initialize bobber with rod transform
+            bobberComponent.Initialize(startPos, targetPos, 8f, OnBobberReachedDestination, rodTransform);
+        }
+        else
+        {
+            Debug.LogWarning("Bobber prefab not assigned to FishingManager!");
+            // If no bobber prefab, just start fishing immediately
+            StartFishing(zoneId, targetPos);
+        }
+    }
+
+    // Callback for when bobber reaches its destination
+    private void OnBobberReachedDestination(Vector3 position)
+    {
+        // Store fishing position
+        fishingPosition = position;
+
+        // Start fishing at this position
+        StartFishing(currentZoneId, position);
+    }
+
+    // Update your existing StartFishing method to accept a position
+    public void StartFishing(int zoneId, Vector3 position)
     {
         if (isFishing)
             return;
 
         currentZoneId = zoneId;
+        fishingPosition = position;
         isFishing = true;
+        fishIsBiting = false;
 
-        // Change game state if we have a GameManager
-        if (gameManager != null)
-        {
-            gameManager.ChangeState(GameManager.GameState.FISHING);
-        }
-
-        Debug.Log("Started fishing in zone " + zoneId);
+        Debug.Log("Started fishing in zone " + zoneId + " at position " + position);
 
         // Start fishing coroutine
         StartCoroutine(FishingSequence());
     }
 
-    // Stop fishing
+    // Update StopFishing to destroy the bobber
     public void StopFishing()
     {
         if (!isFishing)
             return;
 
         isFishing = false;
+        fishIsBiting = false;
         StopAllCoroutines();
+
+        // Destroy bobber
+        if (activeBobber != null)
+        {
+            Destroy(activeBobber);
+            activeBobber = null;
+        }
 
         // Change game state back
         if (gameManager != null)
             gameManager.ChangeState(GameManager.GameState.ROAMING);
 
-        Debug.Log("Stopped fishing");
     }
 
     // Main fishing sequence
     private IEnumerator FishingSequence()
     {
-        // Wait random time until fish bites
-        float waitTime = Random.Range(minTimeUntilBite, maxTimeUntilBite);
-        Debug.Log("Waiting for a bite... (" + waitTime + " seconds)");
-        yield return new WaitForSeconds(waitTime);
+        // Get the fishing spot information from the bobber
+        bool isInFishingSpot = false;
+        FishingSpot spot = null;
+        int fishingZoneId = 1;
+
+        if (activeBobber != null)
+        {
+            Bobber bobber = activeBobber.GetComponent<Bobber>();
+            if (bobber != null)
+            {
+                isInFishingSpot = bobber.IsInFishingSpot();
+                spot = bobber.GetCurrentFishingSpot();
+                fishingZoneId = bobber.GetCurrentZone();
+            }
+        }
+
+        // Adjust wait time based on whether we're in a fishing spot
+        float baseWaitTime = Random.Range(minTimeUntilBite, maxTimeUntilBite);
+        float waitTime;
+
+        if (isInFishingSpot && spot != null && spot.numberOfFish > 0)
+        {
+            // Fish bite faster in fishing spots with more fish
+            float fishFactor = Mathf.Clamp01((float)spot.numberOfFish / spot.maxNumberOfFish);
+            waitTime = Mathf.Lerp(baseWaitTime, minTimeUntilBite, fishFactor);
+            Debug.Log($"Fishing in spot with {spot.numberOfFish} fish. (Zone {fishingZoneId}) Bite time: {waitTime}s");
+        }
+        else if (!isInFishingSpot)
+        {
+            // Longer wait time when not in a fishing spot, fish are rare
+            waitTime = baseWaitTime * 2f;
+            Debug.Log($"Fishing in open water (Zone {fishingZoneId}). Bite time: {waitTime}s");
+        }
+        else
+        {
+            // Fishing spot with no fish
+            waitTime = float.MaxValue; // Will never bite
+            Debug.Log("This fishing spot is depleted. No fish will bite!");
+        }
+
+        // Wait for bite
+        float elapsedTime = 0f;
+        while (elapsedTime < waitTime && isFishing)
+        {
+            yield return null;
+            elapsedTime += Time.deltaTime;
+        }
+
+        // If fishing was canceled or wait time is "infinite", exit
+        if (!isFishing || waitTime >= float.MaxValue)
+            yield break;
 
         // Fish is biting!
-        currentCatch = CatchFish(currentZoneId);
+        if (isInFishingSpot && spot != null && spot.numberOfFish > 0)
+        {
+            // Use the fishing spot's zone for catching
+            currentCatch = CatchFish(spot.fishingSpotZone);
+        }
+        else
+        {
+            // Use the zone determined by position
+            currentCatch = CatchFish(fishingZoneId);
 
-        if (currentCatch != null)
+            // Make catches in open water more rare (might be nothing)
+            if (Random.value > 0.3f) // 70% chance of catching nothing in open water
+            {
+                Debug.Log("Nothing seems to be biting here...");
+                currentCatch = null;
+                yield return new WaitForSeconds(1.0f);
+                StopFishing();
+                yield break;
+            }
+        }
+
+        fishIsBiting = currentCatch != null;
+
+        if (fishIsBiting)
         {
             Debug.Log("Fish is biting! Press " + catchKey + " to catch!");
 
@@ -126,13 +268,18 @@ public class FishingManager : MonoBehaviour
                     // Player caught the fish!
                     Debug.Log("Caught a " + currentCatch.GetName() + "!");
 
-                    // Add to inventory or handle as needed
-                    if (player != null)
+                    // Remove fish from the fishing spot if applicable
+                    if (isInFishingSpot && spot != null)
                     {
-                        // This would be a call to your inventory system
-                        // player.inventory.AddItem(currentCatch);
-                        Debug.Log("Fish added to inventory");
+                        spot.RemoveFish(1);
+                        Debug.Log($"Fishing spot now has {spot.numberOfFish} fish remaining.");
                     }
+
+                    // Add to inventory (commented until inventory system is implemented)
+                    // if (player != null && player.inventory != null)
+                    // {
+                    //     player.inventory.AddItem(currentCatch);
+                    // }
 
                     // Trigger caught event
                     OnFishCaught?.Invoke(currentCatch);
@@ -160,16 +307,22 @@ public class FishingManager : MonoBehaviour
         StopFishing();
     }
 
-    // Generate a caught fish for the given zone
+    // Update your CatchFish method to consider fishing spots
     public Item CatchFish(int zoneId)
     {
-        // Use the database to get a random fish
+        // Use the database to get a random fish for the zone
         ItemDefinition fishDef = itemDatabase.GetRandomFishInZone(zoneId);
         if (fishDef == null)
+        {
+            Debug.LogWarning($"No fish found for zone {zoneId}");
             return null;
+        }
 
-        // Create and return the fish item
-        return ItemFactory.CreateItem(fishDef);
+        // Create fish item
+        Item fishItem = ItemFactory.CreateItem(fishDef);
+
+        Debug.Log($"Created fish: {fishDef.itemName} for zone {zoneId}");
+        return fishItem;
     }
 
     // Helper method to get random fish weighted by rarity
@@ -226,13 +379,6 @@ public class FishingManager : MonoBehaviour
     private List<ItemDefinition> GetAllItemDefinitions()
     {
         return allItems;
-    }
-
-    // Simplified interface for fishing spots to use
-    public void TriggerFishing(int zoneId)
-    {
-        if (!isFishing)
-            StartFishing(zoneId);
     }
 
     // For debugging: catch a specific type of fish

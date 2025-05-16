@@ -14,8 +14,6 @@ public class Fish : Item
         {
             // Generate a random size for this fish instance
             size = Random.Range(definition.minSize, definition.maxSize);
-
-            Debug.Log($"Fish properties refreshed from definition: {definition.itemName} with size={size}");
         }
     }
 

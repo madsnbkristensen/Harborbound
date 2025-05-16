@@ -36,5 +36,5 @@ MonoBehaviour:
   maxSize: 0
   availableZones: 
   rarity: 0
-  catchSpeedBonus: 0
-  rareItemChanceBonus: 0
+  castRange: 0
+  bobberTravelSpeed: 0
