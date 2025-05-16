@@ -15,11 +15,11 @@ MonoBehaviour:
   _id: 81918
   itemName: Freshwater Tuna
   description: Big tuna fish
-  icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: -3752526547493954969, guid: c4c8fe54c413b4239970206bb71d1046, type: 3}
   value: 100
   type: 2
-  inventoryWidth: 0
-  inventoryHeight: 0
+  inventoryWidth: 3
+  inventoryHeight: 1
   isStackable: 1
   maxStackSize: 64
   prefab: {fileID: 0}
@@ -30,5 +30,5 @@ MonoBehaviour:
   maxSize: 200
   availableZones: 0100000002000000
   rarity: 3
-  catchSpeedBonus: 0
-  rareItemChanceBonus: 0
+  castRange: 0
+  bobberTravelSpeed: 0
