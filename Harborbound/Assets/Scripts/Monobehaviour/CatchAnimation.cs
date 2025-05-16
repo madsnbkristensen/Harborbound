@@ -45,6 +45,8 @@ public class CatchAnimation : MonoBehaviour
         if (splashEffect)
             splashEffect.Play();
 
+        // Initial position
+        Vector3 startPos = transform.position;
         float startTime = Time.time;
 
         while (Time.time < startTime + animationDuration)
