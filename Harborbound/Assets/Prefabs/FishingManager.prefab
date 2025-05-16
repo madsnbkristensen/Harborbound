@@ -48,18 +48,13 @@ MonoBehaviour:
   player: {fileID: 7035993917590173729, guid: b5db154add2494adb8f630c82a8eff2c, type: 3}
   allItems: []
   itemDatabase: {fileID: 11400000, guid: e70c0de49d7614cf99dabd2a9a62c754, type: 2}
-  catchAnimationPrefab: {fileID: 5260340858400398140, guid: 49ae684d82e7245b9842ebc3c1b5e57d, type: 3}
+  catchAnimationPrefab: {fileID: 8086153158348760277, guid: 49ae684d82e7245b9842ebc3c1b5e57d, type: 3}
   catchAnimationSpawnPoint: {fileID: 2185498243363619352, guid: b5db154add2494adb8f630c82a8eff2c, type: 3}
-<<<<<<< HEAD
-=======
+  playerInventory: {fileID: 1228140294469694480, guid: b5db154add2494adb8f630c82a8eff2c, type: 3}
   bobberPrefab: {fileID: 6080604513635685319, guid: 371c7e589719243109a6acc0003ec04b, type: 3}
->>>>>>> origin/development
   minTimeUntilBite: 1.5
   maxTimeUntilBite: 5
   catchWindowDuration: 1.5
   catchKey: 32
-<<<<<<< HEAD
-=======
   cancelKey: 32
->>>>>>> origin/development
   isFishing: 0

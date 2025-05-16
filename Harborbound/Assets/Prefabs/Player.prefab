@@ -234,6 +234,7 @@ MonoBehaviour:
   playerBoat: {fileID: 0}
   interactionRange: 1.7
   interactionKey: 101
+  inventoryKey: 9
   boatWheelPosition: {fileID: 0}
 --- !u!212 &3329362614337908596
 SpriteRenderer:
@@ -366,9 +367,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a450154cd94b430e9bfe007716dc11f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipItemPrefab: {fileID: 7546166427365782202, guid: bda05c2de77f84e4bb4affbe37a051a4, type: 3}
+  equipItemPrefab: {fileID: 960434323151276528, guid: bda05c2de77f84e4bb4affbe37a051a4, type: 3}
   weaponAttachPoint: {fileID: 1533000066078620353}
   fishingRodAttachPoint: {fileID: 7189699806558354246}
+  equippedWeapon: {fileID: 0}
   currentEquippedItem: {fileID: 0}
   currentEquippedVisual: {fileID: 0}
 --- !u!114 &7488084073679386627
@@ -400,3 +402,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryWidth: 10
   inventoryHeight: 8
+  spacingPercentage: 0.07
+  paddingLeft: 0
+  paddingRight: 0
+  paddingTop: 0
+  paddingBottom: 0
+  weaponColor: {r: 0.7, g: 0.3, b: 0.3, a: 0.6}
+  fishColor: {r: 0.3, g: 0.5, b: 0.7, a: 0.6}
+  defaultItemColor: {r: 0.4, g: 0.4, b: 0.4, a: 0.6}
+  fishScaleFactor: 1
