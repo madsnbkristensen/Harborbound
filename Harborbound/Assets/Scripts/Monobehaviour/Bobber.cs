@@ -58,7 +58,7 @@ public class Bobber : MonoBehaviour
 
         if (sourceTransform != null)
         {
-            sourcePos = sourceTransform.position + new Vector3(0.1f, 0.2f, 0);
+            sourcePos = sourceTransform.position + new Vector3(0.52f, 0.27f, 0);
         }
         else
         {
