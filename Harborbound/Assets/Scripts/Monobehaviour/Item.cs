@@ -51,4 +51,19 @@ public class Item : MonoBehaviour
     {
         Debug.Log($"Using {GetName()}");
     }
+
+    // Refresh item properties from the definition
+    public virtual void RefreshFromDefinition()
+    {
+        if (definition == null)
+        {
+            Debug.LogWarning($"Cannot refresh {name}: definition is null");
+            return;
+        }
+
+        // Set shared properties that all items have
+        currentStackSize = 1; // Reset stack size or set from definition if needed
+
+        Debug.Log($"Base Item refreshed from definition: {definition.itemName}");
+    }
 }

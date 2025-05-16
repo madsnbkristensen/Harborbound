@@ -89,6 +89,31 @@ public class FishingRod : Item
         }
     }
 
+    private int GetPlayerZone(Player player)
+    {
+        // Simple implementation - can be enhanced
+        ZoneManager zoneManager = Object.FindFirstObjectByType<ZoneManager>();
+        if (zoneManager != null)
+        {
+            // Check which zone contains player
+            // For now, return a default
+        }
+
+        return 1; // Default to zone 1
+    }
+
+    // Add this method to your FishingRod class
+    public override void RefreshFromDefinition()
+    {
+        // Call the base implementation first to handle shared properties
+        base.RefreshFromDefinition();
+
+        if (definition != null && definition.type == ItemDefinition.ItemType.FISHING_ROD)
+        {
+
+            Debug.Log($"FishingRod properties refreshed from definition: {definition.itemName}");
+        }
+    }
     private Vector3 GetMouseWorldPosition()
     {
         // Existing mouse position code...
@@ -124,12 +149,6 @@ public class FishingRod : Item
         }
 
         // If not in any zone (should not happen with proper boundary collider)
-        return 1;
-    }
-
-    private int GetPlayerZone(Player player)
-    {
-        // Zone detection code
         return 1;
     }
 }

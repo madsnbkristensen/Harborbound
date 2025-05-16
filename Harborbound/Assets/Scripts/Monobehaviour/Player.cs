@@ -6,6 +6,8 @@ public class Player : Humanoid
     public Boat playerBoat;
     private Friend currentInteractableFriend;
 
+    private PlayerEquipment playerEquipment;
+
 
     [Header("Interaction Settings")]
     public float interactionRange = 2f;
@@ -32,6 +34,9 @@ public class Player : Humanoid
 
         if (boatWheelPosition == null && playerBoat != null)
             boatWheelPosition = playerBoat.wheelPosition;
+
+        // Get the PlayerEquipment component
+        playerEquipment = GetComponent<PlayerEquipment>();
     }
 
     // React to game state changes

@@ -3,6 +3,8 @@ using UnityEngine;
 public class EquipmentTester : MonoBehaviour
 {
     public PlayerEquipment playerEquipment;
+
+    // Test item definitions
     public ItemDefinition testWeaponDef;
     public ItemDefinition testFishingRodDef;
 
@@ -20,6 +22,22 @@ public class EquipmentTester : MonoBehaviour
     }
 
     void Update()
+    {
+        // Handle equipment switching
+        HandleEquipmentToggle();
+
+        // Handle item usage based on equipped item type
+        if (playerEquipment.IsEquippedItemOfType(ItemDefinition.ItemType.WEAPON))
+        {
+            HandleWeaponInput();
+        }
+        else if (playerEquipment.IsEquippedItemOfType(ItemDefinition.ItemType.FISHING_ROD))
+        {
+            HandleFishingRodInput();
+        }
+    }
+
+    private void HandleEquipmentToggle()
     {
         // Press 1 to equip weapon
         if (Input.GetKeyDown(KeyCode.Alpha1) && testWeapon != null)
@@ -41,12 +59,31 @@ public class EquipmentTester : MonoBehaviour
             Debug.Log("Unequipping item");
             playerEquipment.EquipItem(null);
         }
+    }
 
-        // Press Space to use equipped item
+    private void HandleWeaponInput()
+    {
+        // Weapons support press-and-hold interaction
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            playerEquipment.StartUsingEquippedItem();
+        }
+
+        // For automatic weapons, we need to stop firing when key is released
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            playerEquipment.StopUsingEquippedItem();
+        }
+    }
+
+    private void HandleFishingRodInput()
+    {
+        // Fishing rods use a single press interaction (no hold)
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Using equipped item");
-            playerEquipment.UseEquippedItem();
+            Debug.Log("Using fishing rod");
+            playerEquipment.StartUsingEquippedItem();
+            // No need for StopUsingEquippedItem for fishing rods
         }
     }
 }
