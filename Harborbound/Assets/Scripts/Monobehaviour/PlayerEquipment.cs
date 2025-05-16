@@ -67,6 +67,8 @@ public class PlayerEquipment : MonoBehaviour
 
         // Store reference
         equippedWeapon = weapon;
+        // Unequip fishing rod when equipping a weapon
+        UnequipFishingRod();
 
         if (weapon != null && weaponAttachPoint != null)
         {
@@ -108,6 +110,8 @@ public class PlayerEquipment : MonoBehaviour
 
         // Store reference
         equippedFishingRod = fishingRod;
+        // Unequip weapon when equipping a fishing rod
+        UnequipWeapon();
 
         if (fishingRod != null && fishingRodAttachPoint != null)
         {
@@ -147,68 +151,63 @@ public class PlayerEquipment : MonoBehaviour
         equippedFishingRod = null;
     }
 
-    // UPDATED METHOD - Start using the equipped weapon (for press and hold)
-    public void StartUsingEquippedWeapon()
+    // Get the currently equipped item (weapon or fishing rod)
+    public Item GetEquippedItem()
     {
         if (equippedWeapon != null)
+            return equippedWeapon;
+
+        if (equippedFishingRod != null)
+            return equippedFishingRod;
+
+        return null;
+    }
+
+    // Check if an item of specified type is equipped
+    public bool IsEquippedItemOfType(ItemDefinition.ItemType itemType)
+    {
+        ItemDefinition def = CurrentEquippedItem;
+        return def != null && def.type == itemType;
+    }
+
+    // Start using the equipped item with appropriate behavior
+    public void StartUsingEquippedItem()
+    {
+        Item equippedItem = GetEquippedItem();
+        if (equippedItem == null) return;
+
+        // Play animation based on equipped item type
+        if (equippedWeapon != null)
         {
-            // Play animation
             if (weaponVisual != null)
             {
                 ItemEquipVisual visual = weaponVisual.GetComponent<ItemEquipVisual>();
                 if (visual != null)
                     visual.PlayUseAnimation();
             }
-
-            // Use the weapon
-            equippedWeapon.Use(player);
         }
-    }
-
-    // NEW METHOD - Stop using the equipped weapon (for release)
-    public void StopUsingEquippedWeapon()
-    {
-        if (equippedWeapon != null && equippedWeapon is Weapon weapon)
+        else if (equippedFishingRod != null)
         {
-            weapon.StopUse();
-        }
-    }
-
-    // Legacy method - for single press usage
-    public void UseEquippedWeapon()
-    {
-        StartUsingEquippedWeapon();
-    }
-
-    public void UseEquippedFishingRod()
-    {
-        if (equippedFishingRod != null)
-        {
-            // Play animation
             if (fishingRodVisual != null)
             {
                 ItemEquipVisual visual = fishingRodVisual.GetComponent<ItemEquipVisual>();
                 if (visual != null)
                     visual.PlayUseAnimation();
             }
-
-            // Use the fishing rod
-            equippedFishingRod.Use(player);
         }
+
+        // Use the item
+        equippedItem.Use(player);
     }
 
-    // This maintains compatibility with your current code
-    public void UseEquippedItem()
+    // Stop using the equipped item - only needed for continuous-use items like weapons
+    public void StopUsingEquippedItem()
     {
-        // Try to use whatever is equipped, prioritizing weapon
-        if (equippedWeapon != null)
+        if (equippedWeapon != null && equippedWeapon is Weapon weapon)
         {
-            UseEquippedWeapon();
+            weapon.StopUse();
         }
-        else if (equippedFishingRod != null)
-        {
-            UseEquippedFishingRod();
-        }
+        // Fishing rods don't need a stop method as they're single-action
     }
 
     // Read-only property to get the currently equipped item definition

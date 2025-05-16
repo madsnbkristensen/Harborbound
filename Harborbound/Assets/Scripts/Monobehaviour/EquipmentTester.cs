@@ -4,7 +4,7 @@ public class EquipmentTester : MonoBehaviour
 {
     public PlayerEquipment playerEquipment;
 
-    // Only keep a single weapon definition
+    // Test item definitions
     public ItemDefinition testWeaponDef;
     public ItemDefinition testFishingRodDef;
 
@@ -22,6 +22,22 @@ public class EquipmentTester : MonoBehaviour
     }
 
     void Update()
+    {
+        // Handle equipment switching
+        HandleEquipmentToggle();
+
+        // Handle item usage based on equipped item type
+        if (playerEquipment.IsEquippedItemOfType(ItemDefinition.ItemType.WEAPON))
+        {
+            HandleWeaponInput();
+        }
+        else if (playerEquipment.IsEquippedItemOfType(ItemDefinition.ItemType.FISHING_ROD))
+        {
+            HandleFishingRodInput();
+        }
+    }
+
+    private void HandleEquipmentToggle()
     {
         // Press 1 to equip weapon
         if (Input.GetKeyDown(KeyCode.Alpha1) && testWeapon != null)
@@ -43,19 +59,33 @@ public class EquipmentTester : MonoBehaviour
             Debug.Log("Unequipping item");
             playerEquipment.EquipItem(null);
         }
+    }
 
-        // Handle weapon firing
-        if (Input.GetKeyDown(KeyCode.Space))
+    private void HandleWeaponInput()
+    {
+        // Weapons support press-and-hold interaction
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Debug.Log("Starting to use equipped item");
-            playerEquipment.StartUsingEquippedWeapon();
+            Debug.Log("Starting to fire weapon");
+            playerEquipment.StartUsingEquippedItem();
         }
 
-        // For automatic weapons, we still need to stop firing when key is released
-        if (Input.GetKeyUp(KeyCode.Space))
+        // For automatic weapons, we need to stop firing when key is released
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.Mouse0))
         {
-            Debug.Log("Stopping use of equipped item");
-            playerEquipment.StopUsingEquippedWeapon();
+            Debug.Log("Stopping weapon fire");
+            playerEquipment.StopUsingEquippedItem();
+        }
+    }
+
+    private void HandleFishingRodInput()
+    {
+        // Fishing rods use a single press interaction (no hold)
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Using fishing rod");
+            playerEquipment.StartUsingEquippedItem();
+            // No need for StopUsingEquippedItem for fishing rods
         }
     }
 }
