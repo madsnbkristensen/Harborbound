@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7b6cc0e836ad74a68beae2cd01651abe
+guid: a10e9dc9e493bed43b2d5344d58d5334
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8429361088821098049
-    second: palm1_0
+      213: 2668232129599384549
+    second: 5.2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: palm1_0
+      name: 5.2_0
       rect:
         serializedVersion: 2
-        x: 203
+        x: 0
         y: 0
-        width: 598
-        height: 1003
+        width: 10717
+        height: 6028
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb9815910c4e40b80800000000000000
-      internalID: -8429361088821098049
+      spriteID: 5eb2e072cf6770520800000000000000
+      internalID: 2668232129599384549
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      palm1_0: -8429361088821098049
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
