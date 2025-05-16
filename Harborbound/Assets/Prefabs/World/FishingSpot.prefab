@@ -173,8 +173,8 @@ MonoBehaviour:
   maxNumberOfFish: 5
   minNumberOfFish: 1
   numberOfFish: 0
-  minSize: 0.5
-  maxSize: 1.5
+  minSize: 1.5
+  maxSize: 3
   size: 0
   fishingSpotZone: 0
 --- !u!1 &7424461035175613930
