@@ -11,7 +11,7 @@ public class FishingManager : MonoBehaviour
     public ItemDatabase itemDatabase;
     public GameObject catchAnimationPrefab;
     public Transform catchAnimationSpawnPoint;
-    // public PlayerInventory playerInventory;
+    public PlayerInventory playerInventory;
 
     [Header("Bobber stuff")]
     public GameObject bobberPrefab;
@@ -40,6 +40,26 @@ public class FishingManager : MonoBehaviour
     {
         // Subscribe to our own OnFishCaught event to show animations
         OnFishCaught += HandleFishCaught;
+
+        // Get player inventory reference if not assigned
+        if (playerInventory == null)
+        {
+            // First try to get it from the player reference
+            if (player != null)
+            {
+                playerInventory = player.GetComponent<PlayerInventory>();
+            }
+
+            // If still null, find in scene
+            if (playerInventory == null)
+            {
+                playerInventory = FindFirstObjectByType<PlayerInventory>();
+                if (playerInventory == null)
+                {
+                    Debug.LogWarning("PlayerInventory not found! Caught fish won't be added to inventory.");
+                }
+            }
+        }
     }
 
     private void Update()
@@ -275,13 +295,26 @@ public class FishingManager : MonoBehaviour
                         Debug.Log($"Fishing spot now has {spot.numberOfFish} fish remaining.");
                     }
 
-                    // Add to inventory (commented until inventory system is implemented)
-                    // if (player != null && player.inventory != null)
-                    // {
-                    //     player.inventory.AddItem(currentCatch);
-                    // }
+                    bool addedToInventory = false;
+                    if (playerInventory != null)
+                    {
+                        addedToInventory = playerInventory.AddItem(currentCatch);
 
-                    // Trigger caught event
+                        if (addedToInventory)
+                        {
+                            Debug.Log($"Added {currentCatch.GetName()} to inventory!");
+                        }
+                        else
+                        {
+                            Debug.Log("Inventory is full! Fish was released.");
+                            Destroy(currentCatch.gameObject); // Clean up fish if not added to inventory
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogWarning("PlayerInventory reference is missing in FishingManager!");
+                    }
+
                     OnFishCaught?.Invoke(currentCatch);
                     caught = true;
                 }

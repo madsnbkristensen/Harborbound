@@ -44,5 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d3d399f41794d9fa9e036ff3610b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  money: 0
+  player: {fileID: 7035993917590173729, guid: b5db154add2494adb8f630c82a8eff2c, type: 3}
+  currentPlayerBoat: {fileID: 6143032493178821912, guid: ad8cde775386f428999ad036fee1fd44, type: 3}
+  unlockedBoats: []
   _state: 0
