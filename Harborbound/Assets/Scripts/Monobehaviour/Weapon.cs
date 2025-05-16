@@ -39,34 +39,11 @@ public class Weapon : Item
 
     private void Awake()
     {
-        Debug.Log(
-            $"Weapon Awake: {name} - definition is {(definition == null ? "NULL" : "assigned")}"
-        );
-
-        // Initialize properties from definition when the component wakes up
-        if (definition != null && definition.type == ItemDefinition.ItemType.WEAPON)
-        {
-            damage = definition.damage;
-            range = definition.range;
-            fireRate = definition.attackSpeed;
-            // Other properties from definition
-            Debug.Log(
-                $"Weapon initialized from definition: {definition.itemName} with attackSpeed={definition.attackSpeed}"
-            );
-        }
-        else
-        {
-            Debug.LogWarning(
-                $"Weapon {name} has no valid weapon definition assigned. Using default values."
-            );
-            // Set default values
-            damage = 1;
-            range = 10f;
-            fireRate = 2f;
-        }
-
         // Initialize lastFireTime to allow immediate first shot
         lastFireTime = -999f;
+
+        // Minimal logging
+        Debug.Log($"Weapon Awake: {name}");
     }
 
     // the use method is called when the weapon is used, and should be callable from the player and from enemy
@@ -209,6 +186,17 @@ public class Weapon : Item
             Debug.Log(
                 $"Weapon properties refreshed: {definition.itemName}, Type={weaponType}, BulletsPerShot={bulletsPerShot}"
             );
+        }
+        else
+        {
+            // Add this else clause to handle missing definition
+            Debug.LogWarning(
+                $"Weapon {name} has no valid weapon definition assigned during refresh. Using default values."
+            );
+            // Set default values
+            damage = 1;
+            range = 10f;
+            fireRate = 2f;
         }
     }
 

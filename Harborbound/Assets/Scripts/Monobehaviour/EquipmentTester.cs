@@ -66,14 +66,12 @@ public class EquipmentTester : MonoBehaviour
         // Weapons support press-and-hold interaction
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Debug.Log("Starting to fire weapon");
             playerEquipment.StartUsingEquippedItem();
         }
 
         // For automatic weapons, we need to stop firing when key is released
         if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.Mouse0))
         {
-            Debug.Log("Stopping weapon fire");
             playerEquipment.StopUsingEquippedItem();
         }
     }
