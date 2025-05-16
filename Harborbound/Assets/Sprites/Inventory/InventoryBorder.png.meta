@@ -1,13 +1,22 @@
 fileFormatVersion: 2
-guid: 553f8f2b9fd8e476ea43ba72d35b298a
+guid: 6dbe9710276ea4514a52389c56f4055d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -844090096377951477
-    second: goldfish 1_0
+      213: -597751065639292930
+    second: InventoryBorder_0
   - first:
-      213: -505215479937901626
-    second: goldfish 1_1
+      213: -5606332124883363906
+    second: InventoryBorder_1
+  - first:
+      213: 426135254103516321
+    second: InventoryBorder_2
+  - first:
+      213: -1238060213101759470
+    second: InventoryBorder_3
+  - first:
+      213: 3049375820734527653
+    second: InventoryBorder_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +112,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: goldfish 1_0
+      name: InventoryBorder_0
       rect:
         serializedVersion: 2
-        x: 255
-        y: 255
-        width: 417
-        height: 210
+        x: 13
+        y: 844
+        width: 22
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b0b87fe87803944f0800000000000000
-      internalID: -844090096377951477
+      spriteID: eff6574a29c54b7f0800000000000000
+      internalID: -597751065639292930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goldfish 1_1
+      name: InventoryBorder_1
       rect:
         serializedVersion: 2
-        x: 534
-        y: 255
-        width: 7
-        height: 9
+        x: 118
+        y: 47
+        width: 836
+        height: 922
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6cbd54f923d1df8f0800000000000000
-      internalID: -505215479937901626
+      spriteID: eb75773d2ae4232b0800000000000000
+      internalID: -5606332124883363906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InventoryBorder_2
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 640
+        width: 42
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a46c1f71cfe9e500800000000000000
+      internalID: 426135254103516321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InventoryBorder_3
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 313
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2147683bbc681dee0800000000000000
+      internalID: -1238060213101759470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InventoryBorder_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 272
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a8fb85172f815a20800000000000000
+      internalID: 3049375820734527653
       vertices: []
       indices: 
       edges: []
@@ -150,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 30c80f7b5e81647c786412a261f7ae13
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      goldfish 1_0: -844090096377951477
-      goldfish 1_1: -505215479937901626
+      InventoryBorder_0: -597751065639292930
+      InventoryBorder_1: -5606332124883363906
+      InventoryBorder_2: 426135254103516321
+      InventoryBorder_3: -1238060213101759470
+      InventoryBorder_4: 3049375820734527653
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

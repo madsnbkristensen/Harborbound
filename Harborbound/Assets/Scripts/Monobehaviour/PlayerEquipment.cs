@@ -7,7 +7,7 @@ public class PlayerEquipment : MonoBehaviour
     public Transform fishingRodAttachPoint;
 
     // Track the currently equipped item
-    private Item currentEquippedItem;
+    public Item currentEquippedItem;
     public GameObject currentEquippedVisual;
     private Transform currentAttachPoint;
 
