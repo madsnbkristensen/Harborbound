@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Tile1
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -8868803461578586678, guid: bab9d8e0f882cb543a61d499f8a47471, type: 3}
+  - {fileID: -9166084717782916886, guid: a672dcc7d8dc1b94fbdfe3fbc79568c2, type: 3}
+  - {fileID: 2839294785017435275, guid: 800aa5f57cd394b4b92a5ac063d55f1c, type: 3}
+  - {fileID: -9166084717782916886, guid: a672dcc7d8dc1b94fbdfe3fbc79568c2, type: 3}
+  m_MinSpeed: 1
+  m_MaxSpeed: 1
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0
