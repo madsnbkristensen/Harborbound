@@ -16,6 +16,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private GameObject fishingPanel;
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] public GameObject tooltipPanel;
+    private GameManager.GameState previousState;
 
     [Header("HUD Elements")]
     [SerializeField] private TextMeshProUGUI healthText;
@@ -105,6 +107,14 @@ public class UIManager : MonoBehaviour
             hudPanel.SetActive(true);
         }
 
+        if (newState != GameManager.GameState.INVENTORY)
+        {
+            if (Tooltip.Instance != null)
+            {
+                Tooltip.Instance.HideTooltip();
+            }
+        }
+
         Debug.Log($"UI updated for game state: {newState}");
     }
 
@@ -113,7 +123,7 @@ public class UIManager : MonoBehaviour
     {
         foreach (var panel in statePanels.Values)
         {
-            if (panel != null)
+            if (panel != null && panel != tooltipPanel)
                 panel.SetActive(false);
         }
 

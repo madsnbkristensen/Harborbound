@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public Item item { get; private set; }
     private PlayerInventory inventory;
@@ -77,5 +77,21 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
         }
 
         OnDragEnded?.Invoke();
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (item != null && Tooltip.Instance != null)
+        {
+            Tooltip.Instance.ShowTooltip(item);
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (Tooltip.Instance != null)
+        {
+            Tooltip.Instance.HideTooltip();
+        }
     }
 }
