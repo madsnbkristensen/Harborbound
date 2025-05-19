@@ -22,10 +22,16 @@ public class EnemySpawner : MonoBehaviour
     public int minEnemiesPerBoat = 1;
     public int maxEnemiesPerBoat = 3;
     [Range(0f, 1f)]
-    public float sharkProbability = 0.3f;           // Probability of spawning a shark instead of pirate
+    public float sharkProbability = 0f;           // Probability of spawning a shark instead of pirate
 
     [Header("Weapon Configuration")]
     public List<Weapon> availableWeapons = new List<Weapon>();
+
+    [Header("Enemy Weapons")]
+    public ItemDefinition kalashnikovDef;
+    public ItemDefinition pistolDef;
+    public ItemDefinition shotgunDef;
+    public GameObject equipItemPrefab; // The same prefab used in PlayerEquipment
 
     private List<Vector2> enemyBoatPositions = new List<Vector2>();
 
@@ -159,7 +165,17 @@ public class EnemySpawner : MonoBehaviour
 
     private void ConfigureEnemyBoat(EnemyBoat boat, int zoneIndex)
     {
-        if (boat == null) return;
+        if (boat == null)
+        {
+            Debug.LogError("ConfigureEnemyBoat: Boat is null");
+            return;
+        }
+
+        // Clear any existing enemies in the boat's list
+        boat.ClearEnemies();
+
+        // Debug log for diagnostics
+        Debug.Log($"Configuring boat at {boat.transform.position}, looking for enemy positions...");
 
         // Determine number of enemies based on zone
         int numEnemies = Random.Range(minEnemiesPerBoat, maxEnemiesPerBoat + 1);
@@ -171,34 +187,69 @@ public class EnemySpawner : MonoBehaviour
         }
 
         // Find enemy positions on the boat
-        Transform[] enemyPositions = new Transform[3]; // Max 3 positions
+        List<Transform> foundPositions = new List<Transform>();
 
-        // Find enemy position transforms in the boat
+        // Find enemy position transforms in the boat - try both direct and recursive search
         for (int i = 0; i < 3; i++)
         {
+            // Try direct child first
             Transform position = boat.transform.Find($"EnemyPosition{i + 1}");
+
+            if (position == null)
+            {
+                // Log all child objects for debugging
+                Debug.Log($"Children of boat: {boat.name}");
+                for (int c = 0; c < boat.transform.childCount; c++)
+                {
+                    Debug.Log($"Child {c}: {boat.transform.GetChild(c).name}");
+                }
+
+                // Try recursive search
+                position = FindChildRecursively(boat.transform, $"EnemyPosition{i + 1}");
+            }
+
             if (position != null)
             {
-                enemyPositions[i] = position;
+                foundPositions.Add(position);
+                Debug.Log($"Found position {i + 1} at {position.position}");
+            }
+            else
+            {
+                Debug.LogWarning($"Could not find EnemyPosition{i + 1} on boat");
             }
         }
 
-        // Create enemies and place them on the boat
-        for (int i = 0; i < numEnemies; i++)
+        if (foundPositions.Count == 0)
         {
-            if (i >= enemyPositions.Length || enemyPositions[i] == null) continue;
+            Debug.LogError("No enemy positions found on boat! Creating emergency positions.");
+            // Create emergency positions if none found
+            for (int i = 0; i < 3; i++)
+            {
+                GameObject posObj = new GameObject($"EnemyPosition{i + 1}");
+                posObj.transform.SetParent(boat.transform);
+                posObj.transform.localPosition = new Vector3(i - 1, 0, 0); // Simple line formation
+                foundPositions.Add(posObj.transform);
+            }
+        }
 
+        Debug.Log($"Found {foundPositions.Count} positions, creating {numEnemies} enemies");
+
+        // Create enemies and place them on the boat
+        for (int i = 0; i < numEnemies && i < foundPositions.Count; i++)
+        {
             // Determine if this should be a shark or pirate
             bool isShark = Random.value < sharkProbability;
             GameObject enemyPrefab = isShark ? enemySharkPrefab : enemyPiratePrefab;
 
             if (enemyPrefab == null)
             {
-                enemyPrefab = enemyPiratePrefab; // Fallback to pirate if shark is null
+                Debug.LogError("Enemy prefab is null!");
+                enemyPrefab = enemyPiratePrefab; // Fallback
+                if (enemyPrefab == null) continue; // Skip if still null
             }
 
             // Instantiate enemy
-            GameObject enemyObject = Instantiate(enemyPrefab, enemyPositions[i].position, Quaternion.identity);
+            GameObject enemyObject = Instantiate(enemyPrefab, foundPositions[i].position, Quaternion.identity);
             enemyObject.transform.SetParent(boat.transform);
 
             // Configure the enemy
@@ -214,38 +265,110 @@ public class EnemySpawner : MonoBehaviour
                 // Set initial state
                 enemy.SetState(Enemy.state.PATROLLING);
 
-                // Give it a weapon
-                AssignRandomWeapon(enemy, zoneIndex);
+                // Give pirates a weapon but not sharks
+                if (enemy.enemyType == Enemy.type.PIRATE)
+                {
+                    AssignRandomWeapon(enemy, zoneIndex);
+                }
 
-                // Increase stats based on zone
-                float zoneFactor = 1f + ((zoneIndex - 1) * 0.2f); // 20% increase per zone
-                enemy.attackDamage = Mathf.RoundToInt(enemy.attackDamage * zoneFactor);
-                enemy.attackRange = enemy.attackRange * zoneFactor;
+                // Add to boat's enemies list
+                boat.AddEnemy(enemy);
+
+                Debug.Log($"Added enemy to boat at position {foundPositions[i].position}");
+            }
+            else
+            {
+                Debug.LogError("Instantiated enemy doesn't have Enemy component!");
             }
         }
     }
 
     private void AssignRandomWeapon(Enemy enemy, int zoneIndex)
     {
-        if (enemy == null || availableWeapons.Count == 0 || enemy.weaponMountPoint == null)
+        if (enemy == null || enemy.weaponMountPoint == null)
             return;
 
-        // Get a random weapon from the available weapons
-        int weaponIndex = Random.Range(0, availableWeapons.Count);
-        Weapon weaponPrefab = availableWeapons[weaponIndex];
+        // Choose a random weapon type
+        float randomValue = Random.value;
+        ItemDefinition weaponDef = null;
 
-        if (weaponPrefab != null)
+        // More powerful weapons in higher zones
+        if (zoneIndex >= 3)
         {
-            // Instantiate the weapon
-            Weapon weapon = Instantiate(weaponPrefab, enemy.weaponMountPoint);
-
-            // Adjust weapon stats based on zone
-            float zoneFactor = 1f + ((zoneIndex - 1) * 0.15f); // 15% increase per zone
-            weapon.damage = Mathf.RoundToInt(weapon.damage * zoneFactor);
-
-            // Assign to enemy
-            enemy.equippedWeapon = weapon;
+            // Higher zones get better weapons
+            if (randomValue < 0.5f)
+                weaponDef = kalashnikovDef; // 50% chance for kalashnikov
+            else if (randomValue < 0.8f)
+                weaponDef = shotgunDef;     // 30% chance for shotgun
+            else
+                weaponDef = pistolDef;      // 20% chance for pistol
         }
+        else if (zoneIndex == 2)
+        {
+            // Mid zone
+            if (randomValue < 0.3f)
+                weaponDef = kalashnikovDef; // 30% chance for kalashnikov
+            else if (randomValue < 0.6f)
+                weaponDef = shotgunDef;     // 30% chance for shotgun
+            else
+                weaponDef = pistolDef;      // 40% chance for pistol
+        }
+        else
+        {
+            // Starting zone
+            if (randomValue < 0.1f)
+                weaponDef = kalashnikovDef; // 10% chance for kalashnikov
+            else if (randomValue < 0.3f)
+                weaponDef = shotgunDef;     // 20% chance for shotgun
+            else
+                weaponDef = pistolDef;      // 70% chance for pistol
+        }
+
+        if (weaponDef == null)
+            return;
+
+        // Create the weapon using ItemFactory
+        Item weaponItem = ItemFactory.CreateItem(weaponDef);
+        if (weaponItem == null || !(weaponItem is Weapon))
+            return;
+
+        Weapon weapon = (Weapon)weaponItem;
+
+        // Create visual representation of the weapon
+        GameObject weaponVisual = GameObject.Instantiate(equipItemPrefab, enemy.weaponMountPoint);
+
+        // Set up the visual
+        ItemEquipVisual visual = weaponVisual.GetComponent<ItemEquipVisual>();
+        if (visual != null)
+        {
+            // Configure appropriate offsets for enemy weapons
+            visual.positionOffset = new Vector3(0.2f, 0, 0);
+            visual.rotationOffset = Vector3.zero;
+            visual.SetupVisual(weaponDef, enemy.weaponMountPoint);
+
+            // Find/create the fire point
+            Transform firePoint = weaponVisual.transform.Find("FirePoint");
+            if (firePoint == null)
+            {
+                // Create a fire point if one doesn't exist
+                GameObject firePointObj = new GameObject("FirePoint");
+                firePoint = firePointObj.transform;
+                firePoint.SetParent(weaponVisual.transform);
+                firePoint.localPosition = new Vector3(0.5f, 0, 0); // Adjust position as needed
+            }
+
+            // Set the fire point on the weapon
+            weapon.SetFirePoint(firePoint);
+        }
+
+        // Adjust weapon stats based on zone
+        float zoneFactor = 1f + ((zoneIndex - 1) * 0.15f); // 15% increase per zone
+        weapon.damage = Mathf.RoundToInt(weapon.damage * zoneFactor);
+
+        // Assign to enemy
+        enemy.equippedWeapon = weapon;
+
+        Debug.Log($"Equipped enemy with {weaponDef.itemName}");
     }
 
     // Call this method to spawn enemies when the world is generated
@@ -271,5 +394,27 @@ public class EnemySpawner : MonoBehaviour
             // Draw min distance between boats
             Gizmos.DrawWireSphere(pos, minDistanceBetweenBoats / 2f);
         }
+    }
+
+    // Helper method to find a child recursively
+    private Transform FindChildRecursively(Transform parent, string name)
+    {
+        // Check each child
+        for (int i = 0; i < parent.childCount; i++)
+        {
+            Transform child = parent.GetChild(i);
+
+            // Check if this child matches
+            if (child.name == name)
+                return child;
+
+            // Check child's children recursively
+            Transform found = FindChildRecursively(child, name);
+            if (found != null)
+                return found;
+        }
+
+        // Not found
+        return null;
     }
 }

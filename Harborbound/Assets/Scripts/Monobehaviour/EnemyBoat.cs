@@ -55,11 +55,17 @@ public class EnemyBoat : Boat
     // Event to notify when the state changes
     public event Action<EnemyBoatState> OnStateChanged;
 
+    private bool isFacingLeft = false;
+    private Transform enemyPositionsContainer;
+
     private void Start()
     {
         // Find player if not assigned
         if (targetPlayer == null)
             targetPlayer = FindFirstObjectByType<Player>();
+
+        // Set up enemy positions container
+        SetupEnemyPositionsContainer();
 
         // Initialize enemies
         for (int i = 0; i < enemies.Count && i < enemyPositions.Length; i++)
@@ -108,6 +114,9 @@ public class EnemyBoat : Boat
 
         // Check state transitions
         CheckStateTransitions();
+
+        // Update enemy positions every frame
+        UpdateEnemyPositions();
     }
 
     protected void handlePatrolState()
@@ -117,6 +126,7 @@ public class EnemyBoat : Boat
         // Move toward current patrol point
         Vector2 direction = (patrolPoints[currentPatrolIndex] - (Vector2)transform.position).normalized;
         Move(direction);
+        FaceDirection(direction);
 
         // Check if reached waypoint
         if (Vector2.Distance(transform.position, patrolPoints[currentPatrolIndex]) < 0.5f)
@@ -128,10 +138,12 @@ public class EnemyBoat : Boat
 
     protected void handleChaseState()
     {
-        // Calculate distance maintaining direction
+        if (targetPlayer == null) return;
+
+        // Calculate direction to player
         Vector2 directionToPlayer = ((Vector2)targetPlayer.transform.position - (Vector2)transform.position).normalized;
 
-        // If we're too close, try to maintain attack range
+        // Move toward player
         if (distanceToPlayer < minAttackDistance)
         {
             // Move away slightly
@@ -142,10 +154,14 @@ public class EnemyBoat : Boat
             // Chase player
             Move(directionToPlayer);
         }
+
+        FaceDirection(directionToPlayer);
     }
 
     protected void handleAttackState()
     {
+        if (targetPlayer == null) return;
+
         // When attacking, try to position optimally
         Vector2 directionToPlayer = ((Vector2)targetPlayer.transform.position - (Vector2)transform.position).normalized;
 
@@ -161,8 +177,7 @@ public class EnemyBoat : Boat
         else
         {
             // At good attack range, just rotate to face player
-            float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            FaceDirection(directionToPlayer);
         }
     }
 
@@ -173,11 +188,21 @@ public class EnemyBoat : Boat
         {
             Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
             Move(direction * 0.7f); // Move slower when searching
+
+            FaceDirection(direction);
         }
         else
         {
-            // At target search position, look around
-            transform.Rotate(0, 0, 45 * Time.deltaTime);
+            // At target search position, look around - use a different approach
+            // Instead of rotating, just periodically flip the sprite
+            if (Time.frameCount % 120 < 60) // Every ~2 seconds at 60fps
+            {
+                SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+                if (spriteRenderer != null)
+                {
+                    spriteRenderer.flipX = !spriteRenderer.flipX;
+                }
+            }
         }
     }
 
@@ -233,12 +258,54 @@ public class EnemyBoat : Boat
         }
     }
 
+    private void SetupEnemyPositionsContainer()
+    {
+        // Find enemy positions container
+        enemyPositionsContainer = transform.Find("EnemyPositions");
+
+        if (enemyPositionsContainer == null)
+        {
+            Debug.LogWarning("EnemyPositions container not found on boat!");
+            return;
+        }
+
+        // Ensure container has correct initial scale
+        enemyPositionsContainer.localScale = new Vector3(1, 1, 1);
+
+        // Store initial facing direction based on sprite
+        SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            isFacingLeft = spriteRenderer.flipX;
+        }
+
+        // Find positions and store references
+        for (int i = 0; i < enemyPositions.Length; i++)
+        {
+            Transform positionTransform = enemyPositionsContainer.Find($"EnemyPosition{i + 1}");
+            if (positionTransform != null)
+            {
+                enemyPositions[i] = positionTransform;
+                Debug.Log($"Found EnemyPosition{i + 1} at {positionTransform.position}");
+            }
+        }
+    }
+
+    // Modify the UpdateEnemyStates method to correctly handle both enemy states and positions
     private void UpdateEnemyStates()
     {
+        if (enemies.Count == 0)
+        {
+            return; // Skip if no enemies
+        }
+
+        Debug.Log($"Updating {enemies.Count} enemies, container scale: {enemyPositionsContainer?.localScale}");
+
         foreach (Enemy enemy in enemies)
         {
             if (enemy == null) continue;
 
+            // Update enemy state based on boat state
             switch (state)
             {
                 case EnemyBoatState.PATROLLING:
@@ -257,6 +324,48 @@ public class EnemyBoat : Boat
                     enemy.SetState(Enemy.state.SEARCHING);
                     break;
             }
+
+            // Make sure enemy is at the correct position based on its index
+            int index = enemies.IndexOf(enemy);
+            if (index >= 0 && index < enemyPositions.Length && enemyPositions[index] != null)
+            {
+                Vector3 targetPos = enemyPositions[index].position;
+
+                // Smoothly move to position
+                enemy.transform.position = Vector3.Lerp(enemy.transform.position,
+                                                      targetPos,
+                                                      Time.deltaTime * 5f);
+            }
+        }
+    }
+
+    // Add this method to update enemy positions separately from state updates
+    // Call this from Update() to make positioning smoother
+    private void UpdateEnemyPositions()
+    {
+        if (enemies.Count == 0) return;
+
+        // Update each enemy's position
+        for (int i = 0; i < enemies.Count; i++)
+        {
+            Enemy enemy = enemies[i];
+            if (enemy == null) continue;
+
+            // Skip enemies with indices beyond available positions
+            if (i >= enemyPositions.Length || enemyPositions[i] == null) continue;
+
+            // Get the target position
+            Vector3 targetPos = enemyPositions[i].position;
+
+            // Make sure enemy is parented to the boat
+            if (enemy.transform.parent != transform)
+            {
+                enemy.transform.SetParent(transform);
+            }
+
+            // Set position directly instead of smoothly lerping
+            // This ensures enemies stay precisely at their positions
+            enemy.transform.position = targetPos;
         }
     }
 
@@ -275,6 +384,19 @@ public class EnemyBoat : Boat
     // Debug visualization
     private void OnDrawGizmosSelected()
     {
+        // Show facing direction
+        Gizmos.color = Color.white;
+        Vector3 direction = isFacingLeft ? Vector3.left : Vector3.right;
+        Gizmos.DrawRay(transform.position, direction * 2);
+
+        // Draw the container if it exists
+        if (enemyPositionsContainer != null)
+        {
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawWireCube(enemyPositionsContainer.position,
+                               new Vector3(2 * Mathf.Abs(enemyPositionsContainer.localScale.x), 1, 0));
+        }
+
         // Draw view range
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, viewRange);
@@ -300,6 +422,108 @@ public class EnemyBoat : Boat
                 else
                     Gizmos.DrawLine(patrolPoints[i], patrolPoints[0]);
             }
+        }
+    }
+
+    public void AddEnemy(Enemy enemy)
+    {
+        if (enemy != null && !enemies.Contains(enemy))
+        {
+            enemies.Add(enemy);
+            Debug.Log($"Added enemy to boat, total enemies: {enemies.Count}");
+        }
+    }
+
+    public void ClearEnemies()
+    {
+        // Remove existing enemies
+        foreach (Enemy enemy in enemies)
+        {
+            if (enemy != null)
+            {
+                Destroy(enemy.gameObject);
+            }
+        }
+        enemies.Clear();
+    }
+
+    private void OnDrawGizmos()
+    {
+        // Draw position markers for enemy positions
+        Gizmos.color = Color.green;
+
+        // Check for the container first
+        Transform positionsContainer = transform.Find("EnemyPositions");
+        if (positionsContainer != null)
+        {
+            // Draw the container bounds
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireCube(positionsContainer.position, new Vector3(2, 1, 0));
+
+            // Draw each position
+            Gizmos.color = Color.green;
+            for (int i = 1; i <= 3; i++)
+            {
+                Transform pos = positionsContainer.Find($"EnemyPosition{i}");
+                if (pos != null)
+                {
+                    Gizmos.DrawSphere(pos.position, 0.3f);
+                }
+            }
+        }
+        else
+        {
+            // Fall back to direct child search (for backward compatibility)
+            for (int i = 1; i <= 3; i++)
+            {
+                Transform pos = transform.Find($"EnemyPosition{i}");
+                if (pos != null)
+                {
+                    Gizmos.DrawSphere(pos.position, 0.3f);
+                }
+            }
+        }
+    }
+
+    private void FaceDirection(Vector2 direction)
+    {
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            // Check if we're changing direction
+            bool shouldFaceLeft = Mathf.Abs(angle) > 90;
+
+            // If direction changed, flip the enemy positions container
+            if (shouldFaceLeft != isFacingLeft)
+            {
+                isFacingLeft = shouldFaceLeft;
+
+                // Flip sprite
+                spriteRenderer.flipX = shouldFaceLeft;
+
+                // Flip the entire enemy positions container
+                if (enemyPositionsContainer != null)
+                {
+                    // Instead of flipping relative to current scale, set absolute scale
+                    // This prevents problems if scale flipping fails and accumulates
+                    enemyPositionsContainer.localScale = new Vector3(
+                        shouldFaceLeft ? -1 : 1,
+                        1,
+                        1
+                    );
+
+                    Debug.Log($"Flipped enemy positions container, now facing left: {isFacingLeft}, scale: {enemyPositionsContainer.localScale}");
+                }
+                else
+                {
+                    Debug.LogWarning("Enemy positions container is null, can't flip!");
+                }
+            }
+
+            // Apply gentle tilt based on vertical movement
+            transform.rotation = Quaternion.Euler(0, 0, Mathf.Clamp(direction.y * 15f, -15f, 15f));
         }
     }
 }

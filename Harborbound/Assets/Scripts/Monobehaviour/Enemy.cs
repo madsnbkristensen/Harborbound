@@ -78,19 +78,18 @@ public class Enemy : Humanoid
     }
     protected void handleAttackState()
     {
-        if (equippedWeapon == null) return;
+        if (equippedWeapon == null || targetPlayer == null)
+            return;
 
         // Face the target
         FaceTarget(targetPlayer.transform);
 
-        // Check if ready to attack
-        if (Time.time > lastAttackTime + attackCooldown)
+        // Check if in range to fire
+        float distanceToTarget = Vector2.Distance(transform.position, targetPlayer.transform.position);
+        if (distanceToTarget <= equippedWeapon.range)
         {
-            // Fire weapon
-            if (equippedWeapon.Fire(targetPlayer.transform.position))
-            {
-                lastAttackTime = Time.time;
-            }
+            // Fire at the player using the target-specific Fire method
+            equippedWeapon.Fire(targetPlayer.transform.position, gameObject);
         }
     }
     protected void handleSearchState()
@@ -102,9 +101,30 @@ public class Enemy : Humanoid
     // Helper method to face the target
     private void FaceTarget(Transform target)
     {
+        if (target == null) return;
+
         Vector2 direction = target.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        // Get sprite renderer
+        SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            // Flip the sprite horizontally based on direction
+            if (Mathf.Abs(angle) > 90)
+            {
+                // Facing left
+                spriteRenderer.flipX = true;
+            }
+            else
+            {
+                // Facing right
+                spriteRenderer.flipX = false;
+            }
+
+            // Optionally, apply limited vertical tilt
+            transform.rotation = Quaternion.Euler(0, 0, Mathf.Clamp(direction.normalized.y * 15f, -15f, 15f));
+        }
     }
 
     public void SetState(state newState)
