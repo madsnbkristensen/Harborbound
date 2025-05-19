@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 public class Player : Humanoid
 {
@@ -149,12 +151,46 @@ public class Player : Humanoid
                     ExitDialogue();
                 }
                 break;
-            case GameManager.GameState.SHOPPING:
-                if (UnityEngine.Input.GetKeyDown(KeyCode.Mouse0))
-                {
-                  // remove item from inventory
-                  // add money
+            // Add this to the Player class in Player.cs, modifying the existing SHOPPING case in the Update method
 
+            case GameManager.GameState.SHOPPING:
+                // Check for left mouse button click
+                if (Input.GetMouseButtonDown(1))
+                {
+
+                    Tooltip.Instance.HideTooltip();
+                    // Use a raycast to find the item under the cursor
+                    PointerEventData pointerData = new PointerEventData(EventSystem.current);
+                    pointerData.position = Input.mousePosition;
+
+                    List<RaycastResult> results = new List<RaycastResult>();
+                    EventSystem.current.RaycastAll(pointerData, results);
+
+                    foreach (RaycastResult result in results)
+                    {
+                        // Try to get ItemUI component from the clicked object or its parent
+                        ItemUI itemUI = result.gameObject.GetComponent<ItemUI>();
+                        if (itemUI == null)
+                            itemUI = result.gameObject.GetComponentInParent<ItemUI>();
+
+                        if (itemUI != null && itemUI.item != null)
+                        {
+                            // Get the item's value
+                            int value = itemUI.item.GetValue();
+
+                            // Log what we're selling
+                            Debug.Log($"Selling {itemUI.item.GetName()} for {value} coins");
+
+                            // Call the existing remove method
+                            itemUI.RemoveItem();
+
+                            // Add money to player
+                            if (gameManager != null)
+                                gameManager.AddMoney(value);
+
+                            break; // Only sell one item per click
+                        }
+                    }
                 }
                 break;
         }
