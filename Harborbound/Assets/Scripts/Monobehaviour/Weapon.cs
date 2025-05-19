@@ -500,12 +500,14 @@ public class Weapon : Item
     // Add this method to your Weapon class
     public float GetBulletSpeed()
     {
-        // Calculate speed based on range and travel time
+        // Calculate speed based only on bulletTravelTime
         // Using a default travel time of 1 second if not specified
         float travelTime = bulletTravelTime > 0 ? bulletTravelTime : 1f;
 
-        // Speed = distance / time
-        // We use range to ensure bullets can travel far enough
-        return range / travelTime;
+        // Use a fixed standard distance instead of range
+        float standardDistance = 10f; // A consistent reference distance
+
+        // This gives us a consistent speed based only on travel time
+        return standardDistance / travelTime;
     }
 }
