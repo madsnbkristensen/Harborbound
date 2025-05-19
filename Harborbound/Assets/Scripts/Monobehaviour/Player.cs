@@ -73,6 +73,7 @@ public class Player : Humanoid
 
             // Handle other states as needed...
             case GameManager.GameState.INVENTORY:
+            case GameManager.GameState.SHOPPING:
                 if (rb != null)
                 {
                     // Stop any current movement
@@ -92,6 +93,19 @@ public class Player : Humanoid
         if (UnityEngine.Input.GetKeyDown(inventoryKey))
         {
             ToggleInventory();
+            return; // Prevent other state-specific logic from running
+        }
+        if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Handle escape key for menu or other actions
+            if (gameManager.state != GameManager.GameState.ROAMING)
+            {
+                gameManager.ChangeState(GameManager.GameState.ROAMING);
+            }
+            else
+            {
+                gameManager.ChangeState(GameManager.GameState.MENU);
+            }
             return; // Prevent other state-specific logic from running
         }
 
@@ -135,6 +149,14 @@ public class Player : Humanoid
                     ExitDialogue();
                 }
                 break;
+            case GameManager.GameState.SHOPPING:
+                if (UnityEngine.Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                  // remove item from inventory
+                  // add money
+
+                }
+                break;
         }
     }
 
@@ -153,8 +175,21 @@ public class Player : Humanoid
             Debug.Log($"Player is near {currentInteractableFriend.humanoidName}. Starting dialogue.");
             currentInteractableFriend.StartDialogue();
 
-            if (gameManager != null)
-                gameManager.ChangeState(GameManager.GameState.DIALOGUE);
+            switch (currentInteractableFriend.friendType)
+            {
+                case Friend.type.MERCHANT:
+                    // Open shop UI or inventory
+                    gameManager.ChangeState(GameManager.GameState.SHOPPING);
+                    break;
+                case Friend.type.QUEST_GIVER:
+                    // Start quest dialogue
+                    gameManager.ChangeState(GameManager.GameState.DIALOGUE);
+                    break;
+                default:
+                    // Normal NPC dialogue
+                    gameManager.ChangeState(GameManager.GameState.DIALOGUE);
+                    break;
+            }
 
             // Update game state to dialogue mode
             return;

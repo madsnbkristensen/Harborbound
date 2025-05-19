@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private GameObject fishingPanel;
+    [SerializeField] private GameObject shoppingPanel;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] public GameObject tooltipPanel;
     private GameManager.GameState previousState;
@@ -27,19 +28,18 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI fuelText;
 
     // Dictionary to track active UI states
-    private Dictionary<GameManager.GameState, GameObject> statePanels;
+    private Dictionary<GameManager.GameState, List<GameObject>> statePanels;
 
     private void Awake()
     {
-        // Initialize the dictionary mapping game states to UI panels
-        statePanels = new Dictionary<GameManager.GameState, GameObject>
-        {
-            { GameManager.GameState.DIALOGUE, dialoguePanel },
-            { GameManager.GameState.FISHING, fishingPanel },
-            { GameManager.GameState.MENU, menuPanel },
-            { GameManager.GameState.INVENTORY, inventoryPanel }
-            // DRIVING state uses the HUD panel too
-        };
+        statePanels = new Dictionary<GameManager.GameState, List<GameObject>>
+    {
+        { GameManager.GameState.DIALOGUE, new List<GameObject> { dialoguePanel } },
+        { GameManager.GameState.FISHING, new List<GameObject> { fishingPanel } },
+        { GameManager.GameState.MENU, new List<GameObject> { menuPanel } },
+        { GameManager.GameState.INVENTORY, new List<GameObject> { inventoryPanel } },
+        { GameManager.GameState.SHOPPING, new List<GameObject> { inventoryPanel, shoppingPanel } }
+    };
     }
 
     private void Start()
@@ -92,13 +92,16 @@ public class UIManager : MonoBehaviour
     // Method to update UI based on game state
     public void UpdateUI(GameManager.GameState newState)
     {
-        // Hide all panels first
         HideAllPanels();
 
-        // Show the panel corresponding to the new state
-        if (statePanels.TryGetValue(newState, out GameObject panel) && panel != null)
+        // Show all panels for the new state
+        if (statePanels.TryGetValue(newState, out List<GameObject> panels))
         {
-            panel.SetActive(true);
+            foreach (var panel in panels)
+            {
+                if (panel != null)
+                    panel.SetActive(true);
+            }
         }
 
         // Special case for DRIVING state, which uses the HUD
@@ -121,10 +124,19 @@ public class UIManager : MonoBehaviour
     // Helper method to hide all UI panels
     private void HideAllPanels()
     {
-        foreach (var panel in statePanels.Values)
+        var uniquePanels = new HashSet<GameObject>();
+        foreach (var panelList in statePanels.Values)
         {
-            if (panel != null && panel != tooltipPanel)
-                panel.SetActive(false);
+            foreach (var panel in panelList)
+            {
+                if (panel != null && panel != tooltipPanel)
+                    uniquePanels.Add(panel);
+            }
+        }
+
+        foreach (var panel in uniquePanels)
+        {
+            panel.SetActive(false);
         }
 
         if (pauseMenu != null)

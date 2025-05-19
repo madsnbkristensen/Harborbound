@@ -42,6 +42,11 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
             RemoveItem();
             Tooltip.Instance.HideTooltip();
         }
+        if (isHovered && Input.GetKeyDown(KeyCode.X))
+        {
+            RemoveItem();
+            Tooltip.Instance.HideTooltip();
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -110,7 +115,7 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
         }
     }
 
-    private void RemoveItem()
+    public void RemoveItem()
     {
         if (item == null || inventory == null)
             return;

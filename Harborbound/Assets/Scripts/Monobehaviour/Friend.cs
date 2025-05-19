@@ -9,6 +9,7 @@ public class Friend : Humanoid
     public state friendState = state.PATROLLING;
     [SerializeField]
     public type friendType = type.NPC;
+    public GameManager gameManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected override void Start()
@@ -30,6 +31,20 @@ public class Friend : Humanoid
     {
         // Start dialogue with player
         Debug.Log($"{humanoidName} is starting a dialogue.");
+        if (friendType == type.MERCHANT)
+        {
+            // Open shop UI or inventory
+        }
+        else if (friendType == type.QUEST_GIVER)
+        {
+            // Start quest dialogue
+            Debug.Log($"{humanoidName} is giving a quest.");
+        }
+        else
+        {
+            // Normal NPC dialogue
+            Debug.Log($"{humanoidName} is talking to the player.");
+        }
     }
 
     public void EndDialogue()
@@ -38,5 +53,12 @@ public class Friend : Humanoid
         friendState = state.PATROLLING; // Or restore previous state
 
         Debug.Log($"{humanoidName} has ended dialogue.");
+    }
+
+    public void StartShopping()
+    {
+        Debug.Log($"{humanoidName} is starting to shop.");
+        // Open shop UI or inventory
+        gameManager.ChangeState(GameManager.GameState.INVENTORY);
     }
 }
