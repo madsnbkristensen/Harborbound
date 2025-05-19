@@ -12,17 +12,18 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemySharkPrefab;
 
     [Header("Spawn Configuration")]
-    public int baseEnemyBoatsPerZone = 2;           // Base number of enemy boats for first zone
-    public float boatIncreaseFactor = 1.2f;         // How much to increase boats in outer zones
-    public float minDistanceBetweenBoats = 15f;     // Minimum distance between boats
-    public float minDistanceFromRocks = 5f;         // Minimum distance from rocks
-    public float minDistanceFromIsland = 10f;       // Minimum distance from island center
+    public int baseEnemyBoatsPerZone = 2; // Base number of enemy boats for first zone
+    public float boatIncreaseFactor = 1.2f; // How much to increase boats in outer zones
+    public float minDistanceBetweenBoats = 15f; // Minimum distance between boats
+    public float minDistanceFromRocks = 5f; // Minimum distance from rocks
+    public float minDistanceFromIsland = 10f; // Minimum distance from island center
 
     [Header("Enemy Configuration")]
     public int minEnemiesPerBoat = 1;
     public int maxEnemiesPerBoat = 3;
+
     [Range(0f, 1f)]
-    public float sharkProbability = 0f;           // Probability of spawning a shark instead of pirate
+    public float sharkProbability = 0f; // Probability of spawning a shark instead of pirate
 
     [Header("Weapon Configuration")]
     public List<Weapon> availableWeapons = new List<Weapon>();
@@ -52,7 +53,9 @@ public class EnemySpawner : MonoBehaviour
     {
         if (ZoneManager.Instance == null || ZoneManager.Instance.zones.Count == 0)
         {
-            Debug.LogError("Cannot spawn enemy boats: ZoneManager not initialized or no zones created.");
+            Debug.LogError(
+                "Cannot spawn enemy boats: ZoneManager not initialized or no zones created."
+            );
             return;
         }
 
@@ -74,7 +77,8 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < zonesCount; i++)
         {
             Zone zone = ZoneManager.Instance.zones[i];
-            float zoneArea = Mathf.PI * (Mathf.Pow(zone.outerRadius, 2) - Mathf.Pow(zone.innerRadius, 2));
+            float zoneArea =
+                Mathf.PI * (Mathf.Pow(zone.outerRadius, 2) - Mathf.Pow(zone.innerRadius, 2));
             zoneAreas[i] = zoneArea;
             totalArea += zoneArea;
         }
@@ -89,7 +93,9 @@ public class EnemySpawner : MonoBehaviour
                 continue;
 
             // Calculate enemy boats for this zone - more in outer zones
-            int zoneEnemyBoats = Mathf.RoundToInt(baseEnemyBoatsPerZone * Mathf.Pow(boatIncreaseFactor, zoneIndex));
+            int zoneEnemyBoats = Mathf.RoundToInt(
+                baseEnemyBoatsPerZone * Mathf.Pow(boatIncreaseFactor, zoneIndex)
+            );
 
             // Scale with zone area proportion
             float zoneProportion = zoneAreas[zoneIndex] / totalArea;
@@ -135,14 +141,22 @@ public class EnemySpawner : MonoBehaviour
                 }
 
                 // Check if too close to rocks
-                bool tooCloseToRocks = WorldGenerator.Instance != null &&
-                    WorldGenerator.Instance.CheckRockPositions(candidatePos, minDistanceFromRocks);
+                bool tooCloseToRocks =
+                    WorldGenerator.Instance != null
+                    && WorldGenerator.Instance.CheckRockPositions(
+                        candidatePos,
+                        minDistanceFromRocks
+                    );
 
                 if (!tooCloseToOtherBoats && !tooCloseToRocks)
                 {
                     // Position is valid, create enemy boat
                     enemyBoatPositions.Add(candidatePos);
-                    GameObject enemyBoatObject = Instantiate(enemyBoatPrefab, candidatePos, Quaternion.identity);
+                    GameObject enemyBoatObject = Instantiate(
+                        enemyBoatPrefab,
+                        candidatePos,
+                        Quaternion.identity
+                    );
                     enemyBoatObject.transform.SetParent(transform);
 
                     // Get the EnemyBoat component
@@ -245,11 +259,16 @@ public class EnemySpawner : MonoBehaviour
             {
                 Debug.LogError("Enemy prefab is null!");
                 enemyPrefab = enemyPiratePrefab; // Fallback
-                if (enemyPrefab == null) continue; // Skip if still null
+                if (enemyPrefab == null)
+                    continue; // Skip if still null
             }
 
             // Instantiate enemy
-            GameObject enemyObject = Instantiate(enemyPrefab, foundPositions[i].position, Quaternion.identity);
+            GameObject enemyObject = Instantiate(
+                enemyPrefab,
+                foundPositions[i].position,
+                Quaternion.identity
+            );
             enemyObject.transform.SetParent(boat.transform);
 
             // Configure the enemy
@@ -299,9 +318,9 @@ public class EnemySpawner : MonoBehaviour
             if (randomValue < 0.5f)
                 weaponDef = kalashnikovDef; // 50% chance for kalashnikov
             else if (randomValue < 0.8f)
-                weaponDef = shotgunDef;     // 30% chance for shotgun
+                weaponDef = shotgunDef; // 30% chance for shotgun
             else
-                weaponDef = pistolDef;      // 20% chance for pistol
+                weaponDef = pistolDef; // 20% chance for pistol
         }
         else if (zoneIndex == 2)
         {
@@ -309,9 +328,9 @@ public class EnemySpawner : MonoBehaviour
             if (randomValue < 0.3f)
                 weaponDef = kalashnikovDef; // 30% chance for kalashnikov
             else if (randomValue < 0.6f)
-                weaponDef = shotgunDef;     // 30% chance for shotgun
+                weaponDef = shotgunDef; // 30% chance for shotgun
             else
-                weaponDef = pistolDef;      // 40% chance for pistol
+                weaponDef = pistolDef; // 40% chance for pistol
         }
         else
         {
@@ -319,9 +338,9 @@ public class EnemySpawner : MonoBehaviour
             if (randomValue < 0.1f)
                 weaponDef = kalashnikovDef; // 10% chance for kalashnikov
             else if (randomValue < 0.3f)
-                weaponDef = shotgunDef;     // 20% chance for shotgun
+                weaponDef = shotgunDef; // 20% chance for shotgun
             else
-                weaponDef = pistolDef;      // 70% chance for pistol
+                weaponDef = pistolDef; // 70% chance for pistol
         }
 
         if (weaponDef == null)
@@ -337,10 +356,16 @@ public class EnemySpawner : MonoBehaviour
         // Create visual representation of the weapon
         GameObject weaponVisual = GameObject.Instantiate(equipItemPrefab, enemy.weaponMountPoint);
 
+        // Scale down the weapon visual for enemies
+        weaponVisual.transform.localScale = new Vector3(0.25f, 0.25f, 1f);
+
         // Set up the visual
         ItemEquipVisual visual = weaponVisual.GetComponent<ItemEquipVisual>();
         if (visual != null)
         {
+            // Add enemy weapon controller to make it aim at player
+            weaponVisual.AddComponent<EnemyWeaponController>();
+
             // Configure appropriate offsets for enemy weapons
             visual.positionOffset = new Vector3(0.2f, 0, 0);
             visual.rotationOffset = Vector3.zero;
@@ -380,7 +405,8 @@ public class EnemySpawner : MonoBehaviour
     // Debug visualization
     private void OnDrawGizmosSelected()
     {
-        if (ZoneManager.Instance == null) return;
+        if (ZoneManager.Instance == null)
+            return;
 
         // Draw min distance from island
         Gizmos.color = Color.red;

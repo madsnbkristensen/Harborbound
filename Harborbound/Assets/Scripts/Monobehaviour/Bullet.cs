@@ -5,46 +5,47 @@ public class Bullet : MonoBehaviour
     public float speed;
     public float maxLifetime = 2f;
     public GameObject shooter; // Only keep the reference to who shot it
+    public float damage;
+    private float creationTime;
+    private float lifetime;
 
-    private float timer;
     private Weapon sourceWeapon; // Reference to the weapon that fired this bullet
 
     void OnEnable()
     {
-        timer = 0f;
+        // Instead, reset creationTime to track the bullet's lifetime
+        creationTime = Time.time;
     }
 
     // Update this method to use the shooter GameObject directly
-    public void Initialize(Weapon weapon, GameObject shooter = null)
+    public void Initialize(Weapon weapon, GameObject shooter)
     {
-        // Store reference to the source weapon for damage calculations
-        sourceWeapon = weapon;
+        this.sourceWeapon = weapon;
+        this.shooter = shooter;
 
-        // If no shooter specified, use the weapon's root
-        this.shooter = shooter ?? weapon.transform.root.gameObject;
+        // Get damage from weapon
+        damage = weapon.damage;
 
-        // Set speed based on weapon properties
-        speed = weapon.range / weapon.bulletTravelTime;
+        // Calculate speed based on bullet travel time instead of range
+        speed = weapon.GetBulletSpeed();
+
+        // Store creation time to track lifetime
+        creationTime = Time.time;
+
+        // Set bullet lifetime to the weapon's bulletTravelTime
+        // Use a default if not specified
+        lifetime = weapon.bulletTravelTime > 0 ? weapon.bulletTravelTime : 1f;
     }
 
     void Update()
     {
-        // Safety check for invalid speed
-        if (float.IsNaN(speed) || float.IsInfinity(speed) || speed <= 0)
+        // Move the bullet
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
+
+        // Check if bullet has exceeded its lifetime
+        if (Time.time - creationTime >= lifetime)
         {
-            Debug.LogWarning($"Invalid bullet speed: {speed}. Using default.");
-            speed = 10f; // Default fallback speed
-        }
-
-        // Move forward based on the bullet's rotation
-        transform.Translate(Vector3.right * speed * Time.deltaTime, Space.Self);
-
-        // Track lifetime
-        timer += Time.deltaTime;
-
-        // Return the bullet to the pool if it has exceeded its lifetime
-        if (timer >= maxLifetime)
-        {
+            // Return to pool
             BulletPool.Instance.ReturnBullet(gameObject);
         }
     }

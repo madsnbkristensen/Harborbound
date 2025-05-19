@@ -2,8 +2,19 @@ using UnityEngine;
 
 public class Enemy : Humanoid
 {
-    public enum state { PATROLLING, ATTACKING, CHASING, SEARCHING }
-    public enum type { PIRATE, SHARK }
+    public enum state
+    {
+        PATROLLING,
+        ATTACKING,
+        CHASING,
+        SEARCHING,
+    }
+
+    public enum type
+    {
+        PIRATE,
+        SHARK,
+    }
 
     [Header("Enemy Properties")]
     public int attackDamage = 10;
@@ -14,6 +25,7 @@ public class Enemy : Humanoid
 
     [SerializeField]
     public state enemyState = state.PATROLLING;
+
     [SerializeField]
     public type enemyType = type.PIRATE;
 
@@ -43,7 +55,8 @@ public class Enemy : Humanoid
     // Update is called once per frame
     void Update()
     {
-        if (targetPlayer == null) return;
+        if (targetPlayer == null)
+            return;
 
         // Calculate distance to player
         distanceToPlayer = Vector2.Distance(transform.position, targetPlayer.transform.position);
@@ -64,18 +77,26 @@ public class Enemy : Humanoid
                 handleSearchState();
                 break;
         }
+
+        if (equippedWeapon != null)
+        {
+            UpdateWeaponAim();
+        }
     }
+
     protected void handlePatrolState()
     {
         // When on a boat, the boat handles movement
         // Enemy just looks around, plays idle animations
     }
+
     protected void handleChaseState()
     {
         // When on a boat, the boat handles the chasing
         // Enemy prepares weapons, faces player direction
         FaceTarget(targetPlayer.transform);
     }
+
     protected void handleAttackState()
     {
         if (equippedWeapon == null || targetPlayer == null)
@@ -85,13 +106,17 @@ public class Enemy : Humanoid
         FaceTarget(targetPlayer.transform);
 
         // Check if in range to fire
-        float distanceToTarget = Vector2.Distance(transform.position, targetPlayer.transform.position);
+        float distanceToTarget = Vector2.Distance(
+            transform.position,
+            targetPlayer.transform.position
+        );
         if (distanceToTarget <= equippedWeapon.range)
         {
             // Fire at the player using the target-specific Fire method
             equippedWeapon.Fire(targetPlayer.transform.position, gameObject);
         }
     }
+
     protected void handleSearchState()
     {
         // Look around for the player
@@ -101,7 +126,8 @@ public class Enemy : Humanoid
     // Helper method to face the target
     private void FaceTarget(Transform target)
     {
-        if (target == null) return;
+        if (target == null)
+            return;
 
         Vector2 direction = target.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -123,7 +149,11 @@ public class Enemy : Humanoid
             }
 
             // Optionally, apply limited vertical tilt
-            transform.rotation = Quaternion.Euler(0, 0, Mathf.Clamp(direction.normalized.y * 15f, -15f, 15f));
+            transform.rotation = Quaternion.Euler(
+                0,
+                0,
+                Mathf.Clamp(direction.normalized.y * 15f, -15f, 15f)
+            );
         }
     }
 
@@ -143,5 +173,83 @@ public class Enemy : Humanoid
     public bool IsPlayerInAttackRange()
     {
         return distanceToPlayer <= attackRange;
+    }
+
+    // Add this method to your Enemy class
+    public void UpdateWeaponAim()
+    {
+        if (equippedWeapon == null || targetPlayer == null)
+            return;
+
+        // Calculate direction to player
+        Vector3 directionToPlayer = (
+            targetPlayer.transform.position - transform.position
+        ).normalized;
+
+        // Get the angle in degrees
+        float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
+
+        // Check if aiming left
+        bool isAimingLeft = (angle > 90 || angle < -90);
+
+        // Apply the rotation to the weapon mount point, with adjustment for left-facing weapons
+        if (weaponMountPoint != null)
+        {
+            if (isAimingLeft)
+            {
+                // Add 180 degrees to make weapon point correctly when flipped
+                weaponMountPoint.rotation = Quaternion.Euler(0, 0, angle + 180);
+            }
+            else
+            {
+                weaponMountPoint.rotation = Quaternion.Euler(0, 0, angle);
+            }
+        }
+
+        // Update the visual representation
+        Transform weaponVisual = weaponMountPoint
+            .GetComponentInChildren<ItemEquipVisual>()
+            ?.transform;
+        if (weaponVisual != null)
+        {
+            // Get the ItemEquipVisual component to adjust position offsets
+            ItemEquipVisual itemEquipVisual = weaponVisual.GetComponent<ItemEquipVisual>();
+            if (itemEquipVisual != null)
+            {
+                // Adjust position offset based on aiming direction
+                if (isAimingLeft)
+                {
+                    // Adjust position for left-facing weapons
+                    itemEquipVisual.positionOffset = new Vector3(-0.2f, 0, 0);
+                }
+                else
+                {
+                    // Restore normal position for right-facing weapons
+                    itemEquipVisual.positionOffset = new Vector3(0.2f, 0, 0);
+                }
+
+                // Apply the position offset
+                weaponVisual.localPosition = itemEquipVisual.positionOffset;
+            }
+
+            SpriteRenderer weaponSprite = weaponVisual.GetComponent<SpriteRenderer>();
+            if (weaponSprite != null)
+            {
+                // No need to flip the sprite since we're rotating properly
+                weaponSprite.flipX = false;
+
+                // Keep scale values positive
+                Vector3 currentScale = weaponVisual.localScale;
+                weaponVisual.localScale = new Vector3(
+                    Mathf.Abs(currentScale.x),
+                    Mathf.Abs(currentScale.y),
+                    currentScale.z
+                );
+            }
+            else
+            {
+                Debug.LogWarning("No SpriteRenderer found on weapon visual");
+            }
+        }
     }
 }

@@ -10,26 +10,39 @@ public class EnemyBoat : Boat
         ATTACKING,
         CHASE,
         SEARCHING,
-        FROZEN
+        FROZEN,
     }
 
     [SerializeField]
     private EnemyBoatState _state = EnemyBoatState.PATROLLING;
 
     [Header("Detection")]
-    [SerializeField] private float viewRange = 20f;
-    [SerializeField] private float attackRange = 10f;
-    [SerializeField] private float minAttackDistance = 5f;
+    [SerializeField]
+    private float viewRange = 20f;
+
+    [SerializeField]
+    private float attackRange = 10f;
+
+    [SerializeField]
+    private float minAttackDistance = 5f;
 
     [Header("Movement")]
-    [SerializeField] private float patrolSpeed = 2f;
-    [SerializeField] private float chaseSpeed = 4f;
-    [SerializeField] private List<Vector2> patrolPoints = new List<Vector2>();
+    [SerializeField]
+    private float patrolSpeed = 2f;
+
+    [SerializeField]
+    private float chaseSpeed = 4f;
+
+    [SerializeField]
+    private List<Vector2> patrolPoints = new List<Vector2>();
     private int currentPatrolIndex = 0;
 
     [Header("Crew")]
-    [SerializeField] private List<Enemy> enemies = new List<Enemy>();
-    [SerializeField] private Transform[] enemyPositions = new Transform[3]; // Max 3 enemies
+    [SerializeField]
+    private List<Enemy> enemies = new List<Enemy>();
+
+    [SerializeField]
+    private Transform[] enemyPositions = new Transform[3]; // Max 3 enemies
 
     private Player targetPlayer;
     private float distanceToPlayer;
@@ -90,7 +103,8 @@ public class EnemyBoat : Boat
 
     private void Update()
     {
-        if (targetPlayer == null) return;
+        if (targetPlayer == null)
+            return;
 
         // Calculate distance to player
         distanceToPlayer = Vector2.Distance(transform.position, targetPlayer.transform.position);
@@ -121,10 +135,13 @@ public class EnemyBoat : Boat
 
     protected void handlePatrolState()
     {
-        if (patrolPoints.Count == 0) return;
+        if (patrolPoints.Count == 0)
+            return;
 
         // Move toward current patrol point
-        Vector2 direction = (patrolPoints[currentPatrolIndex] - (Vector2)transform.position).normalized;
+        Vector2 direction = (
+            patrolPoints[currentPatrolIndex] - (Vector2)transform.position
+        ).normalized;
         Move(direction);
         FaceDirection(direction);
 
@@ -138,10 +155,13 @@ public class EnemyBoat : Boat
 
     protected void handleChaseState()
     {
-        if (targetPlayer == null) return;
+        if (targetPlayer == null)
+            return;
 
         // Calculate direction to player
-        Vector2 directionToPlayer = ((Vector2)targetPlayer.transform.position - (Vector2)transform.position).normalized;
+        Vector2 directionToPlayer = (
+            (Vector2)targetPlayer.transform.position - (Vector2)transform.position
+        ).normalized;
 
         // Move toward player
         if (distanceToPlayer < minAttackDistance)
@@ -160,10 +180,13 @@ public class EnemyBoat : Boat
 
     protected void handleAttackState()
     {
-        if (targetPlayer == null) return;
+        if (targetPlayer == null)
+            return;
 
         // When attacking, try to position optimally
-        Vector2 directionToPlayer = ((Vector2)targetPlayer.transform.position - (Vector2)transform.position).normalized;
+        Vector2 directionToPlayer = (
+            (Vector2)targetPlayer.transform.position - (Vector2)transform.position
+        ).normalized;
 
         // Maintain ideal attack distance
         if (distanceToPlayer < minAttackDistance)
@@ -299,11 +322,14 @@ public class EnemyBoat : Boat
             return; // Skip if no enemies
         }
 
-        Debug.Log($"Updating {enemies.Count} enemies, container scale: {enemyPositionsContainer?.localScale}");
+        Debug.Log(
+            $"Updating {enemies.Count} enemies, container scale: {enemyPositionsContainer?.localScale}"
+        );
 
         foreach (Enemy enemy in enemies)
         {
-            if (enemy == null) continue;
+            if (enemy == null)
+                continue;
 
             // Update enemy state based on boat state
             switch (state)
@@ -332,9 +358,11 @@ public class EnemyBoat : Boat
                 Vector3 targetPos = enemyPositions[index].position;
 
                 // Smoothly move to position
-                enemy.transform.position = Vector3.Lerp(enemy.transform.position,
-                                                      targetPos,
-                                                      Time.deltaTime * 5f);
+                enemy.transform.position = Vector3.Lerp(
+                    enemy.transform.position,
+                    targetPos,
+                    Time.deltaTime * 5f
+                );
             }
         }
     }
@@ -343,16 +371,19 @@ public class EnemyBoat : Boat
     // Call this from Update() to make positioning smoother
     private void UpdateEnemyPositions()
     {
-        if (enemies.Count == 0) return;
+        if (enemies.Count == 0)
+            return;
 
         // Update each enemy's position
         for (int i = 0; i < enemies.Count; i++)
         {
             Enemy enemy = enemies[i];
-            if (enemy == null) continue;
+            if (enemy == null)
+                continue;
 
             // Skip enemies with indices beyond available positions
-            if (i >= enemyPositions.Length || enemyPositions[i] == null) continue;
+            if (i >= enemyPositions.Length || enemyPositions[i] == null)
+                continue;
 
             // Get the target position
             Vector3 targetPos = enemyPositions[i].position;
@@ -393,8 +424,10 @@ public class EnemyBoat : Boat
         if (enemyPositionsContainer != null)
         {
             Gizmos.color = Color.magenta;
-            Gizmos.DrawWireCube(enemyPositionsContainer.position,
-                               new Vector3(2 * Mathf.Abs(enemyPositionsContainer.localScale.x), 1, 0));
+            Gizmos.DrawWireCube(
+                enemyPositionsContainer.position,
+                new Vector3(2 * Mathf.Abs(enemyPositionsContainer.localScale.x), 1, 0)
+            );
         }
 
         // Draw view range
@@ -508,13 +541,11 @@ public class EnemyBoat : Boat
                 {
                     // Instead of flipping relative to current scale, set absolute scale
                     // This prevents problems if scale flipping fails and accumulates
-                    enemyPositionsContainer.localScale = new Vector3(
-                        shouldFaceLeft ? -1 : 1,
-                        1,
-                        1
-                    );
+                    enemyPositionsContainer.localScale = new Vector3(shouldFaceLeft ? -1 : 1, 1, 1);
 
-                    Debug.Log($"Flipped enemy positions container, now facing left: {isFacingLeft}, scale: {enemyPositionsContainer.localScale}");
+                    Debug.Log(
+                        $"Flipped enemy positions container, now facing left: {isFacingLeft}, scale: {enemyPositionsContainer.localScale}"
+                    );
                 }
                 else
                 {

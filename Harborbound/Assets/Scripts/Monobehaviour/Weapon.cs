@@ -412,7 +412,8 @@ public class Weapon : Item
 
         // Get a bullet from the pool
         GameObject bulletObj = BulletPool.Instance.GetBullet();
-        if (bulletObj == null) return;
+        if (bulletObj == null)
+            return;
 
         // Position the bullet at the fire point
         bulletObj.transform.position = firePoint != null ? firePoint.position : transform.position;
@@ -456,10 +457,12 @@ public class Weapon : Item
 
             // Get a bullet from the pool
             GameObject bulletObj = BulletPool.Instance.GetBullet();
-            if (bulletObj == null) continue;
+            if (bulletObj == null)
+                continue;
 
             // Position the bullet at the fire point
-            bulletObj.transform.position = firePoint != null ? firePoint.position : transform.position;
+            bulletObj.transform.position =
+                firePoint != null ? firePoint.position : transform.position;
 
             // Calculate direction to the target position
             Vector2 direction = targetPosition - bulletObj.transform.position;
@@ -492,5 +495,17 @@ public class Weapon : Item
             if (i < burstCount - 1)
                 yield return new WaitForSeconds(burstInterval);
         }
+    }
+
+    // Add this method to your Weapon class
+    public float GetBulletSpeed()
+    {
+        // Calculate speed based on range and travel time
+        // Using a default travel time of 1 second if not specified
+        float travelTime = bulletTravelTime > 0 ? bulletTravelTime : 1f;
+
+        // Speed = distance / time
+        // We use range to ensure bullets can travel far enough
+        return range / travelTime;
     }
 }
