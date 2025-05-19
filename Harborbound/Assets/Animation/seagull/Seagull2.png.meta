@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 14eb2af5bca1fbf47a8ff93d7b9e3cbe
+guid: 670fb9bc0d6c04181a0fc0085ccbbfd0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3697339964511811899
-    second: Seagull2_0
+      213: 4989055199760012502
+    second: Seagull2-2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Seagull2_0
+      name: Seagull2-2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c60b6144e860bcc0800000000000000
-      internalID: -3697339964511811899
+      spriteID: 6d4d282654fac3540800000000000000
+      internalID: 4989055199760012502
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Seagull2-2_0: 4989055199760012502
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
