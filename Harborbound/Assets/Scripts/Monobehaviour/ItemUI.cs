@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public Item item { get; private set; }
     private PlayerInventory inventory;
@@ -12,6 +12,7 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     private CanvasGroup canvasGroup;
     private Vector2 originalPosition;
     private Image iconImage;
+    private bool isHovered = false; // Track if mouse is hovering over this item
 
     public event System.Action OnDragStarted;
     public event System.Action OnDragEnded;
@@ -31,6 +32,21 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
         // Find canvas
         canvas = GetComponentInParent<Canvas>();
+    }
+
+    private void Update()
+    {
+        // Check for X key press while item is being hovered
+        if (isHovered && Input.GetKeyDown(KeyCode.X))
+        {
+            RemoveItem();
+            Tooltip.Instance.HideTooltip();
+        }
+        if (isHovered && Input.GetKeyDown(KeyCode.X))
+        {
+            RemoveItem();
+            Tooltip.Instance.HideTooltip();
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -77,5 +93,60 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
         }
 
         OnDragEnded?.Invoke();
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        isHovered = true;
+        
+        if (item != null && Tooltip.Instance != null)
+        {
+            Tooltip.Instance.ShowTooltip(item);
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isHovered = false;
+        
+        if (Tooltip.Instance != null)
+        {
+            Tooltip.Instance.HideTooltip();
+        }
+    }
+
+    public void RemoveItem()
+    {
+        if (item == null || inventory == null)
+            return;
+
+        // Find the item's position in the grid
+        bool foundItem = false;
+        int mainX = 0, mainY = 0;
+        int gridColumns = inventory.Width;
+        int gridRows = inventory.Height;
+
+        for (int y = 0; y < gridRows && !foundItem; y++)
+        {
+            for (int x = 0; x < gridColumns && !foundItem; x++)
+            {
+                if (inventory.mainInventory.GetItemAt(x, y) == item)
+                {
+                    mainX = x;
+                    mainY = y;
+                    foundItem = true;
+                    break;
+                }
+            }
+        }
+
+        if (foundItem)
+        {
+            // Remove the item from inventory
+            inventory.RemoveItemAt(mainX, mainY);
+            Debug.Log($"Removed item: {item.GetName()} from inventory at position ({mainX}, {mainY})");
+            
+            // The UI will be updated automatically through the inventory change event
+        }
     }
 }
