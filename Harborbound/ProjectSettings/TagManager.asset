@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Wall
   - Obstacle
+  - ZoneBoundary
   - Boundry
   - EnemyCorpse
   - EnemyBoat
@@ -17,35 +18,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Boat
   - Water
   - UI
+  - Player
+  - Obstacle
+  - ZoneBoundary
   - Rocks
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0

@@ -5,7 +5,7 @@ public class Boat : MonoBehaviour
     public float speed = 3f;
     public float rotationSpeed = 100f;
 
-    public void Move(Vector2 inputDirection)
+    public virtual void Move(Vector2 inputDirection)
     {
         // Only process input if there's actual input
         if (inputDirection.magnitude > 0.1f)

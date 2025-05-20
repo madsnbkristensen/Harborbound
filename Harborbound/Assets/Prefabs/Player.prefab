@@ -186,10 +186,10 @@ GameObject:
   - component: {fileID: 7035993917590173729}
   - component: {fileID: 3329362614337908596}
   - component: {fileID: 3713679245457080761}
-  - component: {fileID: 513652743708195821}
   - component: {fileID: 1209877081846410082}
   - component: {fileID: 7488084073679386627}
   - component: {fileID: 1228140294469694480}
+  - component: {fileID: 4047994704696393999}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -410,3 +410,49 @@ MonoBehaviour:
   fishColor: {r: 0.3, g: 0.5, b: 0.7, a: 0.6}
   defaultItemColor: {r: 0.4, g: 0.4, b: 0.4, a: 0.6}
   fishScaleFactor: 1
+--- !u!61 &4047994704696393999
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6710653315548954765}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 2.55, y: 2.78, z: 2.7, w: 2.73}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.03, y: 13.52}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 10.03, y: 13.52}
+  m_EdgeRadius: 0
