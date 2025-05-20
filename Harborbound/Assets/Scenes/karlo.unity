@@ -309,11 +309,11 @@ PrefabInstance:
       objectReference: {fileID: -5019264981349273687, guid: b86c2574b4c9d4f8ca02636edc53f69c, type: 3}
     - target: {fileID: 4749319862316911342, guid: 85ee7d8dc36324edb8af68b0a3df875b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.7
+      value: -3.81
       objectReference: {fileID: 0}
     - target: {fileID: 4749319862316911342, guid: 85ee7d8dc36324edb8af68b0a3df875b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 4749319862316911342, guid: 85ee7d8dc36324edb8af68b0a3df875b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -347,6 +347,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5986370154002399873, guid: 85ee7d8dc36324edb8af68b0a3df875b, type: 3}
+      propertyPath: speed
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 6016468731210743947, guid: 85ee7d8dc36324edb8af68b0a3df875b, type: 3}
       propertyPath: m_Name
       value: PlayerBoat
@@ -354,14 +358,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6016468731210743947, guid: 85ee7d8dc36324edb8af68b0a3df875b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 439243747}
   m_SourcePrefab: {fileID: 100100000, guid: 85ee7d8dc36324edb8af68b0a3df875b, type: 3}
 --- !u!114 &71843863 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8941174343409893368, guid: 85ee7d8dc36324edb8af68b0a3df875b, type: 3}
   m_PrefabInstance: {fileID: 71843862}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 439243742}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 659c9bd6f10fb48ffa039b069bc43586, type: 3}
@@ -527,6 +534,47 @@ MonoBehaviour:
   tileSize: 2
   baseWaterColor: {r: 0.2, g: 0.5, b: 0.8, a: 1}
   darknessFactor: 0.15
+--- !u!1 &439243742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6016468731210743947, guid: 85ee7d8dc36324edb8af68b0a3df875b, type: 3}
+  m_PrefabInstance: {fileID: 71843862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &439243747
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439243742}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 6.605
 --- !u!1 &470528541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,7 +1133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &980254744
 Transform:
   m_ObjectHideFlags: 0

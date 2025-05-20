@@ -8,16 +8,17 @@ TagManager:
   - Enemy
   - Wall
   - Obstacle
+  - ZoneBoundary
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Boat
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - Obstacle
+  - ZoneBoundary
   - 
   - 
   - 

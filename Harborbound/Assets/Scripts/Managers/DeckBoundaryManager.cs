@@ -186,8 +186,6 @@ public class DeckBoundaryManager : MonoBehaviour
                     edgeColliders[i].points = edgePoints;
                 }
             }
-            
-            Debug.Log("Updated deck boundary with 4 edge colliders");
         }
     }
 
