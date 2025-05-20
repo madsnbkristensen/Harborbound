@@ -14,6 +14,9 @@ public class Weapon : Item
     private Transform firePoint;
     private float lastFireTime;
 
+    // Add this to store the shooter reference
+    private GameObject activeShooter;
+
     // Add this property to expose lastFireTime
     public float LastFireTime
     {
@@ -41,16 +44,15 @@ public class Weapon : Item
     {
         // Initialize lastFireTime to allow immediate first shot
         lastFireTime = -999f;
-
-        // Minimal logging
-        Debug.Log($"Weapon Awake: {name}");
     }
 
     // the use method is called when the weapon is used, and should be callable from the player and from enemy
     public override void Use(Player player)
     {
         // This version is called by players via the PlayerEquipment system
-        Debug.Log("Weapon used by player: " + (player != null ? player.name : "unknown"));
+
+        // Store the player as the active shooter for continuous firing
+        activeShooter = player.gameObject;
 
         // Start firing based on weapon type
         switch (weaponType)
@@ -63,18 +65,18 @@ public class Weapon : Item
             case WeaponType.BURST:
                 // For burst weapons, start a burst coroutine
                 if (burstCoroutine == null)
-                    burstCoroutine = StartCoroutine(FireBurst(player.gameObject));
+                    burstCoroutine = StartCoroutine(FireBurst(activeShooter));
                 break;
 
             case WeaponType.SHOTGUN:
                 // For shotguns, fire multiple bullets in a spread pattern
-                FireShotgun(player.gameObject);
+                FireShotgun(activeShooter);
                 break;
 
             case WeaponType.SINGLE:
             default:
                 // For single-shot weapons, just fire once
-                FireWeapon(player.gameObject);
+                FireWeapon(activeShooter);
                 break;
         }
     }
@@ -82,9 +84,11 @@ public class Weapon : Item
     // Add this overload method to allow enemies to use the weapon
     public void Use(GameObject shooter)
     {
+        // Store the shooter reference
+        activeShooter = shooter;
+
         // This version can be called by enemies
-        Debug.Log("Weapon used by: " + (shooter != null ? shooter.name : "unknown"));
-        FireWeapon(shooter);
+        FireWeapon(activeShooter);
     }
 
     // Add this helper method that handles the common firing logic
@@ -94,10 +98,6 @@ public class Weapon : Item
         float cooldownTime = lastFireTime + (1f / fireRate);
         float currentTime = Time.time;
         bool canFire = currentTime > cooldownTime;
-
-        Debug.Log(
-            $"Fire check: Time={currentTime:F2}, Last={lastFireTime:F2}, Cooldown={cooldownTime:F2}, FireRate={fireRate}, CanFire={canFire}"
-        );
 
         // Check if enough time has passed since last fire based on fire rate
         if (canFire)
@@ -120,11 +120,8 @@ public class Weapon : Item
             return;
         }
 
-        Debug.Log("Firing bullet from " + name);
-
         // Get a bullet from the pool
         GameObject bulletObj = BulletPool.Instance.GetBullet();
-        Debug.Log("Bullet obtained: " + (bulletObj != null));
 
         // Position the bullet at the fire point
         if (firePoint != null)
@@ -183,9 +180,6 @@ public class Weapon : Item
             burstCount = definition.burstCount;
             burstInterval = definition.burstInterval;
 
-            Debug.Log(
-                $"Weapon properties refreshed: {definition.itemName}, Type={weaponType}, BulletsPerShot={bulletsPerShot}"
-            );
         }
         else
         {
@@ -254,9 +248,31 @@ public class Weapon : Item
             // The fire rate check is inside FireWeapon
             if (Time.time > lastFireTime + (1f / fireRate))
             {
-                // Get the shooter (player or enemy) - in this case we assume it's our parent transform
-                GameObject shooter = transform.root.gameObject;
-                FireWeapon(shooter);
+                // Use the stored activeShooter instead of trying to find it again
+                if (activeShooter != null)
+                {
+                    FireWeapon(activeShooter);
+                }
+                else
+                {
+                    // Only try to find the shooter if we lost the reference somehow
+                    Debug.LogWarning("Lost shooter reference in automatic firing!");
+
+                    // First try to find a player component in the hierarchy
+                    Player playerComponent = GetComponentInParent<Player>();
+                    if (playerComponent != null)
+                    {
+                        activeShooter = playerComponent.gameObject;
+                    }
+                    else
+                    {
+                        // Fallback to root if no player found
+                        activeShooter = transform.root.gameObject;
+                        Debug.Log($"No player component found, using root: {activeShooter.name} with tag {activeShooter.tag}");
+                    }
+
+                    FireWeapon(activeShooter);
+                }
             }
         }
     }
@@ -331,8 +347,6 @@ public class Weapon : Item
             return;
         }
 
-        Debug.Log("Firing bullet from " + name);
-
         // Get a bullet from the pool
         GameObject bulletObj = BulletPool.Instance.GetBullet();
 
@@ -366,5 +380,175 @@ public class Weapon : Item
         {
             bullet.Initialize(this, shooter);
         }
+    }
+
+    public bool Fire(Vector3 targetPosition, GameObject shooter = null)
+    {
+        // If no shooter is provided, try to find a player component
+        if (shooter == null)
+        {
+            Player playerComponent = GetComponentInParent<Player>();
+            if (playerComponent != null)
+            {
+                shooter = playerComponent.gameObject;
+
+                // Make sure the player GameObject has the Player tag
+                if (!shooter.CompareTag("Player"))
+                {
+                    Debug.LogWarning("Player GameObject is missing 'Player' tag!");
+                }
+            }
+            else
+            {
+                // Try to find a player in the scene as fallback
+                Player foundPlayer = FindFirstObjectByType<Player>();
+                if (foundPlayer != null)
+                {
+                    shooter = foundPlayer.gameObject;
+                }
+                else
+                {
+                    // Last resort fallback
+                    shooter = transform.root.gameObject;
+                    Debug.LogWarning($"No player found, using {shooter.name} with tag {shooter.tag} as shooter");
+                }
+            }
+        }
+
+        // Calculate cooldown time
+        float cooldownTime = lastFireTime + (1f / fireRate);
+        bool canFire = Time.time > cooldownTime;
+
+        if (!canFire)
+            return false;
+
+        // Handle different weapon types
+        switch (weaponType)
+        {
+            case WeaponType.SHOTGUN:
+                FireShotgunAt(targetPosition, shooter);
+                break;
+            case WeaponType.BURST:
+                StartCoroutine(FireBurstAt(targetPosition, shooter));
+                break;
+            case WeaponType.AUTOMATIC:
+            case WeaponType.SINGLE:
+            default:
+                FireBulletAt(targetPosition, shooter);
+                break;
+        }
+
+        lastFireTime = Time.time;
+        return true;
+    }
+
+    // Add this helper method to fire at a specific position
+    private void FireBulletAt(Vector3 targetPosition, GameObject shooter)
+    {
+        if (BulletPool.Instance == null)
+        {
+            Debug.LogError("BulletPool instance not found!");
+            return;
+        }
+
+        // Get a bullet from the pool
+        GameObject bulletObj = BulletPool.Instance.GetBullet();
+        if (bulletObj == null)
+            return;
+
+        // Position the bullet at the fire point
+        bulletObj.transform.position = firePoint != null ? firePoint.position : transform.position;
+
+        // Calculate direction to the target position
+        Vector2 direction = targetPosition - bulletObj.transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        // Set the bullet rotation to aim toward the target
+        bulletObj.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        // Apply spread if needed
+        if (spread > 0)
+        {
+            float randomSpread = Random.Range(-spread, spread);
+            bulletObj.transform.Rotate(0, 0, randomSpread);
+        }
+
+        // Configure the bullet with a reference to this weapon and the shooter
+        Bullet bullet = bulletObj.GetComponent<Bullet>();
+        if (bullet != null)
+        {
+            bullet.Initialize(this, shooter);
+        }
+    }
+
+    // Add shotgun firing at a position
+    private void FireShotgunAt(Vector3 targetPosition, GameObject shooter)
+    {
+        // Fire multiple bullets in a spread pattern
+        for (int i = 0; i < bulletsPerShot; i++)
+        {
+            // Modify the spread for each bullet to create a shotgun pattern
+            float adjustedSpread = spread;
+            if (bulletsPerShot > 1)
+            {
+                // Create a wider pattern based on bullet index
+                float spreadFactor = (i / (float)(bulletsPerShot - 1)) * 2 - 1; // Range: -1 to 1
+                adjustedSpread = spread * 0.5f + spreadFactor * spread;
+            }
+
+            // Get a bullet from the pool
+            GameObject bulletObj = BulletPool.Instance.GetBullet();
+            if (bulletObj == null)
+                continue;
+
+            // Position the bullet at the fire point
+            bulletObj.transform.position =
+                firePoint != null ? firePoint.position : transform.position;
+
+            // Calculate direction to the target position
+            Vector2 direction = targetPosition - bulletObj.transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            // Set the bullet rotation to aim toward the target
+            bulletObj.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+            // Apply spread
+            bulletObj.transform.Rotate(0, 0, adjustedSpread);
+
+            // Configure the bullet
+            Bullet bullet = bulletObj.GetComponent<Bullet>();
+            if (bullet != null)
+            {
+                bullet.Initialize(this, shooter);
+            }
+        }
+    }
+
+    // Implement burst firing at a position
+    private System.Collections.IEnumerator FireBurstAt(Vector3 targetPosition, GameObject shooter)
+    {
+        // Fire a burst of bullets
+        for (int i = 0; i < burstCount; i++)
+        {
+            FireBulletAt(targetPosition, shooter);
+
+            // Wait for burst interval
+            if (i < burstCount - 1)
+                yield return new WaitForSeconds(burstInterval);
+        }
+    }
+
+    // Add this method to your Weapon class
+    public float GetBulletSpeed()
+    {
+        // Calculate speed based only on bulletTravelTime
+        // Using a default travel time of 1 second if not specified
+        float travelTime = bulletTravelTime > 0 ? bulletTravelTime : 1f;
+
+        // Use a fixed standard distance instead of range
+        float standardDistance = 10f; // A consistent reference distance
+
+        // This gives us a consistent speed based only on travel time
+        return standardDistance / travelTime;
     }
 }

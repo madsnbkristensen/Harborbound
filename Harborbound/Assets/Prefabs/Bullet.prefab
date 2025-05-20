@@ -168,3 +168,9 @@ MonoBehaviour:
   speed: 0
   maxLifetime: 2
   shooter: {fileID: 0}
+  damage: 0
+  ignoreTags:
+  - Bullet
+  - PlayerBoat
+  - EnemyBoat
+  - FishingSpot

@@ -15,7 +15,6 @@ public class Player : Humanoid
     public float interactionRange = 2f;
     public KeyCode interactionKey = KeyCode.E;
     public KeyCode inventoryKey = KeyCode.Tab;
-    public Transform boatWheelPosition;
     private Vector3 lastPositionBeforeDriving;
 
     protected override void Start()
@@ -31,6 +30,7 @@ public class Player : Humanoid
         if (gameManager != null)
             gameManager.OnGameStateChanged += HandleGameStateChanged;
 
+        // Change the FindFirstObjectByType to look for PlayerBoat
         if (playerBoat == null)
             playerBoat = FindFirstObjectByType<PlayerBoat>();
 
@@ -332,10 +332,10 @@ public class Player : Humanoid
 
     private bool IsNearBoatWheel()
     {
-        if (playerBoat == null || boatWheelPosition == null)
+        if (playerBoat == null || playerBoat.wheelPosition == null)
             return false;
 
-        float distance = Vector2.Distance(transform.position, boatWheelPosition.position);
+        float distance = Vector2.Distance(transform.position, playerBoat.wheelPosition.position);
         return distance <= interactionRange;
     }
 
@@ -422,10 +422,11 @@ public class Player : Humanoid
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, interactionRange);
 
-        if (boatWheelPosition != null)
+        // Update to use playerBoat.wheelPosition
+        if (playerBoat != null && playerBoat.wheelPosition != null)
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawSphere(boatWheelPosition.position, 0.3f);
+            Gizmos.DrawSphere(playerBoat.wheelPosition.position, 0.3f);
         }
     }
 

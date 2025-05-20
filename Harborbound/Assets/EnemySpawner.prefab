@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &292044204338428326
+--- !u!1 &6336859034109653311
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1835023956401924278}
-  - component: {fileID: 804896007309793517}
+  - component: {fileID: 6259690030120630098}
+  - component: {fileID: 1592006499927386062}
   m_Layer: 0
-  m_Name: WaterTileManager
+  m_Name: EnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1835023956401924278
+--- !u!4 &6259690030120630098
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292044204338428326}
+  m_GameObject: {fileID: 6336859034109653311}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.554417, y: 11.250213, z: 0.05813006}
+  m_LocalPosition: {x: -11.337487, y: 1.7362461, z: 0.059871074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &804896007309793517
+--- !u!114 &1592006499927386062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292044204338428326}
+  m_GameObject: {fileID: 6336859034109653311}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 935f4895ec1bf0d43853d5712f56bcea, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b8cc124fdf7a52428234974e8c3bf95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterTileSprite: {fileID: -5246934026592108136, guid: 2224f01b3841d2b45966d02150853050, type: 3}
-  tileSize: 2
-  baseWaterColor: {r: 0.11053756, g: 0.7791614, b: 0.8679245, a: 1}
-  darknessFactor: 0.15
+  enemyBoatPrefab: {fileID: 736686741757130447, guid: d5191ca75fb7d1a41a85a237ca779979, type: 3}
+  enemyPiratePrefab: {fileID: 9143379638909142466, guid: ef811164ea9774850bccc28d3c924ef3, type: 3}
+  enemySharkPrefab: {fileID: 0}
+  baseEnemyBoatsPerZone: 2
+  boatIncreaseFactor: 1.2
+  minDistanceBetweenBoats: 15
+  minDistanceFromRocks: 5
+  minDistanceFromIsland: 10
+  minEnemiesPerBoat: 1
+  maxEnemiesPerBoat: 3
+  sharkProbability: 0.3
+  availableWeapons: []

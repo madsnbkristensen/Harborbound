@@ -19,6 +19,4 @@ public class Boat : MonoBehaviour
             transform.position += new Vector3(movement.x, movement.y, 0);
         }
     }
-
-
 }

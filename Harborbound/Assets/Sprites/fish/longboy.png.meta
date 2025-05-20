@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      longboy_0: -3752526547493954969
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

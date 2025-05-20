@@ -6,6 +6,13 @@ public class BulletPool : MonoBehaviour
     public GameObject bulletPrefab;
     public static BulletPool Instance;
 
+    [Header("Rendering Settings")]
+    [SerializeField]
+    private string bulletSortingLayer = "TopMost"; // Create this layer in Unity
+
+    [SerializeField]
+    private int bulletSortingOrder = 100;
+
     private ObjectPool<GameObject> pool;
 
     void Awake()
@@ -36,12 +43,29 @@ public class BulletPool : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab);
         bullet.transform.SetParent(transform);
+
+        // Set the bullet's sprite to always render on top
+        SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.sortingLayerName = bulletSortingLayer;
+            spriteRenderer.sortingOrder = bulletSortingOrder;
+        }
+
         return bullet;
     }
 
     private void OnBulletGet(GameObject bullet)
     {
         bullet.SetActive(true);
+
+        // Ensure sorting settings are maintained when reused
+        SpriteRenderer spriteRenderer = bullet.GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.sortingLayerName = bulletSortingLayer;
+            spriteRenderer.sortingOrder = bulletSortingOrder;
+        }
     }
 
     private void OnBulletRelease(GameObject bullet)
@@ -64,4 +88,3 @@ public class BulletPool : MonoBehaviour
         pool.Release(bullet);
     }
 }
-

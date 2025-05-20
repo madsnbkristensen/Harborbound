@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4151464565682776722}
   m_Layer: 0
   m_Name: Rock_1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.254, y: 0.08911812, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 860545182587358878}
@@ -67,8 +67,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.016753584, y: 0.042399764}
-  m_Radius: 0.27878323
+  m_Offset: {x: 0.22867274, y: 0.042399764}
+  m_Radius: 0.5242095
 --- !u!1 &4338285081296354344
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,8 +95,8 @@ Transform:
   m_GameObject: {fileID: 4338285081296354344}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 0.047, z: 0}
-  m_LocalScale: {x: 0.1195, y: 0.1195, z: 0.1195}
+  m_LocalPosition: {x: 0.214, y: 0.033, z: 0}
+  m_LocalScale: {x: 0.24296859, y: 0.24296859, z: 0.24296859}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3791164363004967463}

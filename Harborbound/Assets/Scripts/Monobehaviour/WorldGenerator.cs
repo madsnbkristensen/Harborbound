@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
-using Vector2 = UnityEngine.Vector2;
-using Random = UnityEngine.Random;
 using Quaternion = UnityEngine.Quaternion;
+using Random = UnityEngine.Random;
+using Vector2 = UnityEngine.Vector2;
 
 public class WorldGenerator : MonoBehaviour
 {
@@ -28,7 +28,6 @@ public class WorldGenerator : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject); // Optional: keeps the object across scene loads
-
     }
 
     void Start()
@@ -38,6 +37,9 @@ public class WorldGenerator : MonoBehaviour
 
     public void GenerateWorld()
     {
+        // cleanup corpses
+        CleanupCorpses();
+
         // Initialize ZoneManager with island center and size
         if (ZoneManager.Instance != null)
         {
@@ -88,6 +90,16 @@ public class WorldGenerator : MonoBehaviour
         {
             Debug.LogWarning("FishingSpotSpawner not found. Fishing spots will not be generated.");
         }
+
+        // Step 6: Spawn enemy boats
+        if (EnemySpawner.Instance != null)
+        {
+            EnemySpawner.Instance.SpawnEnemies();
+        }
+        else
+        {
+            Debug.LogWarning("EnemySpawner not found. Enemies will not be generated.");
+        }
     }
 
     private void GenerateNewRockPositions()
@@ -96,7 +108,9 @@ public class WorldGenerator : MonoBehaviour
 
         if (ZoneManager.Instance == null || ZoneManager.Instance.zones.Count == 0)
         {
-            Debug.LogError("Cannot generate rocks: ZoneManager not initialized or no zones created.");
+            Debug.LogError(
+                "Cannot generate rocks: ZoneManager not initialized or no zones created."
+            );
             return;
         }
 
@@ -110,7 +124,8 @@ public class WorldGenerator : MonoBehaviour
         {
             Zone zone = ZoneManager.Instance.zones[i];
             // Area of a ring = π(R²-r²) where R is outer radius and r is inner radius
-            float zoneArea = Mathf.PI * (Mathf.Pow(zone.outerRadius, 2) - Mathf.Pow(zone.innerRadius, 2));
+            float zoneArea =
+                Mathf.PI * (Mathf.Pow(zone.outerRadius, 2) - Mathf.Pow(zone.innerRadius, 2));
             zoneAreas[i] = zoneArea;
             totalArea += zoneArea;
         }
@@ -164,15 +179,23 @@ public class WorldGenerator : MonoBehaviour
                     zoneRocksPlaced++;
                 }
             }
-
-            Debug.Log($"Placed {zoneRocksPlaced} rocks in Zone {zoneIndex + 1} (area proportion: {zoneProportion:P2})");
         }
-
-        Debug.Log($"Successfully generated {rockPositions.Count} of {rockCount} rocks across all zones.");
     }
 
     private void PlaceRocks()
     {
+        // Define the rocks layer number
+        int rocksLayer = LayerMask.NameToLayer("Rocks");
+
+        // Check if layer exists
+        if (rocksLayer == -1)
+        {
+            Debug.LogError(
+                "Rocks layer not found! Please create a layer named 'Rocks' in Project Settings > Tags and Layers"
+            );
+            return;
+        }
+
         foreach (Vector2 position in rockPositions)
         {
             // Select a random prefab from the array
@@ -182,15 +205,29 @@ public class WorldGenerator : MonoBehaviour
             GameObject rock = Instantiate(selectedPrefab, position, Quaternion.identity);
             rock.transform.SetParent(transform);
 
+            // Set the rock to the Rocks layer - this is the new line
+            rock.layer = rocksLayer;
+
+            // Also set the layer for all children if any
+            foreach (Transform child in rock.transform)
+            {
+                child.gameObject.layer = rocksLayer;
+            }
+
             // Flip the rock randomly
             bool flipHorizontal = Random.value > 0.5f;
             rock.transform.localScale = new Vector2(
                 flipHorizontal ? -1 : 1, // Flip X scale to flip horizontally
-                1                      // Keep Y scale the same
+                1 // Keep Y scale the same
+            );
+
+            // set scale of rock to random value between 1 and 1.5
+            float randomScale = Random.Range(1f, 1.5f);
+            rock.transform.localScale = new Vector2(
+                rock.transform.localScale.x * randomScale,
+                rock.transform.localScale.y * randomScale
             );
         }
-        // num of rocks placed
-        Debug.Log($"Placed {rockPositions.Count} rocks in the world.");
     }
 
     // Update the rock check method to allow for a custom distance check
@@ -204,5 +241,19 @@ public class WorldGenerator : MonoBehaviour
             }
         }
         return false; // No rocks are in the way
+    }
+
+    private void CleanupCorpses()
+    {
+        // Find all objects with the tag "EnemyCorpse"
+        GameObject[] corpses = GameObject.FindGameObjectsWithTag("EnemyCorpse");
+
+        Debug.Log($"Cleaning up {corpses.Length} enemy corpses");
+
+        // Destroy each corpse
+        foreach (GameObject corpse in corpses)
+        {
+            Destroy(corpse);
+        }
     }
 }
