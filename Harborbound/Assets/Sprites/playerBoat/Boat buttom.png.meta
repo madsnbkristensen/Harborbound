@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boat buttom_0: 3975826167195517899
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

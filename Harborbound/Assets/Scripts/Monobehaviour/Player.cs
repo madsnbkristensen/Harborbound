@@ -11,6 +11,9 @@ public class Player : Humanoid
     private SpriteRenderer playerSpriteRenderer;
     private Vector2 moveDirection;
 
+    // Add this line to declare the missing variable
+    private Transform boatWheelPosition;
+
     [Header("Interaction Settings")]
     public float interactionRange = 2f;
     public KeyCode interactionKey = KeyCode.E;
