@@ -91,6 +91,8 @@ MonoBehaviour:
   parentBoat: {fileID: 0}
   weaponMountPoint: {fileID: 5674711360089792244}
   equippedWeapon: {fileID: 0}
+  corpsePrefab: {fileID: 7237845713404521523, guid: ccf952f10cd3c154ab0906b0b428979d, type: 3}
+  corpseLifetime: 10
   showDebugColliders: 0
 --- !u!212 &1083884465041387658
 SpriteRenderer:

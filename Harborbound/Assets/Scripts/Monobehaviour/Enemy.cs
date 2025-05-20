@@ -36,6 +36,10 @@ public class Enemy : Humanoid
     private Player targetPlayer;
     private float distanceToPlayer;
 
+    [Header("Death")]
+    public GameObject corpsePrefab; // Assign this in the inspector
+    public float corpseLifetime = 10f; // How long the corpse will remain before being destroyed
+
     [Header("Debug")]
     public bool showDebugColliders = false;
 
@@ -274,7 +278,9 @@ public class Enemy : Humanoid
                     Vector3 offset = boxCollider.offset;
 
                     // Apply local offset to position
-                    pos += boxCollider.transform.TransformDirection(new Vector3(offset.x, offset.y, 0));
+                    pos += boxCollider.transform.TransformDirection(
+                        new Vector3(offset.x, offset.y, 0)
+                    );
 
                     // Draw wireframe box
                     Gizmos.DrawWireCube(pos, new Vector3(size.x, size.y, 0.1f));
@@ -291,6 +297,9 @@ public class Enemy : Humanoid
 
         // Call the base implementation in Humanoid
         base.TakeDamage(damage);
+
+        // Flash red to indicate damage taken
+        StartCoroutine(FlashRed());
 
         // Add debug to check health after damage
         Debug.Log($"Enemy health after: {currentHealth}");
@@ -310,9 +319,21 @@ public class Enemy : Humanoid
 
     protected override void Die()
     {
-        Debug.Log($"Enemy {humanoidName} has died!");
+        // Spawn corpse at the same position and rotation as the enemy
+        if (corpsePrefab != null)
+        {
+            GameObject corpse = Instantiate(corpsePrefab, transform.position, transform.rotation);
 
-        // Drop loot or play death animation here if needed
+            // Get the SpriteRenderer from the original enemy and from the corpse
+            SpriteRenderer enemyRenderer = GetComponentInChildren<SpriteRenderer>();
+            SpriteRenderer corpseRenderer = corpse.GetComponentInChildren<SpriteRenderer>();
+
+            // Match the facing direction if needed
+            if (enemyRenderer != null && corpseRenderer != null)
+            {
+                corpseRenderer.flipX = enemyRenderer.flipX;
+            }
+        }
 
         // Notify the parent boat if there is one
         if (parentBoat != null)

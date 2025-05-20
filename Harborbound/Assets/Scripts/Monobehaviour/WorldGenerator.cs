@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
-using Vector2 = UnityEngine.Vector2;
-using Random = UnityEngine.Random;
 using Quaternion = UnityEngine.Quaternion;
+using Random = UnityEngine.Random;
+using Vector2 = UnityEngine.Vector2;
 
 public class WorldGenerator : MonoBehaviour
 {
@@ -28,7 +28,6 @@ public class WorldGenerator : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject); // Optional: keeps the object across scene loads
-
     }
 
     void Start()
@@ -38,6 +37,9 @@ public class WorldGenerator : MonoBehaviour
 
     public void GenerateWorld()
     {
+        // cleanup corpses
+        CleanupCorpses();
+
         // Initialize ZoneManager with island center and size
         if (ZoneManager.Instance != null)
         {
@@ -106,7 +108,9 @@ public class WorldGenerator : MonoBehaviour
 
         if (ZoneManager.Instance == null || ZoneManager.Instance.zones.Count == 0)
         {
-            Debug.LogError("Cannot generate rocks: ZoneManager not initialized or no zones created.");
+            Debug.LogError(
+                "Cannot generate rocks: ZoneManager not initialized or no zones created."
+            );
             return;
         }
 
@@ -120,7 +124,8 @@ public class WorldGenerator : MonoBehaviour
         {
             Zone zone = ZoneManager.Instance.zones[i];
             // Area of a ring = π(R²-r²) where R is outer radius and r is inner radius
-            float zoneArea = Mathf.PI * (Mathf.Pow(zone.outerRadius, 2) - Mathf.Pow(zone.innerRadius, 2));
+            float zoneArea =
+                Mathf.PI * (Mathf.Pow(zone.outerRadius, 2) - Mathf.Pow(zone.innerRadius, 2));
             zoneAreas[i] = zoneArea;
             totalArea += zoneArea;
         }
@@ -192,7 +197,7 @@ public class WorldGenerator : MonoBehaviour
             bool flipHorizontal = Random.value > 0.5f;
             rock.transform.localScale = new Vector2(
                 flipHorizontal ? -1 : 1, // Flip X scale to flip horizontally
-                1                      // Keep Y scale the same
+                1 // Keep Y scale the same
             );
 
             // set scale of rock to random value between 1 and 1.5
@@ -215,5 +220,19 @@ public class WorldGenerator : MonoBehaviour
             }
         }
         return false; // No rocks are in the way
+    }
+
+    private void CleanupCorpses()
+    {
+        // Find all objects with the tag "EnemyCorpse"
+        GameObject[] corpses = GameObject.FindGameObjectsWithTag("EnemyCorpse");
+
+        Debug.Log($"Cleaning up {corpses.Length} enemy corpses");
+
+        // Destroy each corpse
+        foreach (GameObject corpse in corpses)
+        {
+            Destroy(corpse);
+        }
     }
 }
