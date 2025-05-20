@@ -324,6 +324,25 @@ public class Enemy : Humanoid
         {
             GameObject corpse = Instantiate(corpsePrefab, transform.position, transform.rotation);
 
+            // If the enemy is on a boat, parent the corpse to the boat to maintain position
+            if (parentBoat != null)
+            {
+                // Get the local position of the enemy relative to the boat
+                Vector3 localPositionOnBoat = parentBoat.transform.InverseTransformPoint(
+                    transform.position
+                );
+
+                // Parent the corpse to the boat and set its local position
+                corpse.transform.SetParent(parentBoat.transform);
+                corpse.transform.localPosition = localPositionOnBoat;
+
+                // Store reference to boat for potential cleanup
+                CorpseReference corpseRef = corpse.AddComponent<CorpseReference>();
+                corpseRef.parentBoat = parentBoat;
+
+                Debug.Log($"Corpse parented to boat at local position: {localPositionOnBoat}");
+            }
+
             // Get the SpriteRenderer from the original enemy and from the corpse
             SpriteRenderer enemyRenderer = GetComponentInChildren<SpriteRenderer>();
             SpriteRenderer corpseRenderer = corpse.GetComponentInChildren<SpriteRenderer>();

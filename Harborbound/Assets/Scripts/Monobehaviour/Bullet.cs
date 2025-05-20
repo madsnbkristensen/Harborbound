@@ -57,7 +57,7 @@ public class Bullet : MonoBehaviour
             return;
 
         // Ignore zone boundaries
-        if (other.gameObject.name.Contains("ZoneBoundary") || other.gameObject.CompareTag("Boundary"))
+        if (other.gameObject.name.Contains("ZoneBoundary"))
             return;
 
         // Ignore other bullets
