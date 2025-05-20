@@ -5,9 +5,10 @@ using System.Collections.Generic;
 public class Player : Humanoid
 {
     public GameManager gameManager;
-    public Boat playerBoat;
+    public PlayerBoat playerBoat;
     private Friend currentInteractableFriend;
     private PlayerEquipment playerEquipment;
+    private SpriteRenderer playerSpriteRenderer;
 
     [Header("Interaction Settings")]
     public float interactionRange = 2f;
@@ -21,6 +22,7 @@ public class Player : Humanoid
     {
 
         base.Start();
+        playerSpriteRenderer = GetComponent<SpriteRenderer>();
 
         // Find GameManager if needed
         if (gameManager == null)
@@ -31,7 +33,7 @@ public class Player : Humanoid
             gameManager.OnGameStateChanged += HandleGameStateChanged;
 
         if (playerBoat == null)
-            playerBoat = FindFirstObjectByType<Boat>();
+            playerBoat = FindFirstObjectByType<PlayerBoat>();
 
         if (boatWheelPosition == null && playerBoat != null)
             boatWheelPosition = playerBoat.wheelPosition;
@@ -50,6 +52,7 @@ public class Player : Humanoid
         switch (newState)
         {
             case GameManager.GameState.ROAMING:
+                if (playerSpriteRenderer != null) playerSpriteRenderer.enabled = true;
                 // Enable movement components
                 if (col != null) col.enabled = true;
                 // Unfreeze rigidbody if you're using physics-based movement
@@ -68,9 +71,11 @@ public class Player : Humanoid
                 break;
 
             case GameManager.GameState.DRIVING:
-            case GameManager.GameState.FISHING:
                 // Disable player's collider when driving
+                if (playerSpriteRenderer != null) playerSpriteRenderer.enabled = false;
                 if (col != null) col.enabled = false;
+                break;
+            case GameManager.GameState.FISHING:
                 break;
 
             // Handle other states as needed...

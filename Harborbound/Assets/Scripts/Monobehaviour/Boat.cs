@@ -4,10 +4,8 @@ public class Boat : MonoBehaviour
 {
     public float speed = 3f;
     public float rotationSpeed = 100f;
-    [Header("Boat Components")]
-    [SerializeField] private Transform _wheelPosition;
 
-    public void Move(Vector2 inputDirection)
+    public virtual void Move(Vector2 inputDirection)
     {
         // Only process input if there's actual input
         if (inputDirection.magnitude > 0.1f)
@@ -22,32 +20,5 @@ public class Boat : MonoBehaviour
         }
     }
 
-    public Transform wheelPosition
-    {
-        get
-        {
-            // If wheel position isn't assigned, try to find it
-            if (_wheelPosition == null)
-            {
-                // First try to find a child named "BoatWheel"
-                Transform wheelChild = transform.Find("BoatWheel");
 
-                if (wheelChild != null)
-                {
-                    _wheelPosition = wheelChild;
-                    Debug.Log("Found BoatWheel child object");
-                }
-            }
-            return _wheelPosition;
-        }
-    }
-
-    void OnDrawGizmos()
-    {
-        if (wheelPosition != null)
-        {
-            Gizmos.color = Color.blue;
-            Gizmos.DrawSphere(wheelPosition.position, 0.3f);
-        }
-    }
 }
