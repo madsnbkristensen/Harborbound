@@ -86,7 +86,7 @@ public class ZoneManager : MonoBehaviour
         Debug.Log($"Generated Zone {layerCount} with inner radius {zone.innerRadius} and outer radius {zone.outerRadius}");
     }
 
-    // Add this method to create the boundary
+    // Add this method to create the boundary with edge collider
     public void CreateBoundaryCollider()
     {
         // Remove existing boundary if any
@@ -110,18 +110,32 @@ public class ZoneManager : MonoBehaviour
         boundaryCollider.transform.SetParent(transform);
         boundaryCollider.transform.position = new Vector3(centerPoint.x, centerPoint.y, 0);
 
-        // Add a circle collider
-        CircleCollider2D collider = boundaryCollider.AddComponent<CircleCollider2D>();
-        collider.radius = boundaryRadius;
+        // Add an edge collider instead of a circle collider
+        EdgeCollider2D edgeCollider = boundaryCollider.AddComponent<EdgeCollider2D>();
 
-        // Set it as a trigger if you just want to detect when player tries to leave
-        // collider.isTrigger = true;
+        // Create points for the edge collider (approximating a circle)
+        int segments = 64; // More segments = smoother circle
+        Vector2[] points = new Vector2[segments + 1];
+
+        for (int i = 0; i < segments; i++)
+        {
+            float angle = i * Mathf.PI * 2f / segments;
+            float x = Mathf.Cos(angle) * boundaryRadius;
+            float y = Mathf.Sin(angle) * boundaryRadius;
+            points[i] = new Vector2(x, y);
+        }
+
+        // Close the loop
+        points[segments] = points[0];
+
+        // Set the points on the edge collider
+        edgeCollider.points = points;
 
         // Add a rigidbody to ensure collisions work properly
         Rigidbody2D rb = boundaryCollider.AddComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Static;
 
-        Debug.Log($"Created boundary collider with radius {boundaryRadius}");
+        Debug.Log($"Created boundary edge collider with radius {boundaryRadius} using {segments} segments");
     }
 
     // Add this method to update the boundary if zones change
@@ -129,10 +143,28 @@ public class ZoneManager : MonoBehaviour
     {
         if (boundaryCollider != null && zones.Count > 0)
         {
-            CircleCollider2D collider = boundaryCollider.GetComponent<CircleCollider2D>();
-            if (collider != null)
+            EdgeCollider2D edgeCollider = boundaryCollider.GetComponent<EdgeCollider2D>();
+            if (edgeCollider != null)
             {
-                collider.radius = zones[zones.Count - 1].outerRadius;
+                float boundaryRadius = zones[zones.Count - 1].outerRadius;
+
+                // Create points for the edge collider (approximating a circle)
+                int segments = 64; // Keep the same number of segments
+                Vector2[] points = new Vector2[segments + 1];
+
+                for (int i = 0; i < segments; i++)
+                {
+                    float angle = i * Mathf.PI * 2f / segments;
+                    float x = Mathf.Cos(angle) * boundaryRadius;
+                    float y = Mathf.Sin(angle) * boundaryRadius;
+                    points[i] = new Vector2(x, y);
+                }
+
+                // Close the loop
+                points[segments] = points[0];
+
+                // Update the points on the edge collider
+                edgeCollider.points = points;
             }
         }
     }
