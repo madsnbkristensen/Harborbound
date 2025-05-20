@@ -477,6 +477,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WorldGenerator
       objectReference: {fileID: 0}
+    - target: {fileID: 4469237557894705333, guid: 764706f7f1f03e34bb9aaa8b63c7db51, type: 3}
+      propertyPath: 'rockPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3235963336647158931, guid: 576d73c30713d8a49b2a867ebbc39bf6, type: 3}
+    - target: {fileID: 5117333696239254107, guid: 764706f7f1f03e34bb9aaa8b63c7db51, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5117333696239254107, guid: 764706f7f1f03e34bb9aaa8b63c7db51, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.32417268
@@ -516,6 +524,10 @@ PrefabInstance:
     - target: {fileID: 5117333696239254107, guid: 764706f7f1f03e34bb9aaa8b63c7db51, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117333696239254107, guid: 764706f7f1f03e34bb9aaa8b63c7db51, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -643,6 +655,10 @@ PrefabInstance:
       propertyPath: kalashnikovDef
       value: 
       objectReference: {fileID: 11400000, guid: 73f82264251a14e7aa8bb284302f7ecf, type: 2}
+    - target: {fileID: 4136170455367901386, guid: b77e1e61d4bdf46419776d3e66f31dc4, type: 3}
+      propertyPath: enemySharkPrefab
+      value: 
+      objectReference: {fileID: 9143379638909142466, guid: ef811164ea9774850bccc28d3c924ef3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -881,6 +897,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2019249028}
+  - {fileID: 2137332826332301348}
   - {fileID: 878543967581354464}
   - {fileID: 6306364627895769577}
   - {fileID: 3216962826976163157}
@@ -891,4 +908,3 @@ SceneRoots:
   - {fileID: 898798787}
   - {fileID: 5415321521031768292}
   - {fileID: 2092665915016007514}
-  - {fileID: 2137332826332301348}

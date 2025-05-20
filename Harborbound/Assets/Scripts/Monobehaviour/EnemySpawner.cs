@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
     public int maxEnemiesPerBoat = 3;
 
     [Range(0f, 1f)]
-    public float sharkProbability = 0f; // Probability of spawning a shark instead of pirate
+    public float sharkProbability = 0; // Probability of spawning a shark instead of pirate
 
     [Header("Weapon Configuration")]
     public List<Weapon> availableWeapons = new List<Weapon>();
@@ -170,11 +170,7 @@ public class EnemySpawner : MonoBehaviour
                     boatsPlaced++;
                 }
             }
-
-            Debug.Log($"Placed {boatsPlaced} enemy boats in Zone {zoneIndex + 1}");
         }
-
-        Debug.Log($"Total enemy boats placed: {enemyBoatPositions.Count}");
     }
 
     private void ConfigureEnemyBoat(EnemyBoat boat, int zoneIndex)
@@ -187,9 +183,6 @@ public class EnemySpawner : MonoBehaviour
 
         // Clear any existing enemies in the boat's list
         boat.ClearEnemies();
-
-        // Debug log for diagnostics
-        Debug.Log($"Configuring boat at {boat.transform.position}, looking for enemy positions...");
 
         // Determine number of enemies based on zone
         int numEnemies = Random.Range(minEnemiesPerBoat, maxEnemiesPerBoat + 1);
@@ -211,13 +204,6 @@ public class EnemySpawner : MonoBehaviour
 
             if (position == null)
             {
-                // Log all child objects for debugging
-                Debug.Log($"Children of boat: {boat.name}");
-                for (int c = 0; c < boat.transform.childCount; c++)
-                {
-                    Debug.Log($"Child {c}: {boat.transform.GetChild(c).name}");
-                }
-
                 // Try recursive search
                 position = FindChildRecursively(boat.transform, $"EnemyPosition{i + 1}");
             }
@@ -225,7 +211,6 @@ public class EnemySpawner : MonoBehaviour
             if (position != null)
             {
                 foundPositions.Add(position);
-                Debug.Log($"Found position {i + 1} at {position.position}");
             }
             else
             {
@@ -246,14 +231,12 @@ public class EnemySpawner : MonoBehaviour
             }
         }
 
-        Debug.Log($"Found {foundPositions.Count} positions, creating {numEnemies} enemies");
-
         // Create enemies and place them on the boat
         for (int i = 0; i < numEnemies && i < foundPositions.Count; i++)
         {
             // Determine if this should be a shark or pirate
-            bool isShark = Random.value < sharkProbability;
-            GameObject enemyPrefab = isShark ? enemySharkPrefab : enemyPiratePrefab;
+            bool isShark = false; // Force pirates only
+            GameObject enemyPrefab = enemyPiratePrefab;
 
             if (enemyPrefab == null)
             {
@@ -292,8 +275,6 @@ public class EnemySpawner : MonoBehaviour
 
                 // Add to boat's enemies list
                 boat.AddEnemy(enemy);
-
-                Debug.Log($"Added enemy to boat at position {foundPositions[i].position}");
             }
             else
             {
@@ -304,8 +285,17 @@ public class EnemySpawner : MonoBehaviour
 
     private void AssignRandomWeapon(Enemy enemy, int zoneIndex)
     {
-        if (enemy == null || enemy.weaponMountPoint == null)
+        if (enemy == null)
+        {
+            Debug.LogWarning("Cannot assign weapon: Enemy is null");
             return;
+        }
+
+        if (enemy.weaponMountPoint == null)
+        {
+            Debug.LogWarning($"Cannot assign weapon: Enemy {enemy.name} has no weaponMountPoint");
+            return;
+        }
 
         // Choose a random weapon type
         float randomValue = Random.value;
@@ -343,15 +333,42 @@ public class EnemySpawner : MonoBehaviour
                 weaponDef = pistolDef; // 70% chance for pistol
         }
 
+        // Fallback to pistol if weapon definition is null
         if (weaponDef == null)
-            return;
+        {
+            Debug.LogWarning("Selected weapon definition is null, falling back to pistol");
+            weaponDef = pistolDef;
+
+            // If still null, we can't proceed
+            if (weaponDef == null)
+            {
+                Debug.LogError("Cannot assign weapon: All weapon definitions are null!");
+                return;
+            }
+        }
 
         // Create the weapon using ItemFactory
         Item weaponItem = ItemFactory.CreateItem(weaponDef);
-        if (weaponItem == null || !(weaponItem is Weapon))
+        if (weaponItem == null)
+        {
+            Debug.LogError($"ItemFactory.CreateItem failed for {weaponDef.itemName}");
             return;
+        }
+
+        if (!(weaponItem is Weapon))
+        {
+            Debug.LogError($"Created item is not a weapon: {weaponItem.GetType().Name}");
+            return;
+        }
 
         Weapon weapon = (Weapon)weaponItem;
+
+        // Check if we have the prefab
+        if (equipItemPrefab == null)
+        {
+            Debug.LogError("equipItemPrefab is null! Cannot create weapon visual");
+            return;
+        }
 
         // Create visual representation of the weapon
         GameObject weaponVisual = GameObject.Instantiate(equipItemPrefab, enemy.weaponMountPoint);
@@ -385,6 +402,11 @@ public class EnemySpawner : MonoBehaviour
             // Set the fire point on the weapon
             weapon.SetFirePoint(firePoint);
         }
+        else
+        {
+            Debug.LogError("ItemEquipVisual component missing on equipItemPrefab!");
+            return;
+        }
 
         // Adjust weapon stats based on zone
         float zoneFactor = 1f + ((zoneIndex - 1) * 0.15f); // 15% increase per zone
@@ -393,7 +415,7 @@ public class EnemySpawner : MonoBehaviour
         // Assign to enemy
         enemy.equippedWeapon = weapon;
 
-        Debug.Log($"Equipped enemy with {weaponDef.itemName}");
+        Debug.Log($"Successfully equipped enemy with {weaponDef.itemName}");
     }
 
     // Call this method to spawn enemies when the world is generated

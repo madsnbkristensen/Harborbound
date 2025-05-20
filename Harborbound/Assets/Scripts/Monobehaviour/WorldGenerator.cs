@@ -174,11 +174,7 @@ public class WorldGenerator : MonoBehaviour
                     zoneRocksPlaced++;
                 }
             }
-
-            Debug.Log($"Placed {zoneRocksPlaced} rocks in Zone {zoneIndex + 1} (area proportion: {zoneProportion:P2})");
         }
-
-        Debug.Log($"Successfully generated {rockPositions.Count} of {rockCount} rocks across all zones.");
     }
 
     private void PlaceRocks()
@@ -198,9 +194,14 @@ public class WorldGenerator : MonoBehaviour
                 flipHorizontal ? -1 : 1, // Flip X scale to flip horizontally
                 1                      // Keep Y scale the same
             );
+
+            // set scale of rock to random value between 1 and 1.5
+            float randomScale = Random.Range(1f, 1.5f);
+            rock.transform.localScale = new Vector2(
+                rock.transform.localScale.x * randomScale,
+                rock.transform.localScale.y * randomScale
+            );
         }
-        // num of rocks placed
-        Debug.Log($"Placed {rockPositions.Count} rocks in the world.");
     }
 
     // Update the rock check method to allow for a custom distance check

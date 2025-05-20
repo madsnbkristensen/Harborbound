@@ -45,6 +45,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Pirates
+    uniqueID: 225953343
+    locked: 0
+  - name: Equipableitem
+    uniqueID: 1175999479
+    locked: 0
   - name: TopMost
     uniqueID: 1855919617
     locked: 0

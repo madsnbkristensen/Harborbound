@@ -42,15 +42,12 @@ public class Weapon : Item
         // Initialize lastFireTime to allow immediate first shot
         lastFireTime = -999f;
 
-        // Minimal logging
-        Debug.Log($"Weapon Awake: {name}");
     }
 
     // the use method is called when the weapon is used, and should be callable from the player and from enemy
     public override void Use(Player player)
     {
         // This version is called by players via the PlayerEquipment system
-        Debug.Log("Weapon used by player: " + (player != null ? player.name : "unknown"));
 
         // Start firing based on weapon type
         switch (weaponType)
@@ -83,7 +80,6 @@ public class Weapon : Item
     public void Use(GameObject shooter)
     {
         // This version can be called by enemies
-        Debug.Log("Weapon used by: " + (shooter != null ? shooter.name : "unknown"));
         FireWeapon(shooter);
     }
 
@@ -94,10 +90,6 @@ public class Weapon : Item
         float cooldownTime = lastFireTime + (1f / fireRate);
         float currentTime = Time.time;
         bool canFire = currentTime > cooldownTime;
-
-        Debug.Log(
-            $"Fire check: Time={currentTime:F2}, Last={lastFireTime:F2}, Cooldown={cooldownTime:F2}, FireRate={fireRate}, CanFire={canFire}"
-        );
 
         // Check if enough time has passed since last fire based on fire rate
         if (canFire)
@@ -120,11 +112,8 @@ public class Weapon : Item
             return;
         }
 
-        Debug.Log("Firing bullet from " + name);
-
         // Get a bullet from the pool
         GameObject bulletObj = BulletPool.Instance.GetBullet();
-        Debug.Log("Bullet obtained: " + (bulletObj != null));
 
         // Position the bullet at the fire point
         if (firePoint != null)
@@ -330,8 +319,6 @@ public class Weapon : Item
             Debug.LogError("BulletPool instance not found!");
             return;
         }
-
-        Debug.Log("Firing bullet from " + name);
 
         // Get a bullet from the pool
         GameObject bulletObj = BulletPool.Instance.GetBullet();

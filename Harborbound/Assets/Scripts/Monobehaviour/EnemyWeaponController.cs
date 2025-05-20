@@ -8,7 +8,7 @@ public class EnemyWeaponController : MonoBehaviour
     private void Start()
     {
         // Find the player
-        Player player = FindObjectOfType<Player>();
+        Player player = FindAnyObjectByType<Player>();
         if (player != null)
         {
             playerTransform = player.transform;
@@ -27,7 +27,7 @@ public class EnemyWeaponController : MonoBehaviour
         if (playerTransform == null)
         {
             // Try to find player if not assigned yet
-            Player player = FindObjectOfType<Player>();
+            Player player = FindAnyObjectByType<Player>();
             if (player != null)
             {
                 playerTransform = player.transform;

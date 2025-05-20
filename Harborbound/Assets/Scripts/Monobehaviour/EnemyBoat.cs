@@ -309,7 +309,6 @@ public class EnemyBoat : Boat
             if (positionTransform != null)
             {
                 enemyPositions[i] = positionTransform;
-                Debug.Log($"Found EnemyPosition{i + 1} at {positionTransform.position}");
             }
         }
     }
@@ -321,10 +320,6 @@ public class EnemyBoat : Boat
         {
             return; // Skip if no enemies
         }
-
-        Debug.Log(
-            $"Updating {enemies.Count} enemies, container scale: {enemyPositionsContainer?.localScale}"
-        );
 
         foreach (Enemy enemy in enemies)
         {
@@ -388,15 +383,21 @@ public class EnemyBoat : Boat
             // Get the target position
             Vector3 targetPos = enemyPositions[i].position;
 
-            // Make sure enemy is parented to the boat
+            // Make sure enemy is parented to the boat (not to the positions container)
             if (enemy.transform.parent != transform)
             {
                 enemy.transform.SetParent(transform);
             }
 
-            // Set position directly instead of smoothly lerping
-            // This ensures enemies stay precisely at their positions
+            // Set position directly - ensures enemies stay at their positions
             enemy.transform.position = targetPos;
+
+            // Update enemy's facing direction based on boat's direction
+            SpriteRenderer enemySprite = enemy.GetComponentInChildren<SpriteRenderer>();
+            if (enemySprite != null)
+            {
+                enemySprite.flipX = isFacingLeft;
+            }
         }
     }
 
@@ -463,7 +464,6 @@ public class EnemyBoat : Boat
         if (enemy != null && !enemies.Contains(enemy))
         {
             enemies.Add(enemy);
-            Debug.Log($"Added enemy to boat, total enemies: {enemies.Count}");
         }
     }
 
@@ -528,7 +528,7 @@ public class EnemyBoat : Boat
             // Check if we're changing direction
             bool shouldFaceLeft = Mathf.Abs(angle) > 90;
 
-            // If direction changed, flip the enemy positions container
+            // If direction changed, update facing direction
             if (shouldFaceLeft != isFacingLeft)
             {
                 isFacingLeft = shouldFaceLeft;
@@ -539,17 +539,17 @@ public class EnemyBoat : Boat
                 // Flip the entire enemy positions container
                 if (enemyPositionsContainer != null)
                 {
-                    // Instead of flipping relative to current scale, set absolute scale
-                    // This prevents problems if scale flipping fails and accumulates
                     enemyPositionsContainer.localScale = new Vector3(shouldFaceLeft ? -1 : 1, 1, 1);
 
-                    Debug.Log(
-                        $"Flipped enemy positions container, now facing left: {isFacingLeft}, scale: {enemyPositionsContainer.localScale}"
-                    );
-                }
-                else
-                {
-                    Debug.LogWarning("Enemy positions container is null, can't flip!");
+                    // Force immediate update of positions
+                    for (int i = 0; i < enemyPositions.Length; i++)
+                    {
+                        if (enemyPositions[i] != null)
+                        {
+                            // Force Transform to update its world position
+                            enemyPositions[i].position = enemyPositions[i].position;
+                        }
+                    }
                 }
             }
 
@@ -557,4 +557,5 @@ public class EnemyBoat : Boat
             transform.rotation = Quaternion.Euler(0, 0, Mathf.Clamp(direction.y * 15f, -15f, 15f));
         }
     }
+
 }
