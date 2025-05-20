@@ -61,7 +61,7 @@ MonoBehaviour:
   - {fileID: 5742939918389239861}
   - {fileID: 7256663392779264358}
   - {fileID: 5253138170914053179}
-  rockDetectionRange: 5
+  rockDetectionRange: 3.5
   avoidanceStrength: 1.5
   rockLayer:
     serializedVersion: 2

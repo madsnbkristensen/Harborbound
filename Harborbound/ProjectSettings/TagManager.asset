@@ -9,6 +9,10 @@ TagManager:
   - Wall
   - Obstacle
   - Boundry
+  - EnemyCorpse
+  - EnemyBoat
+  - PlayerBoat
+  - FishingSpot
   layers:
   - Default
   - TransparentFX
@@ -16,7 +20,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Rocks
   - 
   - 
   - 

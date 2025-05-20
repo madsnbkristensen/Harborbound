@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 7525511553950557774}
   m_Layer: 0
   m_Name: FishingSpot
-  m_TagString: Untagged
+  m_TagString: FishingSpot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

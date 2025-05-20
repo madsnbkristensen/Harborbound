@@ -9,6 +9,10 @@ public class Bullet : MonoBehaviour
     private float creationTime;
     private float lifetime;
 
+    // Tags bullets should ignore
+    [SerializeField]
+    private string[] ignoreTags = { "Bullet", "PlayerBoat", "EnemyBoat", "FishingSpot" };
+
     private Weapon sourceWeapon; // Reference to the weapon that fired this bullet
 
     void OnEnable()
@@ -60,15 +64,12 @@ public class Bullet : MonoBehaviour
         if (other.gameObject.name.Contains("ZoneBoundary"))
             return;
 
-        // Ignore other bullets
-        if (other.CompareTag("Bullet") || other.GetComponent<Bullet>() != null)
-            return;
-        // Ignore the PlayerBoat
-        if (other.CompareTag("PlayerBoat"))
-            return;
-        // Ignore the EnemyBoat
-        if (other.CompareTag("EnemyBoat"))
-            return;
+        // Ignore specific tags
+        foreach (string tag in ignoreTags)
+        {
+            if (other.CompareTag(tag))
+                return;
+        }
         // Damage logic for different entity types
         if (other.CompareTag("Enemy") && shooter.CompareTag("Player"))
         {
