@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3549688376151447611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3751013590211684593}
+  - component: {fileID: 4136170455367901386}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3751013590211684593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3549688376151447611}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.173182, y: -26.011103, z: -0.09037027}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4136170455367901386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3549688376151447611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b8cc124fdf7a52428234974e8c3bf95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBoatPrefab: {fileID: 736686741757130447, guid: d5191ca75fb7d1a41a85a237ca779979, type: 3}
+  enemyPiratePrefab: {fileID: 9143379638909142466, guid: ef811164ea9774850bccc28d3c924ef3, type: 3}
+  enemySharkPrefab: {fileID: 0}
+  baseEnemyBoatsPerZone: 2
+  boatIncreaseFactor: 1.2
+  minDistanceBetweenBoats: 15
+  minDistanceFromRocks: 5
+  minDistanceFromIsland: 10
+  minEnemiesPerBoat: 1
+  maxEnemiesPerBoat: 3
+  sharkProbability: 0.3
+  availableWeapons: []
+  kalashnikovDef: {fileID: 11400000, guid: 73f82264251a14e7aa8bb284302f7ecf, type: 2}
+  pistolDef: {fileID: 11400000, guid: dc0d05e1b40b085479984582b4b2a1b3, type: 2}
+  shotgunDef: {fileID: 11400000, guid: 23d001e3098e376479307c6b7865c79a, type: 2}
+  equipItemPrefab: {fileID: 960434323151276528, guid: bda05c2de77f84e4bb4affbe37a051a4, type: 3}

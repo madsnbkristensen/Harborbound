@@ -24,10 +24,10 @@ MonoBehaviour:
   maxStackSize: 0
   prefab: {fileID: 7546166427365782202, guid: bda05c2de77f84e4bb4affbe37a051a4, type: 3}
   damage: 20
-  range: 30
+  range: 15
   attackSpeed: 6
   spread: 4
-  bulletTravelTime: 1
+  bulletTravelTime: 0.5
   weaponType: 1
   bulletsPerShot: 1
   burstCount: 1

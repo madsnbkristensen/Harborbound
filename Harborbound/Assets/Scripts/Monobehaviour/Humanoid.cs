@@ -16,7 +16,6 @@ public class Humanoid : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-
     // simple function to move the humanoid that takes a direction as arg
     protected virtual void Move(Vector2 direction)
     {

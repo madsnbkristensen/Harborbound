@@ -5,7 +5,8 @@ using System.Collections.Generic;
 public class Player : Humanoid
 {
     public GameManager gameManager;
-    public Boat playerBoat;
+    // Change the type from Boat to PlayerBoat
+    public PlayerBoat playerBoat;
     private Friend currentInteractableFriend;
     private PlayerEquipment playerEquipment;
 
@@ -13,7 +14,6 @@ public class Player : Humanoid
     public float interactionRange = 2f;
     public KeyCode interactionKey = KeyCode.E;
     public KeyCode inventoryKey = KeyCode.Tab;
-    public Transform boatWheelPosition;
     private Vector3 lastPositionBeforeDriving;
 
 
@@ -30,11 +30,9 @@ public class Player : Humanoid
         if (gameManager != null)
             gameManager.OnGameStateChanged += HandleGameStateChanged;
 
+        // Change the FindFirstObjectByType to look for PlayerBoat
         if (playerBoat == null)
-            playerBoat = FindFirstObjectByType<Boat>();
-
-        if (boatWheelPosition == null && playerBoat != null)
-            boatWheelPosition = playerBoat.wheelPosition;
+            playerBoat = FindFirstObjectByType<PlayerBoat>();
 
         // Get the PlayerEquipment component
         playerEquipment = GetComponent<PlayerEquipment>();
@@ -280,10 +278,10 @@ public class Player : Humanoid
 
     private bool IsNearBoatWheel()
     {
-        if (playerBoat == null || boatWheelPosition == null)
+        if (playerBoat == null || playerBoat.wheelPosition == null)
             return false;
 
-        float distance = Vector2.Distance(transform.position, boatWheelPosition.position);
+        float distance = Vector2.Distance(transform.position, playerBoat.wheelPosition.position);
         return distance <= interactionRange;
     }
 
@@ -300,8 +298,9 @@ public class Player : Humanoid
         // Store current position before getting on boat
         lastPositionBeforeDriving = transform.position;
 
-        // Position the player at the wheel
-        transform.position = boatWheelPosition.position;
+        // Position the player at the wheel - use playerBoat.wheelPosition directly
+        if (playerBoat.wheelPosition != null)
+            transform.position = playerBoat.wheelPosition.position;
 
         // Parent the player to the boat
         transform.SetParent(playerBoat.transform);
@@ -318,18 +317,12 @@ public class Player : Humanoid
         // Unparent from the boat
         transform.SetParent(null);
 
-        // Move the player slightly away from the wheel to prevent immediate re-entry
-        if (boatWheelPosition != null)
-        {
-            Vector2 awayDirection = (transform.position - boatWheelPosition.position).normalized;
-            transform.position += (Vector3)awayDirection * 1.0f;
-        }
-
-        if (boatWheelPosition != null)
+        // Use playerBoat.wheelPosition directly
+        if (playerBoat != null && playerBoat.wheelPosition != null)
         {
             // Calculate a position slightly away from the wheel
-            Vector2 awayDirection = (transform.position - boatWheelPosition.position).normalized;
-            transform.position = boatWheelPosition.position + (Vector3)awayDirection * 1.5f;
+            Vector2 awayDirection = (transform.position - playerBoat.wheelPosition.position).normalized;
+            transform.position = playerBoat.wheelPosition.position + (Vector3)awayDirection * 1.5f;
         }
 
         // Change game state
@@ -373,10 +366,11 @@ public class Player : Humanoid
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, interactionRange);
 
-        if (boatWheelPosition != null)
+        // Update to use playerBoat.wheelPosition
+        if (playerBoat != null && playerBoat.wheelPosition != null)
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawSphere(boatWheelPosition.position, 0.3f);
+            Gizmos.DrawSphere(playerBoat.wheelPosition.position, 0.3f);
         }
     }
 

@@ -24,10 +24,10 @@ MonoBehaviour:
   maxStackSize: 0
   prefab: {fileID: 7546166427365782202, guid: bda05c2de77f84e4bb4affbe37a051a4, type: 3}
   damage: 30
-  range: 15
+  range: 10
   attackSpeed: 4
-  spread: 2
-  bulletTravelTime: 1
+  spread: 6
+  bulletTravelTime: 0.5
   weaponType: 0
   bulletsPerShot: 4
   burstCount: 1
@@ -36,5 +36,5 @@ MonoBehaviour:
   maxSize: 0
   availableZones: 
   rarity: 0
-  catchSpeedBonus: 0
-  rareItemChanceBonus: 0
+  castRange: 0
+  bobberTravelSpeed: 0
