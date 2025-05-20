@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 public class Player : Humanoid
 {
@@ -73,6 +75,7 @@ public class Player : Humanoid
 
             // Handle other states as needed...
             case GameManager.GameState.INVENTORY:
+            case GameManager.GameState.SHOPPING:
                 if (rb != null)
                 {
                     // Stop any current movement
@@ -92,6 +95,19 @@ public class Player : Humanoid
         if (UnityEngine.Input.GetKeyDown(inventoryKey))
         {
             ToggleInventory();
+            return; // Prevent other state-specific logic from running
+        }
+        if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Handle escape key for menu or other actions
+            if (gameManager.state != GameManager.GameState.ROAMING)
+            {
+                gameManager.ChangeState(GameManager.GameState.ROAMING);
+            }
+            else
+            {
+                gameManager.ChangeState(GameManager.GameState.MENU);
+            }
             return; // Prevent other state-specific logic from running
         }
 
@@ -135,6 +151,48 @@ public class Player : Humanoid
                     ExitDialogue();
                 }
                 break;
+            // Add this to the Player class in Player.cs, modifying the existing SHOPPING case in the Update method
+
+            case GameManager.GameState.SHOPPING:
+                // Check for left mouse button click
+                if (Input.GetMouseButtonDown(1))
+                {
+
+                    Tooltip.Instance.HideTooltip();
+                    // Use a raycast to find the item under the cursor
+                    PointerEventData pointerData = new PointerEventData(EventSystem.current);
+                    pointerData.position = Input.mousePosition;
+
+                    List<RaycastResult> results = new List<RaycastResult>();
+                    EventSystem.current.RaycastAll(pointerData, results);
+
+                    foreach (RaycastResult result in results)
+                    {
+                        // Try to get ItemUI component from the clicked object or its parent
+                        ItemUI itemUI = result.gameObject.GetComponent<ItemUI>();
+                        if (itemUI == null)
+                            itemUI = result.gameObject.GetComponentInParent<ItemUI>();
+
+                        if (itemUI != null && itemUI.item != null)
+                        {
+                            // Get the item's value
+                            int value = itemUI.item.GetValue();
+
+                            // Log what we're selling
+                            Debug.Log($"Selling {itemUI.item.GetName()} for {value} coins");
+
+                            // Call the existing remove method
+                            itemUI.RemoveItem();
+
+                            // Add money to player
+                            if (gameManager != null)
+                                gameManager.AddMoney(value);
+
+                            break; // Only sell one item per click
+                        }
+                    }
+                }
+                break;
         }
     }
 
@@ -153,8 +211,21 @@ public class Player : Humanoid
             Debug.Log($"Player is near {currentInteractableFriend.humanoidName}. Starting dialogue.");
             currentInteractableFriend.StartDialogue();
 
-            if (gameManager != null)
-                gameManager.ChangeState(GameManager.GameState.DIALOGUE);
+            switch (currentInteractableFriend.friendType)
+            {
+                case Friend.type.MERCHANT:
+                    // Open shop UI or inventory
+                    gameManager.ChangeState(GameManager.GameState.SHOPPING);
+                    break;
+                case Friend.type.QUEST_GIVER:
+                    // Start quest dialogue
+                    gameManager.ChangeState(GameManager.GameState.DIALOGUE);
+                    break;
+                default:
+                    // Normal NPC dialogue
+                    gameManager.ChangeState(GameManager.GameState.DIALOGUE);
+                    break;
+            }
 
             // Update game state to dialogue mode
             return;

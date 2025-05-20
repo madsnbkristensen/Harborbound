@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Boat currentPlayerBoat;
     public List<Boat> unlockedBoats = new List<Boat>();
-    public enum GameState { ROAMING, DIALOGUE, FISHING, DRIVING, MENU, INVENTORY }
+    public enum GameState { ROAMING, DIALOGUE, FISHING, DRIVING, MENU, INVENTORY, SHOPPING }
     [SerializeField]
     private GameState _state = GameState.ROAMING;
     private bool isPaused = false;
