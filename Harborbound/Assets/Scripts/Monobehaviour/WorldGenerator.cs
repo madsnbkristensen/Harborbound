@@ -184,6 +184,18 @@ public class WorldGenerator : MonoBehaviour
 
     private void PlaceRocks()
     {
+        // Define the rocks layer number
+        int rocksLayer = LayerMask.NameToLayer("Rocks");
+
+        // Check if layer exists
+        if (rocksLayer == -1)
+        {
+            Debug.LogError(
+                "Rocks layer not found! Please create a layer named 'Rocks' in Project Settings > Tags and Layers"
+            );
+            return;
+        }
+
         foreach (Vector2 position in rockPositions)
         {
             // Select a random prefab from the array
@@ -192,6 +204,15 @@ public class WorldGenerator : MonoBehaviour
             // Instantiate the selected prefab
             GameObject rock = Instantiate(selectedPrefab, position, Quaternion.identity);
             rock.transform.SetParent(transform);
+
+            // Set the rock to the Rocks layer - this is the new line
+            rock.layer = rocksLayer;
+
+            // Also set the layer for all children if any
+            foreach (Transform child in rock.transform)
+            {
+                child.gameObject.layer = rocksLayer;
+            }
 
             // Flip the rock randomly
             bool flipHorizontal = Random.value > 0.5f;

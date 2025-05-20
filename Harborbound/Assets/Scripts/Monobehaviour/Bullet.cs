@@ -63,7 +63,12 @@ public class Bullet : MonoBehaviour
         // Ignore other bullets
         if (other.CompareTag("Bullet") || other.GetComponent<Bullet>() != null)
             return;
-
+        // Ignore the PlayerBoat
+        if (other.CompareTag("PlayerBoat"))
+            return;
+        // Ignore the EnemyBoat
+        if (other.CompareTag("EnemyBoat"))
+            return;
         // Damage logic for different entity types
         if (other.CompareTag("Enemy") && shooter.CompareTag("Player"))
         {

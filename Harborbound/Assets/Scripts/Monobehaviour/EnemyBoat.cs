@@ -44,6 +44,16 @@ public class EnemyBoat : Boat
     [SerializeField]
     private Transform[] enemyPositions = new Transform[3]; // Max 3 enemies
 
+    [Header("Obstacle Avoidance")]
+    [SerializeField]
+    private float rockDetectionRange = 5f;
+
+    [SerializeField]
+    private float avoidanceStrength = 1.5f;
+
+    [SerializeField]
+    private LayerMask rockLayer; // Set this to the layer your rocks are on
+
     private Player targetPlayer;
     private float distanceToPlayer;
     private Vector2 targetPosition;
@@ -142,8 +152,12 @@ public class EnemyBoat : Boat
         Vector2 direction = (
             patrolPoints[currentPatrolIndex] - (Vector2)transform.position
         ).normalized;
-        Move(direction);
-        FaceDirection(direction);
+
+        // Apply rock avoidance to the direction
+        Vector2 avoidedDirection = AvoidRocks(direction);
+
+        Move(avoidedDirection);
+        FaceDirection(avoidedDirection);
 
         // Check if reached waypoint
         if (Vector2.Distance(transform.position, patrolPoints[currentPatrolIndex]) < 0.5f)
@@ -163,19 +177,22 @@ public class EnemyBoat : Boat
             (Vector2)targetPlayer.transform.position - (Vector2)transform.position
         ).normalized;
 
-        // Move toward player
+        // Apply rock avoidance
+        Vector2 avoidedDirection = AvoidRocks(directionToPlayer);
+
+        // Move toward player with avoidance
         if (distanceToPlayer < minAttackDistance)
         {
             // Move away slightly
-            Move(-directionToPlayer * 0.5f);
+            Move(AvoidRocks(-directionToPlayer * 0.5f));
         }
         else
         {
             // Chase player
-            Move(directionToPlayer);
+            Move(avoidedDirection);
         }
 
-        FaceDirection(directionToPlayer);
+        FaceDirection(avoidedDirection);
     }
 
     protected void handleAttackState()
@@ -191,15 +208,29 @@ public class EnemyBoat : Boat
         // Maintain ideal attack distance
         if (distanceToPlayer < minAttackDistance)
         {
-            Move(-directionToPlayer * 0.5f); // Back away slightly
+            // Back away slightly with rock avoidance
+            Vector2 moveDirection = -directionToPlayer * 0.5f;
+            Vector2 avoidedDirection = AvoidRocks(moveDirection);
+            Move(avoidedDirection);
         }
         else if (distanceToPlayer > attackRange)
         {
-            Move(directionToPlayer * 0.5f); // Move closer slowly
+            // Move closer slowly with rock avoidance
+            Vector2 moveDirection = directionToPlayer * 0.5f;
+            Vector2 avoidedDirection = AvoidRocks(moveDirection);
+            Move(avoidedDirection);
         }
         else
         {
             // At good attack range, just rotate to face player
+            // Even when stationary, we should check for rocks that might be too close
+            Vector2 avoidRocksDirection = AvoidRocks(Vector2.zero);
+            if (avoidRocksDirection != Vector2.zero)
+            {
+                // If we're too close to rocks, move away slightly
+                Move(avoidRocksDirection * 0.3f);
+            }
+
             FaceDirection(directionToPlayer);
         }
     }
@@ -210,20 +241,35 @@ public class EnemyBoat : Boat
         if (Vector2.Distance(transform.position, targetPosition) > 0.5f)
         {
             Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
-            Move(direction * 0.7f); // Move slower when searching
 
-            FaceDirection(direction);
+            // Apply rock avoidance to the search path
+            Vector2 avoidedDirection = AvoidRocks(direction);
+
+            // Move slower when searching
+            Move(avoidedDirection * 0.7f);
+            FaceDirection(avoidedDirection);
         }
         else
         {
-            // At target search position, look around - use a different approach
-            // Instead of rotating, just periodically flip the sprite
-            if (Time.frameCount % 120 < 60) // Every ~2 seconds at 60fps
+            // At target search position, look around
+            // Even when "looking around", check for rocks that might be too close
+            Vector2 avoidRocksDirection = AvoidRocks(Vector2.zero);
+            if (avoidRocksDirection != Vector2.zero)
             {
-                SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-                if (spriteRenderer != null)
+                // If too close to rocks, move away slightly
+                Move(avoidRocksDirection * 0.3f);
+            }
+            else
+            {
+                // At target search position, look around - use a different approach
+                // Instead of rotating, just periodically flip the sprite
+                if (Time.frameCount % 120 < 60) // Every ~2 seconds at 60fps
                 {
-                    spriteRenderer.flipX = !spriteRenderer.flipX;
+                    SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+                    if (spriteRenderer != null)
+                    {
+                        spriteRenderer.flipX = !spriteRenderer.flipX;
+                    }
                 }
             }
         }
@@ -483,6 +529,10 @@ public class EnemyBoat : Boat
                     Gizmos.DrawLine(patrolPoints[i], patrolPoints[0]);
             }
         }
+
+        // Draw rock detection range
+        Gizmos.color = new Color(0f, 1f, 0.5f, 0.3f);
+        Gizmos.DrawWireSphere(transform.position, rockDetectionRange);
     }
 
     public void AddEnemy(Enemy enemy)
@@ -584,4 +634,46 @@ public class EnemyBoat : Boat
         }
     }
 
+    // Add this method to detect and avoid rocks
+    private Vector2 AvoidRocks(Vector2 moveDirection)
+    {
+        // Cast a circle to detect rocks
+        Collider2D[] rocks = Physics2D.OverlapCircleAll(
+            transform.position,
+            rockDetectionRange,
+            rockLayer
+        );
+
+        if (rocks.Length == 0)
+            return moveDirection; // No rocks detected, continue with original direction
+
+        Vector2 avoidanceDirection = Vector2.zero;
+
+        // Calculate avoidance direction based on all nearby rocks
+        foreach (Collider2D rock in rocks)
+        {
+            // Get direction away from rock
+            Vector2 directionFromRock = (Vector2)transform.position - (Vector2)rock.bounds.center;
+            float distance = directionFromRock.magnitude;
+
+            // The closer the rock, the stronger the avoidance
+            float weight = 1.0f - Mathf.Clamp01(distance / rockDetectionRange);
+
+            avoidanceDirection += directionFromRock.normalized * weight;
+        }
+
+        // Normalize and apply avoidance strength
+        if (avoidanceDirection != Vector2.zero)
+        {
+            avoidanceDirection.Normalize();
+
+            // Blend between current direction and avoidance direction
+            Vector2 blendedDirection = (
+                moveDirection + avoidanceDirection * avoidanceStrength
+            ).normalized;
+            return blendedDirection;
+        }
+
+        return moveDirection;
+    }
 }

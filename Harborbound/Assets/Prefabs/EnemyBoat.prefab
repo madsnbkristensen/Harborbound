@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5562686015726419971}
   - component: {fileID: 4609275348265204925}
-  - component: {fileID: 9076244204622839059}
+  - component: {fileID: 7542338870975716638}
   m_Layer: 0
   m_Name: EnemyBoat
-  m_TagString: Untagged
+  m_TagString: EnemyBoat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,13 +61,21 @@ MonoBehaviour:
   - {fileID: 5742939918389239861}
   - {fileID: 7256663392779264358}
   - {fileID: 5253138170914053179}
---- !u!65 &9076244204622839059
-BoxCollider:
+  rockDetectionRange: 5
+  avoidanceStrength: 1.5
+  rockLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!58 &7542338870975716638
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736686741757130447}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -76,12 +84,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 15.6, y: 16.1, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.036034107, y: -0.9008577}
+  m_Radius: 2.589991
 --- !u!1 &2681748728622817325
 GameObject:
   m_ObjectHideFlags: 0
