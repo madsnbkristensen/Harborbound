@@ -9,6 +9,7 @@ public class Player : Humanoid
     private Friend currentInteractableFriend;
     private PlayerEquipment playerEquipment;
     private SpriteRenderer playerSpriteRenderer;
+    private Vector2 moveDirection;
 
     [Header("Interaction Settings")]
     public float interactionRange = 2f;
@@ -17,10 +18,8 @@ public class Player : Humanoid
     public Transform boatWheelPosition;
     private Vector3 lastPositionBeforeDriving;
 
-
     protected override void Start()
     {
-
         base.Start();
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -28,7 +27,7 @@ public class Player : Humanoid
         if (gameManager == null)
             gameManager = FindFirstObjectByType<GameManager>();
 
-        // Subscribe to game state changes to react
+        // Subscribe to game state changes
         if (gameManager != null)
             gameManager.OnGameStateChanged += HandleGameStateChanged;
 
@@ -40,53 +39,117 @@ public class Player : Humanoid
 
         // Get the PlayerEquipment component
         playerEquipment = GetComponent<PlayerEquipment>();
+
+        // Ensure basic collision setup
+        EnsureBasicCollisionSetup();
+    }
+
+    private void EnsureBasicCollisionSetup()
+    {
+        // Make sure player has a Collider2D
+        Collider2D playerCollider = GetComponent<Collider2D>();
+        if (playerCollider == null)
+        {
+            Debug.LogError("Player has no Collider2D! Adding CircleCollider2D");
+            playerCollider = gameObject.AddComponent<CircleCollider2D>();
+        }
+
+        // Make sure player collider is NOT a trigger
+        playerCollider.isTrigger = false;
+
+        // Make sure player has a Rigidbody2D (needed for collisions)
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb == null)
+        {
+            Debug.LogError("Player has no Rigidbody2D! Adding one for collision");
+            rb = gameObject.AddComponent<Rigidbody2D>();
+        }
+
+        // Configure Rigidbody for character movement
+        rb.gravityScale = 0; // No gravity in top-down
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation; // Don't rotate from collisions
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+        rb.linearDamping = 0.5f; // Add some drag to prevent sliding
+
+        // IMPORTANT - Make sure we're using the right physics type for movement
+        rb.bodyType = RigidbodyType2D.Dynamic;
+
+        // Make sure we're on the correct layer for collisions
+        gameObject.layer = LayerMask.NameToLayer("Player");
+
+        Debug.Log("Player collision setup complete - Player should now collide properly");
+    }
+
+    // This is now correctly overriding the Move method from the Humanoid class
+    protected override void Move(Vector2 direction)
+    {
+        if (direction.magnitude < 0.1f) return;
+
+        // Use proper physics movement
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            // Calculate movement with proper time delta
+            Vector2 movement = direction * speed * Time.fixedDeltaTime;
+            Vector2 newPosition = rb.position + movement;
+
+            // Use Rigidbody2D.MovePosition for proper physics movement
+            rb.MovePosition(newPosition);
+
+            // Debug.DrawLine(rb.position, newPosition, Color.red, 0.1f); // Visualize movement
+        }
+        else
+        {
+            // Fallback to transform movement if no rigidbody (shouldn't happen now)
+            transform.position += (Vector3)(direction * speed * Time.deltaTime);
+            Debug.LogWarning("Using transform movement - collisions may not work properly");
+        }
     }
 
     // React to game state changes
     private void HandleGameStateChanged(GameManager.GameState newState)
     {
-        // Get components if needed
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         Collider2D col = GetComponent<Collider2D>();
 
         switch (newState)
         {
             case GameManager.GameState.ROAMING:
-                if (playerSpriteRenderer != null) playerSpriteRenderer.enabled = true;
-                // Enable movement components
-                if (col != null) col.enabled = true;
-                // Unfreeze rigidbody if you're using physics-based movement
-                if (rb != null) rb.constraints = RigidbodyConstraints2D.None;
-                break;
+                // Show player sprite
+                if (playerSpriteRenderer != null)
+                    playerSpriteRenderer.enabled = true;
 
-            case GameManager.GameState.DIALOGUE:
-                // Freeze player during dialogue
+                // Enable collider
+                if (col != null)
+                    col.enabled = true;
+
+                // Unfreeze rigidbody, but keep rotation frozen
                 if (rb != null)
                 {
-                    // Stop any current movement
-                    rb.linearVelocity = Vector2.zero;
-                    // Freeze position but allow rotation if needed
-                    rb.constraints = RigidbodyConstraints2D.FreezePosition;
+                    rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                    rb.bodyType = RigidbodyType2D.Dynamic; // Make sure physics is active
                 }
                 break;
 
             case GameManager.GameState.DRIVING:
-                // Disable player's collider when driving
-                if (playerSpriteRenderer != null) playerSpriteRenderer.enabled = false;
-                if (col != null) col.enabled = false;
-                break;
-            case GameManager.GameState.FISHING:
+                // Hide player sprite while driving
+                if (playerSpriteRenderer != null)
+                    playerSpriteRenderer.enabled = false;
+
+                // Disable player's collider while driving
+                if (col != null)
+                    col.enabled = false;
                 break;
 
-            // Handle other states as needed...
+            case GameManager.GameState.DIALOGUE:
             case GameManager.GameState.INVENTORY:
             case GameManager.GameState.SHOPPING:
+                // Freeze player during these states
                 if (rb != null)
                 {
-                    // Stop any current movement
                     rb.linearVelocity = Vector2.zero;
-                    // Freeze position but allow rotation if needed
-                    rb.constraints = RigidbodyConstraints2D.FreezePosition;
+                    rb.constraints = RigidbodyConstraints2D.FreezeAll;
                 }
                 break;
         }
@@ -96,189 +159,173 @@ public class Player : Humanoid
     {
         if (gameManager == null) return;
 
-        Vector2 inputDirection = GetInputDirection();
-        if (UnityEngine.Input.GetKeyDown(inventoryKey))
+        // Get input in Update
+        moveDirection = GetInputDirection();
+
+        // Handle inventory toggle
+        if (Input.GetKeyDown(inventoryKey))
         {
             ToggleInventory();
-            return; // Prevent other state-specific logic from running
-        }
-        if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
-        {
-            // Handle escape key for menu or other actions
-            if (gameManager.state != GameManager.GameState.ROAMING)
-            {
-                gameManager.ChangeState(GameManager.GameState.ROAMING);
-            }
-            else
-            {
-                gameManager.ChangeState(GameManager.GameState.MENU);
-            }
-            return; // Prevent other state-specific logic from running
+            return;
         }
 
+        // Handle escape key
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (gameManager.state != GameManager.GameState.ROAMING)
+                gameManager.ChangeState(GameManager.GameState.ROAMING);
+            else
+                gameManager.ChangeState(GameManager.GameState.MENU);
+            return;
+        }
+
+        // State-specific non-movement logic
         switch (gameManager.state)
         {
             case GameManager.GameState.ROAMING:
-                // Move the player
-                if (inputDirection.magnitude > 0.1f)
-                    Move(inputDirection);
-
-                // Check for interaction key press
-                if (UnityEngine.Input.GetKeyDown(interactionKey))
-                {
+                // Check for interaction
+                if (Input.GetKeyDown(interactionKey))
                     TryInteract();
-                }
                 break;
 
             case GameManager.GameState.DRIVING:
                 // Control the boat
-                if (inputDirection.magnitude > 0.1f && playerBoat != null)
-                    playerBoat.Move(inputDirection);
+                if (moveDirection.magnitude > 0.1f && playerBoat != null)
+                    playerBoat.Move(moveDirection);
 
                 // Exit the boat
-                if (UnityEngine.Input.GetKeyDown(interactionKey))
+                if (Input.GetKeyDown(interactionKey))
                     StopDriving();
                 break;
 
-            // Other states...
             case GameManager.GameState.DIALOGUE:
-                // Player is frozen during dialogue
-                // Only check for input to advance or exit dialogue
-                if (UnityEngine.Input.GetKeyDown(KeyCode.Space) ||
-                    UnityEngine.Input.GetKeyDown(KeyCode.Return))
-                {
-                    // Signal to advance dialogue
+                // Dialogue navigation
+                if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
                     Debug.Log("Advancing dialogue...");
-                }
-                else if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
-                {
-                    // Exit dialogue
+                else if (Input.GetKeyDown(KeyCode.Escape))
                     ExitDialogue();
-                }
                 break;
-            // Add this to the Player class in Player.cs, modifying the existing SHOPPING case in the Update method
 
             case GameManager.GameState.SHOPPING:
-                // Check for left mouse button click
+                // Handle right-click to sell
                 if (Input.GetMouseButtonDown(1))
                 {
-
-                    Tooltip.Instance.HideTooltip();
-                    // Use a raycast to find the item under the cursor
-                    PointerEventData pointerData = new PointerEventData(EventSystem.current);
-                    pointerData.position = Input.mousePosition;
-
-                    List<RaycastResult> results = new List<RaycastResult>();
-                    EventSystem.current.RaycastAll(pointerData, results);
-
-                    foreach (RaycastResult result in results)
-                    {
-                        // Try to get ItemUI component from the clicked object or its parent
-                        ItemUI itemUI = result.gameObject.GetComponent<ItemUI>();
-                        if (itemUI == null)
-                            itemUI = result.gameObject.GetComponentInParent<ItemUI>();
-
-                        if (itemUI != null && itemUI.item != null)
-                        {
-                            // Get the item's value
-                            int value = itemUI.item.GetValue();
-
-                            // Log what we're selling
-                            Debug.Log($"Selling {itemUI.item.GetName()} for {value} coins");
-
-                            // Call the existing remove method
-                            itemUI.RemoveItem();
-
-                            // Add money to player
-                            if (gameManager != null)
-                                gameManager.AddMoney(value);
-
-                            break; // Only sell one item per click
-                        }
-                    }
+                    SellSelectedItem();
                 }
                 break;
+        }
+    }
+
+    void FixedUpdate()
+    {
+        // Apply movement in FixedUpdate for proper physics
+        if (gameManager.state == GameManager.GameState.ROAMING && moveDirection.magnitude > 0.1f)
+        {
+            Move(moveDirection);
+        }
+    }
+
+    // Add collision debug callback
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log($"Player collided with: {collision.gameObject.name}", collision.gameObject);
+    }
+
+    // Clean implementation for selling items
+    private void SellSelectedItem()
+    {
+        if (Tooltip.Instance != null)
+            Tooltip.Instance.HideTooltip();
+
+        // Use EventSystem to find item under cursor
+        PointerEventData pointerData = new PointerEventData(EventSystem.current);
+        pointerData.position = Input.mousePosition;
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        foreach (RaycastResult result in results)
+        {
+            // Try to get ItemUI component
+            ItemUI itemUI = result.gameObject.GetComponent<ItemUI>() ??
+                            result.gameObject.GetComponentInParent<ItemUI>();
+
+            if (itemUI != null && itemUI.item != null)
+            {
+                int value = itemUI.item.GetValue();
+                Debug.Log($"Selling {itemUI.item.GetName()} for {value} coins");
+
+                itemUI.RemoveItem();
+
+                if (gameManager != null)
+                    gameManager.AddMoney(value);
+
+                break;
+            }
         }
     }
 
     public void TryInteract()
     {
-        // BOAT LOGIC
+        // Check boat interaction first
         if (IsNearBoatWheel())
         {
-            Debug.Log("Player is near the boat wheel. Starting to drive.");
+            Debug.Log("Starting to drive boat");
             StartDriving();
             return;
         }
-        // FRIEND LOGIC
-        else if (IsNearFriend())
+
+        // Then check NPC interaction
+        if (IsNearFriend())
         {
-            Debug.Log($"Player is near {currentInteractableFriend.humanoidName}. Starting dialogue.");
-            currentInteractableFriend.StartDialogue();
+            Debug.Log($"Interacting with {currentInteractableFriend.humanoidName}");
 
             switch (currentInteractableFriend.friendType)
             {
                 case Friend.type.MERCHANT:
-                    // Open shop UI or inventory
                     gameManager.ChangeState(GameManager.GameState.SHOPPING);
                     break;
                 case Friend.type.QUEST_GIVER:
-                    // Start quest dialogue
-                    gameManager.ChangeState(GameManager.GameState.DIALOGUE);
-                    break;
+                case Friend.type.NPC:
                 default:
-                    // Normal NPC dialogue
                     gameManager.ChangeState(GameManager.GameState.DIALOGUE);
                     break;
             }
 
-            // Update game state to dialogue mode
+            currentInteractableFriend.StartDialogue();
             return;
         }
-        else
-        {
-            Debug.Log("Nothing to interact with nearby.");
-            // Check for other interactable objects
-            // CheckForFishingSpot();
-        }
+
+        Debug.Log("Nothing to interact with nearby");
     }
 
     private void ToggleInventory()
     {
-        if (gameManager != null)
-        {
-            Debug.Log("Toggling inventory");
-            if (gameManager.state == GameManager.GameState.INVENTORY)
-            {
-                gameManager.ChangeState(GameManager.GameState.ROAMING);
-            }
-            else
-            {
-                gameManager.ChangeState(GameManager.GameState.INVENTORY);
-            }
-        }
+        if (gameManager == null) return;
+
+        Debug.Log("Toggling inventory");
+
+        if (gameManager.state == GameManager.GameState.INVENTORY)
+            gameManager.ChangeState(GameManager.GameState.ROAMING);
+        else
+            gameManager.ChangeState(GameManager.GameState.INVENTORY);
     }
 
     private bool IsNearFriend()
     {
-        // Find all Friend objects in the scene
         Friend[] nearbyFriends = FindObjectsByType<Friend>(FindObjectsSortMode.None);
 
         foreach (Friend friend in nearbyFriends)
         {
-            // Calculate distance between player and this friend
             float distance = Vector2.Distance(transform.position, friend.transform.position);
 
-            // Check if within interaction range
             if (distance <= interactionRange)
             {
-                // Store reference to the closest friend
                 currentInteractableFriend = friend;
                 return true;
             }
         }
 
-        // No friends within range
         currentInteractableFriend = null;
         return false;
     }
@@ -300,15 +347,13 @@ public class Player : Humanoid
             return;
         }
 
-        Debug.Log("Starting to drive boat");
-
-        // Store current position before getting on boat
+        // Store current position
         lastPositionBeforeDriving = transform.position;
 
-        // Position the player at the wheel
+        // Position player at wheel
         transform.position = boatWheelPosition.position;
 
-        // Parent the player to the boat
+        // Parent to boat
         transform.SetParent(playerBoat.transform);
 
         // Change game state
@@ -320,22 +365,26 @@ public class Player : Humanoid
     {
         Debug.Log("Stopping driving boat");
 
-        // Unparent from the boat
+        // Ensure player is visible
+        if (playerSpriteRenderer != null)
+            playerSpriteRenderer.enabled = true;
+
+        // Store current wheel position before unparenting
+        Vector3 exitPosition = boatWheelPosition.position;
+
+        // Add slight upward offset to correct the position
+        exitPosition.y += 0.0f; // Adjust this value as needed (0.5 units up)
+
+        // Unparent from boat
         transform.SetParent(null);
 
-        // Move the player slightly away from the wheel to prevent immediate re-entry
-        if (boatWheelPosition != null)
-        {
-            Vector2 awayDirection = (transform.position - boatWheelPosition.position).normalized;
-            transform.position += (Vector3)awayDirection * 1.0f;
-        }
+        // Move to the adjusted wheel position
+        transform.position = exitPosition;
 
-        if (boatWheelPosition != null)
-        {
-            // Calculate a position slightly away from the wheel
-            Vector2 awayDirection = (transform.position - boatWheelPosition.position).normalized;
-            transform.position = boatWheelPosition.position + (Vector3)awayDirection * 1.5f;
-        }
+        // Re-enable player collider
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+            col.enabled = true;
 
         // Change game state
         if (gameManager != null)
@@ -345,12 +394,8 @@ public class Player : Humanoid
     private void ExitDialogue()
     {
         if (currentInteractableFriend != null)
-        {
-            // Let the friend know dialogue has ended (we'll add this method to Friend)
-            // currentInteractableFriend.EndDialogue();
-        }
+            currentInteractableFriend.EndDialogue();
 
-        // Return to roaming state
         if (gameManager != null)
             gameManager.ChangeState(GameManager.GameState.ROAMING);
     }
@@ -360,19 +405,18 @@ public class Player : Humanoid
         float horizontal = 0f;
         float vertical = 0f;
 
-        if (UnityEngine.Input.GetKey(KeyCode.W) || UnityEngine.Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             vertical = 1f;
-        if (UnityEngine.Input.GetKey(KeyCode.S) || UnityEngine.Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             vertical = -1f;
-        if (UnityEngine.Input.GetKey(KeyCode.A) || UnityEngine.Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             horizontal = -1f;
-        if (UnityEngine.Input.GetKey(KeyCode.D) || UnityEngine.Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             horizontal = 1f;
 
         return new Vector2(horizontal, vertical).normalized;
     }
 
-    // Visual indicator of interaction range (for debugging)
     void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
