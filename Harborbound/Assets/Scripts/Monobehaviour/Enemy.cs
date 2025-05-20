@@ -36,6 +36,9 @@ public class Enemy : Humanoid
     private Player targetPlayer;
     private float distanceToPlayer;
 
+    [Header("Debug")]
+    public bool showDebugColliders = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected override void Start()
     {
@@ -251,5 +254,73 @@ public class Enemy : Humanoid
                 Debug.LogWarning("No SpriteRenderer found on weapon visual");
             }
         }
+    }
+
+    // Add this method to visualize colliders
+    private void OnDrawGizmos()
+    {
+        if (showDebugColliders)
+        {
+            Collider2D[] colliders = GetComponentsInChildren<Collider2D>();
+            Gizmos.color = Color.red;
+
+            foreach (Collider2D collider in colliders)
+            {
+                if (collider is BoxCollider2D boxCollider)
+                {
+                    // Draw box outline where the collider is
+                    Vector3 pos = boxCollider.transform.position;
+                    Vector3 size = boxCollider.size;
+                    Vector3 offset = boxCollider.offset;
+
+                    // Apply local offset to position
+                    pos += boxCollider.transform.TransformDirection(new Vector3(offset.x, offset.y, 0));
+
+                    // Draw wireframe box
+                    Gizmos.DrawWireCube(pos, new Vector3(size.x, size.y, 0.1f));
+                }
+                // Add support for other collider types if needed
+            }
+        }
+    }
+
+    public override void TakeDamage(int damage)
+    {
+        // Add debug to verify method is called and damage amount
+        Debug.Log($"Enemy {humanoidName} taking {damage} damage. Health before: {currentHealth}");
+
+        // Call the base implementation in Humanoid
+        base.TakeDamage(damage);
+
+        // Add debug to check health after damage
+        Debug.Log($"Enemy health after: {currentHealth}");
+    }
+
+    public System.Collections.IEnumerator FlashRed()
+    {
+        SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            Color originalColor = spriteRenderer.color;
+            spriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(0.1f);
+            spriteRenderer.color = originalColor;
+        }
+    }
+
+    protected override void Die()
+    {
+        Debug.Log($"Enemy {humanoidName} has died!");
+
+        // Drop loot or play death animation here if needed
+
+        // Notify the parent boat if there is one
+        if (parentBoat != null)
+        {
+            parentBoat.EnemyKilled(this);
+        }
+
+        // Destroy the enemy GameObject
+        Destroy(gameObject);
     }
 }

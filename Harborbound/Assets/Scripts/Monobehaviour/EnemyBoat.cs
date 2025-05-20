@@ -362,6 +362,32 @@ public class EnemyBoat : Boat
         }
     }
 
+    // Add this method to your EnemyBoat class
+    public void EnemyKilled(Enemy enemy)
+    {
+        // Remove the enemy from our list
+        if (enemies.Contains(enemy))
+        {
+            enemies.Remove(enemy);
+
+            // Log for debugging
+            Debug.Log($"Enemy removed from boat. {enemies.Count} enemies remaining.");
+
+            // Check if all enemies are dead
+            if (enemies.Count == 0)
+            {
+                // All enemies are dead, perform boat destruction logic
+                Debug.Log("All enemies on boat are dead!");
+
+                // Optional: Drop loot, play sinking animation, etc.
+                // Destroy(gameObject);  // Uncomment if you want to destroy the boat
+
+                // Or set to a "defeated" state
+                state = EnemyBoatState.FROZEN;
+            }
+        }
+    }
+
     // Add this method to update enemy positions separately from state updates
     // Call this from Update() to make positioning smoother
     private void UpdateEnemyPositions()

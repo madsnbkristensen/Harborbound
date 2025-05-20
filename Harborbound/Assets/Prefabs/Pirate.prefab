@@ -42,10 +42,10 @@ GameObject:
   - component: {fileID: 2039993949060024192}
   - component: {fileID: 777260838845264643}
   - component: {fileID: 1083884465041387658}
-  - component: {fileID: 7389416975477100115}
+  - component: {fileID: 3981744270350775303}
   m_Layer: 0
   m_Name: Pirate
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,6 +91,7 @@ MonoBehaviour:
   parentBoat: {fileID: 0}
   weaponMountPoint: {fileID: 5674711360089792244}
   equippedWeapon: {fileID: 0}
+  showDebugColliders: 0
 --- !u!212 &1083884465041387658
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -146,8 +147,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7389416975477100115
-BoxCollider2D:
+--- !u!70 &3981744270350775303
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -176,19 +177,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.04331088, y: 0.04331255}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.22, y: 13.93}
-    newSize: {x: 11.22, y: 13.93}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 6.455691, y: 8.645957}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.0000028859772, y: -0.15159269}
+  m_Size: {x: 6.282467, y: 9.382248}
+  m_Direction: 0

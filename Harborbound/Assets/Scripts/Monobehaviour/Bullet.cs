@@ -56,8 +56,26 @@ public class Bullet : MonoBehaviour
         if (other.gameObject == shooter)
             return;
 
+        // Ignore zone boundaries
+        if (other.gameObject.name.Contains("ZoneBoundary") || other.gameObject.CompareTag("Boundary"))
+            return;
+
+        // Ignore other bullets
+        if (other.CompareTag("Bullet") || other.GetComponent<Bullet>() != null)
+            return;
+
         // Damage logic for different entity types
         if (other.CompareTag("Enemy") && shooter.CompareTag("Player"))
+        {
+            // Player bullet hit enemy
+            Enemy enemy = other.GetComponent<Enemy>();
+            if (enemy != null && sourceWeapon != null)
+            {
+                enemy.TakeDamage(sourceWeapon.damage);
+                BulletPool.Instance.ReturnBullet(gameObject);
+            }
+        }
+        else if (other.CompareTag("Player") && shooter.CompareTag("Player"))
         {
             // Player bullet hit enemy
             Enemy enemy = other.GetComponent<Enemy>();
@@ -77,9 +95,19 @@ public class Bullet : MonoBehaviour
                 BulletPool.Instance.ReturnBullet(gameObject);
             }
         }
+        else if (other.CompareTag("Enemy") && shooter.CompareTag("Enemy"))
+        {
+            // Enemy bullet hit another enemy - do nothing, let bullet pass through
+            // This allows enemies to shoot without hitting each other
+            return;
+        }
         else if (other.CompareTag("Obstacle") || other.CompareTag("Wall"))
         {
             // Hit environment
+            BulletPool.Instance.ReturnBullet(gameObject);
+        }
+        else
+        {
             BulletPool.Instance.ReturnBullet(gameObject);
         }
     }

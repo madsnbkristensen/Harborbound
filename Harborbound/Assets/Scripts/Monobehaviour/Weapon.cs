@@ -14,6 +14,9 @@ public class Weapon : Item
     private Transform firePoint;
     private float lastFireTime;
 
+    // Add this to store the shooter reference
+    private GameObject activeShooter;
+
     // Add this property to expose lastFireTime
     public float LastFireTime
     {
@@ -41,13 +44,15 @@ public class Weapon : Item
     {
         // Initialize lastFireTime to allow immediate first shot
         lastFireTime = -999f;
-
     }
 
     // the use method is called when the weapon is used, and should be callable from the player and from enemy
     public override void Use(Player player)
     {
         // This version is called by players via the PlayerEquipment system
+
+        // Store the player as the active shooter for continuous firing
+        activeShooter = player.gameObject;
 
         // Start firing based on weapon type
         switch (weaponType)
@@ -60,18 +65,18 @@ public class Weapon : Item
             case WeaponType.BURST:
                 // For burst weapons, start a burst coroutine
                 if (burstCoroutine == null)
-                    burstCoroutine = StartCoroutine(FireBurst(player.gameObject));
+                    burstCoroutine = StartCoroutine(FireBurst(activeShooter));
                 break;
 
             case WeaponType.SHOTGUN:
                 // For shotguns, fire multiple bullets in a spread pattern
-                FireShotgun(player.gameObject);
+                FireShotgun(activeShooter);
                 break;
 
             case WeaponType.SINGLE:
             default:
                 // For single-shot weapons, just fire once
-                FireWeapon(player.gameObject);
+                FireWeapon(activeShooter);
                 break;
         }
     }
@@ -79,8 +84,11 @@ public class Weapon : Item
     // Add this overload method to allow enemies to use the weapon
     public void Use(GameObject shooter)
     {
+        // Store the shooter reference
+        activeShooter = shooter;
+
         // This version can be called by enemies
-        FireWeapon(shooter);
+        FireWeapon(activeShooter);
     }
 
     // Add this helper method that handles the common firing logic
@@ -172,9 +180,6 @@ public class Weapon : Item
             burstCount = definition.burstCount;
             burstInterval = definition.burstInterval;
 
-            Debug.Log(
-                $"Weapon properties refreshed: {definition.itemName}, Type={weaponType}, BulletsPerShot={bulletsPerShot}"
-            );
         }
         else
         {
@@ -243,9 +248,31 @@ public class Weapon : Item
             // The fire rate check is inside FireWeapon
             if (Time.time > lastFireTime + (1f / fireRate))
             {
-                // Get the shooter (player or enemy) - in this case we assume it's our parent transform
-                GameObject shooter = transform.root.gameObject;
-                FireWeapon(shooter);
+                // Use the stored activeShooter instead of trying to find it again
+                if (activeShooter != null)
+                {
+                    FireWeapon(activeShooter);
+                }
+                else
+                {
+                    // Only try to find the shooter if we lost the reference somehow
+                    Debug.LogWarning("Lost shooter reference in automatic firing!");
+
+                    // First try to find a player component in the hierarchy
+                    Player playerComponent = GetComponentInParent<Player>();
+                    if (playerComponent != null)
+                    {
+                        activeShooter = playerComponent.gameObject;
+                    }
+                    else
+                    {
+                        // Fallback to root if no player found
+                        activeShooter = transform.root.gameObject;
+                        Debug.Log($"No player component found, using root: {activeShooter.name} with tag {activeShooter.tag}");
+                    }
+
+                    FireWeapon(activeShooter);
+                }
             }
         }
     }
@@ -357,9 +384,36 @@ public class Weapon : Item
 
     public bool Fire(Vector3 targetPosition, GameObject shooter = null)
     {
-        // If no shooter is provided, use the object this weapon is attached to
+        // If no shooter is provided, try to find a player component
         if (shooter == null)
-            shooter = transform.root.gameObject;
+        {
+            Player playerComponent = GetComponentInParent<Player>();
+            if (playerComponent != null)
+            {
+                shooter = playerComponent.gameObject;
+
+                // Make sure the player GameObject has the Player tag
+                if (!shooter.CompareTag("Player"))
+                {
+                    Debug.LogWarning("Player GameObject is missing 'Player' tag!");
+                }
+            }
+            else
+            {
+                // Try to find a player in the scene as fallback
+                Player foundPlayer = FindFirstObjectByType<Player>();
+                if (foundPlayer != null)
+                {
+                    shooter = foundPlayer.gameObject;
+                }
+                else
+                {
+                    // Last resort fallback
+                    shooter = transform.root.gameObject;
+                    Debug.LogWarning($"No player found, using {shooter.name} with tag {shooter.tag} as shooter");
+                }
+            }
+        }
 
         // Calculate cooldown time
         float cooldownTime = lastFireTime + (1f / fireRate);

@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterTileSprite: {fileID: -5246934026592108136, guid: 2224f01b3841d2b45966d02150853050, type: 3}
   tileSize: 2
-  baseWaterColor: {r: 0.2, g: 0.5, b: 0.8, a: 1}
+  baseWaterColor: {r: 0.11053756, g: 0.7791614, b: 0.8679245, a: 1}
   darknessFactor: 0.15

@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Wall
   - Obstacle
+  - Boundry
   layers:
   - Default
   - TransparentFX

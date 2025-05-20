@@ -414,8 +414,6 @@ public class EnemySpawner : MonoBehaviour
 
         // Assign to enemy
         enemy.equippedWeapon = weapon;
-
-        Debug.Log($"Successfully equipped enemy with {weaponDef.itemName}");
     }
 
     // Call this method to spawn enemies when the world is generated
