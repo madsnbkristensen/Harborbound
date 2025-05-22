@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: d5e9febfd4d1d954985e1961ce4af34c
+guid: 5759aaf98b59e32439ae31421db229ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7375551369367730488
-    second: tooltipBox_0
+      213: -3220398671927784246
+    second: playerAngles_0
+  - first:
+      213: 1995789369456833468
+    second: playerAngles_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tooltipBox_0
+      name: playerAngles_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 429
-        height: 94
+        x: 72
+        y: 89
+        width: 391
+        height: 929
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 85, z: 0, w: 151}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8393fc1a4e83b5660800000000000000
-      internalID: 7375551369367730488
+      spriteID: 52669864efb087d45999d37d48a527ac
+      internalID: 1920737994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerAngles_1
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 174
+        width: 423
+        height: 748
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 58}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7875b84ca5c872942bfb5d15cdf678ec
+      internalID: -1053902737
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 308d2f2a8d19cb14db6baca9e41a0498
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tooltipBox_0: 7375551369367730488
+      playerAngles_0: 1920737994
+      playerAngles_1: -1053902737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
