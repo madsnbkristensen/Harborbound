@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: 
   _id: 574764
-  itemName: Shotgun
+  itemName: Pistol
   description: big BRRR
   icon: {fileID: 4319395737909131107, guid: 1c7034126cf36f4488e1e753ed98548c, type: 3}
   value: 2000

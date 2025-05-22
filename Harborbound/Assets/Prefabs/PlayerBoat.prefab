@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6107932580858949776}
   - component: {fileID: 4471942297470795371}
   - component: {fileID: 5269883419126054856}
+  - component: {fileID: 4910656318055604342}
   m_Layer: 0
   m_Name: PlayerBoat
-  m_TagString: Untagged
+  m_TagString: PlayerBoat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,6 +164,56 @@ MonoBehaviour:
   - {x: 5, y: 1}
   - {x: 1, y: -3}
   - {x: -3, y: -2}
+--- !u!68 &4910656318055604342
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920234793942508906}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -3.3492813, y: -6.033932}
+  - {x: -6.577994, y: -4.3898907}
+  - {x: -4.589312, y: -0.1571303}
+  - {x: -0.9382079, y: 1.9728107}
+  - {x: 2.387473, y: 2.9038491}
+  - {x: 6.3340473, y: 2.2409515}
+  - {x: 6.1625767, y: -1.142134}
+  - {x: 3.2515674, y: -4.034767}
+  - {x: -3.379204, y: -6.0773425}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &3947862005920269831
 GameObject:
   m_ObjectHideFlags: 0

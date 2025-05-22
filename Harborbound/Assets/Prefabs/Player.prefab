@@ -57,6 +57,10 @@ MonoBehaviour:
   humanoidName: Player
   gameManager: {fileID: 6827428874560893546, guid: 9a320148da65b4f62ba509b9d1c9a10b, type: 3}
   playerBoat: {fileID: 0}
+  interactableTags:
+  - PlayerBoat
+  - Friend
+  - FishingSpot
   interactionRange: 1.7
   interactionKey: 101
   inventoryKey: 9
