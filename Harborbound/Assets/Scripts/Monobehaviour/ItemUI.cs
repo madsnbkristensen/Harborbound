@@ -4,13 +4,21 @@ using UnityEngine.UI;
 
 public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public Item item { get; private set; }
+    [SerializeField]
+    public Item item;
+    [SerializeField]
     private InventoryUIController controller;
+    [SerializeField]
     private RectTransform rectTransform;
+    [SerializeField]
     private Canvas canvas;
+    [SerializeField]
     private CanvasGroup canvasGroup;
+    [SerializeField]
     private Vector2 originalPosition;
+    [SerializeField]
     private Image iconImage;
+    [SerializeField]
     private bool isHovered = false; // Track if mouse is hovering over this item
 
 
@@ -41,11 +49,6 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     private void Update()
     {
         // Check for X key press while item is being hovered
-        if (isHovered && Input.GetKeyDown(KeyCode.X))
-        {
-            RemoveItem();
-            Tooltip.Instance.HideTooltip();
-        }
         if (isHovered && Input.GetKeyDown(KeyCode.X))
         {
             RemoveItem();
@@ -101,6 +104,8 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        Debug.Log($"ITEM {item != null}: Pointer entered");
+        Debug.Log($"TOOLTIP {Tooltip.Instance != null}: Pointer entered");
         isHovered = true;
 
         if (item != null && Tooltip.Instance != null)

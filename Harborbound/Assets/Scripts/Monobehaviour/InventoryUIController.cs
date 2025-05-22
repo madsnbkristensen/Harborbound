@@ -11,7 +11,7 @@ public class InventoryUIController : MonoBehaviour
     [SerializeField] private GameObject slotPrefab;
 
 
-    private GameObject[,] slotObjects;
+    private GameObject[,] slotObjects = null;
     private Dictionary<Item, GameObject> itemUIObjects = new Dictionary<Item, GameObject>();
     private float slotSize; // Will be calculated based on available space
     private float spacing;  // Will be calculated based on slot size
@@ -35,7 +35,15 @@ public class InventoryUIController : MonoBehaviour
     private void Start()
     {
         // Create inventory grid UI
-        CreateInventoryGridUI();
+        if (slotObjects == null)
+        {
+            Debug.LogWarning("Creating inventory grid");
+            CreateInventoryGridUI();
+        }
+        else
+        {
+            Debug.LogWarning("Inventory grid already exists");
+        }
 
         // Subscribe to inventory changes
         PlayerInventory.Instance.OnInventoryChanged += UpdateInventoryUI;
@@ -156,13 +164,13 @@ public class InventoryUIController : MonoBehaviour
         Debug.Log("InventoryUIController: UpdateInventoryUI called");
 
         // Should be reimplemented because it doubles items when dropped
-        // // Clear existing item visuals
-        // foreach (var itemObj in itemUIObjects.Values)
-        // {
-        //     Debug.Log($"Destroying item visual: {itemObj.name}");
-        //     Destroy(itemObj);
-        // }
-        // itemUIObjects.Clear();
+        // Clear existing item visuals
+        foreach (var itemObj in itemUIObjects.Values)
+        {
+            Debug.Log($"Destroying item visual: {itemObj.name}");
+            Destroy(itemObj);
+        }
+        itemUIObjects.Clear();
 
         // Create visuals for items
         List<Item> items = PlayerInventory.Instance.GetAllItems();

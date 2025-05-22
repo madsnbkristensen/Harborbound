@@ -4,7 +4,7 @@ using TMPro;
 
 public class Tooltip : MonoBehaviour
 {
-    public static Tooltip Instance { get; private set; }
+    public static Tooltip Instance;
 
     [SerializeField] private TextMeshProUGUI titleText;
     [SerializeField] private TextMeshProUGUI descriptionText;

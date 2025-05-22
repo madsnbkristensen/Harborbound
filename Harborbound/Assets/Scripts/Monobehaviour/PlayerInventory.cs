@@ -44,13 +44,14 @@ public class PlayerInventory : MonoBehaviour
     public float FishScaleFactor => fishScaleFactor;
 
     // Inventory data structure
-    public InventoryGrid mainInventory { get; private set; }
+    [SerializeField]
+    public InventoryGrid mainInventory;
 
     // Events for UI updates
     public delegate void InventoryChangeHandler();
     public event InventoryChangeHandler OnInventoryChanged;
 
-    public static PlayerInventory Instance { get; private set; }
+    public static PlayerInventory Instance;
 
     private void Start()
     {
