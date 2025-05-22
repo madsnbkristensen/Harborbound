@@ -53,10 +53,16 @@ public class HelperManager : MonoBehaviour
 
         switch (itemName)
         {
-            case "Basic_rod":
-                interactMessage = "Press space near the water to fish!";
+            case "Item_Basic rod":
+                interactMessage = "Press space to fish!";
                 break;
-            case "Weapon":
+            case "Item_Pistol":
+                interactMessage = "Press mouse button to shoot!";
+                break;
+            case "Item_Shotgun":
+                interactMessage = "Press mouse button to shoot!";
+                break;
+            case "Item_Kalashnikov":
                 interactMessage = "Press mouse button to shoot!";
                 break;
             default:
