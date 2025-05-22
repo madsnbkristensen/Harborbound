@@ -65,7 +65,7 @@ MonoBehaviour:
   avoidanceStrength: 1.5
   rockLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 512
 --- !u!58 &7542338870975716638
 CircleCollider2D:
   m_ObjectHideFlags: 0
