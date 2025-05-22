@@ -97,7 +97,7 @@ public class FishingManager : MonoBehaviour
         if (PlayerInventory.Instance != null)
         {
             Debug.Log($"BEFORE adding fish: Inventory has {PlayerInventory.Instance.GetAllItems().Count} items");
-            addedToInventory = PlayerInventory.Instance.AddItem(currentCatch);
+            // addedToInventory = PlayerInventory.Instance.AddItem(currentCatch);
             Debug.Log($"AFTER adding fish: Inventory has {PlayerInventory.Instance.GetAllItems().Count} items. Added successfully: {addedToInventory}");
         }
     }
@@ -298,20 +298,36 @@ public class FishingManager : MonoBehaviour
                     }
 
                     bool addedToInventory = false;
-                    if (PlayerInventory.Instance != null)
+                    if (InventoryManager2.Instance != null)
                     {
-                        addedToInventory = PlayerInventory.Instance.AddItem(currentCatch);
-
+                        // Use InventoryManager2 to add fish to inventory
+                        InventoryManager2.Instance.SetupItemSprite(currentCatch);
+                        addedToInventory = InventoryManager2.Instance.TryAddItemToInventory(currentCatch);
                         if (addedToInventory)
                         {
                             Debug.Log($"Added {currentCatch.GetName()} to inventory!");
+                            // TODO: Show catch animation
                         }
                         else
                         {
+                            // TODO: Show inventory full animation
                             Debug.Log("Inventory is full! Fish was released.");
                             Destroy(currentCatch.gameObject); // Clean up fish if not added to inventory
                         }
                     }
+                    // {
+                    //     addedToInventory = PlayerInventory.Instance.AddItem(currentCatch);
+
+                    //     if (addedToInventory)
+                    //     {
+                    //         Debug.Log($"Added {currentCatch.GetName()} to inventory!");
+                    //     }
+                    //     else
+                    //     {
+                    //         Debug.Log("Inventory is full! Fish was released.");
+                    //         Destroy(currentCatch.gameObject); // Clean up fish if not added to inventory
+                    //     }
+                    // }
                     else
                     {
                         Debug.LogWarning("PlayerInventory reference is missing in FishingManager!");
@@ -353,7 +369,7 @@ public class FishingManager : MonoBehaviour
             return null;
         }
 
-        // Create fish item
+        // Instantiate the fish item
         Item fishItem = ItemFactory.CreateItem(fishDef);
 
         Debug.Log($"Created fish: {fishDef.itemName} for zone {zoneId}");

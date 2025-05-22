@@ -17,6 +17,8 @@ public static class ItemFactory
         // Then add specialized component based on type
         Item item = null;
 
+        itemObj.AddComponent<RectTransform>();
+
         switch (definition.type)
         {
             case ItemDefinition.ItemType.WEAPON:
@@ -54,4 +56,5 @@ public static class ItemFactory
 
         return item;
     }
+
 }

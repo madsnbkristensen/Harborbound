@@ -30,11 +30,7 @@ public class InventoryUIController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
 
-    private void Start()
-    {
-        // Create inventory grid UI
         if (slotObjects == null)
         {
             Debug.LogWarning("Creating inventory grid");
@@ -44,6 +40,11 @@ public class InventoryUIController : MonoBehaviour
         {
             Debug.LogWarning("Inventory grid already exists");
         }
+    }
+
+    private void Start()
+    {
+        // Create inventory grid UI
 
         // Subscribe to inventory changes
         PlayerInventory.Instance.OnInventoryChanged += UpdateInventoryUI;
