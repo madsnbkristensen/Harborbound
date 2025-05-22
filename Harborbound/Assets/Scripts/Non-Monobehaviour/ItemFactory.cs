@@ -46,7 +46,7 @@ public static class ItemFactory
         if (item != null)
         {
             item.definition = definition;
-            Debug.Log($"Setting definition {definition.itemName} on {item.GetType().Name}");
+            // Debug.Log($"Setting definition {definition.itemName} on {item.GetType().Name}");
 
             // And now refresh from definition
             item.RefreshFromDefinition();

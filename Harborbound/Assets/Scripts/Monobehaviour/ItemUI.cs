@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public Item item { get; private set; }
-    private PlayerInventory inventory;
     private InventoryUIController controller;
     private RectTransform rectTransform;
     private Canvas canvas;
@@ -14,13 +13,18 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     private Image iconImage;
     private bool isHovered = false; // Track if mouse is hovering over this item
 
+
     public event System.Action OnDragStarted;
     public event System.Action OnDragEnded;
 
-    public void Initialize(Item itemRef, PlayerInventory playerInventory, InventoryUIController uiController)
+    void Start()
+    {
+        Debug.Log($"ItemUI {name}: Canvas={canvas}, CanvasGroup={canvasGroup}, EventSystem={EventSystem.current}");
+    }
+
+    public void Initialize(Item itemRef, InventoryUIController uiController)
     {
         item = itemRef;
-        inventory = playerInventory;
         controller = uiController;
         rectTransform = GetComponent<RectTransform>();
 
@@ -98,7 +102,7 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     public void OnPointerEnter(PointerEventData eventData)
     {
         isHovered = true;
-        
+
         if (item != null && Tooltip.Instance != null)
         {
             Tooltip.Instance.ShowTooltip(item);
@@ -108,7 +112,7 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     public void OnPointerExit(PointerEventData eventData)
     {
         isHovered = false;
-        
+
         if (Tooltip.Instance != null)
         {
             Tooltip.Instance.HideTooltip();
@@ -117,20 +121,20 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
     public void RemoveItem()
     {
-        if (item == null || inventory == null)
+        if (item == null || PlayerInventory.Instance == null)
             return;
 
         // Find the item's position in the grid
         bool foundItem = false;
         int mainX = 0, mainY = 0;
-        int gridColumns = inventory.Width;
-        int gridRows = inventory.Height;
+        int gridColumns = PlayerInventory.Instance.Width;
+        int gridRows = PlayerInventory.Instance.Height;
 
         for (int y = 0; y < gridRows && !foundItem; y++)
         {
             for (int x = 0; x < gridColumns && !foundItem; x++)
             {
-                if (inventory.mainInventory.GetItemAt(x, y) == item)
+                if (PlayerInventory.Instance.mainInventory.GetItemAt(x, y) == item)
                 {
                     mainX = x;
                     mainY = y;
@@ -142,11 +146,11 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
         if (foundItem)
         {
-            // Remove the item from inventory
-            inventory.RemoveItemAt(mainX, mainY);
-            Debug.Log($"Removed item: {item.GetName()} from inventory at position ({mainX}, {mainY})");
-            
-            // The UI will be updated automatically through the inventory change event
+            // Remove the item from PlayerInventory.Instance
+            PlayerInventory.Instance.RemoveItemAt(mainX, mainY);
+            Debug.Log($"Removed item: {item.GetName()} from PlayerInventory.Instance at position ({mainX}, {mainY})");
+
+            // The UI will be updated automatically through the PlayerInventory.Instance change event
         }
     }
 }

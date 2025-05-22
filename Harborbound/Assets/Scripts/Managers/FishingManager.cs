@@ -11,7 +11,6 @@ public class FishingManager : MonoBehaviour
     public ItemDatabase itemDatabase;
     public GameObject catchAnimationPrefab;
     public Transform catchAnimationSpawnPoint;
-    public PlayerInventory playerInventory;
 
     [Header("Bobber stuff")]
     public GameObject bobberPrefab;
@@ -42,19 +41,13 @@ public class FishingManager : MonoBehaviour
         OnFishCaught += HandleFishCaught;
 
         // Get player inventory reference if not assigned
-        if (playerInventory == null)
+        if (PlayerInventory.Instance == null)
         {
-            // First try to get it from the player reference
-            if (player != null)
-            {
-                playerInventory = player.GetComponent<PlayerInventory>();
-            }
 
             // If still null, find in scene
-            if (playerInventory == null)
+            if (PlayerInventory.Instance == null)
             {
-                playerInventory = FindFirstObjectByType<PlayerInventory>();
-                if (playerInventory == null)
+                if (PlayerInventory.Instance == null)
                 {
                     Debug.LogWarning("PlayerInventory not found! Caught fish won't be added to inventory.");
                 }
@@ -97,6 +90,15 @@ public class FishingManager : MonoBehaviour
             anim.SetupAnimation(caughtFish.definition, () =>
             {
             });
+        }
+
+        // In FishingManager's fishing sequence where fish gets added
+        bool addedToInventory = false;
+        if (PlayerInventory.Instance != null)
+        {
+            Debug.Log($"BEFORE adding fish: Inventory has {PlayerInventory.Instance.GetAllItems().Count} items");
+            addedToInventory = PlayerInventory.Instance.AddItem(currentCatch);
+            Debug.Log($"AFTER adding fish: Inventory has {PlayerInventory.Instance.GetAllItems().Count} items. Added successfully: {addedToInventory}");
         }
     }
 
@@ -296,9 +298,9 @@ public class FishingManager : MonoBehaviour
                     }
 
                     bool addedToInventory = false;
-                    if (playerInventory != null)
+                    if (PlayerInventory.Instance != null)
                     {
-                        addedToInventory = playerInventory.AddItem(currentCatch);
+                        addedToInventory = PlayerInventory.Instance.AddItem(currentCatch);
 
                         if (addedToInventory)
                         {

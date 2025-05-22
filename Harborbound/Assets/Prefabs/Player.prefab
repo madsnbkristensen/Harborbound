@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3713679245457080761}
   - component: {fileID: 1209877081846410082}
   - component: {fileID: 7488084073679386627}
-  - component: {fileID: 1228140294469694480}
   - component: {fileID: 4047994704696393999}
   - component: {fileID: 513652743708195821}
   m_Layer: 0
@@ -175,29 +174,6 @@ MonoBehaviour:
   playerEquipment: {fileID: 1209877081846410082}
   testWeaponDef: {fileID: 11400000, guid: dc0d05e1b40b085479984582b4b2a1b3, type: 2}
   testFishingRodDef: {fileID: 11400000, guid: d1f437f18002548f386f2db29acb81f8, type: 2}
---- !u!114 &1228140294469694480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6710653315548954765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa200fd762f874bc298b4418fd4f84fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryWidth: 10
-  inventoryHeight: 8
-  spacingPercentage: 0.07
-  paddingLeft: 0
-  paddingRight: 0
-  paddingTop: 0
-  paddingBottom: 0
-  weaponColor: {r: 0.7, g: 0.3, b: 0.3, a: 0.6}
-  fishColor: {r: 0.3, g: 0.5, b: 0.7, a: 0.6}
-  defaultItemColor: {r: 0.4, g: 0.4, b: 0.4, a: 0.6}
-  fishScaleFactor: 1
 --- !u!61 &4047994704696393999
 BoxCollider2D:
   m_ObjectHideFlags: 0

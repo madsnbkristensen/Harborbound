@@ -64,6 +64,6 @@ public class Item : MonoBehaviour
         // Set shared properties that all items have
         currentStackSize = 1; // Reset stack size or set from definition if needed
 
-        Debug.Log($"Base Item refreshed from definition: {definition.itemName}");
+        // Debug.Log($"Base Item refreshed from definition: {definition.itemName}");
     }
 }
