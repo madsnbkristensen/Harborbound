@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6016468731210743947
+--- !u!1 &3920234793942508906
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4749319862316911342}
-  - component: {fileID: 5986370154002399873}
-  - component: {fileID: 2158519799218765624}
-  - component: {fileID: 8941174343409893368}
-  - component: {fileID: -2912594829420095077}
+  - component: {fileID: 2124155860733399560}
+  - component: {fileID: 5456378491154228732}
+  - component: {fileID: 6107932580858949776}
+  - component: {fileID: 4471942297470795371}
+  - component: {fileID: 5269883419126054856}
   m_Layer: 0
   m_Name: PlayerBoat
   m_TagString: Untagged
@@ -20,45 +20,45 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4749319862316911342
+--- !u!4 &2124155860733399560
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6016468731210743947}
+  m_GameObject: {fileID: 3920234793942508906}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7, y: 0.2, z: -0.5820237}
+  m_LocalPosition: {x: -3.81, y: 0.34, z: -0.5820237}
   m_LocalScale: {x: 0.22, y: 0.22, z: 0.22}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 2133326914952790642}
+  - {fileID: 4558667207472975731}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5986370154002399873
+--- !u!114 &5456378491154228732
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6016468731210743947}
+  m_GameObject: {fileID: 3920234793942508906}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a28d5f64e8bad46778d4ad90331f0bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 10
   rotationSpeed: 100
   player: {fileID: 0}
-  _wheelPosition: {fileID: 2133326914952790642}
---- !u!212 &2158519799218765624
+  _wheelPosition: {fileID: 4558667207472975731}
+--- !u!212 &6107932580858949776
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6016468731210743947}
+  m_GameObject: {fileID: 3920234793942508906}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -96,7 +96,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3975826167195517899, guid: 1eb14c96687d54eaf865a8f7e0924112, type: 3}
+  m_Sprite: {fileID: -5019264981349273687, guid: b86c2574b4c9d4f8ca02636edc53f69c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -107,13 +107,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8941174343409893368
+--- !u!114 &4471942297470795371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6016468731210743947}
+  m_GameObject: {fileID: 3920234793942508906}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 659c9bd6f10fb48ffa039b069bc43586, type: 3}
@@ -125,25 +125,45 @@ MonoBehaviour:
   spriteRightUp: {fileID: 2051622401280252251, guid: 1bc4088caed4849c7b88f34c82887b60, type: 3}
   spriteLeftDown: {fileID: -5019264981349273687, guid: b86c2574b4c9d4f8ca02636edc53f69c, type: 3}
   diagonalThreshold: 0.4
---- !u!114 &-2912594829420095077
+--- !u!114 &5269883419126054856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6016468731210743947}
+  m_GameObject: {fileID: 3920234793942508906}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c30d134b47cc24016a8650114f313364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteController: {fileID: 0}
-  rightBoundaryPoints: []
-  upBoundaryPoints: []
-  downBoundaryPoints: []
-  rightUpBoundaryPoints: []
-  leftDownBoundaryPoints: []
---- !u!1 &6689920335861286532
+  spriteController: {fileID: 4471942297470795371}
+  rightBoundaryPoints:
+  - {x: -7, y: -4}
+  - {x: -7, y: -1}
+  - {x: 2, y: -1}
+  - {x: 2, y: -4}
+  upBoundaryPoints:
+  - {x: -4, y: 0}
+  - {x: 4, y: 0}
+  - {x: 4, y: -4.5}
+  - {x: -4, y: -4.5}
+  downBoundaryPoints:
+  - {x: -2, y: 4}
+  - {x: -4, y: -2.5}
+  - {x: 4, y: -2.5}
+  - {x: 2, y: 4}
+  rightUpBoundaryPoints:
+  - {x: -5.5, y: -3}
+  - {x: -1, y: -4.5}
+  - {x: 4.5, y: -1}
+  - {x: -1, y: 0}
+  leftDownBoundaryPoints:
+  - {x: 1, y: 2}
+  - {x: 5, y: 1}
+  - {x: 1, y: -3}
+  - {x: -3, y: -2}
+--- !u!1 &3947862005920269831
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,7 +171,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2133326914952790642}
+  - component: {fileID: 4558667207472975731}
   m_Layer: 0
   m_Name: wheelPosition
   m_TagString: Untagged
@@ -159,18 +179,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2133326914952790642
+--- !u!4 &4558667207472975731
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6689920335861286532}
+  m_GameObject: {fileID: 3947862005920269831}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.24, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4749319862316911342}
+  m_Father: {fileID: 2124155860733399560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
