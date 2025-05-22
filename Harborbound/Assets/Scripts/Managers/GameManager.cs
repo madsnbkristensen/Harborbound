@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +27,49 @@ public class GameManager : MonoBehaviour
                 OnGameStateChanged?.Invoke(_state);
             }
         }
+    }
+
+    public static GameManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+
+            // Subscribe to scene loading event
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Refind scene-specific references
+        RefindSceneReferences();
+    }
+
+    private void RefindSceneReferences()
+    {
+        // Find player if not assigned or if current reference is null
+        if (player == null)
+            player = FindFirstObjectByType<Player>();
+
+        // Find current player boat if not assigned or if current reference is null
+        if (currentPlayerBoat == null)
+            currentPlayerBoat = FindFirstObjectByType<Boat>();
+
+        // Log what was found for debugging
+        Debug.Log($"GameManager refound references - Player: {(player != null ? "Found" : "Not found")}, Boat: {(currentPlayerBoat != null ? "Found" : "Not found")}");
     }
 
     // Event system for state changes
