@@ -10,6 +10,7 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public ItemDefinition definition;
     public bool isHovered = false;
     public List<InventorySlot2> occupiedSlots = new List<InventorySlot2>();
+    public GameObject background;
 
     // Instance-specific properties
     public int currentStackSize = 1;
@@ -98,6 +99,10 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         if (isHovered && Input.GetKeyDown(KeyCode.X))
         {
             InventoryManager2.Instance.DiscardItem(this);
+        }
+        if (isHovered && Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            InventoryManager2.Instance.StartItemDrag(this);
         }
     }
 }

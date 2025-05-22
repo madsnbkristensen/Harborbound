@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class InventorySlot2 : MonoBehaviour
 {
+    public int x, y;
     public Image image;
     public bool isOccupied = false;
 
