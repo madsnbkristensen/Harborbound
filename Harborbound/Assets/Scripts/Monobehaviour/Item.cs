@@ -1,10 +1,15 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 
 // Base Item class
-public class Item : MonoBehaviour
+public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     // Reference to the definition (blueprint)
     public ItemDefinition definition;
+    public bool isHovered = false;
+    public List<InventorySlot2> occupiedSlots = new List<InventorySlot2>();
 
     // Instance-specific properties
     public int currentStackSize = 1;
@@ -65,5 +70,34 @@ public class Item : MonoBehaviour
         currentStackSize = 1; // Reset stack size or set from definition if needed
 
         // Debug.Log($"Base Item refreshed from definition: {definition.itemName}");
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        isHovered = true;
+        FindFirstObjectByType<Player>().hoveredItem = this;
+        Debug.LogWarning($"Fish {GetName()} hovered over");
+        if (this != null && Tooltip.Instance != null)
+        {
+            Tooltip.Instance.ShowTooltip(this);
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isHovered = false;
+        Debug.LogWarning($"Fish {GetName()} stopped hovering");
+        if (this != null && Tooltip.Instance != null)
+        {
+            Tooltip.Instance.HideTooltip();
+        }
+    }
+
+    public void Update()
+    {
+        if (isHovered && Input.GetKeyDown(KeyCode.X))
+        {
+            InventoryManager2.Instance.DiscardItem(this);
+        }
     }
 }

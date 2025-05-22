@@ -135,8 +135,7 @@ public class GameManager : MonoBehaviour
         money += amount;
         Debug.Log($"Added {amount} money. New balance: {money}");
 
-        // Notify UI or other systems about money change
-        // You might want to add an event for this
+        UIManager.Instance.UpdateMoneyDisplay(money);
     }
 
     public bool SpendMoney(int amount)
@@ -148,6 +147,7 @@ public class GameManager : MonoBehaviour
             return true;
         }
 
+        UIManager.Instance.UpdateMoneyDisplay(money);
         Debug.Log($"Not enough money to spend {amount}. Current balance: {money}");
         return false;
     }

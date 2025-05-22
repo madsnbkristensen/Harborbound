@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameManager gameManager;
     [SerializeField] private Player player;
-    public static UIManager Instance { get; private set; }
+    public static UIManager Instance;
 
     [Header("UI Elements")]
     [SerializeField] private GameObject hudPanel;
@@ -161,8 +161,11 @@ public class UIManager : MonoBehaviour
             UpdateHealthDisplay(player.currentHealth, player.maxHealth);
 
         // Update money display if game manager reference exists
-        if (gameManager != null && moneyText != null)
-            UpdateMoneyDisplay(gameManager.money);
+        // COMMENTED OUT because we update it manually where money is changed because bug lol
+        // if (gameManager != null && moneyText != null)
+        // {
+        //     UpdateMoneyDisplay(gameManager.money);
+        // }
 
         // Update fuel display if player boat reference exists
         // if (gameManager?.currentPlayerBoat is PlayerBoat playerBoat && fuelText != null)
@@ -242,7 +245,7 @@ public class UIManager : MonoBehaviour
     public void UpdateMoneyDisplay(int amount)
     {
         if (moneyText != null)
-            moneyText.text = $"${amount}";
+            moneyText.text = $"$: {amount}";
     }
 
     // Update the fuel display for the boat

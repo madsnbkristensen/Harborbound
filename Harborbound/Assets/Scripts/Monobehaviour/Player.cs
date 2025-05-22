@@ -10,6 +10,7 @@ public class Player : Humanoid
     private PlayerEquipment playerEquipment;
     private SpriteRenderer playerSpriteRenderer;
     private Vector2 moveDirection;
+    public Item hoveredItem;
 
     // Add this line to declare the missing variable
     private Transform boatWheelPosition;
@@ -213,7 +214,7 @@ public class Player : Humanoid
                 // Handle right-click to sell
                 if (Input.GetMouseButtonDown(1))
                 {
-                    SellSelectedItem();
+                    InventoryManager2.Instance.SellItem(hoveredItem);
                 }
                 break;
         }

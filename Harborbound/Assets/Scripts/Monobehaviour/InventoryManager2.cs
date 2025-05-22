@@ -13,7 +13,7 @@ public class InventoryManager2 : MonoBehaviour
     public static InventoryManager2 Instance;
     public GameObject fishContainer;
     [SerializeField] private RectTransform gridContainerRect;
-    public List<GameObject> fish;
+    public List<GameObject> items = new List<GameObject>();
     public GameObject gridContainer;
     public GameObject slotPrefab;
 
@@ -79,9 +79,11 @@ public class InventoryManager2 : MonoBehaviour
                 for (int l = y; l < caughtItem.definition.inventoryHeight + y; l++)
                 {
                     slots[k, l].SetOccupied();
+                    var inventorySlot = slots[k, l];
+                    caughtItem.occupiedSlots.Add(inventorySlot);
                 }
             }
-            fish.Add(caughtItem.gameObject);
+            items.Add(caughtItem.gameObject);
             SnapItemToSlot(caughtItem.GetComponent<RectTransform>(), x, y);
         }
         else
@@ -250,8 +252,8 @@ public class InventoryManager2 : MonoBehaviour
         GameObject iconObj = new GameObject("Icon");
         iconObj.transform.SetParent(item.transform, false);
         RectTransform iconRect = iconObj.AddComponent<RectTransform>();
-        iconRect.anchorMin = Vector2.zero;
-        iconRect.anchorMax = Vector2.one;
+        iconRect.anchorMin = new Vector2(0.05f, 0.05f);
+        iconRect.anchorMax = new Vector2(0.95f, 0.95f);
         iconRect.offsetMin = Vector2.zero;
         iconRect.offsetMax = Vector2.zero;
         // iconRect.sizeDelta = new Vector2(width, height);
@@ -268,12 +270,32 @@ public class InventoryManager2 : MonoBehaviour
 
     }
 
+    public void DiscardItem(Item itemToDestroy)
+    {
+        //remove specific fish from inventory and destroy gameobject
+        // and free slots from gridcontainer
+
+        for (int i = 0; i < itemToDestroy.occupiedSlots.Count; i++)
+        {
+            itemToDestroy.occupiedSlots[i].SetFreed();
+        }
+        items.Remove(itemToDestroy.gameObject);
+        Destroy(itemToDestroy.gameObject);
+        Tooltip.Instance.HideTooltip();
+    }
+
+    public void SellItem(Item itemToSell)
+    {
+        GameManager.Instance.AddMoney(itemToSell.GetValue());
+        UIManager.Instance.UpdateMoneyDisplay(GameManager.Instance.money);
+        DiscardItem(itemToSell);
+    }
+
     public void Update()
     {
-        // set fish scale to 1
-        foreach (var fishItem in fish)
+        foreach (var item in items)
         {
-            fishItem.gameObject.transform.localScale = new Vector3(1, 1, 1);
+            item.gameObject.transform.localScale = new Vector3(1, 1, 1);
         }
     }
 }
