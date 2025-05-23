@@ -127,12 +127,23 @@ public class WaterTileManager : MonoBehaviour
                 int zoneIndex = GetZoneIndexAtDistance(distFromCenter);
                 if (zoneIndex >= 0)
                 {
-                    // Calculate a color based on zone index
-                    float hue = (float)(zoneIndex) / 8f;
-                    Color zoneColor = Color.HSVToRGB(hue % 1f, 0.6f, 0.8f);
+                    // Always use baseWaterColor as the base for all zones
+                    Color zoneColor = baseWaterColor;
 
-                    // Apply darkening effect for deeper waters
-                    float darkness = zoneIndex * darknessFactor;
+                    // Calculate darkness based on zone index
+                    float darkness;
+                    if (zoneIndex == 0)
+                    {
+                        // First zone - no darkening
+                        darkness = 0;
+                    }
+                    else
+                    {
+                        // More subtle darkening for deeper waters
+                        // Use sqrt to make transitions less dramatic
+                        darkness = Mathf.Sqrt(zoneIndex) * darknessFactor * 0.3f;
+                    }
+
                     renderer.color = new Color(
                         zoneColor.r * (1f - darkness),
                         zoneColor.g * (1f - darkness),
@@ -142,8 +153,14 @@ public class WaterTileManager : MonoBehaviour
                 }
                 else
                 {
-                    // Use extended water color for tiles beyond game boundary
-                    renderer.color = extendedWaterColor;
+                    // Use a darker version of baseWaterColor for extended water
+                    float extendedDarkness = 0.4f; // Fixed darkness for extended water
+                    renderer.color = new Color(
+                        baseWaterColor.r * (1f - extendedDarkness),
+                        baseWaterColor.g * (1f - extendedDarkness),
+                        baseWaterColor.b * (1f - extendedDarkness),
+                        0.8f
+                    );
                 }
             }
         }

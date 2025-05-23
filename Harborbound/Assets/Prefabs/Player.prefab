@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5463458772397480518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 786862889641797072}
+  m_Layer: 0
+  m_Name: WeaponAttatchmentPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &786862889641797072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5463458772397480518}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.15, y: -0.83, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2185498243363619352}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6710653315548954765
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,6 +47,7 @@ GameObject:
   - component: {fileID: 7488084073679386627}
   - component: {fileID: 4047994704696393999}
   - component: {fileID: 513652743708195821}
+  - component: {fileID: 8081973511007764423}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -35,7 +67,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 786862889641797072}
+  - {fileID: 1235820213185592462}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7035993917590173729
@@ -112,7 +146,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 10.03, y: 13.52}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -158,8 +192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipItemPrefab: {fileID: 960434323151276528, guid: bda05c2de77f84e4bb4affbe37a051a4, type: 3}
-  weaponAttachPoint: {fileID: 0}
-  fishingRodAttachPoint: {fileID: 0}
+  weaponAttachPoint: {fileID: 786862889641797072}
+  fishingRodAttachPoint: {fileID: 1235820213185592462}
   equippedWeapon: {fileID: 0}
   currentEquippedItem: {fileID: 0}
   currentEquippedVisual: {fileID: 0}
@@ -176,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerEquipment: {fileID: 1209877081846410082}
-  testWeaponDef: {fileID: 11400000, guid: dc0d05e1b40b085479984582b4b2a1b3, type: 2}
+  testWeaponDef: {fileID: 11400000, guid: 73f82264251a14e7aa8bb284302f7ecf, type: 2}
   testFishingRodDef: {fileID: 11400000, guid: d1f437f18002548f386f2db29acb81f8, type: 2}
 --- !u!61 &4047994704696393999
 BoxCollider2D:
@@ -214,10 +248,10 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.2567494, y: -3.4844556}
   m_SpriteTilingProperty:
-    border: {x: 2.55, y: 2.78, z: 2.7, w: 2.73}
+    border: {x: 2.55, y: 2.78, z: 2.7, w: 2.69}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.03, y: 13.52}
-    newSize: {x: 0.16, y: 0.16}
+    newSize: {x: 10.03, y: 13.52}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -261,3 +295,56 @@ CapsuleCollider2D:
   m_Offset: {x: -0.06697694, y: 0.12149731}
   m_Size: {x: 3.7977035, y: 7.724973}
   m_Direction: 0
+--- !u!95 &8081973511007764423
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6710653315548954765}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 28daf723ea94e8d459e98d638e2a0226, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &8299222975137495618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1235820213185592462}
+  m_Layer: 0
+  m_Name: RodAttatchmentPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1235820213185592462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8299222975137495618}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.15, y: 1.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2185498243363619352}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
