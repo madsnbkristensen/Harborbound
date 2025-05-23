@@ -374,6 +374,14 @@ public class InventoryManager2 : MonoBehaviour
         return null;
     }
 
+    public void SetHoveringFalse()
+    {
+        foreach (GameObject item in items)
+        {
+            item.GetComponent<Item>().isHovered = false;
+        }
+    }
+
     public void Update()
     {
         foreach (var item in items)

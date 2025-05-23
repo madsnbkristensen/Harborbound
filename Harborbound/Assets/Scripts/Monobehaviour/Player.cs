@@ -235,40 +235,6 @@ public class Player : Humanoid
         Debug.Log($"Player collided with: {collision.gameObject.name}", collision.gameObject);
     }
 
-    // Clean implementation for selling items
-    private void SellSelectedItem()
-    {
-        if (Tooltip.Instance != null)
-            Tooltip.Instance.HideTooltip();
-
-        // Use EventSystem to find item under cursor
-        PointerEventData pointerData = new PointerEventData(EventSystem.current);
-        pointerData.position = Input.mousePosition;
-
-        List<RaycastResult> results = new List<RaycastResult>();
-        EventSystem.current.RaycastAll(pointerData, results);
-
-        foreach (RaycastResult result in results)
-        {
-            // Try to get ItemUI component
-            ItemUI itemUI = result.gameObject.GetComponent<ItemUI>() ??
-                            result.gameObject.GetComponentInParent<ItemUI>();
-
-            if (itemUI != null && itemUI.item != null)
-            {
-                int value = itemUI.item.GetValue();
-                Debug.Log($"Selling {itemUI.item.GetName()} for {value} coins");
-
-                itemUI.RemoveItem();
-
-                if (gameManager != null)
-                    gameManager.AddMoney(value);
-
-                break;
-            }
-        }
-    }
-
     public void TryInteract()
     {
         // Check boat interaction first
@@ -310,9 +276,14 @@ public class Player : Humanoid
         Debug.Log("Toggling inventory");
 
         if (gameManager.state == GameManager.GameState.INVENTORY)
+        {
             gameManager.ChangeState(GameManager.GameState.ROAMING);
+            InventoryManager2.Instance.SetHoveringFalse();
+        }
         else
             gameManager.ChangeState(GameManager.GameState.INVENTORY);
+
+        // set all items isHovering to false
     }
 
     private bool IsNearFriend()

@@ -16,6 +16,6 @@ public class InventorySlot2 : MonoBehaviour
     public void SetFreed()
     {
         isOccupied = false;
-        image.color = new Color(1f, 1f, 1f, 1f); // Fully opaque
+        image.color = new Color(1f, 1f, 1f, 0.4549019608f); // 166 opacity
     }
 }
