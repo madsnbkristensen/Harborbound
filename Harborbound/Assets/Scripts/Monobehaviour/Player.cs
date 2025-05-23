@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
 public class Player : Humanoid
@@ -12,6 +11,10 @@ public class Player : Humanoid
     private Vector2 moveDirection;
     public Item hoveredItem;
     public List<string> interactableTags;
+
+    public bool startDriving = true;
+
+    private SceneChangeZone sceneChangeZone;
 
     // Add this line to declare the missing variable
     private Transform boatWheelPosition;
@@ -47,6 +50,12 @@ public class Player : Humanoid
 
         // Ensure basic collision setup
         EnsureBasicCollisionSetup();
+
+        if (startDriving)
+        {
+            // Start driving if the player is already in the boat
+            StartDriving();
+        }
     }
 
     private void EnsureBasicCollisionSetup()
@@ -242,6 +251,14 @@ public class Player : Humanoid
 
     public void TryInteract()
     {
+
+        if (IsNearSceneChangeZone())
+        {
+            SceneChangeZone sceneChangeZone = FindFirstObjectByType<SceneChangeZone>();
+            sceneChangeZone.TravelToScene(sceneChangeZone.GetSceneName());
+            return;
+        }
+
         // Check boat interaction first
         if (IsNearBoatWheel())
         {
@@ -317,6 +334,19 @@ public class Player : Humanoid
 
         float distance = Vector2.Distance(transform.position, playerBoat.wheelPosition.position);
         return distance <= interactionRange;
+    }
+
+    private bool IsNearSceneChangeZone()
+    {
+        SceneChangeZone sceneChangeZone = FindFirstObjectByType<SceneChangeZone>();
+        if (sceneChangeZone == null) return false;
+
+        BoxCollider2D collider = sceneChangeZone.GetComponent<BoxCollider2D>();
+        if (collider != null)
+        {
+            return collider.OverlapPoint(transform.position);
+        }
+        return false;
     }
 
     public void StartDriving()
