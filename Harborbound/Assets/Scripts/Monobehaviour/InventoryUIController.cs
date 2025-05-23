@@ -1,41 +1,107 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class InventoryUIController : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private PlayerInventory playerInventory;
     [SerializeField] private RectTransform slotsContainer; // The container within the border
     [SerializeField] private GameObject slotPrefab;
 
-    private GameObject[,] slotObjects;
+
+    private GameObject[,] slotObjects = null;
     private Dictionary<Item, GameObject> itemUIObjects = new Dictionary<Item, GameObject>();
     private float slotSize; // Will be calculated based on available space
     private float spacing;  // Will be calculated based on slot size
 
+    public static InventoryUIController Instance { get; private set; }
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        if (slotObjects == null)
+        {
+            Debug.LogWarning("Creating inventory grid");
+            CreateInventoryGridUI();
+        }
+        else
+        {
+            Debug.LogWarning("Inventory grid already exists");
+        }
+    }
+
     private void Start()
     {
-        if (playerInventory == null)
-            playerInventory = FindFirstObjectByType<PlayerInventory>();
-
         // Create inventory grid UI
-        CreateInventoryGridUI();
 
         // Subscribe to inventory changes
-        playerInventory.OnInventoryChanged += UpdateInventoryUI;
+        PlayerInventory.Instance.OnInventoryChanged += UpdateInventoryUI;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("InventoryUIController: Scene loaded, refreshing references");
+
+        // Force EventSystem refresh
+        if (EventSystem.current != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            Debug.Log($"EventSystem current: {EventSystem.current.name}");
+        }
+
+        // Check Canvas raycast status
+        GraphicRaycaster raycaster = GetComponentInParent<GraphicRaycaster>();
+        Debug.Log($"GraphicRaycaster found: {raycaster != null}, enabled: {raycaster?.enabled}");
+
+        // Recreate ItemUI components to fix event connections
+        RecreateItemUIComponents();
+    }
+
+    private void RecreateItemUIComponents()
+    {
+        Debug.Log("Recreating ItemUI components...");
+
+        // Destroy existing ItemUI visuals (they're broken anyway)
+        foreach (var itemObj in itemUIObjects.Values)
+        {
+            Destroy(itemObj);
+        }
+        itemUIObjects.Clear();
+
+        // Recreate them fresh from the persistent inventory data
+        List<Item> items = PlayerInventory.Instance.GetAllItems();
+        Debug.Log($"Recreating visuals for {items.Count} items");
+
+        foreach (Item item in items)
+        {
+            CreateItemVisual(item);
+        }
+
+        Debug.Log("ItemUI recreation complete");
     }
 
     private void CreateInventoryGridUI()
     {
         // Use dimensions from the PlayerInventory
-        int gridColumns = playerInventory.Width;
-        int gridRows = playerInventory.Height;
-        float spacingPercentage = playerInventory.SpacingPercentage;
-        float paddingLeft = playerInventory.PaddingLeft;
-        float paddingRight = playerInventory.PaddingRight;
-        float paddingTop = playerInventory.PaddingTop;
-        float paddingBottom = playerInventory.PaddingBottom;
+        int gridColumns = PlayerInventory.Instance.Width;
+        int gridRows = PlayerInventory.Instance.Height;
+        float spacingPercentage = PlayerInventory.Instance.SpacingPercentage;
+        float paddingLeft = PlayerInventory.Instance.PaddingLeft;
+        float paddingRight = PlayerInventory.Instance.PaddingRight;
+        float paddingTop = PlayerInventory.Instance.PaddingTop;
+        float paddingBottom = PlayerInventory.Instance.PaddingBottom;
 
         // Calculate available space within the container (accounting for padding)
         float availableWidth = slotsContainer.rect.width - paddingLeft - paddingRight;
@@ -86,7 +152,7 @@ public class InventoryUIController : MonoBehaviour
                 InventorySlotUI slotUI = slotObj.GetComponent<InventorySlotUI>();
                 if (slotUI == null)
                     slotUI = slotObj.AddComponent<InventorySlotUI>();
-                slotUI.Initialize(x, y, playerInventory);
+                slotUI.Initialize(x, y, PlayerInventory.Instance);
             }
         }
 
@@ -96,15 +162,21 @@ public class InventoryUIController : MonoBehaviour
 
     private void UpdateInventoryUI()
     {
+        Debug.Log("InventoryUIController: UpdateInventoryUI called");
+
+        // Should be reimplemented because it doubles items when dropped
         // Clear existing item visuals
         foreach (var itemObj in itemUIObjects.Values)
         {
+            Debug.Log($"Destroying item visual: {itemObj.name}");
             Destroy(itemObj);
         }
         itemUIObjects.Clear();
 
         // Create visuals for items
-        List<Item> items = playerInventory.GetAllItems();
+        List<Item> items = PlayerInventory.Instance.GetAllItems();
+        Debug.Log($"Creating visuals for {items.Count} items");
+
         foreach (Item item in items)
         {
             CreateItemVisual(item);
@@ -116,14 +188,14 @@ public class InventoryUIController : MonoBehaviour
         // Find the item's position in the grid
         bool foundItem = false;
         int mainX = 0, mainY = 0;
-        int gridColumns = playerInventory.Width;
-        int gridRows = playerInventory.Height;
+        int gridColumns = PlayerInventory.Instance.Width;
+        int gridRows = PlayerInventory.Instance.Height;
 
         for (int y = 0; y < gridRows && !foundItem; y++)
         {
             for (int x = 0; x < gridColumns && !foundItem; x++)
             {
-                if (playerInventory.mainInventory.GetItemAt(x, y) == item)
+                if (PlayerInventory.Instance.mainInventory.GetItemAt(x, y) == item)
                 {
                     mainX = x;
                     mainY = y;
@@ -136,10 +208,10 @@ public class InventoryUIController : MonoBehaviour
         if (!foundItem) return;
 
         // Get layout settings from PlayerInventory
-        float paddingLeft = playerInventory.PaddingLeft;
-        float paddingRight = playerInventory.PaddingRight;
-        float paddingTop = playerInventory.PaddingTop;
-        float paddingBottom = playerInventory.PaddingBottom;
+        float paddingLeft = PlayerInventory.Instance.PaddingLeft;
+        float paddingRight = PlayerInventory.Instance.PaddingRight;
+        float paddingTop = PlayerInventory.Instance.PaddingTop;
+        float paddingBottom = PlayerInventory.Instance.PaddingBottom;
 
         // Get the item dimensions
         int itemWidth = item.definition.inventoryWidth;
@@ -183,7 +255,7 @@ public class InventoryUIController : MonoBehaviour
         bgRect.offsetMax = Vector2.zero;
 
         Image bgImage = bgObj.AddComponent<Image>();
-        bgImage.color = playerInventory.GetItemColor(item.definition.type);
+        bgImage.color = PlayerInventory.Instance.GetItemColor(item.definition.type);
 
         // Create icon with proper scaling
         GameObject iconObj = new GameObject("Icon");
@@ -208,7 +280,7 @@ public class InventoryUIController : MonoBehaviour
             iconImage.preserveAspect = true;
 
             // Apply the fish scale factor from PlayerInventory
-            float fishScaleFactor = playerInventory.FishScaleFactor;
+            float fishScaleFactor = PlayerInventory.Instance.FishScaleFactor;
             iconRect.localScale = new Vector3(fishScaleFactor, fishScaleFactor, 1.0f);
 
             // Center it better
@@ -217,7 +289,7 @@ public class InventoryUIController : MonoBehaviour
 
         // Add item UI component for drag & drop
         ItemUI itemUI = itemObj.AddComponent<ItemUI>();
-        itemUI.Initialize(item, playerInventory, this);
+        itemUI.Initialize(item, this);
 
         // Store reference
         itemUIObjects[item] = itemObj;
@@ -228,8 +300,8 @@ public class InventoryUIController : MonoBehaviour
     {
         // Get current position
         int currentX = -1, currentY = -1;
-        int gridColumns = playerInventory.Width;
-        int gridRows = playerInventory.Height;
+        int gridColumns = PlayerInventory.Instance.Width;
+        int gridRows = PlayerInventory.Instance.Height;
 
         foreach (Item existingItem in itemUIObjects.Keys)
         {
@@ -240,7 +312,7 @@ public class InventoryUIController : MonoBehaviour
                 {
                     for (int x = 0; x < gridColumns; x++)
                     {
-                        if (playerInventory.mainInventory.GetItemAt(x, y) == item)
+                        if (PlayerInventory.Instance.mainInventory.GetItemAt(x, y) == item)
                         {
                             currentX = x;
                             currentY = y;
@@ -256,25 +328,25 @@ public class InventoryUIController : MonoBehaviour
         // Remove from current position
         if (currentX != -1 && currentY != -1)
         {
-            playerInventory.RemoveItemAt(currentX, currentY);
+            PlayerInventory.Instance.RemoveItemAt(currentX, currentY);
         }
 
         // Try to place at new position
-        if (!playerInventory.AddItemAt(item, targetX, targetY))
+        if (!PlayerInventory.Instance.AddItemAt(item, targetX, targetY))
         {
             // If failed to place at new position, try to put back at original position
             if (currentX != -1 && currentY != -1)
             {
-                playerInventory.AddItemAt(item, currentX, currentY);
+                PlayerInventory.Instance.AddItemAt(item, currentX, currentY);
             }
         }
     }
 
     private void OnDestroy()
     {
-        if (playerInventory != null)
+        if (PlayerInventory.Instance != null)
         {
-            playerInventory.OnInventoryChanged -= UpdateInventoryUI;
+            PlayerInventory.Instance.OnInventoryChanged -= UpdateInventoryUI;
         }
     }
 }

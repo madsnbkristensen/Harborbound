@@ -17,6 +17,8 @@ public static class ItemFactory
         // Then add specialized component based on type
         Item item = null;
 
+        itemObj.AddComponent<RectTransform>();
+
         switch (definition.type)
         {
             case ItemDefinition.ItemType.WEAPON:
@@ -46,7 +48,7 @@ public static class ItemFactory
         if (item != null)
         {
             item.definition = definition;
-            Debug.Log($"Setting definition {definition.itemName} on {item.GetType().Name}");
+            // Debug.Log($"Setting definition {definition.itemName} on {item.GetType().Name}");
 
             // And now refresh from definition
             item.RefreshFromDefinition();
@@ -54,4 +56,5 @@ public static class ItemFactory
 
         return item;
     }
+
 }

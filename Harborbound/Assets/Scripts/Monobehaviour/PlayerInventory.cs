@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private Color weaponColor = new Color(0.7f, 0.3f, 0.3f, 0.6f);
     [SerializeField] private Color fishColor = new Color(0.3f, 0.5f, 0.7f, 0.6f);
     [SerializeField] private Color defaultItemColor = new Color(0.4f, 0.4f, 0.4f, 0.6f);
-    [SerializeField] private float fishScaleFactor = 1f; // Scale up fish sprites
+    [SerializeField] private float fishScaleFactor = 1f;
 
     // Public accessors
     public int Width => inventoryWidth;
@@ -43,15 +44,57 @@ public class PlayerInventory : MonoBehaviour
     public float FishScaleFactor => fishScaleFactor;
 
     // Inventory data structure
-    public InventoryGrid mainInventory { get; private set; }
+    [SerializeField]
+    public InventoryGrid mainInventory;
 
     // Events for UI updates
     public delegate void InventoryChangeHandler();
     public event InventoryChangeHandler OnInventoryChanged;
 
+    public static PlayerInventory Instance;
+
+    private void Start()
+    {
+        Debug.Log($"PlayerInventory Start is called #############");
+    }
     private void Awake()
     {
-        mainInventory = new InventoryGrid(inventoryWidth, inventoryHeight);
+        Debug.Log($"PlayerInventory Awake called. Instance is currently: {(Instance == null ? "NULL" : "EXISTS")}");
+        Debug.Log($"This GameObject: {gameObject.name}, InstanceID: {GetInstanceID()}");
+
+        if (Instance == null)
+        {
+            Debug.Log("Setting this as the Instance and making persistent");
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+
+            // Only initialize if not already initialized
+            if (mainInventory == null)
+            {
+                mainInventory = new InventoryGrid(inventoryWidth, inventoryHeight);
+                Debug.Log("New inventory grid created");
+            }
+            else
+            {
+                Debug.Log("Using existing inventory grid");
+            }
+
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+        else
+        {
+            Debug.Log($"Instance already exists! Destroying duplicate. Existing Instance ID: {Instance.GetInstanceID()}");
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log($"PlayerInventory: Scene loaded. Items in inventory: {GetAllItems().Count}");
+        foreach (Item item in GetAllItems())
+        {
+            Debug.Log($"  - {item.GetName()}");
+        }
     }
 
     // Add an item at a specific position

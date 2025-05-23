@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class InventoryGrid
 {
-    public int width { get; private set; }
-    public int height { get; private set; }
+    public int width;
+    public int height;
     private InventorySlot[,] slots;
 
     public InventoryGrid(int width, int height)

@@ -3,12 +3,14 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameManager gameManager;
     [SerializeField] private Player player;
+    public static UIManager Instance;
 
     [Header("UI Elements")]
     [SerializeField] private GameObject hudPanel;
@@ -22,6 +24,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] public GameObject interactPanel;
     private GameManager.GameState previousState;
 
+
     [Header("HUD Elements")]
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private Slider healthSlider;
@@ -34,6 +37,20 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+
+            // Subscribe to scene loading event
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+        else
+        {
+            Destroy(gameObject); // Prevent duplicates
+        }
+
+
         statePanels = new Dictionary<GameManager.GameState, List<GameObject>>
     {
         { GameManager.GameState.DIALOGUE, new List<GameObject> { dialoguePanel } },
@@ -42,6 +59,67 @@ public class UIManager : MonoBehaviour
         { GameManager.GameState.INVENTORY, new List<GameObject> { inventoryPanel } },
         { GameManager.GameState.SHOPPING, new List<GameObject> { inventoryPanel, shoppingPanel } }
     };
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log($"UIManager: Scene '{scene.name}' loaded. Refinding references...");
+        RefindReferences();
+    }
+
+
+    private void RefindReferences()
+    {
+        // Refind GameManager reference
+        if (gameManager == null)
+            gameManager = GameManager.Instance;
+
+        // Refind Player reference
+        if (player == null && gameManager != null)
+            player = gameManager.player;
+
+        // Find UI elements if they're null (in case they're scene-specific)
+        // Note: If your Canvas is persistent, these might not need refinding
+
+        if (hudPanel == null)
+            hudPanel = GameObject.Find("HUDPanel");
+
+        if (menuPanel == null)
+            menuPanel = GameObject.Find("MenuPanel");
+
+        if (inventoryPanel == null)
+            inventoryPanel = GameObject.Find("InventoryPanel");
+
+        if (dialoguePanel == null)
+            dialoguePanel = GameObject.Find("DialoguePanel");
+
+        if (fishingPanel == null)
+            fishingPanel = GameObject.Find("FishingPanel");
+
+        if (shoppingPanel == null)
+            shoppingPanel = GameObject.Find("ShoppingPanel");
+
+        if (pauseMenu == null)
+            pauseMenu = GameObject.Find("PauseMenu");
+
+        // Refind text components
+        if (healthText == null)
+            healthText = GameObject.Find("HealthText")?.GetComponent<TextMeshProUGUI>();
+
+        if (moneyText == null)
+            moneyText = GameObject.Find("MoneyText")?.GetComponent<TextMeshProUGUI>();
+
+        if (fuelText == null)
+            fuelText = GameObject.Find("FuelText")?.GetComponent<TextMeshProUGUI>();
+
+        // Refind sliders
+        if (healthSlider == null)
+            healthSlider = GameObject.Find("HealthSlider")?.GetComponent<Slider>();
+
+        if (fuelSlider == null)
+            fuelSlider = GameObject.Find("FuelSlider")?.GetComponent<Slider>();
+
+        Debug.Log($"UIManager refound references - GameManager: {(gameManager != null ? "Found" : "NULL")}, Player: {(player != null ? "Found" : "NULL")}");
     }
 
     private void Start()
@@ -74,6 +152,8 @@ public class UIManager : MonoBehaviour
         // Unsubscribe to prevent memory leaks
         if (gameManager != null)
             gameManager.OnGameStateChanged -= UpdateUI;
+
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void Update()
@@ -83,8 +163,11 @@ public class UIManager : MonoBehaviour
             UpdateHealthDisplay(player.currentHealth, player.maxHealth);
 
         // Update money display if game manager reference exists
-        if (gameManager != null && moneyText != null)
-            UpdateMoneyDisplay(gameManager.money);
+        // COMMENTED OUT because we update it manually where money is changed because bug lol
+        // if (gameManager != null && moneyText != null)
+        // {
+        //     UpdateMoneyDisplay(gameManager.money);
+        // }
 
         // Update fuel display if player boat reference exists
         // if (gameManager?.currentPlayerBoat is PlayerBoat playerBoat && fuelText != null)
@@ -167,7 +250,7 @@ public class UIManager : MonoBehaviour
     public void UpdateMoneyDisplay(int amount)
     {
         if (moneyText != null)
-            moneyText.text = $"${amount}";
+            moneyText.text = $"$: {amount}";
     }
 
     // Update the fuel display for the boat

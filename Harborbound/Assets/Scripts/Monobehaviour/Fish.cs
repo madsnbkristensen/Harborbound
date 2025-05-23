@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+
 // Fish class
 public class Fish : Item
 {
@@ -43,5 +45,6 @@ public class Fish : Item
             Debug.Log($"Healed player for {healAmount} health");
         }
     }
+
 }
 

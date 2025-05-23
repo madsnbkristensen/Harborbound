@@ -4,9 +4,13 @@ using UnityEngine.UI;
 
 public class InventorySlotUI : MonoBehaviour, IDropHandler
 {
+    [SerializeField]
     private int slotX;
+    [SerializeField]
     private int slotY;
+    [SerializeField]
     private PlayerInventory inventory;
+    [SerializeField]
     private Image background;
 
     public void Initialize(int x, int y, PlayerInventory playerInventory)
