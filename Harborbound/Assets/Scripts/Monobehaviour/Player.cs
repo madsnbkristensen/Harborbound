@@ -21,10 +21,14 @@ public class Player : Humanoid
     public KeyCode inventoryKey = KeyCode.Tab;
     private Vector3 lastPositionBeforeDriving;
 
+    private Animator animator;
+
     protected override void Start()
     {
         base.Start();
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
+
+        animator = GetComponent<Animator>();
 
         // Find GameManager if needed
         if (gameManager == null)
@@ -421,6 +425,32 @@ public class Player : Humanoid
             horizontal = -1f;
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             horizontal = 1f;
+
+        // Then set animation direction based on movement
+        // Handle sprite flipping based on horizontal direction
+        if (horizontal != 0 && playerSpriteRenderer != null)
+        {
+            // Set flipX to true when moving left, false when moving right
+            playerSpriteRenderer.flipX = (horizontal < 0);
+        }
+
+        if (animator != null)
+        {
+            if (vertical > 0)
+                animator.SetInteger("direction", 0);  // Up
+            else if (vertical < 0)
+                animator.SetInteger("direction", 2);  // Down
+            else if (horizontal != 0)
+                animator.SetInteger("direction", 1);  // Use right animation for both left and right
+            else
+                animator.SetInteger("direction", -1); // Idle or default state
+
+            // This triggers animations to play once
+            if (moveDirection.magnitude > 0.1f)
+                animator.SetBool("isMoving", true);
+            else
+                animator.SetBool("isMoving", false);
+        }
 
         return new Vector2(horizontal, vertical).normalized;
     }

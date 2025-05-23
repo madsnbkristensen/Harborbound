@@ -432,6 +432,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1235820213185592462, guid: 992782c7cc37e4c25b6a913ea47809af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 2185498243363619352, guid: 992782c7cc37e4c25b6a913ea47809af, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -470,6 +474,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2185498243363619352, guid: 992782c7cc37e4c25b6a913ea47809af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329362614337908596, guid: 992782c7cc37e4c25b6a913ea47809af, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329362614337908596, guid: 992782c7cc37e4c25b6a913ea47809af, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6710653315548954765, guid: 992782c7cc37e4c25b6a913ea47809af, type: 3}
@@ -1019,6 +1031,10 @@ PrefabInstance:
     - target: {fileID: 292044204338428326, guid: 0ffcdde9b56da1c42980071481490721, type: 3}
       propertyPath: m_Name
       value: WaterTileManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 804896007309793517, guid: 0ffcdde9b56da1c42980071481490721, type: 3}
+      propertyPath: darknessFactor
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1835023956401924278, guid: 0ffcdde9b56da1c42980071481490721, type: 3}
       propertyPath: m_LocalPosition.x
