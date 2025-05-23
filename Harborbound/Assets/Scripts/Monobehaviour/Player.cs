@@ -11,6 +11,7 @@ public class Player : Humanoid
     private SpriteRenderer playerSpriteRenderer;
     private Vector2 moveDirection;
     public Item hoveredItem;
+    public List<string> interactableTags;
 
     // Add this line to declare the missing variable
     private Transform boatWheelPosition;
@@ -162,6 +163,10 @@ public class Player : Humanoid
     void Update()
     {
         if (gameManager == null) return;
+
+        // check interactable objects within range
+        GetInteractableObjects();
+        CallHelperManager(GetInteractableObjects());
 
         // Get input in Update
         moveDirection = GetInputDirection();
@@ -409,5 +414,40 @@ public class Player : Humanoid
     {
         if (gameManager != null)
             gameManager.OnGameStateChanged -= HandleGameStateChanged;
+    }
+
+    // function to detect interActable objects within interaction range
+    private List<GameObject> GetInteractableObjects()
+    {
+        List<GameObject> interactableObjects = new List<GameObject>();
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, interactionRange);
+
+        foreach (Collider2D collider in colliders)
+        {
+            // Check if the collider has a tag that matches any of the interactable tags
+            foreach (string tag in interactableTags)
+            {
+                if (collider.CompareTag(tag))
+                {
+                    // Add the game object to the list
+                    interactableObjects.Add(collider.gameObject);
+                    break; // No need to check other tags for this collider
+                }
+            }
+        }
+
+        return interactableObjects;
+    }
+
+    // function to call helper manager based on interactable objects within range
+    private void CallHelperManager(List<GameObject> interactableObjects)
+    {
+        foreach (GameObject obj in interactableObjects)
+        {
+            if (HelperManager.Instance != null)
+            {
+                HelperManager.Instance.HandleInteraction(obj);
+            }
+        }
     }
 }

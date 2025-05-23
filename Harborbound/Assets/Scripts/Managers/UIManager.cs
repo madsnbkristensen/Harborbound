@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
@@ -20,6 +21,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject shoppingPanel;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] public GameObject tooltipPanel;
+    [SerializeField] public GameObject interactPanel;
     private GameManager.GameState previousState;
 
 
@@ -224,6 +226,9 @@ public class UIManager : MonoBehaviour
 
         if (pauseMenu != null)
             pauseMenu.SetActive(false);
+
+        if (interactPanel != null)
+            interactPanel.SetActive(false);
     }
 
     #region UI Update Methods
@@ -307,6 +312,49 @@ public class UIManager : MonoBehaviour
     {
         if (panel != null)
             panel.SetActive(active);
+    }
+
+    // Show interactpanel with message and duration
+    public void ShowInteractPanel(string message, float duration)
+    {
+        if (interactPanel != null)
+        {
+            interactPanel.SetActive(true);
+
+            // Get the Text component
+            TextMeshProUGUI tmpText = interactPanel.GetComponentInChildren<TextMeshProUGUI>();
+            if (tmpText != null)
+            {
+                // Set the message
+                tmpText.text = message;
+
+                // Force the text to update its layout
+                tmpText.ForceMeshUpdate();
+
+                // Get the background image (assuming it's the first Image component in children)
+                Image backgroundImage = interactPanel.GetComponentsInChildren<Image>()[0];
+                if (backgroundImage != null)
+                {
+                    // Get the preferred width of the text plus some padding
+                    float textWidth = tmpText.preferredWidth;
+                    float padding = 40f; // Adjust padding as needed
+
+                    // Set the width of the background image
+                    RectTransform bgRectTransform = backgroundImage.rectTransform;
+                    bgRectTransform.sizeDelta = new Vector2(textWidth + padding, bgRectTransform.sizeDelta.y);
+                }
+            }
+
+            StartCoroutine(HideInteractPanelAfterDuration(duration));
+        }
+    }
+
+    // Coroutine to hide the interact panel after a specified duration
+    private IEnumerator HideInteractPanelAfterDuration(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        if (interactPanel != null)
+            interactPanel.SetActive(false);
     }
 
     #endregion

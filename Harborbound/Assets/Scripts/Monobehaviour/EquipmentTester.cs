@@ -44,6 +44,10 @@ public class EquipmentTester : MonoBehaviour
         {
             Debug.Log("Equipping weapon");
             playerEquipment.EquipItem(testWeapon);
+            if (HelperManager.Instance != null)
+            {
+                HelperManager.Instance.HandleEquip(testWeapon.gameObject);
+            }
         }
 
         // Press 2 to equip fishing rod
@@ -51,6 +55,12 @@ public class EquipmentTester : MonoBehaviour
         {
             Debug.Log("Equipping fishing rod");
             playerEquipment.EquipItem(testFishingRod);
+
+            if (HelperManager.Instance != null)
+            {
+                HelperManager.Instance.HandleEquip(testFishingRod.gameObject);
+            }
+
         }
 
         // Press 3 to unequip (pass null)

@@ -160,6 +160,21 @@ RectTransform:
   m_AnchoredPosition: {x: -5.548584, y: -5.8334045}
   m_SizeDelta: {x: -2.392334, y: 5.0427246}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &110314425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110314423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e6ae6c681f34880a44d93f0289f4e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInventory: {fileID: 0}
+  slotsContainer: {fileID: 110314424}
+  slotPrefab: {fileID: 7970234904510361744, guid: 412ee16b9095345bc81f7e27f2b550b9, type: 3}
 --- !u!212 &110314426
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2587,8 +2602,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2792,4 +2806,3 @@ SceneRoots:
   - {fileID: 9070118795655498041}
   - {fileID: 1845383300}
   - {fileID: 6720265156665088007}
-  - {fileID: 1431081831}
