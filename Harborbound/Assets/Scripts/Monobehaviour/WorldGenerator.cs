@@ -43,7 +43,7 @@ public class WorldGenerator : MonoBehaviour
         // Initialize ZoneManager with island center and size
         if (ZoneManager.Instance != null)
         {
-            ZoneManager.Instance.Initialize(islandCenterPosition, 20f); // Pass island radius here
+            ZoneManager.Instance.Initialize(islandCenterPosition, ZoneManager.Instance.islandRadius); // Pass island radius here
         }
 
         // Step 1: Generate world zones

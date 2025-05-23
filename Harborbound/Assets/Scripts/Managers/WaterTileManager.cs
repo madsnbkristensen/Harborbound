@@ -8,7 +8,6 @@ public class WaterTileManager : MonoBehaviour
     // Use a sprite reference instead of a GameObject prefab
     public Sprite waterTileSprite;
     public float tileSize = 2f;
-    public Color baseWaterColor = new Color(0.2f, 0.5f, 0.8f);
     public float darknessFactor = 0.15f;
 
     private void Awake()

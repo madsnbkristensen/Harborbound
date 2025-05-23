@@ -39,7 +39,7 @@ public class ZoneManager : MonoBehaviour
     public void Initialize(Vector2 islandCenter, float islandSize)
     {
         centerPoint = islandCenter;
-        islandRadius = islandSize / 2;
+        islandRadius = islandSize;
 
         Debug.Log($"ZoneManager initialized with center: {centerPoint}, islandRadius: {islandRadius}");
     }
