@@ -177,6 +177,12 @@ public class Player : Humanoid
     {
         if (gameManager == null) return;
 
+        // if press m 
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            AudioManager.Instance.ChangeMusic(AudioManager.SoundType.Music_Ocean_Loop);
+        }
+
         // check interactable objects within range
         GetInteractableObjects();
         CallHelperManager(GetInteractableObjects());
@@ -259,7 +265,7 @@ public class Player : Humanoid
         if (IsNearSceneChangeZone())
         {
             SceneChangeZone sceneChangeZone = FindFirstObjectByType<SceneChangeZone>();
-            sceneChangeZone.TravelToScene(sceneChangeZone.GetSceneName());
+            sceneChangeZone.TravelToScene();
             return;
         }
 

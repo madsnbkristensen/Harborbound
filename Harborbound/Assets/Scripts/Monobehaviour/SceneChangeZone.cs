@@ -1,17 +1,26 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneChangeZone : MonoBehaviour
 {
     [SerializeField]
-    private string sceneName; // The name of the scene to load
+    private string oceanSceneName = "OceanScene";
+    [SerializeField]
+    private string islandSceneName = "IslandScene";
 
-    public void TravelToScene(string sceneName)
+    public void TravelToScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
-    }
+        Scene currentScene = SceneManager.GetActiveScene();
 
-    public string GetSceneName()
-    {
-        return sceneName;
+        if (currentScene.name == oceanSceneName)
+        {
+            AudioManager.Instance.ChangeMusic(AudioManager.SoundType.Music_Island);
+            SceneManager.LoadScene(islandSceneName);
+        }
+        else if (currentScene.name == islandSceneName)
+        {
+            AudioManager.Instance.ChangeMusic(AudioManager.SoundType.Music_Ocean);
+            SceneManager.LoadScene(oceanSceneName);
+        }
     }
 }

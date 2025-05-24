@@ -318,6 +318,7 @@ public class InventoryManager2 : MonoBehaviour
 
     public void SellItem(Item itemToSell)
     {
+        AudioManager.Instance.Play(AudioManager.SoundType.Sell);
         GameManager.Instance.AddMoney(itemToSell.GetValue());
         UIManager.Instance.UpdateMoneyDisplay(GameManager.Instance.money);
         DiscardItem(itemToSell);

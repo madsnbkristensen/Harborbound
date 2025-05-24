@@ -146,6 +146,7 @@ public class FishingManager : MonoBehaviour
     // Callback for when bobber reaches its destination
     private void OnBobberReachedDestination(Vector3 position)
     {
+        AudioManager.Instance.Play(AudioManager.SoundType.CastSplash);
         // Store fishing position
         fishingPosition = position;
 
@@ -274,6 +275,7 @@ public class FishingManager : MonoBehaviour
 
         if (fishIsBiting)
         {
+            AudioManager.Instance.Play(AudioManager.SoundType.Bite);
             Debug.Log("Fish is biting! Press " + catchKey + " to catch!");
 
             // Trigger bite event
@@ -311,6 +313,7 @@ public class FishingManager : MonoBehaviour
                         else
                         {
                             // TODO: Show inventory full animation
+                            AudioManager.Instance.Play(AudioManager.SoundType.Full_Inventory);
                             Debug.Log("Inventory is full! Fish was released.");
                             Destroy(currentCatch.gameObject); // Clean up fish if not added to inventory
                         }

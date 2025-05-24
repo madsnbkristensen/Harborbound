@@ -102,6 +102,7 @@ public class Weapon : Item
         // Check if enough time has passed since last fire based on fire rate
         if (canFire)
         {
+            AudioManager.Instance.Play(AudioManager.SoundType.Shoot);
             FireBullet(shooter);
             lastFireTime = Time.time;
         }
