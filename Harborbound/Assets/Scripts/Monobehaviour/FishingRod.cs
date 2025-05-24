@@ -50,6 +50,7 @@ public class FishingRod : Item
     public override void Use(Player player)
     {
         Debug.Log($"Using fishing rod {GetName()}");
+        AudioManager.Instance.Play(AudioManager.SoundType.Cast);
 
         // Get the player's equipment component
         PlayerEquipment equipment = player.GetComponent<PlayerEquipment>();

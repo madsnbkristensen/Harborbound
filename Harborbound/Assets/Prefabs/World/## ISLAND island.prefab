@@ -1588,7 +1588,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cea5cc6c3b3984db6bd1579248b340b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Karlo2
+  oceanSceneName: karlo2
+  islandSceneName: Main island
 --- !u!1 &7858141707643815379
 GameObject:
   m_ObjectHideFlags: 0
