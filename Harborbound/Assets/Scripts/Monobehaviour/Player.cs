@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class Player : Humanoid
 {
@@ -102,7 +102,8 @@ public class Player : Humanoid
     // This is now correctly overriding the Move method from the Humanoid class
     protected override void Move(Vector2 direction)
     {
-        if (direction.magnitude < 0.1f) return;
+        if (direction.magnitude < 0.1f)
+            return;
 
         // Use proper physics movement
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -175,9 +176,10 @@ public class Player : Humanoid
 
     void Update()
     {
-        if (gameManager == null) return;
+        if (gameManager == null)
+            return;
 
-        // if press m 
+        // if press m
         if (Input.GetKeyDown(KeyCode.M))
         {
             AudioManager.Instance.ChangeMusic(AudioManager.SoundType.Music_Ocean_Loop);
@@ -261,7 +263,6 @@ public class Player : Humanoid
 
     public void TryInteract()
     {
-
         if (IsNearSceneChangeZone())
         {
             SceneChangeZone sceneChangeZone = FindFirstObjectByType<SceneChangeZone>();
@@ -303,7 +304,8 @@ public class Player : Humanoid
 
     private void ToggleInventory()
     {
-        if (gameManager == null) return;
+        if (gameManager == null)
+            return;
 
         Debug.Log("Toggling inventory");
 
@@ -349,7 +351,8 @@ public class Player : Humanoid
     private bool IsNearSceneChangeZone()
     {
         SceneChangeZone sceneChangeZone = FindFirstObjectByType<SceneChangeZone>();
-        if (sceneChangeZone == null) return false;
+        if (sceneChangeZone == null)
+            return false;
 
         BoxCollider2D collider = sceneChangeZone.GetComponent<BoxCollider2D>();
         if (collider != null)
@@ -406,7 +409,7 @@ public class Player : Humanoid
         Vector3 exitPosition = boatWheelPosition.position;
         // Add slight upward offset to correct the position
         exitPosition.y += 0.0f; // Adjust this value as needed (0.5 units up)
-                                // Unparent from boat
+        // Unparent from boat
         transform.SetParent(null);
         // Move to the adjusted wheel position
         transform.position = exitPosition;
@@ -453,11 +456,11 @@ public class Player : Humanoid
         if (animator != null)
         {
             if (vertical > 0)
-                animator.SetInteger("direction", 0);  // Up
+                animator.SetInteger("direction", 0); // Up
             else if (vertical < 0)
-                animator.SetInteger("direction", 2);  // Down
+                animator.SetInteger("direction", 2); // Down
             else if (horizontal != 0)
-                animator.SetInteger("direction", 1);  // Use right animation for both left and right
+                animator.SetInteger("direction", 1); // Use right animation for both left and right
             else
                 animator.SetInteger("direction", -1); // Idle or default state
 
@@ -490,7 +493,6 @@ public class Player : Humanoid
         {
             gameManager.OnGameStateChanged -= HandleGameStateChanged;
         }
-
     }
 
     // function to detect interActable objects within interaction range
@@ -537,6 +539,5 @@ public class Player : Humanoid
             Die();
         }
         UIManager.Instance.UpdateHealthDisplay(currentHealth, maxHealth);
-
     }
 }

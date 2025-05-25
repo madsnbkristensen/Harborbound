@@ -16,6 +16,8 @@ TagManager:
   - FishingSpot
   - Interactable
   - Friend
+  - DeckEdge
+  - Island
   layers:
   - Default
   - TransparentFX
@@ -27,7 +29,7 @@ TagManager:
   - Obstacle
   - ZoneBoundary
   - Rocks
-  - 
+  - PlayerBoat
   - 
   - 
   - 

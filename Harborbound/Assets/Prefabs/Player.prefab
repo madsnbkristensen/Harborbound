@@ -90,10 +90,12 @@ MonoBehaviour:
   humanoidName: Player
   gameManager: {fileID: 6827428874560893546, guid: 9a320148da65b4f62ba509b9d1c9a10b, type: 3}
   playerBoat: {fileID: 0}
+  hoveredItem: {fileID: 0}
   interactableTags:
   - PlayerBoat
   - Friend
   - FishingSpot
+  startDriving: 1
   interactionRange: 1.7
   interactionKey: 101
   inventoryKey: 9
@@ -212,6 +214,7 @@ MonoBehaviour:
   playerEquipment: {fileID: 1209877081846410082}
   testWeaponDef: {fileID: 11400000, guid: 73f82264251a14e7aa8bb284302f7ecf, type: 2}
   testFishingRodDef: {fileID: 11400000, guid: d1f437f18002548f386f2db29acb81f8, type: 2}
+  player: {fileID: 0}
 --- !u!61 &4047994704696393999
 BoxCollider2D:
   m_ObjectHideFlags: 0

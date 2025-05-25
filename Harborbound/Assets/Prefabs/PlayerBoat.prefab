@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 6107932580858949776}
   - component: {fileID: 4471942297470795371}
   - component: {fileID: 5269883419126054856}
-  - component: {fileID: 4910656318055604342}
+  - component: {fileID: 6057780637170200934}
+  - component: {fileID: 7037898372856587850}
   m_Layer: 0
   m_Name: PlayerBoat
   m_TagString: PlayerBoat
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3920234793942508906}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.81, y: 0.34, z: -0.5820237}
+  m_LocalPosition: {x: -3.81, y: 0.28, z: -0.5820237}
   m_LocalScale: {x: 0.22, y: 0.22, z: 0.22}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -49,10 +50,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a28d5f64e8bad46778d4ad90331f0bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   rotationSpeed: 100
   player: {fileID: 0}
   _wheelPosition: {fileID: 4558667207472975731}
+  edgeCollider: {fileID: 0}
+  colliderPivotOffset: {x: 3, y: 2}
 --- !u!212 &6107932580858949776
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -97,7 +100,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5019264981349273687, guid: b86c2574b4c9d4f8ca02636edc53f69c, type: 3}
+  m_Sprite: {fileID: -3440172122128719022, guid: ce56fef795ca0471688d54d3234c7018, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -164,7 +167,34 @@ MonoBehaviour:
   - {x: 5, y: 1}
   - {x: 1, y: -3}
   - {x: -3, y: -2}
---- !u!68 &4910656318055604342
+--- !u!50 &6057780637170200934
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920234793942508906}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!68 &7037898372856587850
 EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,15 +231,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -3.3492813, y: -6.033932}
-  - {x: -6.577994, y: -4.3898907}
-  - {x: -4.589312, y: -0.1571303}
-  - {x: -0.9382079, y: 1.9728107}
-  - {x: 2.387473, y: 2.9038491}
-  - {x: 6.3340473, y: 2.2409515}
-  - {x: 6.1625767, y: -1.142134}
-  - {x: 3.2515674, y: -4.034767}
-  - {x: -3.379204, y: -6.0773425}
+  - {x: -9.0873375, y: -6.6192827}
+  - {x: 8.161929, y: -6.6525083}
+  - {x: 8.270525, y: 0.8818581}
+  - {x: -9.171078, y: 0.85341525}
+  - {x: -9.165838, y: -6.66943}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
