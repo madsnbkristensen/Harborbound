@@ -8,6 +8,8 @@ public class EquipmentTester : MonoBehaviour
     public ItemDefinition testWeaponDef;
     public ItemDefinition testFishingRodDef;
 
+    public Player player;
+
     private Item testWeapon;
     private Item testFishingRod;
 
@@ -39,6 +41,10 @@ public class EquipmentTester : MonoBehaviour
 
     private void HandleEquipmentToggle()
     {
+        if (player.GetComponent<SpriteRenderer>().enabled == false)
+        {
+            return;
+        }
         // Press 1 to equip weapon
         if (Input.GetKeyDown(KeyCode.Alpha1) && testWeapon != null)
         {
@@ -93,7 +99,6 @@ public class EquipmentTester : MonoBehaviour
         {
             Debug.Log("Using fishing rod");
             playerEquipment.StartUsingEquippedItem();
-            // No need for StopUsingEquippedItem for fishing rods
         }
     }
 }

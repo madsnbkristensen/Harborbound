@@ -367,6 +367,12 @@ public class Player : Humanoid
             return;
         }
 
+        // unequip any currently equipped item
+        if (playerEquipment != null)
+        {
+            playerEquipment.EquipItem(null);
+        }
+
         // Store current position
         lastPositionBeforeDriving = transform.position;
         // Position player at wheel
