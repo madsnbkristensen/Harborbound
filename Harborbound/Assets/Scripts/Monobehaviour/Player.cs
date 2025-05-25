@@ -527,4 +527,16 @@ public class Player : Humanoid
             }
         }
     }
+
+    public override void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+        UIManager.Instance.UpdateHealthDisplay(currentHealth, maxHealth);
+
+    }
 }
