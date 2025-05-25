@@ -116,11 +116,12 @@ MonoBehaviour:
     Source: {fileID: 0}
   - Type: 9
     Clips:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: f2627ecd49fd296438c326ec66b03c34, type: 3}
     Volume: 0.564
     Source: {fileID: 0}
   - Type: 10
-    Clips: []
+    Clips:
+    - {fileID: 8300000, guid: a248ee7382f6e594a9ae7147fc339b67, type: 3}
     Volume: 0.564
     Source: {fileID: 0}
   - Type: 11

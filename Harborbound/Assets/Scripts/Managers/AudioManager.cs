@@ -51,6 +51,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] AllSounds;
 
     private Dictionary<SoundType, Sound> _soundDictionary = new Dictionary<SoundType, Sound>();
+    private Dictionary<SoundType, AudioSource> _persistentSounds = new Dictionary<SoundType, AudioSource>();
     private AudioSource _musicSource;
     private bool _isPlayingIntro = false;
 
@@ -102,6 +103,87 @@ public class AudioManager : MonoBehaviour
 
         //Destroy the object
         Destroy(soundObj, clipToPlay.length);
+    }
+
+    // Play a sound that persists until manually stopped
+    public void PlayPersistent(SoundType type, bool loop = false)
+    {
+        // If this sound is already playing, don't start another
+        if (_persistentSounds.ContainsKey(type) && _persistentSounds[type] != null && _persistentSounds[type].isPlaying)
+        {
+            return;
+        }
+
+        if (!_soundDictionary.TryGetValue(type, out Sound sound))
+        {
+            Debug.LogWarning($"Sound type {type} not found!");
+            return;
+        }
+
+        AudioClip clipToPlay = sound.GetRandomClip();
+        if (clipToPlay == null)
+        {
+            Debug.LogWarning($"No clips found for sound type {type}!");
+            return;
+        }
+
+        // Stop any existing persistent sound of this type
+        StopPlay(type);
+
+        // Create persistent sound object
+        var soundObj = new GameObject($"PersistentSound_{type}");
+        var audioSrc = soundObj.AddComponent<AudioSource>();
+
+        // Assign sound properties
+        audioSrc.clip = clipToPlay;
+        audioSrc.volume = sound.Volume;
+        audioSrc.loop = loop;
+
+        // Play the sound
+        audioSrc.Play();
+
+        // Store reference for later stopping
+        _persistentSounds[type] = audioSrc;
+
+        // If not looping, clean up when finished
+        if (!loop)
+        {
+            StartCoroutine(CleanupPersistentSound(type, clipToPlay.length));
+        }
+    }
+
+    // Stop a specific persistent sound
+    public void StopPlay(SoundType type)
+    {
+        if (_persistentSounds.TryGetValue(type, out AudioSource audioSource) && audioSource != null)
+        {
+            audioSource.Stop();
+            Destroy(audioSource.gameObject);
+            _persistentSounds.Remove(type);
+        }
+    }
+
+    // Check if a persistent sound is currently playing
+    public bool IsPlaying(SoundType type)
+    {
+        return _persistentSounds.ContainsKey(type) &&
+               _persistentSounds[type] != null &&
+               _persistentSounds[type].isPlaying;
+    }
+
+    private IEnumerator CleanupPersistentSound(SoundType type, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (_persistentSounds.ContainsKey(type))
+        {
+            var audioSource = _persistentSounds[type];
+            if (audioSource != null)
+            {
+                Destroy(audioSource.gameObject);
+            }
+            _persistentSounds.Remove(type);
+        }
     }
 
     //Call this method to change music tracks (plays intro first, then loops)
@@ -157,7 +239,6 @@ public class AudioManager : MonoBehaviour
         StartCoroutine(FadeIn(introTrack.Volume, 1f));
         StartCoroutine(WaitForIntroAndPlayLoop(introType));
     }
-
 
     private IEnumerator FadeIn(float targetVolume, float fadeTime)
     {
@@ -216,7 +297,6 @@ public class AudioManager : MonoBehaviour
             Debug.Log($"[AudioManager] Not playing intro anymore, skipping loop");
         }
     }
-
 
     private SoundType GetLoopType(SoundType introType)
     {

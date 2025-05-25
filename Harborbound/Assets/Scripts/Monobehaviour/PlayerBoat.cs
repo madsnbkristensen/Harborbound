@@ -5,14 +5,12 @@ public class PlayerBoat : Boat
     [Header("Player Boat")]
     [SerializeField] private Player player;
     [SerializeField] private Transform _wheelPosition;
-
     private PlayerBoatSpriteController spriteController;
 
     private void Start()
     {
         if (player == null)
             player = FindFirstObjectByType<Player>();
-
         spriteController = GetComponent<PlayerBoatSpriteController>();
     }
 
@@ -21,11 +19,17 @@ public class PlayerBoat : Boat
         // Call the base class implementation first
         base.Move(inputDirection);
 
-        // Then update the sprite direction
+        // Update sprite direction
         if (spriteController != null && inputDirection.magnitude > 0.1f)
         {
             spriteController.UpdateDirection(inputDirection);
         }
+    }
+
+    // Public method to stop the engine sound (called from Player.StopDriving())
+    public void StopEngine()
+    {
+        AudioManager.Instance.StopPlay(AudioManager.SoundType.Boat_Engine);
     }
 
     public Transform wheelPosition
@@ -37,7 +41,6 @@ public class PlayerBoat : Boat
             {
                 // First try to find a child named "BoatWheel"
                 Transform wheelChild = transform.Find("BoatWheel");
-
                 if (wheelChild != null)
                 {
                     _wheelPosition = wheelChild;
@@ -55,5 +58,16 @@ public class PlayerBoat : Boat
             Gizmos.color = Color.blue;
             Gizmos.DrawSphere(wheelPosition.position, 0.3f);
         }
+    }
+
+    // Cleanup when boat is destroyed or disabled
+    private void OnDestroy()
+    {
+        StopEngine();
+    }
+
+    private void OnDisable()
+    {
+        StopEngine();
     }
 }
