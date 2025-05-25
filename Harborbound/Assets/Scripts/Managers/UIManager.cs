@@ -158,17 +158,6 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        // Update health display if player reference exists
-        if (player != null && healthText != null)
-            UpdateHealthDisplay(player.currentHealth, player.maxHealth);
-
-        // Update money display if game manager reference exists
-        // COMMENTED OUT because we update it manually where money is changed because bug lol
-        // if (gameManager != null && moneyText != null)
-        // {
-        //     UpdateMoneyDisplay(gameManager.money);
-        // }
-
         // Update fuel display if player boat reference exists
         // if (gameManager?.currentPlayerBoat is PlayerBoat playerBoat && fuelText != null)
         //     UpdateFuelDisplay(playerBoat.fuel, playerBoat.maxFuel);
