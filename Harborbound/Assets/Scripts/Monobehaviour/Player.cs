@@ -95,8 +95,6 @@ public class Player : Humanoid
 
         // Make sure we're on the correct layer for collisions
         gameObject.layer = LayerMask.NameToLayer("Player");
-
-        Debug.Log("Player collision setup complete - Player should now collide properly");
     }
 
     // This is now correctly overriding the Move method from the Humanoid class
@@ -253,12 +251,6 @@ public class Player : Humanoid
         {
             Move(moveDirection);
         }
-    }
-
-    // Add collision debug callback
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log($"Player collided with: {collision.gameObject.name}", collision.gameObject);
     }
 
     public void TryInteract()
