@@ -47,13 +47,14 @@ public class FishingManager : MonoBehaviour
         // Get player inventory reference if not assigned
         if (PlayerInventory.Instance == null)
         {
-
             // If still null, find in scene
             if (PlayerInventory.Instance == null)
             {
                 if (PlayerInventory.Instance == null)
                 {
-                    Debug.LogWarning("PlayerInventory not found! Caught fish won't be added to inventory.");
+                    Debug.LogWarning(
+                        "PlayerInventory not found! Caught fish won't be added to inventory."
+                    );
                 }
             }
         }
@@ -91,23 +92,30 @@ public class FishingManager : MonoBehaviour
         CatchAnimation anim = animObj.GetComponent<CatchAnimation>();
         if (anim != null)
         {
-            anim.SetupAnimation(caughtFish.definition, () =>
-            {
-            });
+            anim.SetupAnimation(caughtFish.definition, () => { });
         }
 
         // In FishingManager's fishing sequence where fish gets added
         bool addedToInventory = false;
         if (PlayerInventory.Instance != null)
         {
-            Debug.Log($"BEFORE adding fish: Inventory has {PlayerInventory.Instance.GetAllItems().Count} items");
+            Debug.Log(
+                $"BEFORE adding fish: Inventory has {PlayerInventory.Instance.GetAllItems().Count} items"
+            );
             // addedToInventory = PlayerInventory.Instance.AddItem(currentCatch);
-            Debug.Log($"AFTER adding fish: Inventory has {PlayerInventory.Instance.GetAllItems().Count} items. Added successfully: {addedToInventory}");
+            Debug.Log(
+                $"AFTER adding fish: Inventory has {PlayerInventory.Instance.GetAllItems().Count} items. Added successfully: {addedToInventory}"
+            );
         }
     }
 
     // New method to cast bobber and start fishing
-    public void CastBobber(Vector3 startPos, Vector3 targetPos, int zoneId, Transform rodTransform = null)
+    public void CastBobber(
+        Vector3 startPos,
+        Vector3 targetPos,
+        int zoneId,
+        Transform rodTransform = null
+    )
     {
         // Don't cast if already fishing
         if (isFishing)
@@ -137,7 +145,13 @@ public class FishingManager : MonoBehaviour
             }
 
             // Initialize bobber with rod transform
-            bobberComponent.Initialize(startPos, targetPos, 8f, OnBobberReachedDestination, rodTransform);
+            bobberComponent.Initialize(
+                startPos,
+                targetPos,
+                8f,
+                OnBobberReachedDestination,
+                rodTransform
+            );
         }
         else
         {
@@ -205,7 +219,6 @@ public class FishingManager : MonoBehaviour
         return Time.time >= lastFishingEndTime + castCooldown;
     }
 
-
     // Main fishing sequence
     private IEnumerator FishingSequence()
     {
@@ -234,7 +247,9 @@ public class FishingManager : MonoBehaviour
             // Fish bite faster in fishing spots with more fish
             float fishFactor = Mathf.Clamp01((float)spot.numberOfFish / spot.maxNumberOfFish);
             waitTime = Mathf.Lerp(baseWaitTime, minTimeUntilBite, fishFactor);
-            Debug.Log($"Fishing in spot with {spot.numberOfFish} fish. (Zone {fishingZoneId}) Bite time: {waitTime}s");
+            Debug.Log(
+                $"Fishing in spot with {spot.numberOfFish} fish. (Zone {fishingZoneId}) Bite time: {waitTime}s"
+            );
         }
         else if (!isInFishingSpot)
         {
@@ -275,7 +290,7 @@ public class FishingManager : MonoBehaviour
             // Make catches in open water more rare (might be nothing)
             if (Random.value > 0.3f) // 70% chance of catching nothing in open water
             {
-                Debug.Log("Nothing seems to be biting here...");
+                HelperManager.Instance.handleSpecificTooltip("Nothing seems to be biting here...");
                 currentCatch = null;
                 yield return new WaitForSeconds(1.0f);
                 StopFishing();
@@ -319,7 +334,9 @@ public class FishingManager : MonoBehaviour
                     {
                         // Use InventoryManager2 to add fish to inventory
                         InventoryManager2.Instance.SetupItemSprite(currentCatch);
-                        addedToInventory = InventoryManager2.Instance.TryAddItemToInventory(currentCatch);
+                        addedToInventory = InventoryManager2.Instance.TryAddItemToInventory(
+                            currentCatch
+                        );
                         if (addedToInventory)
                         {
                             Debug.Log($"Added {currentCatch.GetName()} to inventory!");
@@ -329,7 +346,9 @@ public class FishingManager : MonoBehaviour
                         {
                             // TODO: Show inventory full animation
                             AudioManager.Instance.Play(AudioManager.SoundType.Full_Inventory);
-                            Debug.Log("Inventory is full! Fish was released.");
+                            HelperManager.Instance.handleSpecificTooltip(
+                                "Inventory is full! Fish was released."
+                            );
                             Destroy(currentCatch.gameObject); // Clean up fish if not added to inventory
                         }
                     }
@@ -426,8 +445,8 @@ public class FishingManager : MonoBehaviour
     {
         // Filter to just fish in this zone
         return allItems.FindAll(item =>
-            item.type == ItemDefinition.ItemType.FISH &&
-            ArrayContains(item.availableZones, zoneId));
+            item.type == ItemDefinition.ItemType.FISH && ArrayContains(item.availableZones, zoneId)
+        );
     }
 
     // Helper method to check if array contains a value
@@ -455,8 +474,9 @@ public class FishingManager : MonoBehaviour
     public Item DebugCatchSpecificFish(string fishName)
     {
         ItemDefinition fishDef = allItems.Find(item =>
-            item.type == ItemDefinition.ItemType.FISH &&
-            item.itemName.ToLower() == fishName.ToLower());
+            item.type == ItemDefinition.ItemType.FISH
+            && item.itemName.ToLower() == fishName.ToLower()
+        );
 
         if (fishDef != null)
             return ItemFactory.CreateItem(fishDef); // Changed this line to use ItemFactory
@@ -474,7 +494,8 @@ public class FishingManager : MonoBehaviour
 
     IEnumerator BobberBiteAnimation()
     {
-        if (activeBobber == null) yield break;
+        if (activeBobber == null)
+            yield break;
 
         Vector3 originalPos = activeBobber.transform.position; // Use the bobber's position
         Vector3 downPos = originalPos + Vector3.down * 0.4f;
@@ -488,7 +509,8 @@ public class FishingManager : MonoBehaviour
 
     IEnumerator MoveToPosition(Vector3 from, Vector3 to, float duration)
     {
-        if (activeBobber == null) yield break;
+        if (activeBobber == null)
+            yield break;
 
         float elapsedTime = 0;
         while (elapsedTime < duration)

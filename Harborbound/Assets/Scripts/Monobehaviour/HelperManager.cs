@@ -1,7 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
-using System;
 
 public class HelperManager : MonoBehaviour
 {
@@ -13,6 +13,8 @@ public class HelperManager : MonoBehaviour
 
     // Dictionary to track which items have been equipped
     private Dictionary<string, bool> equippedItemHistory = new Dictionary<string, bool>();
+
+    // Dictionary to track which tooltips have been shown
 
     private void Awake()
     {
@@ -27,8 +29,23 @@ public class HelperManager : MonoBehaviour
         }
     }
 
+    // debug log history on game start
+    private void Start()
+    {
+        // Load saved interaction history from PlayerPrefs
+        LoadInteractionHistory();
+
+        // Debug log the interaction history
+        Debug.Log("Interaction History: " + string.Join(", ", interactionHistory));
+        Debug.Log("Equipped Item History: " + string.Join(", ", equippedItemHistory));
+    }
+
     // Call this when player interacts with an object that has a tooltip
-    public void ShowTooltipIfFirstTime(string interactId, string interactMessage, float duration = 5f)
+    public void ShowTooltipIfFirstTime(
+        string interactId,
+        string interactMessage,
+        float duration = 5f
+    )
     {
         // Check if this tooltip has been shown before
         if (!interactionHistory.ContainsKey(interactId) || !interactionHistory[interactId])
@@ -75,7 +92,6 @@ public class HelperManager : MonoBehaviour
 
         // Mark as equipped
         equippedItemHistory[itemName] = true;
-
     }
 
     // Load saved interaction history from PlayerPrefs (call this in Start)
@@ -125,5 +141,17 @@ public class HelperManager : MonoBehaviour
 
         // Call the object's interaction method
         interactableObject.SendMessage("Interact", SendMessageOptions.DontRequireReceiver);
+    }
+
+    // Optional: add method to call based on specific game events
+    public void handleSpecificTooltip(string eventMessage)
+    {
+        // Show the event message
+        UIManager.ShowInteractPanel(eventMessage, 10f);
+
+        // Mark as handled
+        // Save to PlayerPrefs for persistence between sessions (optional)
+        //PlayerPrefs.SetInt("Event_" + eventId, 1);
+        //PlayerPrefs.Save();
     }
 }
