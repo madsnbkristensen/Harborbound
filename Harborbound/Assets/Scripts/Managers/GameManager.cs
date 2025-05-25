@@ -184,6 +184,7 @@ public class GameManager : MonoBehaviour
     public void OnPlayerDeath()
     {
         Debug.Log("Player has died!");
+        AudioManager.Instance.Play(AudioManager.SoundType.Death);
         // Handle player death (game over screen, reset, etc.)
     }
 

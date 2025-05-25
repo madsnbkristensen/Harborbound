@@ -173,6 +173,9 @@ public class Enemy : Humanoid
             case state.ATTACKING:
                 lastAttackTime = Time.time; // Ready to attack immediately
                 break;
+            case state.CHASING:
+                AudioManager.Instance.Play(AudioManager.SoundType.Pirate_Aggro);
+                break;
         }
     }
 

@@ -146,6 +146,7 @@ public class FishingManager : MonoBehaviour
     // Callback for when bobber reaches its destination
     private void OnBobberReachedDestination(Vector3 position)
     {
+        AudioManager.Instance.Play(AudioManager.SoundType.CastSplash);
         // Store fishing position
         fishingPosition = position;
 
@@ -274,6 +275,10 @@ public class FishingManager : MonoBehaviour
 
         if (fishIsBiting)
         {
+            AudioManager.Instance.Play(AudioManager.SoundType.Bite);
+            // Play bite animation
+            StartCoroutine(BobberBiteAnimation());
+
             Debug.Log("Fish is biting! Press " + catchKey + " to catch!");
 
             // Trigger bite event
@@ -311,6 +316,7 @@ public class FishingManager : MonoBehaviour
                         else
                         {
                             // TODO: Show inventory full animation
+                            AudioManager.Instance.Play(AudioManager.SoundType.Full_Inventory);
                             Debug.Log("Inventory is full! Fish was released.");
                             Destroy(currentCatch.gameObject); // Clean up fish if not added to inventory
                         }
@@ -350,6 +356,7 @@ public class FishingManager : MonoBehaviour
         }
         else
         {
+            AudioManager.Instance.Play(AudioManager.SoundType.Full_Inventory);
             Debug.Log("Nothing seems to be biting here...");
             yield return new WaitForSeconds(1.0f);
         }
@@ -449,5 +456,36 @@ public class FishingManager : MonoBehaviour
     private void OnDestroy()
     {
         OnFishCaught -= HandleFishCaught;
+    }
+
+    // animation for bobber
+
+    IEnumerator BobberBiteAnimation()
+    {
+        if (activeBobber == null) yield break;
+
+        Vector3 originalPos = activeBobber.transform.position; // Use the bobber's position
+        Vector3 downPos = originalPos + Vector3.down * 0.4f;
+
+        // Quick down
+        yield return StartCoroutine(MoveToPosition(originalPos, downPos, 0.1f));
+
+        // Quick back up
+        yield return StartCoroutine(MoveToPosition(downPos, originalPos, 0.15f));
+    }
+
+    IEnumerator MoveToPosition(Vector3 from, Vector3 to, float duration)
+    {
+        if (activeBobber == null) yield break;
+
+        float elapsedTime = 0;
+        while (elapsedTime < duration)
+        {
+            float t = elapsedTime / duration;
+            activeBobber.transform.position = Vector3.Lerp(from, to, t); // Move the bobber!
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        activeBobber.transform.position = to;
     }
 }

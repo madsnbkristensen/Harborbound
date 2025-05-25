@@ -177,6 +177,12 @@ public class Player : Humanoid
     {
         if (gameManager == null) return;
 
+        // if press m 
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            AudioManager.Instance.ChangeMusic(AudioManager.SoundType.Music_Ocean_Loop);
+        }
+
         // check interactable objects within range
         GetInteractableObjects();
         CallHelperManager(GetInteractableObjects());
@@ -259,7 +265,7 @@ public class Player : Humanoid
         if (IsNearSceneChangeZone())
         {
             SceneChangeZone sceneChangeZone = FindFirstObjectByType<SceneChangeZone>();
-            sceneChangeZone.TravelToScene(sceneChangeZone.GetSceneName());
+            sceneChangeZone.TravelToScene();
             return;
         }
 
@@ -363,12 +369,13 @@ public class Player : Humanoid
 
         // Store current position
         lastPositionBeforeDriving = transform.position;
-
         // Position player at wheel
         transform.position = boatWheelPosition.position;
-
         // Parent to boat
         transform.SetParent(playerBoat.transform);
+
+        // Start the boat engine sound
+        AudioManager.Instance.PlayPersistent(AudioManager.SoundType.Boat_Engine, true);
 
         // Change game state
         if (gameManager != null)
@@ -379,27 +386,28 @@ public class Player : Humanoid
     {
         Debug.Log("Stopping driving boat");
 
+        // Stop the boat engine sound
+        PlayerBoat boat = GetComponentInParent<PlayerBoat>();
+        if (boat != null)
+        {
+            boat.StopEngine();
+        }
+
         // Ensure player is visible
         if (playerSpriteRenderer != null)
             playerSpriteRenderer.enabled = true;
-
         // Store current wheel position before unparenting
         Vector3 exitPosition = boatWheelPosition.position;
-
         // Add slight upward offset to correct the position
         exitPosition.y += 0.0f; // Adjust this value as needed (0.5 units up)
-
-        // Unparent from boat
+                                // Unparent from boat
         transform.SetParent(null);
-
         // Move to the adjusted wheel position
         transform.position = exitPosition;
-
         // Re-enable player collider
         Collider2D col = GetComponent<Collider2D>();
         if (col != null)
             col.enabled = true;
-
         // Change game state
         if (gameManager != null)
             gameManager.ChangeState(GameManager.GameState.ROAMING);
@@ -473,7 +481,10 @@ public class Player : Humanoid
     void OnDestroy()
     {
         if (gameManager != null)
+        {
             gameManager.OnGameStateChanged -= HandleGameStateChanged;
+        }
+
     }
 
     // function to detect interActable objects within interaction range

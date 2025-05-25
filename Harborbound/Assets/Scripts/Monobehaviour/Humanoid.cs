@@ -7,7 +7,7 @@ public class Humanoid : MonoBehaviour
     [Header("Humanoid Properties")]
     public float speed = 5f;
     public int maxHealth = 100;
-    public int currentHealth;
+    public int currentHealth = 100;
     public string humanoidName;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -36,6 +36,10 @@ public class Humanoid : MonoBehaviour
     protected virtual void Die()
     {
         // Override in derived classes for specific death behavior
+        if (humanoidName == "Player")
+        {
+            GameManager.Instance.OnPlayerDeath();
+        }
         Destroy(gameObject);
         Debug.Log($"{humanoidName} has died.");
     }

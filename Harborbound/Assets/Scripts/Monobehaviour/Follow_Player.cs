@@ -13,6 +13,13 @@ public class Follow_player : MonoBehaviour
 
     void Update()
     {
-        transform.position = player.transform.position + new Vector3(0, 1, -5);
+        if (player != null)
+        {
+            transform.position = player.transform.position + new Vector3(0, 1, -5);
+        }
+        else
+        {
+            Debug.LogWarning("Player not found! Please assign the player object in the inspector or ensure it exists in the scene.");
+        }
     }
 }
