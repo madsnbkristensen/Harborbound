@@ -24,6 +24,10 @@ public class FishingManager : MonoBehaviour
     public KeyCode catchKey = KeyCode.Space;
     public KeyCode cancelKey = KeyCode.Space; // Same key to cancel early
 
+    // Add a small cooldown to prevent immediate recasting
+    private float castCooldown = 0.5f;
+    private float lastFishingEndTime = 0f;
+
     [Header("State")]
     public bool isFishing = false;
     private Item currentCatch = null;
@@ -181,6 +185,9 @@ public class FishingManager : MonoBehaviour
         fishIsBiting = false;
         StopAllCoroutines();
 
+        // Record the time when fishing stopped
+        lastFishingEndTime = Time.time;
+
         // Destroy bobber
         if (activeBobber != null)
         {
@@ -191,8 +198,13 @@ public class FishingManager : MonoBehaviour
         // Change game state back
         if (gameManager != null)
             gameManager.ChangeState(GameManager.GameState.ROAMING);
-
     }
+
+    public bool CanCastAgain()
+    {
+        return Time.time >= lastFishingEndTime + castCooldown;
+    }
+
 
     // Main fishing sequence
     private IEnumerator FishingSequence()

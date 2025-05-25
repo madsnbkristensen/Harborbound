@@ -49,6 +49,15 @@ public class FishingRod : Item
     // In your FishingRod.cs
     public override void Use(Player player)
     {
+        // Check if we can cast again (using the cooldown)
+        FishingManager fishingManager = Object.FindFirstObjectByType<FishingManager>();
+
+        if (fishingManager != null && !fishingManager.CanCastAgain())
+        {
+            // Still in cooldown, don't cast
+            return;
+        }
+
         Debug.Log($"Using fishing rod {GetName()}");
         AudioManager.Instance.Play(AudioManager.SoundType.Cast);
 
@@ -77,7 +86,6 @@ public class FishingRod : Item
         Vector3 bobberPos = playerPos + (direction * castDistance);
 
         // Get fishing manager and cast
-        FishingManager fishingManager = Object.FindFirstObjectByType<FishingManager>();
         if (fishingManager != null)
         {
             // Get the zone at the bobber's destination for fallback

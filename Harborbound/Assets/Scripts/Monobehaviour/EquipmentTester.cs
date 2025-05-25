@@ -99,7 +99,6 @@ public class EquipmentTester : MonoBehaviour
         {
             Debug.Log("Using fishing rod");
             playerEquipment.StartUsingEquippedItem();
-            // No need for StopUsingEquippedItem for fishing rods
         }
     }
 }
