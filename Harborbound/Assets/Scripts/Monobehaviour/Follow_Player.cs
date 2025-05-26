@@ -11,7 +11,7 @@ public class Follow_player : MonoBehaviour
     }
 
 
-    void Update()
+    void LateUpdate()
     {
         if (player != null)
         {
