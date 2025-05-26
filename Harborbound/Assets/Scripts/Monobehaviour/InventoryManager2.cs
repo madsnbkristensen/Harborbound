@@ -353,7 +353,7 @@ public class InventoryManager2 : MonoBehaviour
     {
         var itemRectTransform = item.GetComponent<RectTransform>();
         Vector3 itemSize = new Vector3(itemRectTransform.rect.width, itemRectTransform.rect.height);
-        Vector3 itemPos = item.background.transform.position - new Vector3(itemSize.x, -itemSize.y) * 0.5f;
+        Vector3 itemPos = item.background.transform.position - new Vector3(itemSize.x * 1f, -itemSize.y * 0.5f);
         Rect itemRect = new Rect(itemPos, itemSize);
 
         for (int i = 0; i <= PlayerInventory.Instance.Width - item.definition.inventoryWidth; i++)
