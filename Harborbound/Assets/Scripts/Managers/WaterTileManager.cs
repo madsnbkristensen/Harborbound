@@ -1,32 +1,27 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WaterTileManager : MonoBehaviour
 {
-    public static WaterTileManager Instance { get; private set; }
-
     // Use a sprite reference instead of a GameObject prefab
     public Sprite waterTileSprite;
     public float tileSize = 2f;
     public Color baseWaterColor = new Color(0.2f, 0.5f, 0.8f);
     public float darknessFactor = 0.15f;
 
+    public ZoneManager zoneManager;
+
     private void Awake()
     {
-        // Singleton pattern implementation
-        if (Instance != null && Instance != this)
+        zoneManager = FindFirstObjectByType<ZoneManager>();
+        if (zoneManager == null)
         {
-            Destroy(gameObject);
-            return;
+            Debug.LogError("WaterTileManager: ZoneManager not found! Make sure it is present in the scene.");
         }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     public void GenerateWaterTiles()
     {
-        if (ZoneManager.Instance == null || ZoneManager.Instance.zones.Count == 0)
+        if (zoneManager == null || zoneManager.zones.Count == 0)
         {
             Debug.LogError("Cannot generate water tiles: ZoneManager not initialized or no zones created.");
             return;
@@ -45,7 +40,7 @@ public class WaterTileManager : MonoBehaviour
 
         // Get the outermost zone's radius to determine the water area
         float maxRadius = 0f;
-        foreach (Zone zone in ZoneManager.Instance.zones)
+        foreach (Zone zone in zoneManager.zones)
         {
             if (zone.outerRadius > maxRadius)
                 maxRadius = zone.outerRadius;
@@ -64,8 +59,8 @@ public class WaterTileManager : MonoBehaviour
 
         // Calculate the offset to center the grid precisely at the island center
         float gridSize = tilesAcross * tileSize;
-        float startX = ZoneManager.Instance.centerPoint.x - (gridSize / 2f);
-        float startY = ZoneManager.Instance.centerPoint.y - (gridSize / 2f);
+        float startX = zoneManager.centerPoint.x - (gridSize / 2f);
+        float startY = zoneManager.centerPoint.y - (gridSize / 2f);
 
         // Debug grid size and position
         Debug.Log($"Water grid: {tilesAcross}x{tilesAcross} tiles, size: {gridSize}x{gridSize}, " +
@@ -73,9 +68,9 @@ public class WaterTileManager : MonoBehaviour
 
         // Get color for extended water (same as last zone)
         Color extendedWaterColor = Color.black;
-        if (ZoneManager.Instance.zones.Count > 0)
+        if (zoneManager.zones.Count > 0)
         {
-            int lastZoneIndex = ZoneManager.Instance.zones.Count - 1;
+            int lastZoneIndex = zoneManager.zones.Count - 1;
             float hue = (float)(lastZoneIndex) / 8f;
             Color zoneColor = Color.HSVToRGB(hue % 1f, 0.6f, 0.8f);
 
@@ -99,11 +94,11 @@ public class WaterTileManager : MonoBehaviour
                 Vector2 tileCenter = new Vector2(posX, posY);
 
                 // Calculate the distance from the island center to this tile's center
-                float distFromCenter = Vector2.Distance(tileCenter, ZoneManager.Instance.centerPoint);
+                float distFromCenter = Vector2.Distance(tileCenter, zoneManager.centerPoint);
 
                 // Skip tiles that are well inside the island
                 // Apply the visual buffer here for inner radius
-                if (distFromCenter < ZoneManager.Instance.islandRadius - ZoneManager.Instance.islandBuffer - 0.2f)
+                if (distFromCenter < zoneManager.islandRadius - zoneManager.islandBuffer - 0.2f)
                     continue;
 
                 // Use extended radius check instead of maxRadius
@@ -172,16 +167,16 @@ public class WaterTileManager : MonoBehaviour
     private int GetZoneIndexAtDistance(float distance)
     {
         // First check if we're in the buffer zone (between island edge and zone 1 start)
-        if (distance >= ZoneManager.Instance.islandRadius - ZoneManager.Instance.islandBuffer &&
-            distance < ZoneManager.Instance.zones[0].innerRadius)
+        if (distance >= zoneManager.islandRadius - zoneManager.islandBuffer &&
+            distance < zoneManager.zones[0].innerRadius)
         {
             return 0; // Treat buffer zone tiles as zone 1 for coloring purposes
         }
 
         // Regular zone checks
-        for (int i = 0; i < ZoneManager.Instance.zones.Count; i++)
+        for (int i = 0; i < zoneManager.zones.Count; i++)
         {
-            Zone zone = ZoneManager.Instance.zones[i];
+            Zone zone = zoneManager.zones[i];
             if (distance >= zone.innerRadius && distance <= zone.outerRadius)
             {
                 return i;
@@ -189,9 +184,9 @@ public class WaterTileManager : MonoBehaviour
         }
 
         // Extended water beyond the last zone
-        if (distance > ZoneManager.Instance.zones[ZoneManager.Instance.zones.Count - 1].outerRadius)
+        if (distance > zoneManager.zones[zoneManager.zones.Count - 1].outerRadius)
         {
-            return ZoneManager.Instance.zones.Count - 1; // Use last zone color
+            return zoneManager.zones.Count - 1; // Use last zone color
         }
 
         return -1; // Inside island or invalid

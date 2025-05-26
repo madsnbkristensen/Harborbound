@@ -5,6 +5,16 @@ public class FishingRod : Item
     public float castRange = 5f;
     private Transform rodVisualTransform;
 
+    public ZoneManager zoneManager;
+
+    private void Awake()
+    {
+      zoneManager = Object.FindFirstObjectByType<ZoneManager>();
+      if (zoneManager == null)
+      {
+          Debug.LogError("FishingRod: ZoneManager not found! Make sure it is present in the scene.");
+      }
+    }
     private void Start()
     {
         // Try to find the visual representation of the rod
@@ -141,16 +151,16 @@ public class FishingRod : Item
     // New method to get zone at a position
     private int GetZoneAtPosition(Vector3 position)
     {
-        if (ZoneManager.Instance == null || ZoneManager.Instance.zones.Count == 0)
+        if (zoneManager == null || zoneManager.zones.Count == 0)
             return 1; // Default to zone 1
 
-        Vector2 centerPoint = ZoneManager.Instance.centerPoint;
+        Vector2 centerPoint = zoneManager.centerPoint;
         float distance = Vector2.Distance(position, centerPoint);
 
         // Check each zone
-        for (int i = 0; i < ZoneManager.Instance.zones.Count; i++)
+        for (int i = 0; i < zoneManager.zones.Count; i++)
         {
-            Zone zone = ZoneManager.Instance.zones[i];
+            Zone zone = zoneManager.zones[i];
             if (distance >= zone.innerRadius && distance <= zone.outerRadius)
             {
                 return i + 1; // Zones are 1-indexed
