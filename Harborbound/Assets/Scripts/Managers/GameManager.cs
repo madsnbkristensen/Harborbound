@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -9,7 +9,18 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Boat currentPlayerBoat;
     public List<Boat> unlockedBoats = new List<Boat>();
-    public enum GameState { ROAMING, DIALOGUE, FISHING, DRIVING, MENU, INVENTORY, SHOPPING }
+
+    public enum GameState
+    {
+        ROAMING,
+        DIALOGUE,
+        FISHING,
+        DRIVING,
+        MENU,
+        INVENTORY,
+        SHOPPING,
+    }
+
     [SerializeField]
     private GameState _state = GameState.ROAMING;
     private bool isPaused = false;
@@ -69,7 +80,9 @@ public class GameManager : MonoBehaviour
             currentPlayerBoat = FindFirstObjectByType<Boat>();
 
         // Log what was found for debugging
-        Debug.Log($"GameManager refound references - Player: {(player != null ? "Found" : "Not found")}, Boat: {(currentPlayerBoat != null ? "Found" : "Not found")}");
+        Debug.Log(
+            $"GameManager refound references - Player: {(player != null ? "Found" : "Not found")}, Boat: {(currentPlayerBoat != null ? "Found" : "Not found")}"
+        );
     }
 
     // Event system for state changes
@@ -93,7 +106,7 @@ public class GameManager : MonoBehaviour
         state = newState;
 
         // Log the state change for debugging
-        Debug.Log($"Game state changed from {oldState} to {state}");
+        //Debug.Log($"Game state changed from {oldState} to {state}");
 
         switch (state)
         {

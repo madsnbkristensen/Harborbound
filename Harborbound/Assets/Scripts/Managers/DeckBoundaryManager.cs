@@ -1,18 +1,29 @@
 using UnityEngine;
+
 public class DeckBoundaryManager : MonoBehaviour
 {
-    [SerializeField] private PlayerBoatSpriteController spriteController;
+    [SerializeField]
+    private PlayerBoatSpriteController spriteController;
     private SpriteRenderer spriteRenderer;
-    
+
     // List of edge colliders to form the boundary
     private EdgeCollider2D[] edgeColliders = new EdgeCollider2D[4]; // One for each side
-    
+
     [Header("Deck Boundary Points (Local Space)")]
-    [SerializeField] private Vector2[] rightBoundaryPoints;
-    [SerializeField] private Vector2[] upBoundaryPoints;
-    [SerializeField] private Vector2[] downBoundaryPoints;
-    [SerializeField] private Vector2[] rightUpBoundaryPoints;
-    [SerializeField] private Vector2[] leftDownBoundaryPoints;
+    [SerializeField]
+    private Vector2[] rightBoundaryPoints;
+
+    [SerializeField]
+    private Vector2[] upBoundaryPoints;
+
+    [SerializeField]
+    private Vector2[] downBoundaryPoints;
+
+    [SerializeField]
+    private Vector2[] rightUpBoundaryPoints;
+
+    [SerializeField]
+    private Vector2[] leftDownBoundaryPoints;
 
     // Cache for performance
     private Sprite lastSprite;
@@ -34,7 +45,7 @@ public class DeckBoundaryManager : MonoBehaviour
                 new Vector2(-7, -4),
                 new Vector2(-7, -1),
                 new Vector2(2, -1),
-                new Vector2(2, -4)
+                new Vector2(2, -4),
             };
         }
 
@@ -46,7 +57,7 @@ public class DeckBoundaryManager : MonoBehaviour
                 new Vector2(-4, 0),
                 new Vector2(4, 0),
                 new Vector2(4, -4.5f),
-                new Vector2(-4, -4.5f)
+                new Vector2(-4, -4.5f),
             };
         }
 
@@ -58,7 +69,7 @@ public class DeckBoundaryManager : MonoBehaviour
                 new Vector2(-2, 4),
                 new Vector2(-4, -2.5f),
                 new Vector2(4, -2.5f),
-                new Vector2(2, 4)
+                new Vector2(2, 4),
             };
         }
 
@@ -70,7 +81,7 @@ public class DeckBoundaryManager : MonoBehaviour
                 new Vector2(-5.5f, -3),
                 new Vector2(-1, -4.5f),
                 new Vector2(4.5f, -1),
-                new Vector2(-1, 0)
+                new Vector2(-1, 0),
             };
         }
 
@@ -82,7 +93,7 @@ public class DeckBoundaryManager : MonoBehaviour
                 new Vector2(1, 2),
                 new Vector2(5, 1),
                 new Vector2(1, -3),
-                new Vector2(-3, -2)
+                new Vector2(-3, -2),
             };
         }
     }
@@ -93,14 +104,14 @@ public class DeckBoundaryManager : MonoBehaviour
 
         // Create edge colliders
         CreateEdgeColliders();
-        
+
         // Make sure boat has a Rigidbody2D for proper collision
         EnsureRigidbody();
 
         // Initialize with current sprite
         UpdateDeckBoundary();
     }
-    
+
     private void EnsureRigidbody()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -126,17 +137,19 @@ public class DeckBoundaryManager : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             GameObject edgeObj = new GameObject($"DeckEdge_{i}");
+            // add tag to game object
+            edgeObj.tag = "DeckEdge";
             edgeObj.transform.SetParent(transform);
             edgeObj.transform.localPosition = Vector3.zero;
             edgeObj.transform.localRotation = Quaternion.identity;
             edgeObj.transform.localScale = Vector3.one;
-            
+
             EdgeCollider2D edgeCollider = edgeObj.AddComponent<EdgeCollider2D>();
             edgeCollider.isTrigger = false;
-            
+
             edgeColliders[i] = edgeCollider;
         }
-        
+
         Debug.Log("Created 4 edge colliders for deck boundary");
     }
 
@@ -160,7 +173,8 @@ public class DeckBoundaryManager : MonoBehaviour
 
     private void UpdateDeckBoundary()
     {
-        if (spriteRenderer == null || spriteRenderer.sprite == null) return;
+        if (spriteRenderer == null || spriteRenderer.sprite == null)
+            return;
 
         // Get boundary points for current sprite
         Vector2[] boundaryPoints = GetBoundaryForCurrentSprite();
@@ -174,12 +188,13 @@ public class DeckBoundaryManager : MonoBehaviour
                 // Get two consecutive points for this edge
                 int startIdx = i;
                 int endIdx = (i + 1) % boundaryPoints.Length;
-                
-                Vector2[] edgePoints = new Vector2[] { 
-                    boundaryPoints[startIdx], 
-                    boundaryPoints[endIdx] 
+
+                Vector2[] edgePoints = new Vector2[]
+                {
+                    boundaryPoints[startIdx],
+                    boundaryPoints[endIdx],
                 };
-                
+
                 // Apply points to the edge collider
                 if (edgeColliders[i] != null)
                 {
@@ -250,36 +265,45 @@ public class DeckBoundaryManager : MonoBehaviour
         if (!Application.isPlaying)
         {
             // Make sure default points are initialized for gizmos
-            if (rightBoundaryPoints == null || rightBoundaryPoints.Length == 0 ||
-                upBoundaryPoints == null || upBoundaryPoints.Length == 0 ||
-                downBoundaryPoints == null || downBoundaryPoints.Length == 0 ||
-                rightUpBoundaryPoints == null || rightUpBoundaryPoints.Length == 0 ||
-                leftDownBoundaryPoints == null || leftDownBoundaryPoints.Length == 0)
+            if (
+                rightBoundaryPoints == null
+                || rightBoundaryPoints.Length == 0
+                || upBoundaryPoints == null
+                || upBoundaryPoints.Length == 0
+                || downBoundaryPoints == null
+                || downBoundaryPoints.Length == 0
+                || rightUpBoundaryPoints == null
+                || rightUpBoundaryPoints.Length == 0
+                || leftDownBoundaryPoints == null
+                || leftDownBoundaryPoints.Length == 0
+            )
             {
                 InitializeDefaultBoundaryPoints();
             }
-            
+
             // Edit mode visualization
             DrawEditorBoundaryPoints();
         }
-        else 
+        else
         {
             // Play mode - draw active edge colliders
             Gizmos.color = Color.green;
-            
+
             foreach (EdgeCollider2D edge in edgeColliders)
             {
-                if (edge == null) continue;
-                
+                if (edge == null)
+                    continue;
+
                 Vector2[] points = edge.points;
-                if (points.Length < 2) continue;
-                
+                if (points.Length < 2)
+                    continue;
+
                 for (int i = 0; i < points.Length - 1; i++)
                 {
                     Vector2 start = transform.TransformPoint(points[i]);
                     Vector2 end = transform.TransformPoint(points[i + 1]);
                     Gizmos.DrawLine(start, end);
-                    
+
                     // Draw a small sphere at each endpoint
                     Gizmos.DrawSphere(start, 0.05f);
                     if (i == points.Length - 2)
@@ -291,10 +315,12 @@ public class DeckBoundaryManager : MonoBehaviour
 
     private void DrawEditorBoundaryPoints()
     {
-        if (spriteController == null) return;
+        if (spriteController == null)
+            return;
 
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-        if (renderer == null) return;
+        if (renderer == null)
+            return;
 
         // Determine which boundary to show
         Vector2[] pointsToDraw = null;
@@ -338,7 +364,8 @@ public class DeckBoundaryManager : MonoBehaviour
 
     private void DrawBoundaryPoints(Vector2[] points, bool flipX)
     {
-        if (points == null || points.Length < 2) return;
+        if (points == null || points.Length < 2)
+            return;
 
         // Handle flipping
         Vector2[] pointsToUse = points;

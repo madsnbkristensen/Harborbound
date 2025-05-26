@@ -66,7 +66,6 @@ public class EquipmentTester : MonoBehaviour
             {
                 HelperManager.Instance.HandleEquip(testFishingRod.gameObject);
             }
-
         }
 
         // Press 3 to unequip (pass null)
