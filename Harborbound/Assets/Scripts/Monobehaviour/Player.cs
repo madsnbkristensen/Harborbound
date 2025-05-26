@@ -183,6 +183,13 @@ public class Player : Humanoid
             AudioManager.Instance.ChangeMusic(AudioManager.SoundType.Music_Ocean_Loop);
         }
 
+        // Keep player at boat wheel position when sprite is disabled (indicating driving mode)
+        if (playerSpriteRenderer != null && !playerSpriteRenderer.enabled &&
+            playerBoat != null && boatWheelPosition != null)
+        {
+            transform.position = boatWheelPosition.position;
+        }
+
         // check interactable objects within range
         GetInteractableObjects();
         CallHelperManager(GetInteractableObjects());

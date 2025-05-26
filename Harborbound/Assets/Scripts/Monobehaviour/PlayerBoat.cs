@@ -17,10 +17,6 @@ public class PlayerBoat : Boat
     private bool isCollidingWithRock = false;
     private Vector2 collisionNormal;
 
-    // Add this as a class variable
-    [SerializeField]
-    private Vector2 colliderPivotOffset = Vector2.zero;
-
     private void Start()
     {
         if (player == null)
@@ -111,9 +107,6 @@ public class PlayerBoat : Boat
                 if (spriteController != null)
                 {
                     spriteController.UpdateDirection(inputDirection);
-
-                    // Update collider orientation based on movement direction
-                    UpdateColliderOrientation(inputDirection);
                 }
             }
         }
@@ -235,108 +228,5 @@ public class PlayerBoat : Boat
             );
             collisionNormal = _smoothedNormal.normalized;
         }
-    }
-
-    // Add this method to rotate the collider based on movement direction
-    private void UpdateColliderOrientation(Vector2 direction)
-    {
-        if (edgeCollider != null && direction.magnitude > 0.1f)
-        {
-            // Get the current points from the edge collider
-            Vector2[] currentPoints = edgeCollider.points;
-
-            // Create a reference to original points if we haven't stored them yet
-            if (
-                _originalColliderPoints == null
-                || _originalColliderPoints.Length != currentPoints.Length
-            )
-            {
-                _originalColliderPoints = new Vector2[currentPoints.Length];
-                for (int i = 0; i < currentPoints.Length; i++)
-                {
-                    _originalColliderPoints[i] = currentPoints[i];
-                }
-            }
-
-            // Only rotate for vertical movement (W or S keys)
-            bool isVertical = Mathf.Abs(direction.y) > Mathf.Abs(direction.x);
-
-            if (isVertical)
-            {
-                // Rotate collider for up movement
-                RotateCollider(-90);
-            }
-            else
-            {
-                // For horizontal movement (A or D), keep original orientation
-                RotateCollider(0);
-            }
-
-            // Debug visualization
-            Debug.DrawRay(transform.position, direction.normalized * 2f, Color.green, 0.1f);
-        }
-    }
-
-    // Store original collider points
-    private Vector2[] _originalColliderPoints;
-
-    // Helper method to rotate collider points by a specific angle
-    private void RotateCollider(float angleDegrees)
-    {
-        if (_originalColliderPoints != null && edgeCollider != null)
-        {
-            // Create a new array to hold rotated points
-            Vector2[] rotatedPoints = new Vector2[_originalColliderPoints.Length];
-
-            // Find the center point of the collider and apply the manual offset
-            Vector2 pivot = CalculateColliderCenter(_originalColliderPoints) + colliderPivotOffset;
-
-            // Convert angle to radians
-            float angleRad = angleDegrees * Mathf.Deg2Rad;
-            float cos = Mathf.Cos(angleRad);
-            float sin = Mathf.Sin(angleRad);
-
-            // Rotate each point around the pivot
-            for (int i = 0; i < _originalColliderPoints.Length; i++)
-            {
-                // Translate point to origin (relative to pivot)
-                Vector2 pointRelativeToPivot = _originalColliderPoints[i] - pivot;
-
-                // Rotate around origin
-                Vector2 rotated = new Vector2(
-                    pointRelativeToPivot.x * cos - pointRelativeToPivot.y * sin,
-                    pointRelativeToPivot.x * sin + pointRelativeToPivot.y * cos
-                );
-
-                // Translate back to original position
-                rotatedPoints[i] = rotated + pivot;
-            }
-
-            // Apply rotated points to the edge collider
-            edgeCollider.points = rotatedPoints;
-
-            // Debug visualization of pivot point
-            Debug.DrawLine(
-                transform.position,
-                transform.position + (Vector3)pivot,
-                Color.yellow,
-                0.1f
-            );
-        }
-    }
-
-    // Calculate the center of the collider points
-    private Vector2 CalculateColliderCenter(Vector2[] points)
-    {
-        if (points == null || points.Length == 0)
-            return Vector2.zero;
-
-        Vector2 sum = Vector2.zero;
-        foreach (Vector2 point in points)
-        {
-            sum += point;
-        }
-
-        return sum / points.Length;
     }
 }

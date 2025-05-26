@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4471942297470795371}
   - component: {fileID: 5269883419126054856}
   - component: {fileID: 6057780637170200934}
-  - component: {fileID: 7037898372856587850}
+  - component: {fileID: 4177746582165324449}
   m_Layer: 0
   m_Name: PlayerBoat
   m_TagString: PlayerBoat
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3920234793942508906}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.81, y: 0.28, z: -0.5820237}
+  m_LocalPosition: {x: -3.81, y: 0.53, z: -0.5820237}
   m_LocalScale: {x: 0.22, y: 0.22, z: 0.22}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -100,7 +100,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3440172122128719022, guid: ce56fef795ca0471688d54d3234c7018, type: 3}
+  m_Sprite: {fileID: 3975826167195517899, guid: 1eb14c96687d54eaf865a8f7e0924112, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -194,7 +194,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!68 &7037898372856587850
+--- !u!68 &4177746582165324449
 EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -231,11 +231,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -9.0873375, y: -6.6192827}
-  - {x: 8.161929, y: -6.6525083}
-  - {x: 8.270525, y: 0.8818581}
-  - {x: -9.171078, y: 0.85341525}
-  - {x: -9.165838, y: -6.66943}
+  - {x: -7.257285, y: -7.00847}
+  - {x: 6.8287926, y: -7.1216893}
+  - {x: 6.768323, y: 4.23768}
+  - {x: -7.4631867, y: 4.134651}
+  - {x: -7.656089, y: -7.334446}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
