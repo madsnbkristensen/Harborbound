@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class FishingSpotSpawner : MonoBehaviour
 {
-    // Singleton pattern
-    public static FishingSpotSpawner Instance { get; private set; }
-
     // This script is responsible for spawning fishing spots in the game.
     public GameObject fishingSpotPrefab; // Prefab for the fishing spot
 
@@ -17,34 +14,29 @@ public class FishingSpotSpawner : MonoBehaviour
     private List<Vector2> fishingSpotPositions = new List<Vector2>();
 
     public WorldGenerator worldGenerator;
+    public ZoneManager zoneManager;
 
     private void Awake()
     {
-        // Singleton pattern implementation
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-
         worldGenerator = FindFirstObjectByType<WorldGenerator>();
         if (worldGenerator == null)
         {
             Debug.LogException(new System.Exception("FishingSpotSpawner: WorldGenerator not found! Make sure it is present in the scene."));
         }
+        zoneManager = FindFirstObjectByType<ZoneManager>();
+        if (zoneManager == null)
+        {
+            Debug.LogException(new System.Exception("FishingSpotSpawner: ZoneManager not found! Make sure it is present in the scene."));
+        }
     }
 
     private void Start()
     {
-        // Ensure the world generator is assigned
     }
 
     public void SpawnFishingSpots()
     {
-        if (ZoneManager.Instance == null || ZoneManager.Instance.zones.Count == 0)
+        if (zoneManager == null || zoneManager.zones.Count == 0)
         {
             Debug.LogError("Cannot spawn fishing spots: ZoneManager not initialized or no zones created.");
             return;
@@ -52,8 +44,8 @@ public class FishingSpotSpawner : MonoBehaviour
 
         fishingSpotPositions.Clear();
 
-        int zonesCount = ZoneManager.Instance.zones.Count;
-        Vector2 centerPoint = ZoneManager.Instance.centerPoint;
+        int zonesCount = zoneManager.zones.Count;
+        Vector2 centerPoint = zoneManager.centerPoint;
 
         // Calculate the total area of all zones combined (just like in rock generation)
         float totalArea = 0f;
@@ -61,7 +53,7 @@ public class FishingSpotSpawner : MonoBehaviour
 
         for (int i = 0; i < zonesCount; i++)
         {
-            Zone zone = ZoneManager.Instance.zones[i];
+            Zone zone = zoneManager.zones[i];
             float zoneArea = Mathf.PI * (Mathf.Pow(zone.outerRadius, 2) - Mathf.Pow(zone.innerRadius, 2));
             zoneAreas[i] = zoneArea;
             totalArea += zoneArea;
@@ -70,7 +62,7 @@ public class FishingSpotSpawner : MonoBehaviour
         // Spawn fishing spots in each zone
         for (int zoneIndex = 0; zoneIndex < zonesCount; zoneIndex++)
         {
-            Zone currentZone = ZoneManager.Instance.zones[zoneIndex];
+            Zone currentZone = zoneManager.zones[zoneIndex];
 
             // Calculate fishing spots for this zone - more in outer zones
             int zoneFishingSpots = Mathf.RoundToInt(baseFishingSpotsPerZone * Mathf.Pow(spotIncreaseFactor, zoneIndex));

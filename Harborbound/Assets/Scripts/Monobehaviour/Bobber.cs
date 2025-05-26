@@ -14,11 +14,21 @@ public class Bobber : MonoBehaviour
     private float bobFrequency = 2f;
     private System.Action<Vector3> onFishingStart;
 
+    public ZoneManager zoneManager;
+
     // New fields for fishing spot detection
     private FishingSpot currentFishingSpot;
     private bool isInFishingSpot = false;
     private float detectionRadius = 0.5f; // How close bobber needs to be to count as "in" a spot
 
+    private void Awake()
+    {
+        zoneManager = FindFirstObjectByType<ZoneManager>();
+        if (zoneManager == null)
+        {
+            Debug.LogError("Bobber: ZoneManager not found! Make sure it is present in the scene.");
+        }
+    }
     public void Initialize(Vector3 start, Vector3 target, float speed, System.Action<Vector3> callback, Transform source = null)
     {
         startPosition = start;
@@ -159,16 +169,16 @@ public class Bobber : MonoBehaviour
     // Fallback method to determine zone from position when not in a fishing spot
     private int GetZoneFromPosition(Vector3 position)
     {
-        if (ZoneManager.Instance == null || ZoneManager.Instance.zones.Count == 0)
+        if (zoneManager == null || zoneManager.zones.Count == 0)
             return 1; // Default to zone 1
 
-        Vector2 centerPoint = ZoneManager.Instance.centerPoint;
+        Vector2 centerPoint = zoneManager.centerPoint;
         float distance = Vector2.Distance(position, centerPoint);
 
         // Check each zone
-        for (int i = 0; i < ZoneManager.Instance.zones.Count; i++)
+        for (int i = 0; i < zoneManager.zones.Count; i++)
         {
-            Zone zone = ZoneManager.Instance.zones[i];
+            Zone zone = zoneManager.zones[i];
             if (distance >= zone.innerRadius && distance <= zone.outerRadius)
             {
                 return i + 1; // Zones are 1-indexed

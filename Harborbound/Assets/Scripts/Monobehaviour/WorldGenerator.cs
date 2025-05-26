@@ -14,6 +14,9 @@ public class WorldGenerator : MonoBehaviour
     public Vector2 islandCenterPosition = new(0, 0);
 
     public EnemySpawner enemySpawner;
+    public FishingSpotSpawner fishingSpotSpawner;
+    public ZoneManager zoneManager;
+    public WaterTileManager waterTileManager;
 
     private void Awake()
     {
@@ -21,6 +24,21 @@ public class WorldGenerator : MonoBehaviour
         if (enemySpawner == null)
         {
             Debug.LogException(new System.Exception("EnemySpawner not found! Make sure it is present in the scene."));
+        }
+        fishingSpotSpawner = FindFirstObjectByType<FishingSpotSpawner>();
+        if (fishingSpotSpawner == null)
+        {
+            Debug.LogException(new System.Exception("fishingSpotSpawner not found! Make sure it is present in the scene."));
+        }
+        zoneManager = FindFirstObjectByType<ZoneManager>();
+        if (zoneManager == null)
+        {
+            Debug.LogException(new System.Exception("ZoneManager not found! Make sure it is present in the scene."));
+        }
+        waterTileManager = FindFirstObjectByType<WaterTileManager>();
+        if (waterTileManager == null)
+        {
+            Debug.LogException(new System.Exception("WaterTileManager not found! Make sure it is present in the scene."));
         }
     }
 
@@ -31,21 +49,22 @@ public class WorldGenerator : MonoBehaviour
 
     public void GenerateWorld()
     {
+        Debug.Log("######### Generating world #########");
         // cleanup corpses
-        CleanupCorpses();
+        CleanupWorldObjects();
 
         // Initialize ZoneManager with island center and size
-        if (ZoneManager.Instance != null)
+        if (zoneManager != null)
         {
-            ZoneManager.Instance.Initialize(islandCenterPosition, ZoneManager.Instance.islandRadius); // Pass island radius here
+            zoneManager.Initialize(islandCenterPosition, zoneManager.islandRadius); // Pass island radius here
         }
 
         // Step 1: Generate world zones
         for (int i = 0; i < worldZoneCount; i++)
         {
-            if (ZoneManager.Instance != null)
+            if (zoneManager != null)
             {
-                ZoneManager.Instance.GenerateZone(i + 1);
+                zoneManager.GenerateZone(i + 1);
             }
             else
             {
@@ -55,15 +74,15 @@ public class WorldGenerator : MonoBehaviour
         }
 
         // Create the boundary collider after all zones are generated
-        if (ZoneManager.Instance != null)
+        if (zoneManager != null)
         {
-            ZoneManager.Instance.CreateBoundaryCollider();
+            zoneManager.CreateBoundaryCollider();
         }
 
         // Step 2. Generate water tiles to represent the zones
-        if (WaterTileManager.Instance != null)
+        if (waterTileManager != null)
         {
-            WaterTileManager.Instance.GenerateWaterTiles();
+            waterTileManager.GenerateWaterTiles();
         }
 
         // Step 3: Check and generate rock positions if needed
@@ -76,9 +95,9 @@ public class WorldGenerator : MonoBehaviour
         PlaceRocks();
 
         // Step 5: Spawn fishing spots
-        if (FishingSpotSpawner.Instance != null)
+        if (fishingSpotSpawner != null)
         {
-            FishingSpotSpawner.Instance.SpawnFishingSpots();
+            fishingSpotSpawner.SpawnFishingSpots();
         }
         else
         {
@@ -95,13 +114,14 @@ public class WorldGenerator : MonoBehaviour
         {
             Debug.LogWarning("EnemySpawner not found. Enemy boats will not be spawned.");
         }
+
     }
 
     private void GenerateNewRockPositions()
     {
         rockPositions = new List<Vector2>();
 
-        if (ZoneManager.Instance == null || ZoneManager.Instance.zones.Count == 0)
+        if (zoneManager == null || zoneManager.zones.Count == 0)
         {
             Debug.LogError(
                 "Cannot generate rocks: ZoneManager not initialized or no zones created."
@@ -109,7 +129,7 @@ public class WorldGenerator : MonoBehaviour
             return;
         }
 
-        int zonesCount = ZoneManager.Instance.zones.Count;
+        int zonesCount = zoneManager.zones.Count;
 
         // Calculate the total area of all zones combined
         float totalArea = 0f;
@@ -117,7 +137,7 @@ public class WorldGenerator : MonoBehaviour
 
         for (int i = 0; i < zonesCount; i++)
         {
-            Zone zone = ZoneManager.Instance.zones[i];
+            Zone zone = zoneManager.zones[i];
             // Area of a ring = π(R²-r²) where R is outer radius and r is inner radius
             float zoneArea =
                 Mathf.PI * (Mathf.Pow(zone.outerRadius, 2) - Mathf.Pow(zone.innerRadius, 2));
@@ -128,7 +148,7 @@ public class WorldGenerator : MonoBehaviour
         // Distribute rocks proportionally based on zone area
         for (int zoneIndex = 0; zoneIndex < zonesCount; zoneIndex++)
         {
-            Zone currentZone = ZoneManager.Instance.zones[zoneIndex];
+            Zone currentZone = zoneManager.zones[zoneIndex];
 
             // Calculate rock count proportional to zone's area
             float zoneProportion = zoneAreas[zoneIndex] / totalArea;
@@ -238,17 +258,49 @@ public class WorldGenerator : MonoBehaviour
         return false; // No rocks are in the way
     }
 
-    private void CleanupCorpses()
+    private void CleanupWorldObjects()
     {
-        // Find all objects with the tag "EnemyCorpse"
+        // Clean up enemy corpses
         GameObject[] corpses = GameObject.FindGameObjectsWithTag("EnemyCorpse");
-
         Debug.Log($"Cleaning up {corpses.Length} enemy corpses");
-
-        // Destroy each corpse
         foreach (GameObject corpse in corpses)
         {
             Destroy(corpse);
         }
+
+        // Clean up fishing spots
+        GameObject[] fishingSpots = GameObject.FindGameObjectsWithTag("FishingSpot");
+        Debug.Log($"Cleaning up {fishingSpots.Length} fishing spots");
+        foreach (GameObject spot in fishingSpots)
+        {
+            Destroy(spot);
+        }
+
+        // Clean up enemies
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        Debug.Log($"Cleaning up {enemies.Length} enemies");
+        foreach (GameObject enemy in enemies)
+        {
+            Destroy(enemy);
+        }
+        // Clean up enemy boats
+        GameObject[] enemyBoats = GameObject.FindGameObjectsWithTag("EnemyBoat");
+        Debug.Log($"Cleaning up {enemyBoats.Length} enemy boats");
+        foreach (GameObject enemyBoat in enemyBoats)
+        {
+            Destroy(enemyBoat);
+        }
+
+        // // Clean up rocks (if they have the proper tag)
+        // GameObject[] rocks = GameObject.FindGameObjectsWithTag("Rock");
+        // Debug.Log($"Cleaning up {rocks.Length} rocks");
+        // foreach (GameObject rock in rocks)
+        // {
+        //     Destroy(rock);
+        // }
+        //
+        // // Clear rock positions list since we're destroying all rocks
+        // rockPositions.Clear();
     }
+
 }

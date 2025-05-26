@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class ZoneManager : MonoBehaviour
 {
-    // Singleton instance
-    public static ZoneManager Instance { get; private set; }
-
     public List<Zone> zones = new();
 
     // This should match the WorldGenerator's islandCenterPosition
@@ -25,15 +22,6 @@ public class ZoneManager : MonoBehaviour
 
     private void Awake()
     {
-        // Singleton pattern implementation
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject); // Destroy duplicates
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     public void Initialize(Vector2 islandCenter, float islandSize)

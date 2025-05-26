@@ -31,11 +31,18 @@ public class EnemySpawner : MonoBehaviour
     public ItemDefinition shotgunDef;
     public GameObject equipItemPrefab; // The same prefab used in PlayerEquipment
 
+    public ZoneManager zoneManager;
+
     private List<Vector2> enemyBoatPositions = new List<Vector2>();
     public WorldGenerator worldGenerator;
 
     private void Awake()
     {
+      zoneManager = FindFirstObjectByType<ZoneManager>();
+        if (zoneManager == null)
+        {
+            Debug.LogException(new System.Exception("ZoneManager not found! Make sure it is present in the scene."));
+        }
     }
 
     private void Start()
@@ -50,7 +57,7 @@ public class EnemySpawner : MonoBehaviour
     public void SpawnEnemyBoats()
     {
         Debug.LogError("SpawnEnemyBoats called");
-        if (ZoneManager.Instance == null || ZoneManager.Instance.zones.Count == 0)
+        if (zoneManager == null || zoneManager.zones.Count == 0)
         {
             Debug.LogError(
                 "Cannot spawn enemy boats: ZoneManager not initialized or no zones created."
@@ -66,8 +73,8 @@ public class EnemySpawner : MonoBehaviour
 
         enemyBoatPositions.Clear();
 
-        int zonesCount = ZoneManager.Instance.zones.Count;
-        Vector2 centerPoint = ZoneManager.Instance.centerPoint;
+        int zonesCount = zoneManager.zones.Count;
+        Vector2 centerPoint = zoneManager.centerPoint;
 
         // Calculate the total area of all zones combined (similar to FishingSpotSpawner)
         float totalArea = 0f;
@@ -75,7 +82,7 @@ public class EnemySpawner : MonoBehaviour
 
         for (int i = 0; i < zonesCount; i++)
         {
-            Zone zone = ZoneManager.Instance.zones[i];
+            Zone zone = zoneManager.zones[i];
             float zoneArea =
                 Mathf.PI * (Mathf.Pow(zone.outerRadius, 2) - Mathf.Pow(zone.innerRadius, 2));
             zoneAreas[i] = zoneArea;
@@ -85,7 +92,7 @@ public class EnemySpawner : MonoBehaviour
         // Spawn enemy boats in each zone
         for (int zoneIndex = 0; zoneIndex < zonesCount; zoneIndex++)
         {
-            Zone currentZone = ZoneManager.Instance.zones[zoneIndex];
+            Zone currentZone = zoneManager.zones[zoneIndex];
 
             // Skip the first zone (closest to island) to give player a safe starting area
             if (zoneIndex == 0)
@@ -424,12 +431,12 @@ public class EnemySpawner : MonoBehaviour
     // Debug visualization
     private void OnDrawGizmosSelected()
     {
-        if (ZoneManager.Instance == null)
+        if (zoneManager == null)
             return;
 
         // Draw min distance from island
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(ZoneManager.Instance.centerPoint, minDistanceFromIsland);
+        Gizmos.DrawWireSphere(zoneManager.centerPoint, minDistanceFromIsland);
 
         // Draw placed enemy boat positions
         Gizmos.color = Color.yellow;
