@@ -256,6 +256,11 @@ MonoBehaviour:
   baseWaterColor: {r: 0.2, g: 0.5, b: 0.8, a: 1}
   darknessFactor: 0.15
   zoneManager: {fileID: 0}
+--- !u!1 &390326028 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1468041551596601128, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+  m_PrefabInstance: {fileID: 7402001251212191012}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &522536347 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2245126907457695606, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
@@ -1044,11 +1049,11 @@ PrefabInstance:
     - target: {fileID: 2443481978319142599, guid: 36fe2dda92c8e4e51bf4bc4386d1098b, type: 3}
       propertyPath: tooltipPanel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877743101}
     - target: {fileID: 2443481978319142599, guid: 36fe2dda92c8e4e51bf4bc4386d1098b, type: 3}
       propertyPath: interactPanel
       value: 
-      objectReference: {fileID: 1877743101}
+      objectReference: {fileID: 390326028}
     - target: {fileID: 2443481978319142599, guid: 36fe2dda92c8e4e51bf4bc4386d1098b, type: 3}
       propertyPath: shoppingPanel
       value: 

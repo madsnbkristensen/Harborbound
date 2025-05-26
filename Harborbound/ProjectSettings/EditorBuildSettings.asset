@@ -5,8 +5,17 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main Scene.unity
     guid: bfa748ba1749e7747ba6da90ab7f461c
+  - enabled: 1
+    path: Assets/Scenes/karlo2.unity
+    guid: 63740ea1e19dd1743afacd3ffc57330b
+  - enabled: 0
+    path: Assets/Scenes/mads.unity
+    guid: 53230495a76d5084682f9e3ab97d154f
+  - enabled: 1
+    path: Assets/Scenes/Main island.unity
+    guid: 635d0f74de9c046da8cb4ae55e8858aa
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

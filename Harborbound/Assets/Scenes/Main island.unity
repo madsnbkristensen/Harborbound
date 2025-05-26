@@ -504,6 +504,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 108713660177429840, guid: 5d37aeff8f6fe4736aee9d2746f208c2, type: 3}
+      propertyPath: oceanSceneName
+      value: karlo2
+      objectReference: {fileID: 0}
     - target: {fileID: 1351980678588202205, guid: 5d37aeff8f6fe4736aee9d2746f208c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.073024325
