@@ -16,6 +16,8 @@ public class FishingSpotSpawner : MonoBehaviour
 
     private List<Vector2> fishingSpotPositions = new List<Vector2>();
 
+    public WorldGenerator worldGenerator;
+
     private void Awake()
     {
         // Singleton pattern implementation
@@ -27,6 +29,17 @@ public class FishingSpotSpawner : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        worldGenerator = FindFirstObjectByType<WorldGenerator>();
+        if (worldGenerator == null)
+        {
+            Debug.LogException(new System.Exception("FishingSpotSpawner: WorldGenerator not found! Make sure it is present in the scene."));
+        }
+    }
+
+    private void Start()
+    {
+        // Ensure the world generator is assigned
     }
 
     public void SpawnFishingSpots()
@@ -102,7 +115,7 @@ public class FishingSpotSpawner : MonoBehaviour
                 }
 
                 // Check if too close to rocks
-                bool tooCloseToRocks = WorldGenerator.Instance.CheckRockPositions(candidatePos, minDistanceFromRocks);
+                bool tooCloseToRocks = worldGenerator.CheckRockPositions(candidatePos, minDistanceFromRocks);
 
                 if (!tooCloseToOtherSpots && !tooCloseToRocks)
                 {

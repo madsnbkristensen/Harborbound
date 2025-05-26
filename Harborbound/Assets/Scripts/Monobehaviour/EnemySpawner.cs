@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    // Singleton pattern
-    public static EnemySpawner Instance { get; private set; }
-
     [Header("Spawn Settings")]
     public GameObject enemyBoatPrefab;
     public GameObject enemyPiratePrefab;
@@ -35,22 +32,24 @@ public class EnemySpawner : MonoBehaviour
     public GameObject equipItemPrefab; // The same prefab used in PlayerEquipment
 
     private List<Vector2> enemyBoatPositions = new List<Vector2>();
+    public WorldGenerator worldGenerator;
 
     private void Awake()
     {
-        // Singleton pattern implementation
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
+    }
 
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+    private void Start()
+    {
+        worldGenerator = FindFirstObjectByType<WorldGenerator>();
+        if (worldGenerator == null)
+        {
+            Debug.LogException(new System.Exception("WorldGenerator not found!"));
+        }
     }
 
     public void SpawnEnemyBoats()
     {
+        Debug.LogError("SpawnEnemyBoats called");
         if (ZoneManager.Instance == null || ZoneManager.Instance.zones.Count == 0)
         {
             Debug.LogError(
@@ -142,8 +141,8 @@ public class EnemySpawner : MonoBehaviour
 
                 // Check if too close to rocks
                 bool tooCloseToRocks =
-                    WorldGenerator.Instance != null
-                    && WorldGenerator.Instance.CheckRockPositions(
+                    worldGenerator != null
+                    && worldGenerator.CheckRockPositions(
                         candidatePos,
                         minDistanceFromRocks
                     );

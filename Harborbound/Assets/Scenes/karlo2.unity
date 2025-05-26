@@ -292,6 +292,7 @@ MonoBehaviour:
   rockPositions: []
   rockCount: 200
   islandCenterPosition: {x: 0, y: 0}
+  enemySpawner: {fileID: 1890538076}
 --- !u!4 &524707580
 Transform:
   m_ObjectHideFlags: 0
@@ -475,6 +476,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4136170455367901386, guid: b77e1e61d4bdf46419776d3e66f31dc4, type: 3}
+      propertyPath: worldGenerator
+      value: 
+      objectReference: {fileID: 524707579}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -641,6 +646,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7282278447037421304, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
   m_PrefabInstance: {fileID: 7402001251212191012}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1890538076 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4136170455367901386, guid: b77e1e61d4bdf46419776d3e66f31dc4, type: 3}
+  m_PrefabInstance: {fileID: 1408133906}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b8cc124fdf7a52428234974e8c3bf95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1935117458
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +706,7 @@ MonoBehaviour:
   spotIncreaseFactor: 1.5
   minDistanceBetweenSpots: 5
   minDistanceFromRocks: 2
+  worldGenerator: {fileID: 0}
 --- !u!1 &1970602541 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6462175139244585260, guid: 447559e7a31394aeab460a006a8a081e, type: 3}

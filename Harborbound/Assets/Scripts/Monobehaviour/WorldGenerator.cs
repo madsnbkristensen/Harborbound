@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
 using Random = UnityEngine.Random;
@@ -7,9 +6,6 @@ using Vector2 = UnityEngine.Vector2;
 
 public class WorldGenerator : MonoBehaviour
 {
-    // Singleton instance
-    public static WorldGenerator Instance { get; private set; }
-
     public int worldZoneCount = 4;
     public GameObject[] rockPrefabs;
     public List<Vector2> rockPositions = new();
@@ -17,17 +13,15 @@ public class WorldGenerator : MonoBehaviour
     public int rockCount = 200;
     public Vector2 islandCenterPosition = new(0, 0);
 
+    public EnemySpawner enemySpawner;
+
     private void Awake()
     {
-        // Singleton pattern implementation
-        if (Instance != null && Instance != this)
+        enemySpawner = FindFirstObjectByType<EnemySpawner>();
+        if (enemySpawner == null)
         {
-            Destroy(gameObject); // Destroy duplicates
-            return;
+            Debug.LogException(new System.Exception("EnemySpawner not found! Make sure it is present in the scene."));
         }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject); // Optional: keeps the object across scene loads
     }
 
     void Start()
@@ -92,13 +86,14 @@ public class WorldGenerator : MonoBehaviour
         }
 
         // Step 6: Spawn enemy boats
-        if (EnemySpawner.Instance != null)
+        if (enemySpawner != null)
         {
-            EnemySpawner.Instance.SpawnEnemies();
+            Debug.Log("######### Spawning enemy boats #########");
+            enemySpawner.SpawnEnemyBoats();
         }
         else
         {
-            Debug.LogWarning("EnemySpawner not found. Enemies will not be generated.");
+            Debug.LogWarning("EnemySpawner not found. Enemy boats will not be spawned.");
         }
     }
 
