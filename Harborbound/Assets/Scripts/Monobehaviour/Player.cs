@@ -184,8 +184,12 @@ public class Player : Humanoid
         }
 
         // Keep player at boat wheel position when sprite is disabled (indicating driving mode)
-        if (playerSpriteRenderer != null && !playerSpriteRenderer.enabled &&
-            playerBoat != null && boatWheelPosition != null)
+        if (
+            playerSpriteRenderer != null
+            && !playerSpriteRenderer.enabled
+            && playerBoat != null
+            && boatWheelPosition != null
+        )
         {
             transform.position = boatWheelPosition.position;
         }
@@ -450,6 +454,54 @@ public class Player : Humanoid
         {
             // Set flipX to true when moving left, false when moving right
             playerSpriteRenderer.flipX = (horizontal < 0);
+
+            // also transform the weapon and rod attachment position relative to the player, set -x on both
+            Transform weaponAttachment = transform.Find("WeaponAttatchmentPoint");
+            Transform rodAttachment = transform.Find("RodAttatchmentPoint");
+
+            if (weaponAttachment != null)
+            {
+                Vector3 weaponPos = weaponAttachment.localPosition;
+                weaponPos.x = Mathf.Abs(weaponPos.x) * (horizontal > 0 ? 1 : -1);
+                weaponAttachment.localPosition = weaponPos;
+
+                // Check if there are any children before trying to access them
+                if (weaponAttachment.childCount > 0)
+                {
+                    Transform equippedItem = weaponAttachment.GetChild(0);
+                    if (equippedItem != null && equippedItem.name.Contains("EquipableItemVisual"))
+                    {
+                        Vector3 scale = equippedItem.localScale;
+                        // Set X scale to always be positive (1)
+                        scale.x = Mathf.Abs(scale.x);
+                        // Set Y scale to be positive when moving right, negative when moving left
+                        scale.y = Mathf.Abs(scale.y) * (horizontal > 0 ? 1 : -1);
+                        equippedItem.localScale = scale;
+                    }
+                }
+            }
+
+            /* if (rodAttachment != null)
+            {
+                Vector3 rodPos = rodAttachment.localPosition;
+                rodPos.x = Mathf.Abs(rodPos.x) * (horizontal > 0 ? 1 : -1);
+                rodAttachment.localPosition = rodPos;
+
+                // Check if there are any children before trying to access them
+                if (rodAttachment.childCount > 0) // Fixed: Check rodAttachment instead of weaponAttachment
+                {
+                    Transform equippedItem = rodAttachment.GetChild(0); // Fixed: Get from rodAttachment
+                    if (equippedItem != null && equippedItem.name.Contains("EquipableItemVisual"))
+                    {
+                        Vector3 scale = equippedItem.localScale;
+                        // Set X scale to always be positive (1)
+                        scale.x = Mathf.Abs(scale.x);
+                        // Set Y scale to be positive when moving right, negative when moving left
+                        scale.y = Mathf.Abs(scale.y) * (horizontal > 0 ? 1 : -1);
+                        equippedItem.localScale = scale;
+                    }
+                }
+            } */
         }
 
         if (animator != null)
