@@ -377,6 +377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5846233139150736017, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5890166854690598214, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -396,6 +400,54 @@ PrefabInstance:
     - target: {fileID: 5890166854690598214, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951730281332633194, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951730281332633194, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082816259961041000, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082816259961041000, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082816259961041000, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082816259961041000, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1975771436}
+    - target: {fileID: 7082816259961041000, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082816259961041000, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082816259961041000, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RespawnPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082816259961041000, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082816259961041000, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082816259961041000, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8832261596479304585, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -970,6 +1022,17 @@ MonoBehaviour:
   sceneName: Main island
   secondSceneName: karlo2
   keyToPress: 99
+--- !u!114 &1975771436 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6827428874560893546, guid: 9a320148da65b4f62ba509b9d1c9a10b, type: 3}
+  m_PrefabInstance: {fileID: 1975771432}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508974242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d3d399f41794d9fa9e036ff3610b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2129034364 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1912106978581045172, guid: 447559e7a31394aeab460a006a8a081e, type: 3}

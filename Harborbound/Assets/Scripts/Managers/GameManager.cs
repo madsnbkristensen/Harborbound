@@ -210,6 +210,7 @@ public class GameManager : MonoBehaviour
         this.SpendMoney(money / 2); ;
         player.currentHealth = player.maxHealth;
         SceneManager.LoadScene(respawnSceneName);
+        UIManager.Instance.ShowDeathPanel(false);
         Debug.Log("Player respawned");
     }
 
