@@ -97,6 +97,7 @@ public class GameManager : MonoBehaviour
 
         if (currentPlayerBoat == null)
             currentPlayerBoat = FindFirstObjectByType<Boat>();
+        AudioManager.Instance.ChangeMusic(AudioManager.SoundType.Music_Island);
     }
 
     // Methods from UML
@@ -209,6 +210,7 @@ public class GameManager : MonoBehaviour
         this.SpendMoney(money / 2); ;
         player.currentHealth = player.maxHealth;
         SceneManager.LoadScene(respawnSceneName);
+        UIManager.Instance.ShowDeathPanel(false);
         Debug.Log("Player respawned");
     }
 
