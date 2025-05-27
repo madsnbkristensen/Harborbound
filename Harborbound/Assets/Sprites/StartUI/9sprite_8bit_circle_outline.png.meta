@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5e7458f287a76f74883d945efaf41c71
+guid: b0215f3caf8a13047bbec5f5eb5fd5e8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7094374195260217384
-    second: Textbox3_0
+      213: 198610345067750395
+    second: 9sprite_8bit_circle_outline_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Textbox3_0
+      name: 9sprite_8bit_circle_outline_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1512
-        height: 272
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 128, z: 128, w: 128}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d721dbc148bb8d90800000000000000
-      internalID: -7094374195260217384
+      spriteID: bf32b7a7e0b91c200800000000000000
+      internalID: 198610345067750395
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 43a5c677adc0d2b4482da9b65b23933f
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Textbox3_0: -7094374195260217384
+      9sprite_8bit_circle_outline_0: 198610345067750395
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

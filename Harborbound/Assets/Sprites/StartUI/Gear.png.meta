@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5e7458f287a76f74883d945efaf41c71
+guid: 8c1113e0ef9f2e648ae348f7a019ba51
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7094374195260217384
-    second: Textbox3_0
+      213: 3891269495536304776
+    second: Gear_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Textbox3_0
+      name: Gear_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1512
-        height: 272
+        width: 205
+        height: 207
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d721dbc148bb8d90800000000000000
-      internalID: -7094374195260217384
+      spriteID: 88241c64df0900630800000000000000
+      internalID: 3891269495536304776
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Textbox3_0: -7094374195260217384
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
