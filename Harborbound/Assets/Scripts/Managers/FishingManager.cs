@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class FishingManager : MonoBehaviour
@@ -340,15 +341,11 @@ public class FishingManager : MonoBehaviour
                         if (addedToInventory)
                         {
                             Debug.Log($"Added {currentCatch.GetName()} to inventory!");
-                            // TODO: Show catch animation
+                            OnFishCaught?.Invoke(currentCatch);
                         }
                         else
                         {
-                            // TODO: Show inventory full animation
                             AudioManager.Instance.Play(AudioManager.SoundType.Full_Inventory);
-                            HelperManager.Instance.handleSpecificTooltip(
-                                "Inventory is full! Fish was released."
-                            );
                             Destroy(currentCatch.gameObject); // Clean up fish if not added to inventory
                         }
                     }
@@ -370,7 +367,6 @@ public class FishingManager : MonoBehaviour
                         Debug.LogWarning("PlayerInventory reference is missing in FishingManager!");
                     }
 
-                    OnFishCaught?.Invoke(currentCatch);
                     caught = true;
                 }
 
