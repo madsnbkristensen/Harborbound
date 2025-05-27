@@ -24,7 +24,7 @@ MonoBehaviour:
   maxStackSize: 0
   prefab: {fileID: 7546166427365782202, guid: bda05c2de77f84e4bb4affbe37a051a4, type: 3}
   damage: 30
-  range: 5
+  range: 15
   attackSpeed: 2
   spread: 10
   bulletTravelTime: 0.5
