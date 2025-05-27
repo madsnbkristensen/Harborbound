@@ -106,3 +106,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  shouldFollow: 1
+  sceneSettings:
+  - sceneName: Main island
+    normalZoom: 30
+    zoomedOutDistance: 100
+  defaultNormalZoom: 5
+  defaultZoomedOutDistance: 10
+  zoomSpeed: 2
