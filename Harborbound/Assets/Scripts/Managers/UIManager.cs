@@ -241,7 +241,7 @@ public class UIManager : MonoBehaviour
     public void UpdateMoneyDisplay(int amount)
     {
         if (moneyText != null)
-            moneyText.text = $"$: {amount}";
+            moneyText.text = $"{amount}";
     }
 
     // Update the fuel display for the boat

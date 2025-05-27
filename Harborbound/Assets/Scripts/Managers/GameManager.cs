@@ -97,6 +97,7 @@ public class GameManager : MonoBehaviour
 
         if (currentPlayerBoat == null)
             currentPlayerBoat = FindFirstObjectByType<Boat>();
+        AudioManager.Instance.ChangeMusic(AudioManager.SoundType.Music_Island);
     }
 
     // Methods from UML
