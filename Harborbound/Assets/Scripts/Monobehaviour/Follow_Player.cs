@@ -3,6 +3,8 @@ using UnityEngine;
 public class Follow_player : MonoBehaviour
 {
     public Transform player;
+    public bool shouldFollow = true;
+
     // find player by object and add
     private void Start()
     {
