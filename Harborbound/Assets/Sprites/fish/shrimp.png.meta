@@ -1,0 +1,1242 @@
+fileFormatVersion: 2
+guid: 08bd2c2bd41ce4e53b68bbf43a8e4bf5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9161645240248954025
+    second: shrimp_0
+  - first:
+      213: -3214411911766497499
+    second: shrimp_1
+  - first:
+      213: 8102914159492823657
+    second: shrimp_2
+  - first:
+      213: 1984238819572082807
+    second: shrimp_3
+  - first:
+      213: 4632159988271011906
+    second: shrimp_4
+  - first:
+      213: -2885740912573883518
+    second: shrimp_5
+  - first:
+      213: 3128500564109638691
+    second: shrimp_6
+  - first:
+      213: 4982993176672788436
+    second: shrimp_7
+  - first:
+      213: -5335610607407949400
+    second: shrimp_8
+  - first:
+      213: 6432495526038775598
+    second: shrimp_9
+  - first:
+      213: 7115822746730522435
+    second: shrimp_10
+  - first:
+      213: 7907055643426260103
+    second: shrimp_11
+  - first:
+      213: -1065955971937939050
+    second: shrimp_12
+  - first:
+      213: 3365218354760279701
+    second: shrimp_13
+  - first:
+      213: 4076999008196469368
+    second: shrimp_14
+  - first:
+      213: 4094688261476018854
+    second: shrimp_15
+  - first:
+      213: 1877099220036348303
+    second: shrimp_16
+  - first:
+      213: -2644228264629202809
+    second: shrimp_17
+  - first:
+      213: 3819653473042730885
+    second: shrimp_18
+  - first:
+      213: 8841546393214101587
+    second: shrimp_19
+  - first:
+      213: 3292632284598637272
+    second: shrimp_20
+  - first:
+      213: 3664404307810011406
+    second: shrimp_21
+  - first:
+      213: -8390349256182965237
+    second: shrimp_22
+  - first:
+      213: 6290125133938932291
+    second: shrimp_23
+  - first:
+      213: 6481209247679912792
+    second: shrimp_24
+  - first:
+      213: 3136338972665245516
+    second: shrimp_25
+  - first:
+      213: 7547803969529635303
+    second: shrimp_26
+  - first:
+      213: 5893862677362369073
+    second: shrimp_27
+  - first:
+      213: 2760529645065197659
+    second: shrimp_28
+  - first:
+      213: 165220494136827695
+    second: shrimp_29
+  - first:
+      213: -6426890356859903176
+    second: shrimp_30
+  - first:
+      213: -8679645718549366759
+    second: shrimp_31
+  - first:
+      213: -5413615668593949540
+    second: shrimp_32
+  - first:
+      213: 8095758609044275627
+    second: shrimp_33
+  - first:
+      213: -9079815906828442909
+    second: shrimp_34
+  - first:
+      213: -9041976344139000781
+    second: shrimp_35
+  - first:
+      213: -1273021188138407451
+    second: shrimp_36
+  - first:
+      213: 4221304280088677172
+    second: shrimp_37
+  - first:
+      213: 7005562070486796586
+    second: shrimp_38
+  - first:
+      213: 7619118869061499814
+    second: shrimp_39
+  - first:
+      213: -3039912444830351312
+    second: shrimp_40
+  - first:
+      213: 3019750676583758444
+    second: shrimp_41
+  - first:
+      213: 4828225050571879897
+    second: shrimp_42
+  - first:
+      213: 284178970043079777
+    second: shrimp_43
+  - first:
+      213: -6489440522617592792
+    second: shrimp_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: shrimp_0
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 518
+        width: 27
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75310d8c13c4bd080800000000000000
+      internalID: -9161645240248954025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_1
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 579
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 527af5d956d1463d0800000000000000
+      internalID: -3214411911766497499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_2
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 589
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96a7d0a3f75537070800000000000000
+      internalID: 8102914159492823657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_3
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 592
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 778622681be698b10800000000000000
+      internalID: 1984238819572082807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_4
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 579
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 248dba397fcb84040800000000000000
+      internalID: 4632159988271011906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_5
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 589
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28bd838ede9c3f7d0800000000000000
+      internalID: -2885740912573883518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_6
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 592
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32c3d5300baaa6b20800000000000000
+      internalID: 3128500564109638691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_7
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 579
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dfd6c5a4e5272540800000000000000
+      internalID: 4982993176672788436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_8
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 580
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a994adfb6a14f5b0800000000000000
+      internalID: -5335610607407949400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_9
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 579
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e27a4d0a990d44950800000000000000
+      internalID: 6432495526038775598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_10
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 589
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 347648f361b70c260800000000000000
+      internalID: 7115822746730522435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_11
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 579
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7848badd6318bbd60800000000000000
+      internalID: 7907055643426260103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_12
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 589
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 691de62f0b6f431f0800000000000000
+      internalID: -1065955971937939050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_13
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 579
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5966c139348a3be20800000000000000
+      internalID: 3365218354760279701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_14
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 579
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 872ab214ff8649830800000000000000
+      internalID: 4076999008196469368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_15
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 580
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aa6d3b774143d830800000000000000
+      internalID: 4094688261476018854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_16
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 579
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f89ed6a9bcbcc0a10800000000000000
+      internalID: 1877099220036348303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_17
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 591
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7809abd2760dd4bd0800000000000000
+      internalID: -2644228264629202809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_18
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 586
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f8cc9a892220530800000000000000
+      internalID: 3819653473042730885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_19
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 565
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358a9a0a99b73ba70800000000000000
+      internalID: 8841546393214101587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_20
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 593
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d21c732e97c1bd20800000000000000
+      internalID: 3292632284598637272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_21
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 580
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e094d689d449ad230800000000000000
+      internalID: 3664404307810011406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_22
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 584
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c50c33ecd7f8b80800000000000000
+      internalID: -8390349256182965237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_23
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 580
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34abf299b730b4750800000000000000
+      internalID: 6290125133938932291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_24
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 580
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b10fac871e1f950800000000000000
+      internalID: 6481209247679912792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_25
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 580
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4fece8bda3868b20800000000000000
+      internalID: 3136338972665245516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_26
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 255
+        width: 304
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1e81668bf2fb860800000000000000
+      internalID: 7547803969529635303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_27
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 557
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132ed17c0e43bc150800000000000000
+      internalID: 5893862677362369073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_28
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 542
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58db06161f5f4620800000000000000
+      internalID: 2760529645065197659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_29
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 557
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2fd3aef92bfa4200800000000000000
+      internalID: 165220494136827695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_30
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 522
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8336bf485491fc6a0800000000000000
+      internalID: -6426890356859903176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_31
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 522
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 918ff99a434bb8780800000000000000
+      internalID: -8679645718549366759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_32
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 523
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9408f26b39fed4b0800000000000000
+      internalID: -5413615668593949540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_33
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 488
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba1056fcf89e95070800000000000000
+      internalID: 8095758609044275627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_34
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 453
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e2ac872a830ef180800000000000000
+      internalID: -9079815906828442909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_35
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 418
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3341c14eb62748280800000000000000
+      internalID: -9041976344139000781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_36
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 401
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e9e67169f1555ee0800000000000000
+      internalID: -1273021188138407451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_37
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 374
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b858790e5159a30800000000000000
+      internalID: 4221304280088677172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_38
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 383
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a29c0570691c83160800000000000000
+      internalID: 7005562070486796586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_39
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 366
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6abf2eb5e3c8cb960800000000000000
+      internalID: 7619118869061499814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_40
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 339
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0300991dcbf00d5d0800000000000000
+      internalID: -3039912444830351312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_41
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 348
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6a3504bd3f48e920800000000000000
+      internalID: 3019750676583758444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_42
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 313
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d5bafa3a1d410340800000000000000
+      internalID: 4828225050571879897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_43
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 291
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16cdd02844b91f300800000000000000
+      internalID: 284178970043079777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shrimp_44
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 278
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8246a5a2a30e0f5a0800000000000000
+      internalID: -6489440522617592792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
