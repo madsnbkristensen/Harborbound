@@ -183,7 +183,7 @@ public class PlayerBoat : Boat
         // Check for both rock layer and island tag
         if (
             collision.gameObject.layer == LayerMask.NameToLayer("Rocks")
-            || collision.gameObject.CompareTag("Island")
+            || collision.gameObject.CompareTag("Island") || collision.gameObject.CompareTag("EnemyBoat")
         )
         {
             isCollidingWithRock = true;
@@ -202,7 +202,7 @@ public class PlayerBoat : Boat
     {
         if (
             collision.gameObject.layer == LayerMask.NameToLayer("Rocks")
-            || collision.gameObject.CompareTag("Island")
+            || collision.gameObject.CompareTag("Island") || collision.gameObject.CompareTag("EnemyBoat")
         )
         {
             isCollidingWithRock = false;
@@ -216,7 +216,7 @@ public class PlayerBoat : Boat
     {
         if (
             collision.gameObject.layer == LayerMask.NameToLayer("Rocks")
-            || collision.gameObject.CompareTag("Island")
+            || collision.gameObject.CompareTag("Island") || collision.gameObject.CompareTag("EnemyBoat")
         )
         {
             // Smoothly update the collision normal to prevent jittering
