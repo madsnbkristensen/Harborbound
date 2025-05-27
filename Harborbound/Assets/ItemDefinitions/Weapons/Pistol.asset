@@ -29,7 +29,7 @@ MonoBehaviour:
   spread: 6
   bulletTravelTime: 0.5
   weaponType: 0
-  bulletsPerShot: 4
+  bulletsPerShot: 1
   burstCount: 1
   burstInterval: 0.1
   minSize: 0

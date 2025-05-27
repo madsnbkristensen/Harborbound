@@ -47,8 +47,8 @@ MonoBehaviour:
   enemyBoatPrefab: {fileID: 736686741757130447, guid: d5191ca75fb7d1a41a85a237ca779979, type: 3}
   enemyPiratePrefab: {fileID: 9143379638909142466, guid: ef811164ea9774850bccc28d3c924ef3, type: 3}
   enemySharkPrefab: {fileID: 0}
-  baseEnemyBoatsPerZone: 2
-  boatIncreaseFactor: 1.2
+  baseEnemyBoatsPerZone: 6
+  boatIncreaseFactor: 1.8
   minDistanceBetweenBoats: 15
   minDistanceFromRocks: 5
   minDistanceFromIsland: 10
@@ -56,7 +56,9 @@ MonoBehaviour:
   maxEnemiesPerBoat: 3
   sharkProbability: 0.3
   availableWeapons: []
-  kalashnikovDef: {fileID: 11400000, guid: 73f82264251a14e7aa8bb284302f7ecf, type: 2}
-  pistolDef: {fileID: 11400000, guid: dc0d05e1b40b085479984582b4b2a1b3, type: 2}
-  shotgunDef: {fileID: 11400000, guid: 23d001e3098e376479307c6b7865c79a, type: 2}
+  kalashnikovDef: {fileID: 11400000, guid: b679331230e838a4ca6fcd8547488f32, type: 2}
+  pistolDef: {fileID: 11400000, guid: e95d0c6bc4c8d044a891b2debbc16c8a, type: 2}
+  shotgunDef: {fileID: 11400000, guid: 264b7db82b6c5804b964c9654e53be21, type: 2}
   equipItemPrefab: {fileID: 960434323151276528, guid: bda05c2de77f84e4bb4affbe37a051a4, type: 3}
+  zoneManager: {fileID: 0}
+  worldGenerator: {fileID: 0}

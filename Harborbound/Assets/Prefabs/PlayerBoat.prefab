@@ -50,12 +50,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a28d5f64e8bad46778d4ad90331f0bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 10
   rotationSpeed: 100
   player: {fileID: 0}
   _wheelPosition: {fileID: 4558667207472975731}
   edgeCollider: {fileID: 0}
-  colliderPivotOffset: {x: 3, y: 2}
 --- !u!212 &6107932580858949776
 SpriteRenderer:
   m_ObjectHideFlags: 0

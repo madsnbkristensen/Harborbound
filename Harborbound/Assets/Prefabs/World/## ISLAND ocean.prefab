@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 7969938369026842564}
   - component: {fileID: 4054235169139215867}
   - component: {fileID: 3588942475711812658}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: '## ISLAND ocean'
   m_TagString: Island
   m_Icon: {fileID: 0}
@@ -1812,7 +1812,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -50
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.20392159, g: 0.25490198, b: 0.62352943, a: 1}
   m_FlipX: 0
@@ -2226,7 +2226,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -40
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 53.091114, y: 53.091114, z: 0}
   m_MaxChunkCount: 16

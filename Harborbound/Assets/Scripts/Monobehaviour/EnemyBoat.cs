@@ -24,7 +24,7 @@ public class EnemyBoat : Boat
     private float attackRange = 10f;
 
     [SerializeField]
-    private float minAttackDistance = 5f;
+    private float minAttackDistance = 2.5f;
 
     [Header("Movement")]
     [SerializeField]
@@ -213,24 +213,14 @@ public class EnemyBoat : Boat
             Vector2 avoidedDirection = AvoidRocks(moveDirection);
             Move(avoidedDirection);
         }
-        else if (distanceToPlayer > attackRange)
+        else
         {
-            // Move closer slowly with rock avoidance
+            // Move closer to player until reaching min distance
             Vector2 moveDirection = directionToPlayer * 0.5f;
             Vector2 avoidedDirection = AvoidRocks(moveDirection);
             Move(avoidedDirection);
-        }
-        else
-        {
-            // At good attack range, just rotate to face player
-            // Even when stationary, we should check for rocks that might be too close
-            Vector2 avoidRocksDirection = AvoidRocks(Vector2.zero);
-            if (avoidRocksDirection != Vector2.zero)
-            {
-                // If we're too close to rocks, move away slightly
-                Move(avoidRocksDirection * 0.3f);
-            }
 
+            // Always face the player
             FaceDirection(directionToPlayer);
         }
     }

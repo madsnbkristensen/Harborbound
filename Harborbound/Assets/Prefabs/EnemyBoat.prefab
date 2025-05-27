@@ -52,7 +52,7 @@ MonoBehaviour:
   _state: 0
   viewRange: 20
   attackRange: 10
-  minAttackDistance: 5
+  minAttackDistance: 2.5
   patrolSpeed: 2
   chaseSpeed: 4
   patrolPoints: []
