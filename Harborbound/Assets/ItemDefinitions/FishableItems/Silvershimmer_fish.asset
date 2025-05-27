@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f95b83406016b49c8af9627670c9510f, type: 3}
-  m_Name: Salmon_Fish
+  m_Name: Silvershimmer_fish
   m_EditorClassIdentifier: 
-  _id: 281961
-  itemName: Blue Salmon
-  description: Hearty fish known for swimming upstream.
-  icon: {fileID: 6774393580310161239, guid: 77c09434cb80c445da34213c419281be, type: 3}
-  value: 170
+  _id: 915424
+  itemName: Silver Shimmer
+  description: Silvery fish with striking orange fins.
+  icon: {fileID: 7767443930226722933, guid: 9c601d94695f144e2af234c6adc54980, type: 3}
+  value: 80
   type: 2
   inventoryWidth: 2
   inventoryHeight: 1
-  isStackable: 1
-  maxStackSize: 64
+  isStackable: 0
+  maxStackSize: 0
   prefab: {fileID: 0}
   damage: 0
   range: 0
@@ -32,9 +32,9 @@ MonoBehaviour:
   bulletsPerShot: 1
   burstCount: 1
   burstInterval: 0.1
-  minSize: 4
-  maxSize: 12
+  minSize: 2
+  maxSize: 5
   availableZones: 0200000003000000
-  rarity: 60
+  rarity: 35
   castRange: 0
   bobberTravelSpeed: 0
