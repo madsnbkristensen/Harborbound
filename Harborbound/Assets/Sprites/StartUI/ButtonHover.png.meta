@@ -334,7 +334,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ButtonHover_0: 7450269515889703969
+      ButtonHover_1: -3253904087394954182
+      ButtonHover_2: 4106498681297735097
+      ButtonHover_3: 2470167305871212396
+      ButtonHover_4: 6286076182542249126
+      ButtonHover_5: -1651641646648641184
+      ButtonHover_6: 2339868794685368711
+      ButtonHover_7: -3326415261999284124
+      ButtonHover_8: -234816101663079299
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

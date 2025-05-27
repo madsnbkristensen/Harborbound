@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 226435821}
   - component: {fileID: 226435820}
+  - component: {fileID: 226435822}
   m_Layer: 0
   m_Name: Intro
   m_TagString: Untagged
@@ -176,6 +177,19 @@ Transform:
   - {fileID: 1550566730}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &226435822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226435819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9940c00a6baa94ed9829d6efbbad0e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Main island
 --- !u!1 &324674598
 GameObject:
   m_ObjectHideFlags: 0
