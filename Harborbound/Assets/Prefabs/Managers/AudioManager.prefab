@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1503248918685017968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 39161165090079838}
+  - component: {fileID: 3955430968550685769}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &39161165090079838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503248918685017968}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6359838, y: 26.352427, z: 0.3636975}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3955430968550685769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503248918685017968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4052f8de22a0a2e4aa1428dcb9ca5e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllSounds:
+  - Type: 12
+    Clips:
+    - {fileID: 8300000, guid: 002c07da22459d54dba3673401f8c2aa, type: 3}
+    Volume: 0.59
+    Source: {fileID: 0}
+  - Type: 13
+    Clips:
+    - {fileID: 8300000, guid: 63a1d9f986ed9fa42a4cdd1f6cb42a21, type: 3}
+    Volume: 0.506
+    Source: {fileID: 0}
+  - Type: 14
+    Clips:
+    - {fileID: 8300000, guid: 802cd3c1843dbc142ad90b4d76c64ca9, type: 3}
+    Volume: 0.532
+    Source: {fileID: 0}
+  - Type: 15
+    Clips:
+    - {fileID: 8300000, guid: 3ba6049d15d805b479c5e5913d500724, type: 3}
+    Volume: 0.545
+    Source: {fileID: 0}
+  - Type: 0
+    Clips:
+    - {fileID: 8300000, guid: a14f1d0bd131d4d42935eac041496f76, type: 3}
+    Volume: 0.564
+    Source: {fileID: 0}
+  - Type: 1
+    Clips:
+    - {fileID: 8300000, guid: 993a1114f2bd6de4fa34ce76965e78fd, type: 3}
+    Volume: 0.2
+    Source: {fileID: 0}
+  - Type: 2
+    Clips:
+    - {fileID: 8300000, guid: be505b3afee9c164087b37184bdb6fb6, type: 3}
+    Volume: 0.564
+    Source: {fileID: 0}
+  - Type: 3
+    Clips:
+    - {fileID: 8300000, guid: 8e886f672f6a4024da870b2e6b2ba85e, type: 3}
+    Volume: 0.564
+    Source: {fileID: 0}
+  - Type: 4
+    Clips:
+    - {fileID: 8300000, guid: 9fb5d8c2a5d1f2b48aacc10853795964, type: 3}
+    Volume: 0.564
+    Source: {fileID: 0}
+  - Type: 5
+    Clips: []
+    Volume: 0.564
+    Source: {fileID: 0}
+  - Type: 6
+    Clips:
+    - {fileID: 8300000, guid: a611299e593cc0b4d8afaf7204ee65aa, type: 3}
+    - {fileID: 8300000, guid: bfc04ab18ec640346b7c18b85a9c237f, type: 3}
+    - {fileID: 8300000, guid: e738df1608f89a942ac6a67aa1abf5da, type: 3}
+    - {fileID: 8300000, guid: 7f93e424f09dffc4fbf949e37402c76b, type: 3}
+    - {fileID: 8300000, guid: 1ddc71b3370df264f895e1d7cf2b8705, type: 3}
+    - {fileID: 8300000, guid: 464afeb047911054fb949eed5094f269, type: 3}
+    - {fileID: 8300000, guid: c3ddfeae78b0c0f41a1e549f763f9488, type: 3}
+    - {fileID: 8300000, guid: 8ac14a6c3a499704491e9b75fe0e3774, type: 3}
+    - {fileID: 8300000, guid: b73cce8bde792544292b94d76a010f81, type: 3}
+    - {fileID: 8300000, guid: af39c7161a4db9b429c58d5561fe0596, type: 3}
+    - {fileID: 8300000, guid: 247ef215297ab2347a0b1d9994bc34e3, type: 3}
+    Volume: 0.564
+    Source: {fileID: 0}
+  - Type: 7
+    Clips:
+    - {fileID: 8300000, guid: 477e770f092c5d1468a23457caf5e862, type: 3}
+    Volume: 0.564
+    Source: {fileID: 0}
+  - Type: 9
+    Clips:
+    - {fileID: 8300000, guid: f2627ecd49fd296438c326ec66b03c34, type: 3}
+    Volume: 0.564
+    Source: {fileID: 0}
+  - Type: 10
+    Clips:
+    - {fileID: 8300000, guid: a248ee7382f6e594a9ae7147fc339b67, type: 3}
+    Volume: 0.564
+    Source: {fileID: 0}
+  - Type: 11
+    Clips: []
+    Volume: 0.564
+    Source: {fileID: 0}

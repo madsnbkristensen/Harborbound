@@ -2,20 +2,34 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Bullet
+  - Enemy
+  - Wall
+  - Obstacle
+  - ZoneBoundary
+  - Boundry
+  - EnemyCorpse
+  - EnemyBoat
+  - PlayerBoat
+  - FishingSpot
+  - Interactable
+  - Friend
+  - DeckEdge
+  - Island
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Boat
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Obstacle
+  - ZoneBoundary
+  - Rocks
+  - PlayerBoat
   - 
   - 
   - 
@@ -41,3 +55,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Pirates
+    uniqueID: 225953343
+    locked: 0
+  - name: Equipableitem
+    uniqueID: 1175999479
+    locked: 0
+  - name: TopMost
+    uniqueID: 1855919617
+    locked: 0
+  m_RenderingLayers:
+  - Default

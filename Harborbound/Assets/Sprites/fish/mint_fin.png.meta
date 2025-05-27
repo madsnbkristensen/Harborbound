@@ -1,0 +1,2535 @@
+fileFormatVersion: 2
+guid: 908f824ac147f4b52a20a683965f6a24
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1719083627984866577
+    second: mint_fin_0
+  - first:
+      213: -8093709528115396868
+    second: mint_fin_1
+  - first:
+      213: 7397629502037412686
+    second: mint_fin_2
+  - first:
+      213: -3224920143359181732
+    second: mint_fin_3
+  - first:
+      213: 1051621398873716457
+    second: mint_fin_4
+  - first:
+      213: 7015032770029710655
+    second: mint_fin_5
+  - first:
+      213: 424851979787554454
+    second: mint_fin_6
+  - first:
+      213: -5406643603388203588
+    second: mint_fin_7
+  - first:
+      213: -2461454165927115306
+    second: mint_fin_8
+  - first:
+      213: -3528023726679669100
+    second: mint_fin_9
+  - first:
+      213: 821620153147327583
+    second: mint_fin_10
+  - first:
+      213: 4002137276033453031
+    second: mint_fin_11
+  - first:
+      213: 6867199341127893082
+    second: mint_fin_12
+  - first:
+      213: 7040294127182861042
+    second: mint_fin_13
+  - first:
+      213: 789684350383143018
+    second: mint_fin_14
+  - first:
+      213: 3500312137917996804
+    second: mint_fin_15
+  - first:
+      213: -5507483508272699864
+    second: mint_fin_16
+  - first:
+      213: 6161541487048861895
+    second: mint_fin_17
+  - first:
+      213: -8894027633405446060
+    second: mint_fin_18
+  - first:
+      213: 2218717192462067402
+    second: mint_fin_19
+  - first:
+      213: 7748511121849286693
+    second: mint_fin_20
+  - first:
+      213: -7215113601143543827
+    second: mint_fin_21
+  - first:
+      213: 6703269627347737452
+    second: mint_fin_22
+  - first:
+      213: 1090267186004223573
+    second: mint_fin_23
+  - first:
+      213: -3652161847920417040
+    second: mint_fin_24
+  - first:
+      213: 8425464706336865164
+    second: mint_fin_25
+  - first:
+      213: -9211472595727742311
+    second: mint_fin_26
+  - first:
+      213: -9149552268538194319
+    second: mint_fin_27
+  - first:
+      213: -741271961956870175
+    second: mint_fin_28
+  - first:
+      213: 8292369251594680810
+    second: mint_fin_29
+  - first:
+      213: -5496419070312117703
+    second: mint_fin_30
+  - first:
+      213: 7187667566066000749
+    second: mint_fin_31
+  - first:
+      213: -2528910590091480478
+    second: mint_fin_32
+  - first:
+      213: 2765478047962079825
+    second: mint_fin_33
+  - first:
+      213: -2138489324776980528
+    second: mint_fin_34
+  - first:
+      213: -3990166990640902970
+    second: mint_fin_35
+  - first:
+      213: -256817356763729257
+    second: mint_fin_36
+  - first:
+      213: -7016799275941029535
+    second: mint_fin_37
+  - first:
+      213: -3087737591510072440
+    second: mint_fin_38
+  - first:
+      213: -4008891860884027857
+    second: mint_fin_39
+  - first:
+      213: -1851528620268799692
+    second: mint_fin_40
+  - first:
+      213: 7066442618079598780
+    second: mint_fin_41
+  - first:
+      213: 4212742402677665447
+    second: mint_fin_42
+  - first:
+      213: 4814449091383765596
+    second: mint_fin_43
+  - first:
+      213: 3665921413526061226
+    second: mint_fin_44
+  - first:
+      213: -2473645898296433042
+    second: mint_fin_45
+  - first:
+      213: 1684996076060537768
+    second: mint_fin_46
+  - first:
+      213: 8614238903695207074
+    second: mint_fin_47
+  - first:
+      213: -7844482304903922065
+    second: mint_fin_48
+  - first:
+      213: 1125485587603428226
+    second: mint_fin_49
+  - first:
+      213: 8677652698092955866
+    second: mint_fin_50
+  - first:
+      213: -3744432594347390383
+    second: mint_fin_51
+  - first:
+      213: 2446861665702165741
+    second: mint_fin_52
+  - first:
+      213: 7506646524936999063
+    second: mint_fin_53
+  - first:
+      213: 6235961240218701938
+    second: mint_fin_54
+  - first:
+      213: 4896223797970716588
+    second: mint_fin_55
+  - first:
+      213: -1909533092861544397
+    second: mint_fin_56
+  - first:
+      213: 5436765666452654648
+    second: mint_fin_57
+  - first:
+      213: 5750272686584810274
+    second: mint_fin_58
+  - first:
+      213: 346512676640129077
+    second: mint_fin_59
+  - first:
+      213: 3217420999918096208
+    second: mint_fin_60
+  - first:
+      213: -1808834033472554722
+    second: mint_fin_61
+  - first:
+      213: -4310632145087030722
+    second: mint_fin_62
+  - first:
+      213: -583027876302458822
+    second: mint_fin_63
+  - first:
+      213: -5554908029690352621
+    second: mint_fin_64
+  - first:
+      213: 1871879423591319531
+    second: mint_fin_65
+  - first:
+      213: -4487691601529389927
+    second: mint_fin_66
+  - first:
+      213: 6068695174390888954
+    second: mint_fin_67
+  - first:
+      213: -3299781943985852389
+    second: mint_fin_68
+  - first:
+      213: -2891088170123671839
+    second: mint_fin_69
+  - first:
+      213: -2905581541710337464
+    second: mint_fin_70
+  - first:
+      213: 4059848149909384034
+    second: mint_fin_71
+  - first:
+      213: 7974906530940925019
+    second: mint_fin_72
+  - first:
+      213: -6450034157427876339
+    second: mint_fin_73
+  - first:
+      213: 7954841421913086522
+    second: mint_fin_74
+  - first:
+      213: -4644568251572113890
+    second: mint_fin_75
+  - first:
+      213: 4774514242434780281
+    second: mint_fin_76
+  - first:
+      213: -9109078900633372759
+    second: mint_fin_77
+  - first:
+      213: -5042130607450130016
+    second: mint_fin_78
+  - first:
+      213: 1446047272419625772
+    second: mint_fin_79
+  - first:
+      213: 8269768231020083993
+    second: mint_fin_80
+  - first:
+      213: 7973770316346179336
+    second: mint_fin_81
+  - first:
+      213: 453574611873307345
+    second: mint_fin_82
+  - first:
+      213: 2123190509263413051
+    second: mint_fin_83
+  - first:
+      213: -3488895370273357515
+    second: mint_fin_84
+  - first:
+      213: 3926677640407820631
+    second: mint_fin_85
+  - first:
+      213: 5073542900316612796
+    second: mint_fin_86
+  - first:
+      213: 6106601797800845135
+    second: mint_fin_87
+  - first:
+      213: 2040266442231040980
+    second: mint_fin_88
+  - first:
+      213: 9022191964556666384
+    second: mint_fin_89
+  - first:
+      213: 3809117810497053703
+    second: mint_fin_90
+  - first:
+      213: -7472571669519592577
+    second: mint_fin_91
+  - first:
+      213: -5494537299009792749
+    second: mint_fin_92
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mint_fin_0
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 587
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d4a3993796bd710800000000000000
+      internalID: 1719083627984866577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_1
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 588
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfebc75011e5daf80800000000000000
+      internalID: -8093709528115396868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_2
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 588
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4bc3e876d8a9a660800000000000000
+      internalID: 7397629502037412686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_3
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 594
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5cf21a4738ce33d0800000000000000
+      internalID: -3224920143359181732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_4
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 587
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e6311e271c189e00800000000000000
+      internalID: 1051621398873716457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_5
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 591
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d685913276a5160800000000000000
+      internalID: 7015032770029710655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_6
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 587
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69ecb59ef9065e500800000000000000
+      internalID: 424851979787554454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_7
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 591
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbd78e0d94eb7f4b0800000000000000
+      internalID: -5406643603388203588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_8
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 588
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d542093a7827ddd0800000000000000
+      internalID: -2461454165927115306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_9
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 588
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 496cb14ec11f90fc0800000000000000
+      internalID: -3528023726679669100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 588
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5406a81d2bf66b00800000000000000
+      internalID: 821620153147327583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_11
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 594
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ebc258f5a27a8730800000000000000
+      internalID: 4002137276033453031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_12
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 588
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5089b1ba613d4f50800000000000000
+      internalID: 6867199341127893082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 588
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f2d005253624b160800000000000000
+      internalID: 7040294127182861042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_14
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 591
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68b5459bb585fa00800000000000000
+      internalID: 789684350383143018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_15
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 588
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40f179f085b939030800000000000000
+      internalID: 3500312137917996804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_16
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 597
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826651bddec7193b0800000000000000
+      internalID: -5507483508272699864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_17
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 587
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c821645651328550800000000000000
+      internalID: 6161541487048861895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_18
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 591
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4583c507df0129480800000000000000
+      internalID: -8894027633405446060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_19
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 588
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac6e0c108877ace10800000000000000
+      internalID: 2218717192462067402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_20
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 587
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5208dfbdfcd388b60800000000000000
+      internalID: 7748511121849286693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_21
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 588
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de7efb53864cedb90800000000000000
+      internalID: -7215113601143543827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_22
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 587
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6b1abbe53cc60d50800000000000000
+      internalID: 6703269627347737452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_23
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 587
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 556eb0caa38612f00800000000000000
+      internalID: 1090267186004223573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_24
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 591
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f62878362ae05dc0800000000000000
+      internalID: -3652161847920417040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_25
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 587
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8bbcc8a2834de470800000000000000
+      internalID: 8425464706336865164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_26
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 590
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a07698a764a2080800000000000000
+      internalID: -9211472595727742311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_27
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 588
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17659eb20b2460180800000000000000
+      internalID: -9149552268538194319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_28
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 594
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e79a99f31976b5f0800000000000000
+      internalID: -741271961956870175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_29
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 587
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae93ca346e9641370800000000000000
+      internalID: 8292369251594680810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_30
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 593
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93a0d511afbc8b3b0800000000000000
+      internalID: -5496419070312117703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_31
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 595
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d63e5f6c199bfb360800000000000000
+      internalID: 7187667566066000749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_32
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 587
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 262bfd0973187ecd0800000000000000
+      internalID: -2528910590091480478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_33
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 591
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 152abeae1a3f06620800000000000000
+      internalID: 2765478047962079825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_34
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 588
+        width: 40
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dff3b01a4f8252e0800000000000000
+      internalID: -2138489324776980528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_35
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 588
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cc0c58434410a8c0800000000000000
+      internalID: -3990166990640902970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_36
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 594
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79271f589f99f6cf0800000000000000
+      internalID: -256817356763729257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_37
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 256
+        width: 457
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16911513c325f9e90800000000000000
+      internalID: -7016799275941029535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_38
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 587
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8830c6225072625d0800000000000000
+      internalID: -3087737591510072440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_39
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 588
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f268d01b71e8d58c0800000000000000
+      internalID: -4008891860884027857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_40
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 585
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 439b869978c0e46e0800000000000000
+      internalID: -1851528620268799692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_41
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 585
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8d05c1f1c011260800000000000000
+      internalID: 7066442618079598780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_42
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 587
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aee3d925eaa67a30800000000000000
+      internalID: 4212742402677665447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_43
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 588
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5aa129c0fb50d240800000000000000
+      internalID: 4814449091383765596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_44
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 568
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa008bb4a18ffd230800000000000000
+      internalID: 3665921413526061226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_45
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 588
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6660f35928dbadd0800000000000000
+      internalID: -2473645898296433042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_46
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 558
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a3f381f00f426710800000000000000
+      internalID: 1684996076060537768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_47
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 504
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aa6a1984aceb8770800000000000000
+      internalID: 8614238903695207074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_48
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 476
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6e3d51d7ecc22390800000000000000
+      internalID: -7844482304903922065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_49
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 479
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2839ce8cd278e9f00800000000000000
+      internalID: 1125485587603428226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_50
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 455
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad86a0a17273d6870800000000000000
+      internalID: 8677652698092955866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_51
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 449
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15a8780f46a190cc0800000000000000
+      internalID: -3744432594347390383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_52
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 437
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: decb2be88bff4f120800000000000000
+      internalID: 2446861665702165741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_53
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 403
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7905a451e37fc2860800000000000000
+      internalID: 7506646524936999063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_54
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 394
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 270175c55b59a8650800000000000000
+      internalID: 6235961240218701938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_55
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 367
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca7cbda5a91e2f340800000000000000
+      internalID: 4896223797970716588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_56
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 346
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3387229e4c9ff75e0800000000000000
+      internalID: -1909533092861544397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_57
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 313
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a43f38195437b40800000000000000
+      internalID: 5436765666452654648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_58
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 294
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22bc48dca821dcf40800000000000000
+      internalID: 5750272686584810274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_59
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 288
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5300e49817f0fc400800000000000000
+      internalID: 346512676640129077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_60
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 285
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05f00015a5396ac20800000000000000
+      internalID: 3217420999918096208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_61
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 259
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e193b39b70bb5e6e0800000000000000
+      internalID: -1808834033472554722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_62
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 261
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3a15ba17ee8d24c0800000000000000
+      internalID: -4310632145087030722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_63
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 256
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3077da4c3ba8e7f0800000000000000
+      internalID: -583027876302458822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_64
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 269
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c6752049009e2b0800000000000000
+      internalID: -5554908029690352621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_65
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 261
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be706890b604af910800000000000000
+      internalID: 1871879423591319531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_66
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 263
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99c3655e34488b1c0800000000000000
+      internalID: -4487691601529389927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_67
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 263
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af932b79b16583450800000000000000
+      internalID: 6068695174390888954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_68
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 267
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b10b9701ec1d432d0800000000000000
+      internalID: -3299781943985852389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_69
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 257
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e6c17d70aac0e7d0800000000000000
+      internalID: -2891088170123671839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_70
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 266
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a6c647bfc4da7d0800000000000000
+      internalID: -2905581541710337464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_71
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 263
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26b2061e16a775830800000000000000
+      internalID: 4059848149909384034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_72
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 261
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b543dadac3f8cae60800000000000000
+      internalID: 7974906530940925019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_73
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 256
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0e10698b10ec76a0800000000000000
+      internalID: -6450034157427876339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_74
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 259
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a51bd6026456e60800000000000000
+      internalID: 7954841421913086522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_75
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 257
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1eacfd78cd2b8fb0800000000000000
+      internalID: -4644568251572113890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_76
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 260
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c4e53386b724240800000000000000
+      internalID: 4774514242434780281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_77
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 257
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a7fdb8700d069180800000000000000
+      internalID: -9109078900633372759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_78
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 263
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a97fc74de0c60ab0800000000000000
+      internalID: -5042130607450130016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_79
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 256
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2b8ef03554611410800000000000000
+      internalID: 1446047272419625772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_80
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 269
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91b33c8146e14c270800000000000000
+      internalID: 8269768231020083993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_81
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 266
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80f3e5a1bd588ae60800000000000000
+      internalID: 7973770316346179336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_82
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 256
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da18d3d4bb6b4600800000000000000
+      internalID: 453574611873307345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_83
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 261
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f502fd486177d10800000000000000
+      internalID: 2123190509263413051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_84
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 263
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5310a5c4524f49fc0800000000000000
+      internalID: -3488895370273357515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_85
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 259
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7592aff628c5e7630800000000000000
+      internalID: 3926677640407820631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_86
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 257
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8a3161368d86640800000000000000
+      internalID: 5073542900316612796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_87
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 257
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f5eae1bf10fb450800000000000000
+      internalID: 6106601797800845135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_88
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 257
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dbc458f48b705c10800000000000000
+      internalID: 2040266442231040980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_89
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 257
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 016a8c64ac3453d70800000000000000
+      internalID: 9022191964556666384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_90
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 257
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7046a429774bcd430800000000000000
+      internalID: 3809117810497053703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_91
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 257
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7313af68a71c4890800000000000000
+      internalID: -7472571669519592577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mint_fin_92
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 257
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3151367107b7fb3b0800000000000000
+      internalID: -5494537299009792749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mint_fin_0: 1719083627984866577
+      mint_fin_1: -8093709528115396868
+      mint_fin_10: 821620153147327583
+      mint_fin_11: 4002137276033453031
+      mint_fin_12: 6867199341127893082
+      mint_fin_13: 7040294127182861042
+      mint_fin_14: 789684350383143018
+      mint_fin_15: 3500312137917996804
+      mint_fin_16: -5507483508272699864
+      mint_fin_17: 6161541487048861895
+      mint_fin_18: -8894027633405446060
+      mint_fin_19: 2218717192462067402
+      mint_fin_2: 7397629502037412686
+      mint_fin_20: 7748511121849286693
+      mint_fin_21: -7215113601143543827
+      mint_fin_22: 6703269627347737452
+      mint_fin_23: 1090267186004223573
+      mint_fin_24: -3652161847920417040
+      mint_fin_25: 8425464706336865164
+      mint_fin_26: -9211472595727742311
+      mint_fin_27: -9149552268538194319
+      mint_fin_28: -741271961956870175
+      mint_fin_29: 8292369251594680810
+      mint_fin_3: -3224920143359181732
+      mint_fin_30: -5496419070312117703
+      mint_fin_31: 7187667566066000749
+      mint_fin_32: -2528910590091480478
+      mint_fin_33: 2765478047962079825
+      mint_fin_34: -2138489324776980528
+      mint_fin_35: -3990166990640902970
+      mint_fin_36: -256817356763729257
+      mint_fin_37: -7016799275941029535
+      mint_fin_38: -3087737591510072440
+      mint_fin_39: -4008891860884027857
+      mint_fin_4: 1051621398873716457
+      mint_fin_40: -1851528620268799692
+      mint_fin_41: 7066442618079598780
+      mint_fin_42: 4212742402677665447
+      mint_fin_43: 4814449091383765596
+      mint_fin_44: 3665921413526061226
+      mint_fin_45: -2473645898296433042
+      mint_fin_46: 1684996076060537768
+      mint_fin_47: 8614238903695207074
+      mint_fin_48: -7844482304903922065
+      mint_fin_49: 1125485587603428226
+      mint_fin_5: 7015032770029710655
+      mint_fin_50: 8677652698092955866
+      mint_fin_51: -3744432594347390383
+      mint_fin_52: 2446861665702165741
+      mint_fin_53: 7506646524936999063
+      mint_fin_54: 6235961240218701938
+      mint_fin_55: 4896223797970716588
+      mint_fin_56: -1909533092861544397
+      mint_fin_57: 5436765666452654648
+      mint_fin_58: 5750272686584810274
+      mint_fin_59: 346512676640129077
+      mint_fin_6: 424851979787554454
+      mint_fin_60: 3217420999918096208
+      mint_fin_61: -1808834033472554722
+      mint_fin_62: -4310632145087030722
+      mint_fin_63: -583027876302458822
+      mint_fin_64: -5554908029690352621
+      mint_fin_65: 1871879423591319531
+      mint_fin_66: -4487691601529389927
+      mint_fin_67: 6068695174390888954
+      mint_fin_68: -3299781943985852389
+      mint_fin_69: -2891088170123671839
+      mint_fin_7: -5406643603388203588
+      mint_fin_70: -2905581541710337464
+      mint_fin_71: 4059848149909384034
+      mint_fin_72: 7974906530940925019
+      mint_fin_73: -6450034157427876339
+      mint_fin_74: 7954841421913086522
+      mint_fin_75: -4644568251572113890
+      mint_fin_76: 4774514242434780281
+      mint_fin_77: -9109078900633372759
+      mint_fin_78: -5042130607450130016
+      mint_fin_79: 1446047272419625772
+      mint_fin_8: -2461454165927115306
+      mint_fin_80: 8269768231020083993
+      mint_fin_81: 7973770316346179336
+      mint_fin_82: 453574611873307345
+      mint_fin_83: 2123190509263413051
+      mint_fin_84: -3488895370273357515
+      mint_fin_85: 3926677640407820631
+      mint_fin_86: 5073542900316612796
+      mint_fin_87: 6106601797800845135
+      mint_fin_88: 2040266442231040980
+      mint_fin_89: 9022191964556666384
+      mint_fin_9: -3528023726679669100
+      mint_fin_90: 3809117810497053703
+      mint_fin_91: -7472571669519592577
+      mint_fin_92: -5494537299009792749
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

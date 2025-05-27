@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95b83406016b49c8af9627670c9510f, type: 3}
+  m_Name: Pistol
+  m_EditorClassIdentifier: 
+  _id: 574764
+  itemName: Pistol
+  description: big BRRR
+  icon: {fileID: 4319395737909131107, guid: 1c7034126cf36f4488e1e753ed98548c, type: 3}
+  value: 2000
+  type: 0
+  inventoryWidth: 2
+  inventoryHeight: 1
+  isStackable: 0
+  maxStackSize: 0
+  prefab: {fileID: 7546166427365782202, guid: bda05c2de77f84e4bb4affbe37a051a4, type: 3}
+  damage: 30
+  range: 10
+  attackSpeed: 4
+  spread: 6
+  bulletTravelTime: 0.5
+  weaponType: 0
+  bulletsPerShot: 1
+  burstCount: 1
+  burstInterval: 0.1
+  minSize: 0
+  maxSize: 0
+  availableZones: 
+  rarity: 0
+  castRange: 0
+  bobberTravelSpeed: 0

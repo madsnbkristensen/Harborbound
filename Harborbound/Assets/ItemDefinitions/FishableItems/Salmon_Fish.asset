@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95b83406016b49c8af9627670c9510f, type: 3}
+  m_Name: Salmon_Fish
+  m_EditorClassIdentifier: 
+  _id: 281961
+  itemName: Blue Salmon
+  description: Hearty fish known for swimming upstream.
+  icon: {fileID: 6774393580310161239, guid: 77c09434cb80c445da34213c419281be, type: 3}
+  value: 170
+  type: 2
+  inventoryWidth: 2
+  inventoryHeight: 1
+  isStackable: 1
+  maxStackSize: 64
+  prefab: {fileID: 0}
+  damage: 0
+  range: 0
+  attackSpeed: 0
+  spread: 0
+  bulletTravelTime: 0
+  weaponType: 0
+  bulletsPerShot: 1
+  burstCount: 1
+  burstInterval: 0.1
+  minSize: 4
+  maxSize: 12
+  availableZones: 0200000003000000
+  rarity: 60
+  castRange: 0
+  bobberTravelSpeed: 0
