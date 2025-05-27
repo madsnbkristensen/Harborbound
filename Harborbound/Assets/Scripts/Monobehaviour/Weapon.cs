@@ -423,6 +423,10 @@ public class Weapon : Item
         if (!canFire)
             return false;
 
+        Debug.Log("FAAAKING FIRE!");
+        // Play the shooting sound effect
+        AudioManager.Instance.Play(AudioManager.SoundType.Shoot);
+
         // Handle different weapon types
         switch (weaponType)
         {
