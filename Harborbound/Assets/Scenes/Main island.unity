@@ -377,6 +377,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3091767164239873614, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091767164239873614, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091767164239873614, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091767164239873614, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091767164239873614, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -901
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091767164239873614, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 563
+      objectReference: {fileID: 0}
     - target: {fileID: 5846233139150736017, guid: 447559e7a31394aeab460a006a8a081e, type: 3}
       propertyPath: m_MatchWidthOrHeight
       value: 0.6
@@ -1276,6 +1300,10 @@ PrefabInstance:
       propertyPath: draggingPreview
       value: 
       objectReference: {fileID: 288668755}
+    - target: {fileID: 5890356161945810244, guid: 60a792276c557495d86d05905928cd50, type: 3}
+      propertyPath: dropPreviewImage
+      value: 
+      objectReference: {fileID: 7877515895197461403, guid: 58c8f88dc756d42c3bb2448f6ba88555, type: 3}
     - target: {fileID: 5890356161945810244, guid: 60a792276c557495d86d05905928cd50, type: 3}
       propertyPath: gridContainerRect
       value: 

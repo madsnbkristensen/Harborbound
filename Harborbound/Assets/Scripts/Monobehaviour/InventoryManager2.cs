@@ -25,6 +25,9 @@ public class InventoryManager2 : MonoBehaviour
     [SerializeField] private Item _itemBeingDragged = null;
     [SerializeField] private InventorySlot2 _previousSlot = null;
     [SerializeField] private InventorySlot2 _lastValidSlot = null;
+    [SerializeField] private Color validHighlightColor = new Color(0, 0.7f, 0, 0.3f);
+    [SerializeField] private Color invalidHighlightColor = new Color(0.7f, 0, 0, 0.3f);
+    private List<InventorySlot2> currentlyHighlightedSlots = new List<InventorySlot2>();
 
     public void Initialize()
     {
@@ -77,6 +80,55 @@ public class InventoryManager2 : MonoBehaviour
         SnapItemToSlot(item.GetComponent<RectTransform>(), slot.x, slot.y);
     }
 
+    private void HighlightSlots(int topLeftX, int topLeftY, int width, int height, bool isValid)
+    {
+        // Clear previous highlights
+        ClearHighlightedSlots();
+
+        // Highlight all affected slots
+        Color highlightColor = isValid ? validHighlightColor : invalidHighlightColor;
+
+        for (int x = topLeftX; x < topLeftX + width; x++)
+        {
+            for (int y = topLeftY; y < topLeftY + height; y++)
+            {
+                // Check if the slot is within bounds
+                if (x >= 0 && x < PlayerInventory.Instance.Width &&
+                    y >= 0 && y < PlayerInventory.Instance.Height)
+                {
+                    InventorySlot2 slot = slots[x, y];
+                    Image slotImage = slot.GetComponent<Image>();
+
+                    // Store original color if this is the first time highlighting
+                    if (!slot.isHighlighted)
+                    {
+                        slot.originalColor = slotImage.color;
+                        slot.isHighlighted = true;
+                    }
+
+                    // Apply highlight color
+                    slotImage.color = highlightColor;
+                    currentlyHighlightedSlots.Add(slot);
+                }
+            }
+        }
+    }
+
+    // Add this method to clear all highlights
+    private void ClearHighlightedSlots()
+    {
+        foreach (var slot in currentlyHighlightedSlots)
+        {
+            if (slot != null)
+            {
+                Image slotImage = slot.GetComponent<Image>();
+                slotImage.color = slot.originalColor;
+                slot.isHighlighted = false;
+            }
+        }
+
+        currentlyHighlightedSlots.Clear();
+    }
 
     public void BindItemToSlot(Item item, int tlx, int tly)
     {
@@ -389,6 +441,7 @@ public class InventoryManager2 : MonoBehaviour
         {
             item.gameObject.transform.localScale = new Vector3(1, 1, 1);
         }
+
         if (_currentlyDragging)
         {
             if (Input.GetKeyUp(KeyCode.Mouse0))
@@ -405,33 +458,36 @@ public class InventoryManager2 : MonoBehaviour
                 }
 
                 _itemBeingDragged.transform.SetParent(itemContainer.transform, true);
-                draggingPreview.SetActive(false);
+                ClearHighlightedSlots(); // Clear highlights when dropping
                 _currentlyDragging = false;
             }
             else
             {
                 _itemBeingDragged.transform.position = Input.mousePosition - _dragRelativeOffset;
-
                 InventorySlot2 slot = GetInventorySlotUnderItem(_itemBeingDragged);
+
                 if (slot != null)
                 {
-                    draggingPreview.SetActive(true);
-                    var dragRect = draggingPreview.GetComponent<RectTransform>();
-                    dragRect.position = slot.transform.position;
-
-                    // dragRect.position = slot.transform.position;
-
                     bool isSpaceOccupied = IsSpaceOccupied(_itemBeingDragged, slot.x, slot.y);
+
+                    // Highlight all slots that would be occupied
+                    HighlightSlots(
+                        slot.x,
+                        slot.y,
+                        _itemBeingDragged.definition.inventoryWidth,
+                        _itemBeingDragged.definition.inventoryHeight,
+                        !isSpaceOccupied
+                    );
+
                     if (!isSpaceOccupied)
                     {
-                        draggingPreview.GetComponent<Image>().color = Color.green;
                         _lastValidSlot = slot;
                     }
-                    else
-                    {
-                        draggingPreview.GetComponent<Image>().color = Color.red;
-
-                    }
+                }
+                else
+                {
+                    // No slot under cursor, clear highlights
+                    ClearHighlightedSlots();
                 }
             }
         }
