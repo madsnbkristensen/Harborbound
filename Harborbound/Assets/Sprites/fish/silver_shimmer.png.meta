@@ -1,0 +1,1392 @@
+fileFormatVersion: 2
+guid: 9c601d94695f144e2af234c6adc54980
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7767443930226722933
+    second: silver_shimmer_0
+  - first:
+      213: -4722816919975028286
+    second: silver_shimmer_1
+  - first:
+      213: 2460371233502167936
+    second: silver_shimmer_2
+  - first:
+      213: -1078082723065034558
+    second: silver_shimmer_3
+  - first:
+      213: 5606533215356670168
+    second: silver_shimmer_4
+  - first:
+      213: -2754736083018718218
+    second: silver_shimmer_5
+  - first:
+      213: 845332062316255354
+    second: silver_shimmer_6
+  - first:
+      213: -1345367669345241093
+    second: silver_shimmer_7
+  - first:
+      213: 3586232603378101540
+    second: silver_shimmer_8
+  - first:
+      213: 4883781197033456993
+    second: silver_shimmer_9
+  - first:
+      213: 379897217489615455
+    second: silver_shimmer_10
+  - first:
+      213: 2662543612866421553
+    second: silver_shimmer_11
+  - first:
+      213: -7704204367764626872
+    second: silver_shimmer_12
+  - first:
+      213: -6374667327282240269
+    second: silver_shimmer_13
+  - first:
+      213: -2544483832457611118
+    second: silver_shimmer_14
+  - first:
+      213: 8505382107914917875
+    second: silver_shimmer_15
+  - first:
+      213: -7783147948105261374
+    second: silver_shimmer_16
+  - first:
+      213: -154548951170346303
+    second: silver_shimmer_17
+  - first:
+      213: -5945708279262864950
+    second: silver_shimmer_18
+  - first:
+      213: -1841938468051616119
+    second: silver_shimmer_19
+  - first:
+      213: 6085595431989791163
+    second: silver_shimmer_20
+  - first:
+      213: 1809466786209854888
+    second: silver_shimmer_21
+  - first:
+      213: 1378759209574307749
+    second: silver_shimmer_22
+  - first:
+      213: 3555612672720734304
+    second: silver_shimmer_23
+  - first:
+      213: 5427733778262250603
+    second: silver_shimmer_24
+  - first:
+      213: -6413679470365881257
+    second: silver_shimmer_25
+  - first:
+      213: -709376617271826418
+    second: silver_shimmer_26
+  - first:
+      213: -2806735900421400493
+    second: silver_shimmer_27
+  - first:
+      213: -3663026979893315247
+    second: silver_shimmer_28
+  - first:
+      213: 3754967556568918971
+    second: silver_shimmer_29
+  - first:
+      213: 876906729188011821
+    second: silver_shimmer_30
+  - first:
+      213: 2511428901302885092
+    second: silver_shimmer_31
+  - first:
+      213: 3965874702959666204
+    second: silver_shimmer_32
+  - first:
+      213: 3653801918760215289
+    second: silver_shimmer_33
+  - first:
+      213: 2442237666928005628
+    second: silver_shimmer_34
+  - first:
+      213: 7623560224726193678
+    second: silver_shimmer_35
+  - first:
+      213: 4275530515620175710
+    second: silver_shimmer_36
+  - first:
+      213: 9074211577579881833
+    second: silver_shimmer_37
+  - first:
+      213: 9057733885429943075
+    second: silver_shimmer_38
+  - first:
+      213: -5004680080088515736
+    second: silver_shimmer_39
+  - first:
+      213: -795403798932175125
+    second: silver_shimmer_40
+  - first:
+      213: -4469522239174772519
+    second: silver_shimmer_41
+  - first:
+      213: 4449632578042974738
+    second: silver_shimmer_42
+  - first:
+      213: -930010614615305335
+    second: silver_shimmer_43
+  - first:
+      213: -5230816876246186887
+    second: silver_shimmer_44
+  - first:
+      213: -6478735293468964938
+    second: silver_shimmer_45
+  - first:
+      213: 1758365182751404295
+    second: silver_shimmer_46
+  - first:
+      213: 5734271490804023433
+    second: silver_shimmer_47
+  - first:
+      213: 5828573229500108087
+    second: silver_shimmer_48
+  - first:
+      213: -6167301438511468430
+    second: silver_shimmer_49
+  - first:
+      213: 1010380466491926222
+    second: silver_shimmer_50
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: silver_shimmer_0
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 255
+        width: 558
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5788de1d9118bcb60800000000000000
+      internalID: 7767443930226722933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_1
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 499
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c91fa9a80f257eb0800000000000000
+      internalID: -4722816919975028286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_2
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 497
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0838c7ce99ef42220800000000000000
+      internalID: 2460371233502167936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_3
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 497
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c8093da971e901f0800000000000000
+      internalID: -1078082723065034558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_4
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 499
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d053c231486ecd40800000000000000
+      internalID: 5606533215356670168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_5
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 499
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f3e7b1b02635c9d0800000000000000
+      internalID: -2754736083018718218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_6
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 497
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a78db9b28093bbb00800000000000000
+      internalID: 845332062316255354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_7
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 499
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf7b1689b3b445de0800000000000000
+      internalID: -1345367669345241093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_8
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 497
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42da6465d8bd4c130800000000000000
+      internalID: 3586232603378101540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_9
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 499
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16549e19f1da6c340800000000000000
+      internalID: 4883781197033456993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_10
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 465
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5ab0aba18aa54500800000000000000
+      internalID: 379897217489615455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_11
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 481
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13363e32f4143f420800000000000000
+      internalID: 2662543612866421553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_12
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 474
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 842606632fa251590800000000000000
+      internalID: -7704204367764626872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_13
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 478
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f4ad0c17d1a887a0800000000000000
+      internalID: -6374667327282240269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_14
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 466
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298b3a58f6d20bcd0800000000000000
+      internalID: -2544483832457611118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_15
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 458
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f75b35b6ff290670800000000000000
+      internalID: 8505382107914917875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_16
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 465
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce10e69d24bcf390800000000000000
+      internalID: -7783147948105261374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_17
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 466
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c215193c8eeaddf0800000000000000
+      internalID: -154548951170346303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_18
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 440
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac9107c52d99c7da0800000000000000
+      internalID: -5945708279262864950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_19
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 411
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ef7a9e8be1076e0800000000000000
+      internalID: -1841938468051616119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_20
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 417
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb9cd727dc0647450800000000000000
+      internalID: 6085595431989791163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_21
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 395
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a5f7e084748c1910800000000000000
+      internalID: 1809466786209854888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_22
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 392
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a799753236522310800000000000000
+      internalID: 1378759209574307749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_23
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 398
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 068856c23e2185130800000000000000
+      internalID: 3555612672720734304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_24
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 377
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b64d5bc2d1f235b40800000000000000
+      internalID: 5427733778262250603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_25
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 353
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75c40a9b0880ef6a0800000000000000
+      internalID: -6413679470365881257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_26
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 362
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e086b8b99b9c726f0800000000000000
+      internalID: -709376617271826418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_27
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 338
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358db0db1987c09d0800000000000000
+      internalID: -2806735900421400493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_28
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 313
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15979cc8e505a2dc0800000000000000
+      internalID: -3663026979893315247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_29
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 318
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbb286819135c1430800000000000000
+      internalID: 3754967556568918971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_30
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 304
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2fa66e26066b2c00800000000000000
+      internalID: 876906729188011821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_31
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 297
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eadec497436ad220800000000000000
+      internalID: 2511428901302885092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_32
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 289
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c146e9db70e990730800000000000000
+      internalID: 3965874702959666204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_33
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 280
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2e7578c79e4b230800000000000000
+      internalID: 3653801918760215289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_34
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 282
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf19252f73294e120800000000000000
+      internalID: 2442237666928005628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_35
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 255
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e061a9e02a35cc960800000000000000
+      internalID: 7623560224726193678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_36
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 261
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f12e9e95cb55b30800000000000000
+      internalID: 4275530515620175710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_37
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 256
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 965c2624a531eed70800000000000000
+      internalID: 9074211577579881833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_38
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 255
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32b02179af883bd70800000000000000
+      internalID: 9057733885429943075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_39
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 259
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86bb9dbabfdcb8ab0800000000000000
+      internalID: -5004680080088515736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_40
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 265
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be6c6a7857826f4f0800000000000000
+      internalID: -795403798932175125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_41
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 261
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d8774a343119f1c0800000000000000
+      internalID: -4469522239174772519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_42
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 255
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212d14b214540cd30800000000000000
+      internalID: 4449632578042974738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_43
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 261
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 983138ef540f713f0800000000000000
+      internalID: -930010614615305335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_44
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 256
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9744a3ed3c76867b0800000000000000
+      internalID: -5230816876246186887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_45
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 255
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b70ffe8398e616a0800000000000000
+      internalID: -6478735293468964938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_46
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 259
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 701ff4741d7f66810800000000000000
+      internalID: 1758365182751404295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_47
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 261
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98006071a89349f40800000000000000
+      internalID: 5734271490804023433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_48
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 255
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73d84bb987043e050800000000000000
+      internalID: 5828573229500108087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_49
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 255
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 270b4c67408596aa0800000000000000
+      internalID: -6167301438511468430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silver_shimmer_50
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 255
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec6ae395ea7950e00800000000000000
+      internalID: 1010380466491926222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
