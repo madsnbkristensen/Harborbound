@@ -207,8 +207,11 @@ public class GameManager : MonoBehaviour
 
     public void RespawnPlayer()
     {
-        this.SpendMoney(money / 2); ;
+        int newMoney = money / 2;
+        this.SpendMoney(newMoney);
+        UIManager.Instance.UpdateMoneyDisplay(newMoney);
         player.currentHealth = player.maxHealth;
+        UIManager.Instance.UpdateHealthDisplay(player.currentHealth, player.maxHealth);
         SceneManager.LoadScene(respawnSceneName);
         UIManager.Instance.ShowDeathPanel(false);
         Debug.Log("Player respawned");
