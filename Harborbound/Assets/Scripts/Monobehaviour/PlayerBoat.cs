@@ -183,7 +183,7 @@ public class PlayerBoat : Boat
         // Check for both rock layer and island tag
         if (
             collision.gameObject.layer == LayerMask.NameToLayer("Rocks")
-            || collision.gameObject.CompareTag("Island") || collision.gameObject.CompareTag("EnemyBoat")
+            || collision.gameObject.CompareTag("Island") || collision.gameObject.CompareTag("EnemyBoat") || collision.gameObject.CompareTag("ZoneBoundary")
         )
         {
             isCollidingWithRock = true;
@@ -191,6 +191,11 @@ public class PlayerBoat : Boat
             // Initialize the smoothed normal
             _smoothedNormal = collision.GetContact(0).normal;
             collisionNormal = _smoothedNormal;
+
+            if (collision.gameObject.CompareTag("ZoneBoundary"))
+            {
+                HelperManager.Instance.handleSpecificTooltip("You have reach the world's edge.");
+            }
 
             // Optional: Play collision sound with slight randomization to prevent sound repetition
             // if (AudioManager.Instance != null)
@@ -202,7 +207,7 @@ public class PlayerBoat : Boat
     {
         if (
             collision.gameObject.layer == LayerMask.NameToLayer("Rocks")
-            || collision.gameObject.CompareTag("Island") || collision.gameObject.CompareTag("EnemyBoat")
+            || collision.gameObject.CompareTag("Island") || collision.gameObject.CompareTag("EnemyBoat") || collision.gameObject.CompareTag("ZoneBoundary")
         )
         {
             isCollidingWithRock = false;
@@ -216,7 +221,7 @@ public class PlayerBoat : Boat
     {
         if (
             collision.gameObject.layer == LayerMask.NameToLayer("Rocks")
-            || collision.gameObject.CompareTag("Island") || collision.gameObject.CompareTag("EnemyBoat")
+            || collision.gameObject.CompareTag("Island") || collision.gameObject.CompareTag("EnemyBoat") || collision.gameObject.CompareTag("ZoneBoundary")
         )
         {
             // Smoothly update the collision normal to prevent jittering

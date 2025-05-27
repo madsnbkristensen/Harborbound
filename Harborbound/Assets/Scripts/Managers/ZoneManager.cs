@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -98,32 +97,52 @@ public class ZoneManager : MonoBehaviour
         boundaryCollider.transform.SetParent(transform);
         boundaryCollider.transform.position = new Vector3(centerPoint.x, centerPoint.y, 0);
 
-        // Add an edge collider instead of a circle collider
-        EdgeCollider2D edgeCollider = boundaryCollider.AddComponent<EdgeCollider2D>();
+        // set tag 
+        boundaryCollider.tag = "ZoneBoundary";
 
-        // Create points for the edge collider (approximating a circle)
-        int segments = 64; // More segments = smoother circle
-        Vector2[] points = new Vector2[segments + 1];
+        // Create multiple box colliders placed around the circumference
+        int segments = 180; // Increased from 64 to 180 for better coverage
+        float wallThickness = 1f; // Thickness of wall
+        float wallHeight = 5f; // Increased from 3f to 5f for better coverage
+
+        // Calculate the arc length for each segment
+        float circumference = 2f * Mathf.PI * boundaryRadius;
+        float segmentArcLength = circumference / segments;
+
+        // Ensure wall height is sufficient to cover gaps
+        if (wallHeight < segmentArcLength * 1.2f)
+        {
+            wallHeight = segmentArcLength * 1.2f; // Make walls at least 20% wider than segment spacing
+        }
 
         for (int i = 0; i < segments; i++)
         {
             float angle = i * Mathf.PI * 2f / segments;
-            float x = Mathf.Cos(angle) * boundaryRadius;
-            float y = Mathf.Sin(angle) * boundaryRadius;
-            points[i] = new Vector2(x, y);
+            float nextAngle = (i + 1) * Mathf.PI * 2f / segments;
+
+            // Position at the boundary radius
+            float midAngle = (angle + nextAngle) / 2;
+            float x = Mathf.Cos(midAngle) * boundaryRadius;
+            float y = Mathf.Sin(midAngle) * boundaryRadius;
+
+            // Create wall segment
+            GameObject wallSegment = new GameObject($"WallSegment_{i}");
+            wallSegment.transform.SetParent(boundaryCollider.transform);
+            wallSegment.transform.position = new Vector3(x, y, 0) + boundaryCollider.transform.position;
+
+            // Rotate to face outward
+            wallSegment.transform.up = new Vector3(x, y, 0).normalized;
+
+            // Add box collider
+            BoxCollider2D boxCollider = wallSegment.AddComponent<BoxCollider2D>();
+            boxCollider.size = new Vector2(wallHeight, wallThickness);
+            boxCollider.offset = new Vector2(0, wallThickness / 2); // Offset slightly outward
+
+            // add tag to wall segments
+            wallSegment.tag = "ZoneBoundary";
         }
 
-        // Close the loop
-        points[segments] = points[0];
-
-        // Set the points on the edge collider
-        edgeCollider.points = points;
-
-        // Add a rigidbody to ensure collisions work properly
-        Rigidbody2D rb = boundaryCollider.AddComponent<Rigidbody2D>();
-        rb.bodyType = RigidbodyType2D.Static;
-
-        Debug.Log($"Created boundary edge collider with radius {boundaryRadius} using {segments} segments");
+        Debug.Log($"Created boundary with {segments} wall segments at radius {boundaryRadius}");
     }
 
     // Add this method to update the boundary if zones change
@@ -131,29 +150,47 @@ public class ZoneManager : MonoBehaviour
     {
         if (boundaryCollider != null && zones.Count > 0)
         {
-            EdgeCollider2D edgeCollider = boundaryCollider.GetComponent<EdgeCollider2D>();
-            if (edgeCollider != null)
+            float boundaryRadius = zones[zones.Count - 1].outerRadius;
+            int segments = boundaryCollider.transform.childCount;
+
+            // Calculate the arc length for each segment
+            float circumference = 2f * Mathf.PI * boundaryRadius;
+            float segmentArcLength = circumference / segments;
+
+            // Determine optimal wall height based on spacing
+            float wallHeight = segmentArcLength * 1.2f; // Make walls at least 20% wider than segment spacing
+            if (wallHeight < 5f) wallHeight = 5f; // Minimum wall height
+
+            // Update position of each wall segment
+            for (int i = 0; i < segments; i++)
             {
-                float boundaryRadius = zones[zones.Count - 1].outerRadius;
+                Transform wallSegment = boundaryCollider.transform.GetChild(i);
+                BoxCollider2D boxCollider = wallSegment.GetComponent<BoxCollider2D>();
 
-                // Create points for the edge collider (approximating a circle)
-                int segments = 64; // Keep the same number of segments
-                Vector2[] points = new Vector2[segments + 1];
+                float angle = i * Mathf.PI * 2f / segments;
+                float nextAngle = (i + 1) * Mathf.PI * 2f / segments;
 
-                for (int i = 0; i < segments; i++)
+                // Position at the boundary radius
+                float midAngle = (angle + nextAngle) / 2;
+                float x = Mathf.Cos(midAngle) * boundaryRadius;
+                float y = Mathf.Sin(midAngle) * boundaryRadius;
+
+                // Update position
+                wallSegment.position = new Vector3(x, y, 0) + boundaryCollider.transform.position;
+
+                // Update rotation to face outward
+                wallSegment.up = new Vector3(x, y, 0).normalized;
+
+                // Update collider size if needed
+                if (boxCollider != null)
                 {
-                    float angle = i * Mathf.PI * 2f / segments;
-                    float x = Mathf.Cos(angle) * boundaryRadius;
-                    float y = Mathf.Sin(angle) * boundaryRadius;
-                    points[i] = new Vector2(x, y);
+                    boxCollider.size = new Vector2(wallHeight, boxCollider.size.y);
                 }
-
-                // Close the loop
-                points[segments] = points[0];
-
-                // Update the points on the edge collider
-                edgeCollider.points = points;
             }
+        }
+        else
+        {
+            CreateBoundaryCollider();
         }
     }
 

@@ -709,7 +709,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      starfish_0: -6987148479580219570
+      starfish_1: 4765980326882044309
+      starfish_10: -2409320311414634627
+      starfish_11: 281970967511664803
+      starfish_12: 4381192250989629487
+      starfish_13: 2947096380676015737
+      starfish_14: 673392128587132998
+      starfish_15: 485674242692528586
+      starfish_16: 3780288148786272346
+      starfish_17: -5363647945542842176
+      starfish_18: 7894976838953933015
+      starfish_19: -5203520886655976761
+      starfish_2: 8490047252068056058
+      starfish_20: 6932752753854089595
+      starfish_21: 2975260972764776895
+      starfish_22: -5036787405192210697
+      starfish_23: 3202630746409265299
+      starfish_3: -6444406373238106090
+      starfish_4: 7124613297125226825
+      starfish_5: -644941454326880069
+      starfish_6: 6578926304369161953
+      starfish_7: 7622044724806867824
+      starfish_8: 2228018190492370577
+      starfish_9: -4096576275034991097
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
