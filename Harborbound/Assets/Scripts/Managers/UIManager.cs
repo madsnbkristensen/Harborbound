@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] public GameObject tooltipPanel;
     [SerializeField] public GameObject interactPanel;
+    [SerializeField] public GameObject deathPanel;
     private GameManager.GameState previousState;
 
 
@@ -57,7 +58,7 @@ public class UIManager : MonoBehaviour
         { GameManager.GameState.FISHING, new List<GameObject> { fishingPanel } },
         { GameManager.GameState.MENU, new List<GameObject> { menuPanel } },
         { GameManager.GameState.INVENTORY, new List<GameObject> { inventoryPanel } },
-        { GameManager.GameState.SHOPPING, new List<GameObject> { inventoryPanel, shoppingPanel } }
+        { GameManager.GameState.SHOPPING, new List<GameObject> { inventoryPanel, shoppingPanel } },
     };
     }
 
@@ -218,6 +219,7 @@ public class UIManager : MonoBehaviour
 
         if (interactPanel != null)
             interactPanel.SetActive(false);
+        this.ShowDeathPanel(false);
     }
 
     #region UI Update Methods
@@ -301,6 +303,12 @@ public class UIManager : MonoBehaviour
     {
         if (panel != null)
             panel.SetActive(active);
+    }
+
+    public void ShowDeathPanel(bool show)
+    {
+        if (deathPanel != null)
+            deathPanel.SetActive(show);
     }
 
     // Show interactpanel with message and duration

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Boat currentPlayerBoat;
     public List<Boat> unlockedBoats = new List<Boat>();
+    public string respawnSceneName = "Main island";
 
     public enum GameState
     {
@@ -196,23 +197,19 @@ public class GameManager : MonoBehaviour
 
     public void OnPlayerDeath()
     {
+        player.StopDriving();
         Debug.Log("Player has died!");
         AudioManager.Instance.Play(AudioManager.SoundType.Death);
+        UIManager.Instance.ShowDeathPanel(true);
         // Handle player death (game over screen, reset, etc.)
     }
 
     public void RespawnPlayer()
     {
-        if (player != null)
-        {
-            // Reset player health
-            player.currentHealth = player.maxHealth;
-
-            // Position player at spawn point
-            // This would need customization based on your game's spawn system
-
-            Debug.Log("Player respawned");
-        }
+        this.SpendMoney(money / 2); ;
+        player.currentHealth = player.maxHealth;
+        SceneManager.LoadScene(respawnSceneName);
+        Debug.Log("Player respawned");
     }
 
     public void SaveGame()
