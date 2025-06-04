@@ -49,10 +49,11 @@ public class Bullet : MonoBehaviour
         // Check if bullet has exceeded its lifetime
         if (Time.time - creationTime >= lifetime)
         {
-            // Return to pool
+            // Return to pool using the updated method
             BulletPool.Instance.ReturnBullet(gameObject);
         }
     }
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -70,6 +71,7 @@ public class Bullet : MonoBehaviour
             if (other.CompareTag(tag))
                 return;
         }
+
         // Damage logic for different entity types
         if (other.CompareTag("Enemy") && shooter.CompareTag("Player"))
         {
@@ -78,7 +80,7 @@ public class Bullet : MonoBehaviour
             if (enemy != null && sourceWeapon != null)
             {
                 enemy.TakeDamage(sourceWeapon.damage);
-                BulletPool.Instance.ReturnBullet(gameObject);
+                BulletPool.Instance.ReturnBullet(gameObject); // Updated to use new return method
             }
         }
         else if (other.CompareTag("Player") && shooter.CompareTag("Player"))
@@ -88,7 +90,7 @@ public class Bullet : MonoBehaviour
             if (enemy != null && sourceWeapon != null)
             {
                 enemy.TakeDamage(sourceWeapon.damage);
-                BulletPool.Instance.ReturnBullet(gameObject);
+                BulletPool.Instance.ReturnBullet(gameObject); // Updated
             }
         }
         else if (other.CompareTag("Player") && shooter.CompareTag("Enemy"))
@@ -98,7 +100,7 @@ public class Bullet : MonoBehaviour
             if (player != null && sourceWeapon != null)
             {
                 player.TakeDamage(sourceWeapon.damage);
-                BulletPool.Instance.ReturnBullet(gameObject);
+                BulletPool.Instance.ReturnBullet(gameObject); // Updated
             }
         }
         else if (other.CompareTag("Enemy") && shooter.CompareTag("Enemy"))
@@ -110,11 +112,11 @@ public class Bullet : MonoBehaviour
         else if (other.CompareTag("Obstacle") || other.CompareTag("Wall"))
         {
             // Hit environment
-            BulletPool.Instance.ReturnBullet(gameObject);
+            BulletPool.Instance.ReturnBullet(gameObject); // Updated
         }
         else
         {
-            BulletPool.Instance.ReturnBullet(gameObject);
+            BulletPool.Instance.ReturnBullet(gameObject); // Updated
         }
     }
 }
