@@ -111,6 +111,6 @@ MonoBehaviour:
   - sceneName: Main island
     normalZoom: 30
     zoomedOutDistance: 100
-  defaultNormalZoom: 5
-  defaultZoomedOutDistance: 10
+  defaultNormalZoom: 7.5
+  defaultZoomedOutDistance: 12.5
   zoomSpeed: 2

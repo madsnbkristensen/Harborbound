@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4685b64c423a49059112722a4338171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startOffset: {x: -20, y: 4, z: 5}
+  startOffset: {x: -25, y: 4, z: 5}
   endOffset: {x: 10, y: 4, z: 5}
   waveFrequency: 2
   waveAmplitude: 0.5
