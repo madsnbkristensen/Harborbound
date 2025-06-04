@@ -1329,6 +1329,10 @@ PrefabInstance:
       propertyPath: oceanSceneName
       value: karlo2
       objectReference: {fileID: 0}
+    - target: {fileID: 1343322337903628886, guid: 5d37aeff8f6fe4736aee9d2746f208c2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 54733cd6b4ab60743a7347fa8e404929, type: 2}
     - target: {fileID: 1351980678588202205, guid: 5d37aeff8f6fe4736aee9d2746f208c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.073024325
@@ -1369,9 +1373,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1502744691101331226, guid: 5d37aeff8f6fe4736aee9d2746f208c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2391998407628852672, guid: 5d37aeff8f6fe4736aee9d2746f208c2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2391998407628852672, guid: 5d37aeff8f6fe4736aee9d2746f208c2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 5484956636090444007, guid: 5d37aeff8f6fe4736aee9d2746f208c2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6123295416411211672, guid: 5d37aeff8f6fe4736aee9d2746f208c2, type: 3}
       propertyPath: m_Name
       value: '## ISLAND island'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449536660918560319, guid: 5d37aeff8f6fe4736aee9d2746f208c2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
