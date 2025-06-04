@@ -455,8 +455,6 @@ public class Player : Humanoid
         // Handle sprite flipping based on horizontal direction
         if (horizontal != 0 && playerSpriteRenderer != null)
         {
-            // Set flipX to true when moving left, false when moving right
-            playerSpriteRenderer.flipX = (horizontal < 0);
 
             // also transform the weapon and rod attachment position relative to the player, set -x on both
             Transform weaponAttachment = transform.Find("WeaponAttatchmentPoint");
@@ -483,48 +481,32 @@ public class Player : Humanoid
                     }
                 }
             }
-
-            /* if (rodAttachment != null)
-            {
-                Vector3 rodPos = rodAttachment.localPosition;
-                rodPos.x = Mathf.Abs(rodPos.x) * (horizontal > 0 ? 1 : -1);
-                rodAttachment.localPosition = rodPos;
-
-                // Check if there are any children before trying to access them
-                if (rodAttachment.childCount > 0) // Fixed: Check rodAttachment instead of weaponAttachment
-                {
-                    Transform equippedItem = rodAttachment.GetChild(0); // Fixed: Get from rodAttachment
-                    if (equippedItem != null && equippedItem.name.Contains("EquipableItemVisual"))
-                    {
-                        Vector3 scale = equippedItem.localScale;
-                        // Set X scale to always be positive (1)
-                        scale.x = Mathf.Abs(scale.x);
-                        // Set Y scale to be positive when moving right, negative when moving left
-                        scale.y = Mathf.Abs(scale.y) * (horizontal > 0 ? 1 : -1);
-                        equippedItem.localScale = scale;
-                    }
-                }
-            } */
         }
+
+        // This triggers animations to play once
+        if (moveDirection.magnitude > 0.1f)
+            animator.SetBool("isMoving", true);
+        else
+            animator.SetBool("isMoving", false);
 
         if (animator != null)
         {
-            if (vertical > 0)
-                animator.SetInteger("direction", 0); // Up
-            else if (vertical < 0)
-                animator.SetInteger("direction", 2); // Down
-            else if (horizontal != 0)
-                animator.SetInteger("direction", 1); // Use right animation for both left and right
-            else
-                animator.SetInteger("direction", -1); // Idle or default state
-
-            // This triggers animations to play once
-            if (moveDirection.magnitude > 0.1f)
-                animator.SetBool("isMoving", true);
-            else
-                animator.SetBool("isMoving", false);
+            switch (horizontal, vertical)
+            {
+                case (0, 1):
+                    animator.SetInteger("direction", 0); // Up
+                    break;
+                case (0, -1):
+                    animator.SetInteger("direction", 2); // Down
+                    break;
+                case (1, 0):
+                    animator.SetInteger("direction", 1); // Right
+                    break;
+                case (-1, 0):
+                    animator.SetInteger("direction", 3); // Left
+                    break;
+            }
         }
-
         return new Vector2(horizontal, vertical).normalized;
     }
 
