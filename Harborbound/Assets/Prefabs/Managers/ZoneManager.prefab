@@ -47,6 +47,6 @@ MonoBehaviour:
   zones: []
   centerPoint: {x: 0, y: 0}
   islandRadius: 10
-  baseZoneWidth: 30
+  baseZoneWidth: 15
   radiusMultiplier: 1.5
   islandBuffer: 2

@@ -228,14 +228,11 @@ public class Player : Humanoid
                 break;
 
             case GameManager.GameState.DRIVING:
-                // Control the boat
-                if (moveDirection.magnitude > 0.1f && playerBoat != null)
-                    playerBoat.Move(moveDirection);
-
                 // Exit the boat
                 if (Input.GetKeyDown(interactionKey))
                     StopDriving();
                 break;
+
 
             case GameManager.GameState.DIALOGUE:
                 // Dialogue navigation
@@ -261,6 +258,12 @@ public class Player : Humanoid
         if (gameManager.state == GameManager.GameState.ROAMING && moveDirection.magnitude > 0.1f)
         {
             Move(moveDirection);
+        }
+        if (gameManager.state == GameManager.GameState.DRIVING)
+        {
+            // Control the boat
+            if (moveDirection.magnitude > 0.1f && playerBoat != null)
+                playerBoat.Move(moveDirection);
         }
     }
 
