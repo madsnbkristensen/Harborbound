@@ -26,6 +26,10 @@ public class AudioManager : MonoBehaviour
         Music_Battle_Loop,
         Hurt_Player,
         Hurt_Pirate,
+        Shoot_Shotgun,
+        Shoot_Rifle,
+        Shoot_Pistol,
+        Shoot_Slingshot,
         // Add more sound types as needed
     }
 

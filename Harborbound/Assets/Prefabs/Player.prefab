@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerEquipment: {fileID: 1209877081846410082}
-  testWeaponDef: {fileID: 11400000, guid: 73f82264251a14e7aa8bb284302f7ecf, type: 2}
+  testWeaponDef: {fileID: 11400000, guid: b12fc8164ed734757a9c2dbb4d6ed20f, type: 2}
   testFishingRodDef: {fileID: 11400000, guid: d1f437f18002548f386f2db29acb81f8, type: 2}
   player: {fileID: 0}
 --- !u!61 &4047994704696393999
