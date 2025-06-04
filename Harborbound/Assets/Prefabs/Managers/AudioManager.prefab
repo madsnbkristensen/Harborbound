@@ -128,3 +128,15 @@ MonoBehaviour:
     Clips: []
     Volume: 0.564
     Source: {fileID: 0}
+  - Type: 18
+    Clips:
+    - {fileID: 8300000, guid: 2c9c48e2680314800bb753a1560d8723, type: 3}
+    - {fileID: 8300000, guid: 7968a6a5a77e342a9bbf7b5cf70e3312, type: 3}
+    Volume: 0.564
+    Source: {fileID: 0}
+  - Type: 19
+    Clips:
+    - {fileID: 8300000, guid: 065ca3bf38431414f82556b0aaa32111, type: 3}
+    - {fileID: 8300000, guid: 6930394468b8a4d1483e0fd9f0cec510, type: 3}
+    Volume: 0.564
+    Source: {fileID: 0}
