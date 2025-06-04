@@ -31,6 +31,16 @@ public class Humanoid : MonoBehaviour
         {
             Die();
         }
+        if (humanoidName == "Player")
+        {
+            UIManager.Instance.UpdateHealthDisplay(currentHealth, maxHealth);
+            Debug.Log("##################### Player took damage: " + damage);
+            AudioManager.Instance.Play(AudioManager.SoundType.Hurt_Player);
+        }
+        else if (humanoidName == "Pirate")
+        {
+            AudioManager.Instance.Play(AudioManager.SoundType.Hurt_Pirate);
+        }
     }
 
     protected virtual void Die()

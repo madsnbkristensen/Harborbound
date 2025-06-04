@@ -24,6 +24,8 @@ public class AudioManager : MonoBehaviour
         Music_Ocean_Loop,
         Music_Battle,
         Music_Battle_Loop,
+        Hurt_Player,
+        Hurt_Pirate,
         // Add more sound types as needed
     }
 
