@@ -18,9 +18,9 @@ public class Follow_player : MonoBehaviour
     public SceneZoomSettings[] sceneSettings;
 
     // Default values if no scene-specific settings are found
-    public float defaultNormalZoom = 5.0f;     // Default orthographic size
-    public float defaultZoomedOutDistance = 10.0f;  // Zoomed out orthographic size
-    public float zoomSpeed = 2.0f;      // How fast to zoom
+    public float defaultNormalZoom = 5.0f; // Default orthographic size
+    public float defaultZoomedOutDistance = 10.0f; // Zoomed out orthographic size
+    public float zoomSpeed = 2.0f; // How fast to zoom
 
     private Camera mainCamera;
     private SpriteRenderer playerSpriteRenderer;
@@ -35,7 +35,7 @@ public class Follow_player : MonoBehaviour
             player = FindFirstObjectByType<Player>().transform;
 
         if (player != null)
-            playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
+            playerSpriteRenderer = player.transform.Find("sprite")?.GetComponent<SpriteRenderer>();
 
         mainCamera = GetComponent<Camera>();
 
@@ -78,11 +78,7 @@ public class Follow_player : MonoBehaviour
             }
 
             // Smoothly interpolate between current and target orthographic size
-            currentZoom = Mathf.Lerp(
-                currentZoom,
-                targetZoom,
-                Time.deltaTime * zoomSpeed
-            );
+            currentZoom = Mathf.Lerp(currentZoom, targetZoom, Time.deltaTime * zoomSpeed);
 
             // Apply the zoom to the camera
             mainCamera.orthographicSize = currentZoom;
@@ -91,14 +87,16 @@ public class Follow_player : MonoBehaviour
             Vector3 targetPosition = new Vector3(
                 player.transform.position.x,
                 player.transform.position.y + 1,
-                transform.position.z  // Keep the same Z position
+                transform.position.z // Keep the same Z position
             );
 
             transform.position = targetPosition;
         }
         else
         {
-            Debug.LogWarning("Player not found! Please assign the player object in the inspector or ensure it exists in the scene.");
+            Debug.LogWarning(
+                "Player not found! Please assign the player object in the inspector or ensure it exists in the scene."
+            );
         }
     }
 }

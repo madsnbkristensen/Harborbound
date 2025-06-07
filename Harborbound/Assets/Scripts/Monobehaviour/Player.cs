@@ -30,9 +30,9 @@ public class Player : Humanoid
     protected override void Start()
     {
         base.Start();
-        playerSpriteRenderer = GetComponent<SpriteRenderer>();
+        playerSpriteRenderer = transform.Find("sprite")?.GetComponent<SpriteRenderer>();
 
-        animator = GetComponent<Animator>();
+        animator = transform.Find("sprite")?.GetComponent<Animator>();
 
         // Find GameManager if needed
         if (gameManager == null)
@@ -232,7 +232,6 @@ public class Player : Humanoid
                 if (Input.GetKeyDown(interactionKey))
                     StopDriving();
                 break;
-
 
             case GameManager.GameState.DIALOGUE:
                 // Dialogue navigation
@@ -451,12 +450,13 @@ public class Player : Humanoid
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             horizontal = 1f;
 
-        // Then set animation direction based on movement
-        // Handle sprite flipping based on horizontal direction
-        if (horizontal != 0 && playerSpriteRenderer != null)
-        {
+        // Check if player has an item equipped - this decides our animation strategy
+        bool hasItemEquipped = playerEquipment != null && playerEquipment.equippedWeapon != null;
 
-            // also transform the weapon and rod attachment position relative to the player, set -x on both
+        // Handle attachment point positioning regardless of equipped state
+        if (horizontal != 0 && !hasItemEquipped && playerSpriteRenderer != null)
+        {
+            // Only adjust attachment points based on movement when NO item is equipped
             Transform weaponAttachment = transform.Find("WeaponAttatchmentPoint");
             Transform rodAttachment = transform.Find("RodAttatchmentPoint");
 
@@ -483,28 +483,78 @@ public class Player : Humanoid
             }
         }
 
+        // Handle animation states
         // This triggers animations to play once
-        if (moveDirection.magnitude > 0.1f)
+        if (moveDirection.magnitude > 0.1f || new Vector2(horizontal, vertical).magnitude > 0.1f)
             animator.SetBool("isMoving", true);
         else
             animator.SetBool("isMoving", false);
 
         if (animator != null)
         {
-            switch (horizontal, vertical)
+            if (hasItemEquipped)
             {
-                case (0, 1):
-                    animator.SetInteger("direction", 0); // Up
-                    break;
-                case (0, -1):
-                    animator.SetInteger("direction", 2); // Down
-                    break;
-                case (1, 0):
+                // When an item is equipped, ALWAYS use mouse direction for animation
+                // regardless of movement input
+                Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                mouseWorldPosition.z = 0f; // Ensure we're in 2D space
+
+                // Calculate direction from player to mouse
+                Vector2 directionToMouse = (mouseWorldPosition - transform.position).normalized;
+
+                // Update attachment point based on mouse position instead of movement
+                Transform weaponAttachment = transform.Find("WeaponAttatchmentPoint");
+                if (weaponAttachment != null)
+                {
+                    Vector3 weaponPos = weaponAttachment.localPosition;
+                    weaponPos.x = Mathf.Abs(weaponPos.x) * (directionToMouse.x > 0 ? 1 : -1);
+                    weaponAttachment.localPosition = weaponPos;
+
+                    // Update equipped item scale
+                    if (weaponAttachment.childCount > 0)
+                    {
+                        Transform equippedItem = weaponAttachment.GetChild(0);
+                        if (
+                            equippedItem != null
+                            && equippedItem.name.Contains("EquipableItemVisual")
+                        )
+                        {
+                            Vector3 scale = equippedItem.localScale;
+                            scale.x = Mathf.Abs(scale.x);
+                            scale.y = Mathf.Abs(scale.y) * (directionToMouse.x > 0 ? 1 : -1);
+                            equippedItem.localScale = scale;
+                        }
+                    }
+                }
+
+                // For equipped items, we only care about horizontal direction (left/right)
+                if (directionToMouse.x > 0)
+                {
                     animator.SetInteger("direction", 1); // Right
-                    break;
-                case (-1, 0):
+                }
+                else
+                {
                     animator.SetInteger("direction", 3); // Left
-                    break;
+                }
+            }
+            else
+            {
+                // Original movement-based direction logic for when no item is equipped
+                switch (horizontal, vertical)
+                {
+                    case (0, 1):
+                        animator.SetInteger("direction", 0); // Up
+                        break;
+                    case (0, -1):
+                        animator.SetInteger("direction", 2); // Down
+                        break;
+                    case (1, 0):
+                        animator.SetInteger("direction", 1); // Right
+                        break;
+                    case (-1, 0):
+                        animator.SetInteger("direction", 3); // Left
+                        break;
+                }
             }
         }
         return new Vector2(horizontal, vertical).normalized;

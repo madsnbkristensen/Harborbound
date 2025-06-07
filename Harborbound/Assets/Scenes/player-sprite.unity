@@ -194,6 +194,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4096777031321137994, guid: c9b3b076253f50b4a81b9b250fed7218, type: 3}
+    - target: {fileID: 3329362614337908596, guid: 992782c7cc37e4c25b6a913ea47809af, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047994704696393999, guid: 992782c7cc37e4c25b6a913ea47809af, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047994704696393999, guid: 992782c7cc37e4c25b6a913ea47809af, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047994704696393999, guid: 992782c7cc37e4c25b6a913ea47809af, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047994704696393999, guid: 992782c7cc37e4c25b6a913ea47809af, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047994704696393999, guid: 992782c7cc37e4c25b6a913ea47809af, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047994704696393999, guid: 992782c7cc37e4c25b6a913ea47809af, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6710653315548954765, guid: 992782c7cc37e4c25b6a913ea47809af, type: 3}
       propertyPath: m_Name
       value: Player
@@ -315,8 +343,8 @@ MonoBehaviour:
   player: {fileID: 0}
   shouldFollow: 1
   sceneSettings: []
-  defaultNormalZoom: 5
-  defaultZoomedOutDistance: 10
+  defaultNormalZoom: 2
+  defaultZoomedOutDistance: 5
   zoomSpeed: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
