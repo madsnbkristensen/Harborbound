@@ -531,12 +531,10 @@ public class Player : Humanoid
                 if (directionToMouse.x > 0)
                 {
                     animator.SetInteger("direction", 1);
-                    Debug.Log("mouse right");
                 }
                 else
                 {
                     animator.SetInteger("direction", 3);
-                    Debug.Log("mouse left");
                 }
             }
             else
