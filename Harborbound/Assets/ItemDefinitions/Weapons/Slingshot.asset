@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Slingshot
   m_EditorClassIdentifier: 
   _id: 259150
-  itemName: Shotgun
+  itemName: Slingshot
   description: Rock shooter
   icon: {fileID: 3683170113380467368, guid: 6bddbbd5d49fe4f8a8577b5388f53967, type: 3}
   value: 450
@@ -28,7 +28,7 @@ MonoBehaviour:
   attackSpeed: 1.4
   spread: 4
   bulletTravelTime: 0.7
-  fireSound: 23
+  bulletPrefab: {fileID: 5936086762770257364, guid: f1fd6efa3543b43b5bde1c685ee03216, type: 3}
   weaponType: 0
   bulletsPerShot: 1
   burstCount: 1
