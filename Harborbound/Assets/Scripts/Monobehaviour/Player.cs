@@ -530,11 +530,13 @@ public class Player : Humanoid
                 // For equipped items, we only care about horizontal direction (left/right)
                 if (directionToMouse.x > 0)
                 {
-                    animator.SetInteger("direction", 1); // Right
+                    animator.SetInteger("direction", 1);
+                    Debug.Log("mouse right");
                 }
                 else
                 {
-                    animator.SetInteger("direction", 3); // Left
+                    animator.SetInteger("direction", 3);
+                    Debug.Log("mouse left");
                 }
             }
             else
