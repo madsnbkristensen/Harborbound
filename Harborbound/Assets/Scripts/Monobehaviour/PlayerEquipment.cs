@@ -13,6 +13,7 @@ public class PlayerEquipment : MonoBehaviour
     // Track visual gameObjects
     private GameObject weaponVisual;
     private GameObject fishingRodVisual;
+
     // Track the currently equipped item
     public Item currentEquippedItem;
     public GameObject currentEquippedVisual;
@@ -178,7 +179,8 @@ public class PlayerEquipment : MonoBehaviour
     public void StartUsingEquippedItem()
     {
         Item equippedItem = GetEquippedItem();
-        if (equippedItem == null) return;
+        if (equippedItem == null)
+            return;
 
         // Play animation based on equipped item type
         if (equippedWeapon != null)
