@@ -308,18 +308,6 @@ public class Enemy : Humanoid
         Debug.Log($"Enemy health after: {currentHealth}");
     }
 
-    public System.Collections.IEnumerator FlashRed()
-    {
-        SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        if (spriteRenderer != null)
-        {
-            Color originalColor = spriteRenderer.color;
-            spriteRenderer.color = Color.red;
-            yield return new WaitForSeconds(0.1f);
-            spriteRenderer.color = originalColor;
-        }
-    }
-
     protected override void Die()
     {
         // Spawn corpse at the same position and rotation as the enemy

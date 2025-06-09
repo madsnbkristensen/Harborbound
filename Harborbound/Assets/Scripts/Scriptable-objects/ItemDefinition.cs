@@ -37,6 +37,7 @@ public class ItemDefinition : ScriptableObject
     public float attackSpeed;
     public float spread;
     public float bulletTravelTime;
+    public GameObject bulletPrefab;
 
     // New weapon behavior properties
     public enum WeaponType { SINGLE, AUTOMATIC, SHOTGUN, BURST }

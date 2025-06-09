@@ -28,6 +28,7 @@ MonoBehaviour:
   attackSpeed: 1
   spread: 10
   bulletTravelTime: 0.5
+  bulletPrefab: {fileID: 5936086762770257364, guid: b0ed084800c354141a6de625fd81ee39, type: 3}
   weaponType: 2
   bulletsPerShot: 4
   burstCount: 1
