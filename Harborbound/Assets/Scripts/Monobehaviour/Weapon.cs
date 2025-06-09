@@ -102,7 +102,24 @@ public class Weapon : Item
         // Check if enough time has passed since last fire based on fire rate
         if (canFire)
         {
-            AudioManager.Instance.Play(AudioManager.SoundType.Shoot);
+            switch (definition?.name)
+            {
+                case "Slingshot":
+                    AudioManager.Instance.Play(AudioManager.SoundType.Shoot_Slingshot);
+                    break;
+                case "Shotgun":
+                    AudioManager.Instance.Play(AudioManager.SoundType.Shoot_Shotgun);
+                    break;
+                case "Kalashnikov":
+                    AudioManager.Instance.Play(AudioManager.SoundType.Shoot_Rifle);
+                    break;
+                case "Pistol":
+                    AudioManager.Instance.Play(AudioManager.SoundType.Shoot_Pistol);
+                    break;
+                default:
+                    AudioManager.Instance.Play(AudioManager.SoundType.Shoot);
+                    break;
+            }
             FireBullet(shooter);
             lastFireTime = Time.time;
         }
@@ -112,7 +129,7 @@ public class Weapon : Item
         }
     }
 
-    // Update FireBullet to accept a shooter parameter
+    // Update FireBullet to accept a shooter parameter and use weapon-specific bullets
     private void FireBullet(GameObject shooter)
     {
         if (BulletPool.Instance == null)
@@ -121,8 +138,17 @@ public class Weapon : Item
             return;
         }
 
-        // Get a bullet from the pool
-        GameObject bulletObj = BulletPool.Instance.GetBullet();
+        // Get the weapon-specific bullet prefab
+        GameObject bulletPrefab = definition?.bulletPrefab;
+
+        // Get a bullet from the pool (will use default if bulletPrefab is null)
+        GameObject bulletObj = BulletPool.Instance.GetBullet(bulletPrefab);
+
+        if (bulletObj == null)
+        {
+            Debug.LogError("Failed to get bullet from pool!");
+            return;
+        }
 
         // Position the bullet at the fire point
         if (firePoint != null)
@@ -181,6 +207,7 @@ public class Weapon : Item
             burstCount = definition.burstCount;
             burstInterval = definition.burstInterval;
 
+            Debug.Log($"Weapon {definition.itemName} configured with bullet: {(definition.bulletPrefab ? definition.bulletPrefab.name : "default")}");
         }
         else
         {
@@ -291,9 +318,26 @@ public class Weapon : Item
             return;
         }
 
+        // Get the weapon-specific bullet prefab
+        GameObject bulletPrefab = definition?.bulletPrefab;
+
         // Fire multiple bullets in a spread pattern
         for (int i = 0; i < bulletsPerShot; i++)
         {
+            // Get a bullet from the pool
+            GameObject bulletObj = BulletPool.Instance.GetBullet(bulletPrefab);
+            if (bulletObj == null)
+                continue;
+
+            // Position the bullet at the fire point
+            bulletObj.transform.position = firePoint != null ? firePoint.position : transform.position;
+
+            // Get the aim rotation (toward mouse)
+            Quaternion aimRotation = GetMouseAimRotation();
+
+            // Set the bullet rotation to aim toward mouse
+            bulletObj.transform.rotation = aimRotation;
+
             // Modify the spread for each bullet to create a shotgun pattern
             float adjustedSpread = spread;
             if (bulletsPerShot > 1)
@@ -303,7 +347,15 @@ public class Weapon : Item
                 adjustedSpread = spread * 0.5f + spreadFactor * spread;
             }
 
-            FireBullet(shooter, adjustedSpread);
+            // Apply spread
+            bulletObj.transform.Rotate(0, 0, adjustedSpread);
+
+            // Configure the bullet
+            Bullet bullet = bulletObj.GetComponent<Bullet>();
+            if (bullet != null)
+            {
+                bullet.Initialize(this, shooter);
+            }
         }
 
         // Update last fire time
@@ -337,50 +389,6 @@ public class Weapon : Item
         // Update last fire time after the full burst
         lastFireTime = Time.time;
         burstCoroutine = null;
-    }
-
-    // Modify FireBullet to accept an optional spread parameter
-    private void FireBullet(GameObject shooter, float? customSpread = null)
-    {
-        if (BulletPool.Instance == null)
-        {
-            Debug.LogError("BulletPool instance not found!");
-            return;
-        }
-
-        // Get a bullet from the pool
-        GameObject bulletObj = BulletPool.Instance.GetBullet();
-
-        // Position the bullet at the fire point
-        if (firePoint != null)
-        {
-            bulletObj.transform.position = firePoint.position;
-        }
-        else
-        {
-            bulletObj.transform.position = transform.position;
-        }
-
-        // Get the aim rotation (toward mouse)
-        Quaternion aimRotation = GetMouseAimRotation();
-
-        // Set the bullet rotation to aim toward mouse
-        bulletObj.transform.rotation = aimRotation;
-
-        // Apply spread if needed
-        float actualSpread = customSpread ?? spread;
-        if (actualSpread > 0)
-        {
-            float randomSpread = Random.Range(-actualSpread, actualSpread);
-            bulletObj.transform.Rotate(0, 0, randomSpread);
-        }
-
-        // Configure the bullet with a reference to this weapon and the shooter
-        Bullet bullet = bulletObj.GetComponent<Bullet>();
-        if (bullet != null)
-        {
-            bullet.Initialize(this, shooter);
-        }
     }
 
     public bool Fire(Vector3 targetPosition, GameObject shooter = null)
@@ -456,8 +464,11 @@ public class Weapon : Item
             return;
         }
 
+        // Get the weapon-specific bullet prefab
+        GameObject bulletPrefab = definition?.bulletPrefab;
+
         // Get a bullet from the pool
-        GameObject bulletObj = BulletPool.Instance.GetBullet();
+        GameObject bulletObj = BulletPool.Instance.GetBullet(bulletPrefab);
         if (bulletObj == null)
             return;
 
@@ -489,20 +500,14 @@ public class Weapon : Item
     // Add shotgun firing at a position
     private void FireShotgunAt(Vector3 targetPosition, GameObject shooter)
     {
+        // Get the weapon-specific bullet prefab
+        GameObject bulletPrefab = definition?.bulletPrefab;
+
         // Fire multiple bullets in a spread pattern
         for (int i = 0; i < bulletsPerShot; i++)
         {
-            // Modify the spread for each bullet to create a shotgun pattern
-            float adjustedSpread = spread;
-            if (bulletsPerShot > 1)
-            {
-                // Create a wider pattern based on bullet index
-                float spreadFactor = (i / (float)(bulletsPerShot - 1)) * 2 - 1; // Range: -1 to 1
-                adjustedSpread = spread * 0.5f + spreadFactor * spread;
-            }
-
             // Get a bullet from the pool
-            GameObject bulletObj = BulletPool.Instance.GetBullet();
+            GameObject bulletObj = BulletPool.Instance.GetBullet(bulletPrefab);
             if (bulletObj == null)
                 continue;
 
@@ -516,6 +521,15 @@ public class Weapon : Item
 
             // Set the bullet rotation to aim toward the target
             bulletObj.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+            // Modify the spread for each bullet to create a shotgun pattern
+            float adjustedSpread = spread;
+            if (bulletsPerShot > 1)
+            {
+                // Create a wider pattern based on bullet index
+                float spreadFactor = (i / (float)(bulletsPerShot - 1)) * 2 - 1; // Range: -1 to 1
+                adjustedSpread = spread * 0.5f + spreadFactor * spread;
+            }
 
             // Apply spread
             bulletObj.transform.Rotate(0, 0, adjustedSpread);
@@ -532,10 +546,45 @@ public class Weapon : Item
     // Implement burst firing at a position
     private System.Collections.IEnumerator FireBurstAt(Vector3 targetPosition, GameObject shooter)
     {
+        // Get the weapon-specific bullet prefab
+        GameObject bulletPrefab = definition?.bulletPrefab;
+
         // Fire a burst of bullets
         for (int i = 0; i < burstCount; i++)
         {
-            FireBulletAt(targetPosition, shooter);
+            // Get a bullet from the pool
+            GameObject bulletObj = BulletPool.Instance.GetBullet(bulletPrefab);
+            if (bulletObj == null)
+            {
+                // Wait for burst interval even if bullet creation failed
+                if (i < burstCount - 1)
+                    yield return new WaitForSeconds(burstInterval);
+                continue;
+            }
+
+            // Position the bullet at the fire point
+            bulletObj.transform.position = firePoint != null ? firePoint.position : transform.position;
+
+            // Calculate direction to the target position
+            Vector2 direction = targetPosition - bulletObj.transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            // Set the bullet rotation to aim toward the target
+            bulletObj.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+            // Apply spread if needed
+            if (spread > 0)
+            {
+                float randomSpread = Random.Range(-spread, spread);
+                bulletObj.transform.Rotate(0, 0, randomSpread);
+            }
+
+            // Configure the bullet
+            Bullet bullet = bulletObj.GetComponent<Bullet>();
+            if (bullet != null)
+            {
+                bullet.Initialize(this, shooter);
+            }
 
             // Wait for burst interval
             if (i < burstCount - 1)

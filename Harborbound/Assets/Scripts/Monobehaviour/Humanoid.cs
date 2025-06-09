@@ -36,6 +36,7 @@ public class Humanoid : MonoBehaviour
             UIManager.Instance.UpdateHealthDisplay(currentHealth, maxHealth);
             Debug.Log("##################### Player took damage: " + damage);
             AudioManager.Instance.Play(AudioManager.SoundType.Hurt_Player);
+            StartCoroutine(FlashRed());
         }
         else if (humanoidName == "Pirate")
         {
@@ -52,5 +53,37 @@ public class Humanoid : MonoBehaviour
         }
         Destroy(gameObject);
         Debug.Log($"{humanoidName} has died.");
+    }
+
+    protected System.Collections.IEnumerator FlashRed()
+    {
+        // First try to find a child specifically named "sprite"
+        Transform spriteTransform = transform.Find("sprite");
+        SpriteRenderer spriteRenderer = null;
+
+        if (spriteTransform != null)
+        {
+            spriteRenderer = spriteTransform.GetComponent<SpriteRenderer>();
+        }
+
+        // If we didn't find it that way, fall back to the generic method
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        }
+
+        if (spriteRenderer != null)
+        {
+            Color originalColor = spriteRenderer.color;
+            spriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(0.1f);
+            spriteRenderer.color = originalColor;
+        }
+        else
+        {
+            Debug.LogWarning(
+                $"{gameObject.name} tried to flash red but couldn't find a SpriteRenderer"
+            );
+        }
     }
 }
